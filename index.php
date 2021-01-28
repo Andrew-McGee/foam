@@ -5,14 +5,12 @@
 	<title>foam</title>
 	<meta charset="UTF-8">
 	<meta name="Generator" content="Atom">
-	<meta name="Author" content="McGee Technology">
-	<meta name="Keywords" content="">
-	<meta name="Description" content="">
+	<meta name="Author" content="Andrew McGee">
+	<meta name="Keywords" content="Ampache, Fomantic, media player, web player">
+	<meta name="Description" content="A Fomantic UI and Ampache web player frontend.">
 
 	<!-- favicon stuff -->
-	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="icon" type="image/x-icon" sizes="16x16" href="/favicon.ico"/>
 
 <!-- JQuery from CDN -->
 	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>

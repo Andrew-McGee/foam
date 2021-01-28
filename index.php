@@ -63,7 +63,7 @@
 		  <div class="ui inverted manatee segment">
 			  <div class="ui inverted space segment">
 			    <h1 class="ui smoke header">Welcome to foam</h1>
-			    <p>This is some placeholder test that will eventually be replaced by containers with album, artist or song information.</p>
+			    <p>This is some placeholder text that will eventually be replaced by containers with album, artist or song information.</p>
 			  </div>
 		  </div>
 	  </div><!-- END of page column 2 - middle main content -->
@@ -77,8 +77,6 @@
 <!-- Start the footer -->
   <div class="ui inverted spacecadet vertical footer segment">
     <div class="ui center aligned container">
-      <div class="ui inverted section divider"></div>
-      <img src="/img/logo-1.png" class="ui centered medium image">
 			<h1 class="ui inverted yellow header">foam</h1>
     </div>
   </div>

@@ -1,4 +1,4 @@
-# foam
+# foam = FOmantic & AMpache
 
 foam is a web player frontend for Ampache using the Fomantic UI CSS framework. It is mostly PHP, CSS and HTML and designed to be simple and portable.
 
@@ -8,6 +8,8 @@ foam is a web player frontend for Ampache using the Fomantic UI CSS framework. I
 
 ## Installation
 Simply drop everything into your public html directory of your PHP enabled web server and away you go. No building should be necessary as it is designed to be self contained.
+
+You need an [Ampache](https://github.com/ampache/ampache) server somewhere.
 
 Some limited options can be found in config/foam.conf.php which sets a few php variables.
 

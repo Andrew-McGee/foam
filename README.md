@@ -4,10 +4,10 @@ foam is a web player frontend for Ampache using the Fomantic UI CSS framework. I
 
 ## Features
 
-- TBA
+- TBA - but expect all the normal album, artist, song, playlist searching.
 
 ## Installation
-Simply drop everything into your web server public html directory and away you go.
+Simply drop everything into your public html directory of your PHP enabled web server and away you go. No building should be necessary as it is designed to be self contained.
 
 Some limited options can be found in config/foam.conf.php which sets a few php variables.
 
@@ -15,11 +15,11 @@ Some limited options can be found in config/foam.conf.php which sets a few php v
 - Early days - still building the base functionality to get to a working release stage.
 
 ## Contributions
-Once I have a working release contributions, suggestions welcome.
+Once I have a working release then contributions and suggestions always welcome.
 
 ## Acknowledgements
-- Inspired by the subsonic player [subplayer](https://github.com/peguerosdc/subplayer)
-- Using [Fomantic UI](https://github.com/fomantic/Fomantic-UI) UI components.
+- Inspired by the subsonic player [subplayer](https://github.com/peguerosdc/subplayer) - a really nice looking player for subsonic.
+- Using [Fomantic UI](https://github.com/fomantic/Fomantic-UI) components.
 
 ## License
 

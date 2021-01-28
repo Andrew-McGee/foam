@@ -1,0 +1,165 @@
+/*
+  Name: McGee Technology copyright 2018-2020
+  Date: JUL 2020
+  Description: Simple layout for Chinese Language Blogging
+  Version: 1.0
+  Author: Andrew McGee
+  Note: Some of this is a hack - overrides may not be necessary if we re-build fomantic with a new theme and variables
+*/
+
+/* Imports */
+/* @import 'https://fonts.googleapis.com/css?family=Lato:100,300,400,700'; */
+/* @import url('https://fonts.googleapis.com/css2?family=Noto+sans+SC&display=swap'); */
+
+		:root {
+			--space-cadet: hsla(235, 21%, 21%, 1);
+			--manatee: #556177;
+			--alice-blue: hsla(197, 24%, 94%, 1);
+			--imperial-red: hsla(353, 86%, 54%, 1);
+			--amaranth-red: hsla(350, 96%, 43%, 1);
+		}
+		body {
+		 background-color: var(--manatee);
+		}
+
+		p {
+			font-family: 'Noto Sans SC', sans-serif;
+			font-size: 1.15rem !important;
+		}
+
+		a:link { color: gold; text-decoration: none; }
+		a:visited { color: gold; text-decoration: none; }
+		a:active { color: gold; text-decoration: none; }
+		a:hover { color: gold; text-decoration: underline; }
+
+		a.foot:link { color: #A5A5A5; text-decoration: underline; }
+		a.foot:visited { color: #A5A5A5; text-decoration: underline; }
+		a.foot:active { color: gold; text-decoration: none; }
+		a.foot:hover { color: gold; text-decoration: underline; }
+
+		.main.container {
+		 margin: 3em 0em;
+		}
+
+		.righthand.container {
+			margin: 2em !important;
+			padding: 1.5em 1.5em;
+		}
+
+		.ui.footer.segment {
+		 margin: 0em;
+		 padding: 5em 0em;
+		}
+
+		.ui.ribbon.label {
+		  margin: 0rem 4.75rem -2rem;
+		}
+
+		.ui.circular.label {
+		  margin: 0rem;
+		}
+
+		.ui.vertical.menu .item > i.icon.left {
+		    float: none;
+		    margin: 0em 0.35714286em 0em 0em;
+		}
+
+/* Hack to center images that are links
+		a.ui.image.centered{
+    	display: block;
+		}*/
+
+/******************************************
+  Add Custom Colours to Semantic Components
+*******************************************/
+     .ui.header.white {color: white;}
+		 .ui.header.smoke {color: whitesmoke;}
+		 .ui.header.dim {color: #050505 !important;}
+
+     .ui.inverted.amaranth.menu {
+       background-color: var(--amaranth-red) !important;
+       color: #A5A5A5 !important;
+			 padding: 0em 2em;
+     }
+
+     .ui.inverted.amaranth.segment {
+       background-color: var(--amaranth-red) !important;
+       color: lightgrey !important;
+			 padding: 2em 0em;
+			 margin: 0em;
+			 min-height: 50px;
+     }
+
+     .amaranth.column {
+       background-color: var(--amaranth-red) !important;
+       color: lightgrey !important;
+     }
+
+		.sidemenu.column {
+		 background-color: var(--space-cadet);
+		 margin: 1em 0em 0em 0em;
+		}
+
+     .ui.inverted.spacecadet.menu {
+       background-color: var(--space-cadet) !important;
+			 color: #A5A5A5 !important;
+			 margin: 6em 0em 0em 2em;
+     }
+
+		 .ui.menu .active.item {
+			 background-color: var(--manatee) !important;
+		 }
+
+		 .ui.menu .header.item {
+			 color: #FFFFFF !important;
+		 }
+
+		 .ui.menu .right.item {
+			 color: #FFFFFF !important;
+		 }
+
+		 .ui.menu .item {
+			 color: #A5A5A5 !important;
+		 }
+
+     .ui.inverted.spacecadet.segment {
+       background-color: var(--space-cadet) !important;
+       color: #A5A5A5 !important;
+     }
+
+     .ui.inverted.manatee.segment {
+       background-color: var(--manatee) !important;
+       color: whitesmoke !important;
+     }
+
+     .ui.inverted.smoke.segment {
+       background-color: whitesmoke !important;
+       color: #050505 !important;
+			 padding: 3em 5em 3em 5em !important;
+			 margin: 2em !important;
+			 font-size: 1.15rem !important;
+     }
+
+     .ui.inverted.space.segment {
+       background-color: var(--space-cadet) !important;
+       color: #D0D5D5 !important;
+			 padding: 3em 5em 3em 5em !important;
+			 margin: 2em !important;
+			 font-size: 1.15rem !important;
+     }
+
+     .ui.inverted.rspace.segment {
+       background-color: var(--space-cadet) !important;
+       color: #A5A5A5 !important;
+			 padding: 3em 5em 3em 5em !important;
+			 margin: 2rem 2rem 0rem 18rem !important;
+			 font-size: 1.15rem !important;
+     }
+
+     .ui.inverted.lspace.segment {
+       background-color: var(--space-cadet) !important;
+       color: #A5A5A5 !important;
+			 padding: 3em 5em 3em 5em !important;
+			 margin: 2rem 18rem 0rem 2rem !important;
+			 font-size: 1.15rem !important;
+     }

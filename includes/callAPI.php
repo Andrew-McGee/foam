@@ -1,9 +1,10 @@
 <?php
 // callAPI function for all pages that need to call the Ampache API
 //
-include './config/foam.conf.php';
 
 function callAPI(){
+  include 'config/foam.conf.php';
+
   $curl = curl_init();
 
   //Build the handshake string
@@ -11,7 +12,7 @@ function callAPI(){
   $key = hash('sha256', $amppas);
   $passphrase = hash('sha256',$time . $key);
 
-  $url = $ampurl.'/server/xml.server.php?action=handshake&auth='.$passphrase.'&timestamp='.$time.'&version=350001&user='.$ampusr;
+  $url = $ampurl.'/server/json.server.php?action=handshake&auth='.$passphrase.'&timestamp='.$time.'&version=350001&user='.$ampusr;
 
   //Options
   curl_setopt($curl, CURLOPT_URL, $url);

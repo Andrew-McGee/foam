@@ -3,8 +3,8 @@
 
 	$get_data = callAPI();
 	$response = json_decode($get_data, true);
-	$errors = $response['response']['errors'];
-	$data = $response['response']['data'][0];
+	//$errors = $response['response']['errors'];
+	//$data = $response['response']['data'][0];
 ?>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -75,7 +75,7 @@
 					<p>
 					<?php
 
-					echo '<pre>'; print_r($data); echo '</pre>';
+					echo '<pre>'; echo $get_data; echo '</pre>';
 
 					?>
 					</p>

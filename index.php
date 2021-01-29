@@ -1,5 +1,10 @@
-<?
-include 'config/foam.conf.php';
+<?php
+	include 'includes/callAPI.php';
+
+	$get_data = callAPI();
+	$response = json_decode($get_data, true);
+	$errors = $response['response']['errors'];
+	$data = $response['response']['data'][0];
 ?>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -66,6 +71,14 @@ include 'config/foam.conf.php';
 			  <div class="ui inverted space segment">
 			    <h1 class="ui smoke header">Welcome to foam</h1>
 			    <p>This is some placeholder text that will eventually be replaced by containers with album, artist or song information.</p>
+					<p>Also, here is a response from Ampache XML API:</p>
+					<p>
+					<?php
+
+					echo '<pre>'; print_r($data); echo '</pre>';
+
+					?>
+					</p>
 			  </div>
 		  </div>
 	  </div><!-- END of page column 2 - middle main content -->

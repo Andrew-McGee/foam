@@ -1,4 +1,4 @@
-<? php
+<?php
 // Config file for foam web player. Just a standard php include that will pull in variables
 
 //Ampache Server - location and credentials

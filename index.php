@@ -79,6 +79,12 @@
 
 					echo '<pre>'; echo $get_data; echo '</pre>';
 
+					echo '<p>Now here is some value from decoded json variables</p>';
+					echo '<p><pre>auth= '; echo $response[auth]; echo '</pre>';
+					echo '<p><pre>api= '; echo $response[api]; echo '</pre>';
+					echo '<p><pre>albums= '; echo $response[albums]; echo '</pre>';
+					echo '<p><pre>artists= '; echo $response[artists]; echo '</pre></p>';
+
 					echo '<p>Now here is a response from Ampache recent API (Albums):</p>';
 					echo '<p><pre>'; echo $recent; echo '</pre></p>';
 

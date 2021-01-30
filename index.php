@@ -1,10 +1,12 @@
 <?php
 	include 'includes/callAPI.php';
 
-	$get_data = callAPI();
+	$get_data = handshakeAPI();
 	$response = json_decode($get_data, true);
 	//$errors = $response['response']['errors'];
 	//$data = $response['response']['data'][0];
+
+	$recent = recentAPI();
 ?>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -71,11 +73,14 @@
 			  <div class="ui inverted space segment">
 			    <h1 class="ui smoke header">Welcome to foam</h1>
 			    <p>This is some placeholder text that will eventually be replaced by containers with album, artist or song information.</p>
-					<p>Also, here is a response from Ampache XML API:</p>
+					<p>Here is a response from Ampache API handshake:</p>
 					<p>
 					<?php
 
 					echo '<pre>'; echo $get_data; echo '</pre>';
+
+					echo '<p>Now here is a response from Ampache recent API (Albums):</p>';
+					echo '<p><pre>'; echo $recent; echo '</pre></p>';
 
 					?>
 					</p>

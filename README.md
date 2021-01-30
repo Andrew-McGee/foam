@@ -1,4 +1,4 @@
-# foam = FOmantic & AMpache
+# foam = Fomantic & Ampache
 
 foam is a web player frontend for Ampache using the Fomantic UI CSS framework. It is mostly PHP, CSS and HTML and designed to be simple and portable.
 

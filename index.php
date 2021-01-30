@@ -88,6 +88,24 @@
 					echo '</pre></p>';
 
 					echo '<p>Now here is a response from Ampache recent API (Albums):</p>';
+
+					echo '<p><pre>album 1= '. $recent[album[0][name]];
+					echo '<br>artist= '. $recent[album[0][artist][name]];
+					echo '<br>year= '. $recent[album[0][year]];
+
+					echo '<p><pre>album 2= '. $recent[album[1][name]];
+					echo '<br>artist= '. $recent[album[1][artist][name]];
+					echo '<br>year= '. $recent[album[1][year]];
+
+					echo '<p><pre>album 3= '. $recent[album[2][name]];
+					echo '<br>artist= '. $recent[album[2][artist][name]];
+					echo '<br>year= '. $recent[album[2][year]];
+
+					echo '<p><pre>album 4= '. $recent[album[3][name]];
+					echo '<br>artist= '. $recent[album[3][artist][name]];
+					echo '<br>year= '. $recent[album[3][year]];
+
+
 					echo '<p><pre>';
 					var_dump($recent);
 					echo '</pre></p>';

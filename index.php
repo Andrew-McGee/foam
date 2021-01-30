@@ -98,10 +98,10 @@
 						for ($j = 1; $j <=6; $j++){
 							echo "<div class='ui column'>";
 							echo "<img class='ui small image' src='" . $recent[album][$cnt][art] . "' >";
-							echo '<br>'. $recent[album][$cnt][name];
+							echo '<center><br>'. $recent[album][$cnt][name];
 							echo '<br>'. $recent[album][$cnt][artist][name];
 							echo '<br>'. $recent[album][$cnt][year];
-							echo "</div>";
+							echo "</center></div>";
 							$cnt++;
 						}
 						echo "</div>";

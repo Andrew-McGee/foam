@@ -40,7 +40,7 @@ function recentAPI($auth){
   $key = hash('sha256', $amppas);
   $passphrase = hash('sha256',$time . $key);
 
-  $url = $ampurl.'/server/json.server.php?action=albums&auth='.$auth.'&limit=5';
+  $url = $ampurl.'/server/json.server.php?action=albums&auth='.$auth.'&limit=24';
 
   //Options
   curl_setopt($curl, CURLOPT_URL, $url);

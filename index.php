@@ -89,25 +89,21 @@
 
 					echo '<p>Now here is a response from Ampache recent API (Albums):</p>';
 
-					echo '<p><pre>album 1= '. $recent[album][0][name];
-					echo '<br>artist= '. $recent[album][0][artist][name];
-					echo '<br>year= '. $recent[album][0][year];
-					echo "<img class='ui small left floated image' src='" . $recent[album][0][art] . "' ></p>";
+					echo "<div class='ui six column grid'>";
 
-					echo '<p><pre>album 2= '. $recent[album][1][name];
-					echo '<br>artist= '. $recent[album][1][artist][name];
-					echo '<br>year= '. $recent[album][1][year];
-					echo "<img class='ui small left floated image' src='" . $recent[album][1][art] . "' ></p>";
+					for ($i = 1; $i <=4; $i++){
+						echo "<div class='ui row'>";
+						for ($j = 1; $j <=6; $j++){
+							$cnt = 0;
+							echo "<div class='ui column'>";
+							echo "<img class='ui small image' src='" . $recent[album][$cnt][art] . "' >";
+							echo '<br>album 1= '. $recent[album][$cnt][name];
+							echo '<br>artist= '. $recent[album][$cnt][artist][name];
+							echo '<br>year= '. $recent[album][$cnt][year];
+							$cnt++;
+						}
+					}
 
-					echo '<p><pre>album 3= '. $recent[album][2][name];
-					echo '<br>artist= '. $recent[album][2][artist][name];
-					echo '<br>year= '. $recent[album][2][year];
-					echo "<img class='ui small left floated image' src='" . $recent[album][2][art] . "' ></p>";
-
-					echo '<p><pre>album 4= '. $recent[album][3][name];
-					echo '<br>artist= '. $recent[album][3][artist][name];
-					echo '<br>year= '. $recent[album][3][year];
-					echo "<img class='ui small left floated image' src='" . $recent[album][3][art] . "' ></p>";
 
 					?>
 					</p>

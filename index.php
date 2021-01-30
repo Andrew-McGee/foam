@@ -50,8 +50,8 @@
 </div> <!-- End the header -->
 
 <!-- Main Body -->
-	<!-- 3 column grid -->
-	<div class="ui three column grid">
+	<!-- 2 column grid -->
+	<div class="ui two column grid">
 		<div class="ui three wide sidemenu column"><!-- Start of page column 1 - left sidebar -->
 			<div class="ui container"> <!-- Container to constrain width of Vertical Menu -->
 
@@ -70,7 +70,7 @@
 			</div> <!-- Close container -->
 		</div> <!-- End of Column 1 -->
 
-    <div class="ui ten wide column"><!-- START of page column 2 - middle main content -->
+    <div class="ui thirteen wide column"><!-- START of page column 2 - middle main content -->
 		  <div class="ui inverted manatee segment">
 			  <div class="ui inverted space segment">
 			    <h1 class="ui smoke header">Welcome to foam</h1>
@@ -91,17 +91,17 @@
 
 					$cnt = 0;
 
-					echo "<div class='ui six column grid'>";
+					echo "<div class='ui six column grid container'>";
 
 					for ($i = 1; $i <=4; $i++){
 						echo "<div class='ui row'>";
 						for ($j = 1; $j <=6; $j++){
-							echo "<div class='ui column'><div class='ui container'";
+							echo "<div class='ui column'>";
 							echo "<img class='ui small image' src='" . $recent[album][$cnt][art] . "' >";
 							echo '<br>'. $recent[album][$cnt][name];
 							echo '<br>'. $recent[album][$cnt][artist][name];
 							echo '<br>'. $recent[album][$cnt][year];
-							echo "</div></div>";
+							echo "</div>";
 							$cnt++;
 						}
 						echo "</div>";
@@ -112,13 +112,7 @@
 					</p>
 			  </div>
 		  </div>
-	  </div><!-- END of page column 2 - middle main content -->
-		<div class="ui three wide column"><!-- START of page column 3 - right sidebar -->
-			<div class="ui righthand right aligned container">
-				<br> <!-- blank for now -->
-			</div>
-
-		</div><!-- END of page column 3 - right sidebar -->
+	  </div><!-- END of page column 2 -->
 	</div>
 <!-- Start the footer -->
   <div class="ui inverted spacecadet vertical footer segment">

@@ -79,15 +79,18 @@
 					<p>
 					<?php
 
-					echo '<p><pre>auth= '; echo $response[auth]; echo '</pre>';
-					echo '<p><pre>api= '; echo $response[api]; echo '</pre>';
-					echo '<p><pre>albums= '; echo $response[albums]; echo '</pre>';
-					echo '<p><pre>artists= '; echo $response[artists]; echo '</pre>';
-					echo '<p><pre>genres= '; echo $response[genres]; echo '</pre>';
-					echo '<p><pre>playlists= '; echo $response[playlists]; echo '</pre></p>';
+					echo '<p><pre>auth= '. $response[auth];
+					echo '<br>api= '. $response[api];
+					echo '<br>albums= '. $response[albums];
+					echo '<br>artists= '. $response[artists];
+					echo '<br>genres= '. $response[genres];
+					echo '<br>playlists= '. $response[playlists];
+					echo '</pre></p>';
 
 					echo '<p>Now here is a response from Ampache recent API (Albums):</p>';
-					echo '<p><pre>'; var_dump($recent); echo '</pre></p>';
+					echo '<p><pre>';
+					var_dump($recent);
+					echo '</pre></p>';
 
 					?>
 					</p>

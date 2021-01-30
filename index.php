@@ -104,6 +104,7 @@
 							echo "</div></div>";
 							$cnt++;
 						}
+						echo "</div>";
 					}
 
 

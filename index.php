@@ -6,7 +6,9 @@
 
 	$auth=$response[auth];
 
-	$recent = recentAPI($auth);
+	$get_data = recentAPI($auth);
+	$recent = json_decode($get_data, true);
+
 ?>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -77,16 +79,15 @@
 					<p>
 					<?php
 
-					echo '<pre>'; echo $get_data; echo '</pre>';
-
-					echo '<p>Now here is some value from decoded json variables</p>';
 					echo '<p><pre>auth= '; echo $response[auth]; echo '</pre>';
 					echo '<p><pre>api= '; echo $response[api]; echo '</pre>';
 					echo '<p><pre>albums= '; echo $response[albums]; echo '</pre>';
-					echo '<p><pre>artists= '; echo $response[artists]; echo '</pre></p>';
+					echo '<p><pre>artists= '; echo $response[artists]; echo '</pre>';
+					echo '<p><pre>genres= '; echo $response[genres]; echo '</pre>';
+					echo '<p><pre>playlists= '; echo $response[playlists]; echo '</pre></p>';
 
 					echo '<p>Now here is a response from Ampache recent API (Albums):</p>';
-					echo '<p><pre>'; echo $recent; echo '</pre></p>';
+					echo '<p><pre>'; var_dump($recent); echo '</pre></p>';
 
 					?>
 					</p>

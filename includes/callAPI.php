@@ -30,17 +30,17 @@ function handshakeAPI(){
   return $result;
 }
 
-function recentAPI(){
+function recentAPI($auth){
   include 'config/foam.conf.php';
 
   $curl = curl_init();
 
-  //Build the handshake string
+  //Build the albums query string
   $time = time();
   $key = hash('sha256', $amppas);
   $passphrase = hash('sha256',$time . $key);
 
-  $url = $ampurl.'/server/json.server.php?action=albums&auth='.$passphrase.'&timestamp='.$time.'&version=350001&user='.$ampusr.'&limit=5';
+  $url = $ampurl.'/server/json.server.php?action=albums&auth='.$auth.'&limit=5';
 
   //Options
   curl_setopt($curl, CURLOPT_URL, $url);

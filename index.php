@@ -89,21 +89,23 @@
 
 					echo '<p>Now here is a response from Ampache recent API (Albums):</p>';
 
+					$cnt = 0;
+
 					echo "<div class='ui six column grid'>";
 
 					for ($i = 1; $i <=4; $i++){
 						echo "<div class='ui row'>";
 						for ($j = 1; $j <=6; $j++){
-							$cnt = 0;
-							echo "<div class='ui column'>";
+							echo "<div class='ui column'><div class='ui segment'";
 							echo "<img class='ui small image' src='" . $recent[album][$cnt][art] . "' >";
-							echo 'src = ' . $recent[album][$cnt][art];
+							//echo 'src = ' . $recent[album][$cnt][art];
 							echo '<br>album 1= '. $recent[album][$cnt][name];
 							echo '<br>artist= '. $recent[album][$cnt][artist][name];
+							echo "</div></div>";
 							//echo '<br>year= '. $recent[album][$cnt][year];
-							echo '$cnt = '.$cnt;
+							//echo '$cnt = '.$cnt;
 							$cnt++;
-							echo '$cnt = '.$cnt;
+							//echo '$cnt = '.$cnt;
 						}
 					}
 

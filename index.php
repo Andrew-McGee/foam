@@ -99,10 +99,10 @@
 							echo "<div class='ui column'><div class='ui segment'";
 							echo "<img class='ui small image' src='" . $recent[album][$cnt][art] . "' >";
 							//echo 'src = ' . $recent[album][$cnt][art];
-							echo '<br>album 1= '. $recent[album][$cnt][name];
-							echo '<br>artist= '. $recent[album][$cnt][artist][name];
+							echo '<br>'. $recent[album][$cnt][name];
+							echo '<br>'. $recent[album][$cnt][artist][name];
 							echo "</div></div>";
-							//echo '<br>year= '. $recent[album][$cnt][year];
+							echo '<br>'. $recent[album][$cnt][year];
 							//echo '$cnt = '.$cnt;
 							$cnt++;
 							//echo '$cnt = '.$cnt;

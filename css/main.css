@@ -47,7 +47,7 @@
 		    margin: 0em 0.35714286em 0em 0em;
 		}
 
-		.ui.input {
+		.ui.input input {
 			background-color: var(--manatee) !important;
 		}
 

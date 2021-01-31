@@ -75,11 +75,13 @@
 					<div class="item">
 						<h1 class="ui small dim header">Stats</h1>
 						<?php
-						echo '<br>Albums: '. $stats[albums];
-						echo '<br>Artists: '. $stats[artists];
-						echo '<br>Tracks: '. $stats[songs];
-						echo '<br>Genres: '. $stats[genres];
-						echo '<br>Playlists: '. $stats[playlists];
+						echo '<div class="ui two column grid">';
+							echo '<div class="ui column">Albums: </div><div class="ui column">'. $stats[albums].'</div>';
+							echo '<div class="ui column">Artists: </div><div class="ui column">'. $stats[artists].'</div>';
+							echo '<div class="ui column">Tracks: </div><div class="ui column">'. $stats[songs].'</div>';
+							echo '<div class="ui column">Genres: </div><div class="ui column">'. $stats[genres].'</div>';
+							echo '<div class="ui column">Playlists: </div><div class="ui column">'. $stats[playlists].'</div>';
+						echo '</div>';
 						?>
 					</div>
 				</div>

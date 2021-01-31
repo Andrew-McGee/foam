@@ -2,9 +2,9 @@
 	include 'includes/callAPI.php';
 
 	$get_data = handshakeAPI();
-	$response = json_decode($get_data, true);
+	$stats = json_decode($get_data, true);
 
-	$auth=$response[auth];
+	$auth=$stats[auth];
 
 	$get_data = recentAPI($auth);
 	$recent = json_decode($get_data, true);
@@ -65,8 +65,20 @@
 					<a class="item" href="/tracks_view.php"><i class="music icon"></i>Tracks</a>
 					<a class="item" href="/playlists_view.php"><i class="stream icon"></i>Playlists</a>
 					<a class="item" href="/favourites_view.php"><i class="star icon"></i>Favourites</a>
-
 				</div>
+
+				<div class="ui segment">
+					<h1 class="ui small header">Stats</h1>
+					<?php
+					echo '<p><br>Albums: '. $stats[albums];
+					echo '<br>Artists: '. $stats[artists];
+					echo '<br>Tracks: '. $stats[songs];
+					echo '<br>Genres: '. $stats[genres];
+					echo '<br>Playlists: '. $stats[playlists];
+					echo '</p>';
+					?>
+				</div>
+
 			</div> <!-- Close container -->
 		</div> <!-- End of Column 1 -->
 

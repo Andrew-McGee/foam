@@ -41,7 +41,7 @@
 <div class="ui fixed inverted top massive text menu">
 		<div class="item">
 			<h1 class="ui inverted yellow header">
-      foam &nbsp;&nbsp;&nbsp;&nbsp;
+      foam
 			</h1>
 			<div class="ui tiny icon input">
 			  <input type="text" placeholder="Search...">

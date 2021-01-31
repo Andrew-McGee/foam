@@ -82,19 +82,6 @@
 			 padding: 0em 2em;
      }
 
-     .ui.inverted.amaranth.segment {
-       background-color: var(--amaranth-red) !important;
-       color: lightgrey !important;
-			 padding: 2em 0em;
-			 margin: 0em;
-			 min-height: 50px;
-     }
-
-     .amaranth.column {
-       background-color: var(--amaranth-red) !important;
-       color: lightgrey !important;
-     }
-
 		.sidemenu.column {
 		 background-color: var(--space-cadet);
 		 margin: 1em 0em 0em 0em;

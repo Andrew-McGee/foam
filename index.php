@@ -58,7 +58,7 @@
 				<!-- Side Vertical Menus - have a seperate menu for each section-->
 				<div class="ui left fixed compact vertical inverted spacecadet menu">
 
-					<a class="item" href="/newest_view.php"><i class="meteor icon"></i>Newest</a>
+					<a class="active item" href="/newest_view.php"><i class="meteor icon"></i>Newest</a>
 					<a class="item" href="/recent_view.php"><i class="clock icon"></i>Recent</a>
 					<a class="item" href="/artists_view.php"><i class="user icon"></i>Artists</a>
 					<a class="item" href="/albums_view.php"><i class="record vinyl icon"></i>Albums</a>

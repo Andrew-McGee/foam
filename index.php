@@ -75,7 +75,7 @@
 					<div class="item">
 						<h1 class="ui small dim header">Stats</h1>
 						<?php
-						echo '<div class="ui grid container">';
+						echo '<div class="ui grid">';
 							echo '<div class="two column row">';
 							echo '<div class="ui column">Albums: </div><div class="ui column">'. $stats[albums].'</div>';
 							echo '</div><div class="two column row">';

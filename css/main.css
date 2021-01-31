@@ -125,41 +125,7 @@
      .ui.inverted.spacecadet.segment {
        background-color: var(--space-cadet) !important;
        color: #A5A5A5 !important;
-     }
-
-     .ui.inverted.manatee.segment {
-       background-color: var(--manatee) !important;
-       color: whitesmoke !important;
-     }
-
-     .ui.inverted.smoke.segment {
-       background-color: whitesmoke !important;
-       color: #050505 !important;
 			 padding: 3em 5em 3em 5em !important;
 			 margin: 2em !important;
-			 font-size: 1.15rem !important;
-     }
-
-     .ui.inverted.space.segment {
-       background-color: var(--space-cadet) !important;
-       color: #D0D5D5 !important;
-			 padding: 3em 5em 3em 5em !important;
-			 margin: 2em !important;
-			 font-size: 1rem !important;
-     }
-
-     .ui.inverted.rspace.segment {
-       background-color: var(--space-cadet) !important;
-       color: #A5A5A5 !important;
-			 padding: 3em 5em 3em 5em !important;
-			 margin: 2rem 2rem 0rem 18rem !important;
-			 font-size: 1.15rem !important;
-     }
-
-     .ui.inverted.lspace.segment {
-       background-color: var(--space-cadet) !important;
-       color: #A5A5A5 !important;
-			 padding: 3em 5em 3em 5em !important;
-			 margin: 2rem 18rem 0rem 2rem !important;
 			 font-size: 1.15rem !important;
      }

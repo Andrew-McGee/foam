@@ -67,7 +67,7 @@
 					<a class="item" href="/favourites_view.php"><i class="star icon"></i>Favourites</a>
 				</div>
 
-				<div class="ui segment">
+				<div class="ui inverted spacecadet segment">
 					<h1 class="ui small header">Stats</h1>
 					<?php
 					echo '<p><br>Albums: '. $stats[albums];

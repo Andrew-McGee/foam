@@ -75,12 +75,11 @@
 					<div class="item">
 						<h1 class="ui small dim header">Stats</h1>
 						<?php
-						echo '<p>Albums: '. $stats[albums];
+						echo '<br>Albums: '. $stats[albums];
 						echo '<br>Artists: '. $stats[artists];
 						echo '<br>Tracks: '. $stats[songs];
 						echo '<br>Genres: '. $stats[genres];
 						echo '<br>Playlists: '. $stats[playlists];
-						echo '</p>';
 						?>
 					</div>
 				</div>

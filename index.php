@@ -43,7 +43,9 @@
 			<h1 class="ui inverted yellow header">
       foam
 			</h1>
-			<div class="ui tiny icon input">
+		</div>
+		<div class="item">
+			<div class="ui mini icon input">
 			  <input type="text" placeholder="Search...">
 			  <i class="search link icon"></i>
 			</div>

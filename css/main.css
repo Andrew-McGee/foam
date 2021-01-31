@@ -95,8 +95,8 @@
      .ui.inverted.spacecadet.segment {
        background-color: var(--space-cadet) !important;
        color: #A5A5A5 !important;
-			 padding: 3em 5em 3em 5em !important;
-			 margin: 2em !important;
+			 padding: 3em 2em 3em 2em !important;
+			 margin: 8em !important;
 			 font-size: 1.15rem !important;
      }
 

@@ -62,7 +62,7 @@
 			<div class="ui container"> <!-- Container to constrain width of Vertical Menu -->
 
 				<!-- Side Vertical Menus - have a seperate menu for each section-->
-				<div class="ui left fixed compact vertical inverted sidebar menu">
+				<div class="ui left fixed compact vertical inverted spacecadet menu">
 
 					<a class="active item" href="/newest_view.php"><i class="meteor icon"></i>Newest</a>
 					<a class="item" href="/recent_view.php"><i class="clock icon"></i>Recent</a>

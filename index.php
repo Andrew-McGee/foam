@@ -62,7 +62,7 @@
 			<div class="ui container"> <!-- Container to constrain width of Vertical Menu -->
 
 				<!-- Side Vertical Menus - have a seperate menu for each section-->
-				<div class="ui left fixed compact vertical inverted spacecadet menu">
+				<div class="ui left fixed compact vertical inverted sidebar menu">
 
 					<a class="active item" href="/newest_view.php"><i class="meteor icon"></i>Newest</a>
 					<a class="item" href="/recent_view.php"><i class="clock icon"></i>Recent</a>
@@ -73,15 +73,15 @@
 					<a class="item" href="/favourites_view.php"><i class="star icon"></i>Favourites</a>
 
 					<div class="item">
-					<h1 class="ui small dim header">Stats</h1>
-					<?php
-					echo '<p><br>Albums: '. $stats[albums];
-					echo '<br>Artists: '. $stats[artists];
-					echo '<br>Tracks: '. $stats[songs];
-					echo '<br>Genres: '. $stats[genres];
-					echo '<br>Playlists: '. $stats[playlists];
-					echo '</p>';
-					?>
+						<h1 class="ui small dim header">Stats</h1>
+						<?php
+						echo '<p>Albums: '. $stats[albums];
+						echo '<br>Artists: '. $stats[artists];
+						echo '<br>Tracks: '. $stats[songs];
+						echo '<br>Genres: '. $stats[genres];
+						echo '<br>Playlists: '. $stats[playlists];
+						echo '</p>';
+						?>
 					</div>
 				</div>
 

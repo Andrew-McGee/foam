@@ -37,26 +37,9 @@
 		a.foot:active { color: gold; text-decoration: none; }
 		a.foot:hover { color: gold; text-decoration: underline; }
 
-		.main.container {
-		 margin: 3em 0em;
-		}
-
-		.righthand.container {
-			margin: 2em !important;
-			padding: 1.5em 1.5em;
-		}
-
 		.ui.footer.segment {
 		 margin: 0em;
 		 padding: 5em 0em;
-		}
-
-		.ui.ribbon.label {
-		  margin: 0rem 4.75rem -2rem;
-		}
-
-		.ui.circular.label {
-		  margin: 0rem;
 		}
 
 		.ui.vertical.menu .item > i.icon.left {

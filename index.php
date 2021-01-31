@@ -82,7 +82,7 @@
 			</div> <!-- Close container -->
 		</div> <!-- End of Column 1 -->
 
-    <div class="ui thirteen wide column"><!-- START of page column 2 - middle main content -->
+    <div class="ui thirteen wide column"><!-- START of main column 2 -->
 		  <div class="ui inverted manatee segment">
 			  <div class="ui inverted space segment">
 			    <h1 class="ui smoke header">Welcome to foam</h1>
@@ -124,7 +124,7 @@
 					</p>
 			  </div>
 		  </div>
-	  </div><!-- END of page column 2 -->
+	  </div><!-- END of main column 2 -->
 	</div>
 <!-- Start the footer -->
   <div class="ui inverted spacecadet vertical footer segment">

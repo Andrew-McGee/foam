@@ -38,7 +38,7 @@
 
 <body>
 <!-- Start the header -->
-<div class="ui fixed inverted top massive text menu">
+<div class="ui fixed inverted top large text menu">
 		<div class="item">
 			<h1 class="ui inverted yellow header">
       foam

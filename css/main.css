@@ -59,8 +59,8 @@
 		 .ui.header.smoke {color: whitesmoke;}
 		 .ui.header.dim {color: #A5A5A5 !important;}
 
-     .ui.inverted.amaranth.menu {
-       background-color: var(--amaranth-red) !important;
+     .ui.inverted.top.menu {
+       background-color: var(--space-cadet) !important;
        color: #A5A5A5 !important;
 			 padding: 0em 2em;
      }

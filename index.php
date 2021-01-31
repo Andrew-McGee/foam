@@ -38,11 +38,15 @@
 
 <body>
 <!-- Start the header -->
-<div class="ui fixed inverted amaranth massive text menu">
+<div class="ui fixed inverted top massive text menu">
 		<div class="item">
 			<h1 class="ui inverted yellow header">
       foam
 			</h1>
+			<div class="ui icon input">
+			  <input type="text" placeholder="Search...">
+			  <i class="search icon"></i>
+			</div>
 		</div>
   	<div class="right item">
 			A Fomantic Ampache web player.

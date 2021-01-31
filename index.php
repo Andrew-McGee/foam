@@ -71,9 +71,8 @@
 					<a class="item" href="/tracks_view.php"><i class="music icon"></i>Tracks</a>
 					<a class="item" href="/playlists_view.php"><i class="stream icon"></i>Playlists</a>
 					<a class="item" href="/favourites_view.php"><i class="star icon"></i>Favourites</a>
-				</div>
 
-				<div class="ui inverted spacecadet segment">
+					<div class="item">
 					<h1 class="ui small dim header">Stats</h1>
 					<?php
 					echo '<p><br>Albums: '. $stats[albums];
@@ -83,6 +82,7 @@
 					echo '<br>Playlists: '. $stats[playlists];
 					echo '</p>';
 					?>
+					</div>
 				</div>
 
 			</div> <!-- Close container -->

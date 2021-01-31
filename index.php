@@ -76,10 +76,10 @@
 						<h1 class="ui small dim header">Stats</h1>
 						<?php
 							echo 'Albums: '. $stats[albums];
-							echo 'Artists: '. $stats[artists];
-							echo 'Tracks: '. $stats[songs];
-							echo 'Genres: '. $stats[genres];
-							echo 'Playlists: '. $stats[playlists];
+							echo '<br>Artists: '. $stats[artists];
+							echo '<br>Tracks: '. $stats[songs];
+							echo '<br>Genres: '. $stats[genres];
+							echo '<br>Playlists: '. $stats[playlists];
 						?>
 					</div>
 				</div>

@@ -129,3 +129,16 @@
 			 margin: 2em !important;
 			 font-size: 1.15rem !important;
      }
+
+     .ui.inverted.manatee.segment {
+       background-color: var(--manatee) !important;
+       color: whitesmoke !important;
+     }
+
+     .ui.inverted.space.segment {
+       background-color: var(--space-cadet) !important;
+       color: #D0D5D5 !important;
+			 padding: 3em 5em 3em 5em !important;
+			 margin: 2em !important;
+			 font-size: 1rem !important;
+     }

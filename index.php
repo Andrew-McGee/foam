@@ -58,8 +58,8 @@
 				<!-- Side Vertical Menus - have a seperate menu for each section-->
 				<div class="ui left fixed compact vertical inverted spacecadet menu">
 
+					<a class="item" href="/newest_view.php"><i class="meteor icon"></i>Newest</a>
 					<a class="item" href="/recent_view.php"><i class="clock icon"></i>Recent</a>
-					<a  class="item" href="/newest_view.php"><i class="meteor icon"></i>Newest</a>
 					<a class="item" href="/artists_view.php"><i class="user icon"></i>Artists</a>
 					<a class="item" href="/albums_view.php"><i class="record vinyl icon"></i>Albums</a>
 					<a class="item" href="/tracks_view.php"><i class="music icon"></i>Tracks</a>
@@ -68,7 +68,7 @@
 				</div>
 
 				<div class="ui inverted spacecadet segment">
-					<h1 class="ui small header">Stats</h1>
+					<h1 class="ui small dim header">Stats</h1>
 					<?php
 					echo '<p><br>Albums: '. $stats[albums];
 					echo '<br>Artists: '. $stats[artists];
@@ -85,28 +85,15 @@
     <div class="ui thirteen wide column"><!-- START of main column 2 -->
 		  <div class="ui inverted manatee segment">
 			  <div class="ui inverted space segment">
-			    <h1 class="ui smoke header">Welcome to foam</h1>
-			    <p>This is some placeholder text that will eventually be replaced by containers with album, artist or song information.</p>
-					<p>Here is a response from Ampache API handshake:</p>
-					<p>
+			    <h1 class="ui smoke header">Newest Albums</h1>
+
 					<?php
-
-					echo '<p><pre>auth= '. $response[auth];
-					echo '<br>api= '. $response[api];
-					echo '<br>albums= '. $response[albums];
-					echo '<br>artists= '. $response[artists];
-					echo '<br>genres= '. $response[genres];
-					echo '<br>playlists= '. $response[playlists];
-					echo '</pre></p>';
-
-					echo '<p>Now here is a response from Ampache recent API (Albums):</p>';
-
-					$cnt = 0;
-
+					$cnt = 0; //Reset our counter to build grid of 24 entries
 					echo "<div class='ui six column grid container'>";
-
+					//Loop 4 rows
 					for ($i = 1; $i <=4; $i++){
 						echo "<div class='ui row'>";
+						//Loop 6 columns
 						for ($j = 1; $j <=6; $j++){
 							echo "<div class='ui column'>";
 							echo "<img class='ui small image' src='" . $recent[album][$cnt][art] . "' >";
@@ -114,14 +101,11 @@
 							echo '<br>'. $recent[album][$cnt][artist][name];
 							echo '<br>'. $recent[album][$cnt][year];
 							echo "</center></div>";
-							$cnt++;
+							$cnt++; //Increment our counter
 						}
 						echo "</div>";
 					}
-
-
 					?>
-					</p>
 			  </div>
 		  </div>
 	  </div><!-- END of main column 2 -->

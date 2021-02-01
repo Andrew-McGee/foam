@@ -14,9 +14,6 @@
 		:root {
 			--space-cadet: hsla(235, 21%, 21%, 1);
 			--manatee: #556177;
-			--alice-blue: hsla(197, 24%, 94%, 1);
-			--imperial-red: hsla(353, 86%, 54%, 1);
-			--amaranth-red: hsla(350, 96%, 43%, 1);
 		}
 		body {
 		 background-color: var(--manatee);
@@ -24,7 +21,7 @@
 
 		p {
 			font-family: 'Noto Sans SC', sans-serif;
-			font-size: 1.15rem !important;
+			font-size: 1rem !important;
 		}
 
 		a:link { color: gold; text-decoration: none; }
@@ -37,11 +34,11 @@
 		a.foot:active { color: gold; text-decoration: none; }
 		a.foot:hover { color: gold; text-decoration: underline; }
 
-		.ui.footer.segment {
+/*		.ui.footer.segment {
 		 margin: 0em;
 		 padding: 5em 0em;
 		}
-
+*/
 		.ui.vertical.menu .item > i.icon.left {
 		    float: none;
 		    margin: 0em 0.35714286em 0em 0em;
@@ -61,7 +58,6 @@
 /******************************************
   Add Custom Colours to Semantic Components
 *******************************************/
-     .ui.header.white {color: white;}
 		 .ui.header.smoke {color: whitesmoke;}
 		 .ui.header.dim {color: #A5A5A5 !important;}
 
@@ -86,7 +82,7 @@
 			 background-color: var(--manatee) !important;
 		 }
 
-		 .ui.menu .header.item {
+/*		 .ui.menu .header.item {
 			 color: #FFFFFF !important;
 		 }
 
@@ -97,7 +93,7 @@
 		 .ui.menu .item {
 			 color: #A5A5A5 !important;
 		 }
-
+*/
      .ui.inverted.spacecadet.segment {
        background-color: var(--space-cadet) !important;
        color: #A5A5A5 !important;

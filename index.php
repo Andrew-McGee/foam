@@ -2,11 +2,11 @@
 	include 'includes/callAPI.php';
 
 	$get_data = handshakeAPI();
-	$stats = json_decode($get_data, true);
+	$hshake = json_decode($get_data, true);
 
-	$auth=$stats[auth];
+	$auth=$hshake[auth];
 
-	$get_data = recentAPI($auth);
+	$get_data = statsAPI($auth, 'recent');
 	$recent = json_decode($get_data, true);
 
 ?>

@@ -56,21 +56,13 @@ function active_menu($page, $hshake){
   // Build the stats section below the menu
   echo '<h1 class="ui small dim header">Stats</h1>';
 
-  echo '<div class="ui mini horizontal statistic">';
-    echo '<div class="label">Albums&nbsp;</div><div class="value">' . $hshake[albums] . '</div>';
-  echo '</div>';
-  echo '<br><div class="ui mini horizontal statistic">';
-    echo '<div class="label">Artists&nbsp;</div><div class="value">' . $hshake[artists] . '</div>';
-  echo '</div>';
-  echo '<br><div class="ui mini horizontal statistic">';
-    echo '<div class="label">Songs&nbsp;</div><div class="value">' . $hshake[songs] . '</div>';
-  echo '</div>';
-  echo '<br><div class="ui mini horizontal statistic">';
-    echo '<div class="label">Genres&nbsp;</div><div class="value">' . $hshake[genres] . '</div>';
-  echo '</div>';
-  echo '<br><div class="ui mini horizontal statistic">';
-    echo '<div class="label">Playlists&nbsp;</div><div class="value">' . $hshake[playlists] . '</div>';
-  echo '</div>';
+  echo '<table class="ui very basic table"><tbody>';
+    echo '<tr><td>Albums</td><td>' . $hshake[albums] . '</td></tr>';
+    echo '<tr><td>Artists</td><td>' . $hshake[artists] . '</td></tr>';
+    echo '<tr><td>Songs</td><td>' . $hshake[songs] . '</td></tr>';
+    echo '<tr><td>Genres</td><td>' . $hshake[genres] . '</td></tr>';
+    echo '<tr><td>Playlists</td><td>' . $hshake[playlists] . '</td></tr>';
+  echo '</tbody></table>';
 
   return;
 }

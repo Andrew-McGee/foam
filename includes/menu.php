@@ -57,19 +57,19 @@ function active_menu($page, $hshake){
   echo '<h1 class="ui small dim header">Stats</h1>';
 
   echo '<div class="ui mini horizontal statistic">';
-    echo '<div class="label">Albums<div class="value">' . $hshake[albums] . '</div></div>';
+    echo '<div class="label">Albums</div><div class="value">' . $hshake[albums] . '</div>';
   echo '</div>'
   echo '<div class="ui mini horizontal statistic">';
-    echo '<div class="label">Artists<div class="value">' . $hshake[artists] . '</div></div>';
+    echo '<div class="label">Artists</div><div class="value">' . $hshake[artists] . '</div>';
   echo '</div>'
   echo '<div class="ui mini horizontal statistic">';
-    echo '<div class="label">Songs<div class="value">' . $hshake[songs] . '</div></div>';
+    echo '<div class="label">Songs</div><div class="value">' . $hshake[songs] . '</div>';
   echo '</div>'
   echo '<div class="ui mini horizontal statistic">';
-    echo '<div class="label">Genres<div class="value">' . $hshake[genres] . '</div></div>';
+    echo '<div class="label">Genres</div><div class="value">' . $hshake[genres] . '</div>';
   echo '</div>'
   echo '<div class="ui mini horizontal statistic">';
-    echo '<div class="label">Playlists<div class="value">' . $hshake[playlists] . '</div></div>';
+    echo '<div class="label">Playlists</div><div class="value">' . $hshake[playlists] . '</div>';
   echo '</div>'
 
   return;

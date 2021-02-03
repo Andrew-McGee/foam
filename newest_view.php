@@ -6,7 +6,7 @@
 
 	$auth=$hshake[auth];
 
-	$get_data = statsAPI($auth, 'recent');
+	$get_data = statsAPI($auth, 'newest');
 	$results = json_decode($get_data, true);
 
 ?>

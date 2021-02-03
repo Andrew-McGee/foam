@@ -43,7 +43,8 @@
 						//Loop 6 columns
 						for ($j = 1; $j <=6; $j++){
 							echo "<div class='ui column'>";
-							echo "<img class='ui small image' src='" . $results[album][$cnt][art] . "' >";
+							echo '<a href="album_view?uid=>' . $results[album][$cnt][id] . '">';
+							echo "<img class='ui small image' src='" . $results[album][$cnt][art] . "' ></a>";
 							echo '<center><br>'. $results[album][$cnt][name];
 							echo '<br>'. $results[album][$cnt][artist][name];
 							echo '<br>'. $results[album][$cnt][year];

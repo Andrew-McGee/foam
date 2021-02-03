@@ -24,6 +24,30 @@ function statsAPI($auth, $filter){
 }
 
 //
+// Album API call to return details on specific album UID
+//
+function albumAPI($auth, $uid){
+
+  $call = '?action=album&filter=' . $uid;
+
+  $result = c_init($auth, $call);
+
+  return $result;
+}
+
+//
+// Albumsongs API call to return tracks on specific album UID
+//
+function albumsongsAPI($auth, $uid){
+
+  $call = '?action=album_songs&filter=' . $uid;
+
+  $result = c_init($auth, $call);
+
+  return $result;
+}
+
+//
 // Generic CURL stuff used by the various calls to call the Ampache API.
 //
 function c_init($auth, $call){

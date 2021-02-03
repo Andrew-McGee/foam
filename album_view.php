@@ -62,6 +62,7 @@
 							echo '<div class="ui twelve wide column">';
 								echo '<div class="ui huge smoke header">' . $albm_results[name] . '</div>';
 								echo '<button class="ui tiny grey button"><i class="play icon"></i>PLAY</button>';
+								echo '<button class="ui tiny grey button"><i class="random icon"></i>SHUFFLE PLAY</button>';
 								echo '&nbsp;<i class="ellipsis vertical icon"></i>';
 								//Let's make the table for the song list
 								echo '<table class="ui selectable inverted black table">';

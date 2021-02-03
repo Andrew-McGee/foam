@@ -56,7 +56,7 @@ function active_menu($page, $hshake){
   // Build the stats section below the menu
   echo '<h1 class="ui small dim header">Stats</h1>';
 
-  echo '<table class="ui very basic table"><tbody>';
+  echo '<table class="ui very compact very basic table"><tbody>';
     echo '<tr><td>Albums</td><td>' . $hshake[albums] . '</td></tr>';
     echo '<tr><td>Artists</td><td>' . $hshake[artists] . '</td></tr>';
     echo '<tr><td>Songs</td><td>' . $hshake[songs] . '</td></tr>';

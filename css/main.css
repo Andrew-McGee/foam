@@ -17,6 +17,7 @@
 		}
 		body {
 		 background-color: var(--manatee);
+		 color: #A5A5A5 !important;
 		}
 
 		p {

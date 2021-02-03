@@ -37,15 +37,40 @@
     <div class="ui thirteen wide column"><!-- START of main column 2 -->
 		  <div class="ui inverted manatee segment"> <!-- START of content container -->
 			  <div class="ui inverted space segment">
-			    <h1 class="ui smoke header">Album Title</h1>
 					<?php
 						echo '<div class="ui two column grid">'; //Two columns for album view - art on left, tracks on right.
-							echo '<div class="ui three wide sidemenu column">';
 
-							echo "<img class='ui large image' src='" . $albm_results[art] . "' >";
-							echo '<br>Songs: ' . $albm_results[songcount];
+							// Left column for album art and stats
+							echo '<div class="ui three wide column">';
+								echo "<img class='ui huge image' src='" . $albm_results[art] . "' >";
+								echo '<br>Artist: ' . $albm_results[artist];
+								echo '<br>Songs: ' . $albm_results[songcount];
+								echo '<br>Time: ' . $albm_results[time];
+								echo '<br>Year: ' . $albm_results[year];
+							echo '</div>'; // End of 1st column
 
-							echo '</div>';
+							// Right column for album songs in table
+							echo '<div class="ui thirteen wide column">';
+								echo '<h1 class="ui large smoke header">' . $albm_results[name] . '</h1>';
+								//Let's make the table for the song list
+								echo '<table class="ui very basic table">';
+								echo '<thead><tr>';
+								echo '<th>Title</th><th>Artist</th><th>Time</th><th>DL</th>';
+								echo '</tr></thead>';
+								echo '<tbody>';
+								//Loop through the songs to display each on a table row
+								$cnt = $albm_results[songcount]; //Set counter to number of songs on album
+								for ($i = 0; $i < $cnt; $i++){
+									echo '<tr>';
+									echo '<td>' . $song_results[song][$cnt][title] . '</td>';
+									echo '<td>' . $song_results[song][$cnt][artist][name] . '</td>';
+									echo '<td>' . $song_results[song][$cnt][time] . '</td>';
+									echo '<td><i class="download icon"></i></td>';
+									echo '</tr>';
+								}
+								echo '</tbody></table>';
+							echo '</div>'; // End of 2nd column
+
 						echo '</div>'; //End of content grid.
 					?>
 			  </div>

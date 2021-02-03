@@ -86,10 +86,15 @@
 			 color: #A5A5A5 !important;
 		 }
 
-		 .ui.statistic .label .value {
+		 .ui.statistic .label {
 			 color: #A5A5A5 !important;
 			 margin: 1em 2em 0em 2em;
 		 }
+
+		 .ui.statistic .value {
+			 color: #A5A5A5 !important;
+		 }
+
 
      .ui.inverted.spacecadet.segment {
        background-color: var(--space-cadet) !important;

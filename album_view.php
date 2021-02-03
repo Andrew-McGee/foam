@@ -47,6 +47,15 @@
 								echo '<br>' . $albm_results[year];
 								echo '<br>' . $albm_results[songcount] . ' songs';
 								$result = sec2mins($albm_results[time]);
+								if ($result[hours] > 0) {
+									if ($result[hours] > 1) {
+										echo '<br>' . $result[hours] . ' hours, ' . $result[minutes] . ' minutes';
+									} else {
+										echo '<br>' . $result[hours] . ' hour, ' . $result[minutes] . ' minutes';
+									}
+								} else {
+									echo '<br>' . $result[minutes] . ' minutes';
+								}
 								echo '<br>' . $result[hours] . ' hours, ' . $result[minutes] . ' minutes';
 							echo '</div>'; // End of 1st column
 

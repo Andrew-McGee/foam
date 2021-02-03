@@ -56,7 +56,6 @@
 								} else {
 									echo '<br>' . $result[minutes] . ' minutes';
 								}
-								echo '<br>' . $result[hours] . ' hours, ' . $result[minutes] . ' minutes';
 							echo '</div>'; // End of 1st column
 
 							// Right column for album songs in table

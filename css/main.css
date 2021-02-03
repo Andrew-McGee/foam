@@ -94,6 +94,11 @@
 			 margin: 1em 2em 0em 3em !important;
 		 }
 
+		 .ui.inverted.table {
+			 color: #A5A5A5 !important;
+			 background-color: var(--space-cadet) !important;
+		 }
+
      .ui.inverted.spacecadet.segment {
        background-color: var(--space-cadet) !important;
        color: #A5A5A5 !important;

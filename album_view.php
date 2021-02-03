@@ -72,7 +72,7 @@
 								for ($i = 0; $i < $cnt; $i++){
 									echo '<tr>';
 									echo '<td>' . $song_results[song][$i][track] . '</td>';
-									echo '<td>' . $song_results[song][$i][title] . '</td>';
+									echo '<td><strong>' . $song_results[song][$i][title] . '</strong></td>';
 									echo '<td>' . $song_results[song][$i][artist][name] . '</td>';
 									$result = sec2mins($song_results[song][$i][time]);
 									echo '<td>' . $result[minutes] . ':' . sprintf("%02d", $result[seconds]) . '</td>';

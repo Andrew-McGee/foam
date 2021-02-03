@@ -41,17 +41,17 @@
 						echo '<div class="ui two column grid">'; //Two columns for album view - art on left, tracks on right.
 
 							// Left column for album art and stats
-							echo '<div class="ui three wide column">';
-								echo "<img class='ui huge image' src='" . $albm_results[art] . "' >";
-								echo '<br>Artist: ' . $albm_results[artist];
+							echo '<div class="ui four wide column">';
+								echo "<img class='ui massive image' src='" . $albm_results[art] . "' >";
+								echo '<br>Artist: ' . $albm_results[artist][name];
 								echo '<br>Songs: ' . $albm_results[songcount];
 								echo '<br>Time: ' . $albm_results[time];
 								echo '<br>Year: ' . $albm_results[year];
 							echo '</div>'; // End of 1st column
 
 							// Right column for album songs in table
-							echo '<div class="ui thirteen wide column">';
-								echo '<h1 class="ui large smoke header">' . $albm_results[name] . '</h1>';
+							echo '<div class="ui twelve wide column">';
+								echo '<div class="ui huge smoke header">' . $albm_results[name] . '</div>';
 								//Let's make the table for the song list
 								echo '<table class="ui very basic table">';
 								echo '<thead><tr>';

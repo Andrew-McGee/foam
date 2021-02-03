@@ -59,7 +59,10 @@
   Add Custom Colours to Semantic Components
 *******************************************/
 		 .ui.header.smoke {color: whitesmoke;}
-		 .ui.header.dim {color: #A5A5A5 !important;}
+		 .ui.header.dim {
+			 color: #A5A5A5 !important;
+			 margin: 1em 3em 0em 2em !important;
+		 }
 
      .ui.inverted.top.menu {
        background-color: var(--space-cadet) !important;
@@ -88,13 +91,8 @@
 
 		 .ui.compact.table {
 			 color: #A5A5A5 !important;
-			 margin: 1em 2.5em 0em 2em;
+			 margin: 1em 3em 0em 2em !important;
 		 }
-
-		 .ui.statistic .value {
-			 color: #A5A5A5 !important;
-		 }
-
 
      .ui.inverted.spacecadet.segment {
        background-color: var(--space-cadet) !important;

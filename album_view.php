@@ -66,7 +66,8 @@
 									echo '<td>' . $song_results[song][$i][track] . '</td>';
 									echo '<td>' . $song_results[song][$i][title] . '</td>';
 									echo '<td>' . $song_results[song][$i][artist][name] . '</td>';
-									echo '<td>' . $song_results[song][$i][time] . '</td>';
+									$result = sec2mins($song_results[song][$i][time]);
+									echo '<td>' . $result[minutes] . ':' . $result[seconds] . '</td>';
 									echo '<td><i class="download icon"></i></td>';
 									echo '</tr>';
 								}

@@ -53,7 +53,7 @@
 							echo '<div class="ui twelve wide column">';
 								echo '<div class="ui huge smoke header">' . $albm_results[name] . '</div>';
 								//Let's make the table for the song list
-								echo '<table class="ui very basic table">';
+								echo '<table class="ui selectable inverted black table">';
 								echo '<thead><tr>';
 								echo '<th>Title</th><th>Artist</th><th>Time</th><th>DL</th>';
 								echo '</tr></thead>';

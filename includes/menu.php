@@ -2,6 +2,8 @@
 
 <?php
 
+echo '<div class="ui left compact vertical inverted side menu">';
+
 // Function to build the correct active menu item based on which page was passed.
 function active_menu($page){
   if ($page == 'recent') {
@@ -58,6 +60,7 @@ function active_menu($page){
 	echo '<br>Tracks: '. $hshake[songs];
 	echo '<br>Genres: '. $hshake[genres];
 	echo '<br>Playlists: '. $hshake[playlists];
+
   echo '</div></div>';
 
   return;

@@ -1,7 +1,7 @@
 <?php
 	include 'includes/callAPI.php';
 
-	$uid = $_GET["uid"]
+	$uid = $_GET["uid"];
 
 	$get_data = handshakeAPI();
 	$hshake = json_decode($get_data, true);

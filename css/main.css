@@ -75,7 +75,7 @@
      .ui.inverted.side.menu {
        background-color: var(--space-cadet) !important;
 			 color: #A5A5A5 !important;
-			 margin: 6em 0em 0em 2em;
+			 margin: 2em 0em 0em 2em;
      }
 
 		 .ui.menu .active.item {

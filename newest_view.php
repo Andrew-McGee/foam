@@ -57,18 +57,7 @@
 		  </div>
 	  </div><!-- END of main column 2 -->
 	</div>
-<!-- Start the footer -->
-  <div class="ui inverted spacecadet vertical footer segment">
-    <div class="ui center aligned container">
-			<h1 class="ui inverted yellow header">foam</h1>
-    </div>
-  </div>
 
-</body>
-<!-- JS to initialise dropdowns-->
-<script>
-$('.ui.dropdown')
-  .dropdown()
-;
-</script>
-</html>
+	<?php
+		include 'includes/footer.php';
+	?>

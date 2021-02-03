@@ -62,9 +62,9 @@
 								$cnt = $albm_results[songcount]; //Set counter to number of songs on album
 								for ($i = 0; $i < $cnt; $i++){
 									echo '<tr>';
-									echo '<td>' . $song_results[song][$cnt][title] . '</td>';
-									echo '<td>' . $song_results[song][$cnt][artist][name] . '</td>';
-									echo '<td>' . $song_results[song][$cnt][time] . '</td>';
+									echo '<td>' . $song_results[song][$i][title] . '</td>';
+									echo '<td>' . $song_results[song][$i][artist][name] . '</td>';
+									echo '<td>' . $song_results[song][$i][time] . '</td>';
 									echo '<td><i class="download icon"></i></td>';
 									echo '</tr>';
 								}

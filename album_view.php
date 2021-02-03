@@ -67,7 +67,7 @@
 									echo '<td>' . $song_results[song][$i][title] . '</td>';
 									echo '<td>' . $song_results[song][$i][artist][name] . '</td>';
 									$result = sec2mins($song_results[song][$i][time]);
-									echo '<td>' . $result[minutes] . ':' . sprintf("%02d, $result[seconds]) . '</td>';
+									echo '<td>' . $result[minutes] . ':' . sprintf("%02d", $result[seconds]) . '</td>';
 									echo '<td><i class="download icon"></i></td>';
 									echo '</tr>';
 								}

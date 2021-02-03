@@ -64,8 +64,8 @@
 				<!-- Side Vertical Menus - have a seperate menu for each section-->
 				<div class="ui left compact vertical inverted side menu">
 
-					<a class="active item" href="/index.php"><i class="clock icon"></i>Recent</a>
-					<a class="item" href="/newest_view.php"><i class="meteor icon"></i>Newest</a>
+					<a class="item" href="/index.php"><i class="clock icon"></i>Recent</a>
+					<a class="active item" href="/newest_view.php"><i class="meteor icon"></i>Newest</a>
 					<a class="item" href="/artists_view.php"><i class="user icon"></i>Artists</a>
 					<a class="item" href="/albums_view.php"><i class="record vinyl icon"></i>Albums</a>
 					<a class="item" href="/tracks_view.php"><i class="music icon"></i>Tracks</a>
@@ -90,7 +90,7 @@
     <div class="ui thirteen wide column"><!-- START of main column 2 -->
 		  <div class="ui inverted manatee segment">
 			  <div class="ui inverted space segment">
-			    <h1 class="ui smoke header">Recent Albums</h1>
+			    <h1 class="ui smoke header">Newest Albums</h1>
 
 					<?php
 					$cnt = 0; //Reset our counter to build grid of 24 entries

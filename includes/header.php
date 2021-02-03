@@ -1,65 +1,46 @@
 <!-- Header for McGee Technology - Copyright 2018-2020 McGee Technology
      Mostly the meta data for SEO and CSS stylesheets -->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
 
-<!-- Standard Meta -->
-<meta charset="utf-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-<meta name="google-site-verification" content="OHjKANI42quW0tLq927uOg3UAPciUbgJsWmirTpVXPs" />
+	<title>foam</title>
+	<meta charset="UTF-8">
+	<meta name="Generator" content="Atom">
+	<meta name="Author" content="Andrew McGee">
+	<meta name="Keywords" content="Ampache, Fomantic, media player, web player">
+	<meta name="Description" content="A Fomantic UI and Ampache web player frontend.">
 
-<link href="/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<!-- favicon stuff -->
+	<link rel="icon" type="image/x-icon" sizes="16x16" href="/favicon.ico"/>
 
-  <!-- Site Properties using Semantic -->
-  <link rel="stylesheet" type="text/css" href="semantic/components/reset.css">
-  <link rel="stylesheet" type="text/css" href="semantic/components/site.css">
+<!-- JQuery from CDN -->
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 
-  <link rel="stylesheet" type="text/css" href="semantic/components/container.css">
-  <link rel="stylesheet" type="text/css" href="semantic/components/grid.css">
-  <link rel="stylesheet" type="text/css" href="semantic/components/header.css">
-  <link rel="stylesheet" type="text/css" href="semantic/components/image.css">
-  <link rel="stylesheet" type="text/css" href="semantic/components/menu.css">
+<!-- Fomantic UI -->
+	<link rel="stylesheet" type="text/css" href="dist/semantic.min.css">
+	<script src="dist/semantic.min.js"></script>
 
-  <link rel="stylesheet" type="text/css" href="semantic/components/divider.css">
-  <link rel="stylesheet" type="text/css" href="semantic/components/dropdown.css">
-  <link rel="stylesheet" type="text/css" href="semantic/components/segment.css">
-  <link rel="stylesheet" type="text/css" href="semantic/components/button.css">
-  <link rel="stylesheet" type="text/css" href="semantic/components/list.css">
-  <link rel="stylesheet" type="text/css" href="semantic/components/icon.css">
-  <link rel="stylesheet" type="text/css" href="semantic/components/sidebar.css">
-  <link rel="stylesheet" type="text/css" href="semantic/components/transition.css">
-  <link rel="stylesheet" type="text/css" href="semantic/components/label.css">
-
-  <!-- Custom CSS -->
+<!-- CSS Overrides -->
   <link rel="stylesheet" href="css/main.css" type="text/css" />
+</head>
 
-  <!-- Scripts -->
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-  <script src="semantic/components/visibility.js"></script>
-  <script src="semantic/components/sidebar.js"></script>
-  <script src="semantic/components/transition.js"></script>
-
-  <script>
-  $(document)
-    .ready(function() {
-
-      // fix menu when passed
-      $('.masthead')
-        .visibility({
-          once: false,
-          onBottomPassed: function() {
-            $('.fixed.menu').transition('fade in');
-          },
-          onBottomPassedReverse: function() {
-            $('.fixed.menu').transition('fade out');
-          }
-        })
-      ;
-
-      // create sidebar and attach to menu open
-      $('.ui.sidebar')
-        .sidebar('attach events', '.toc.item')
-      ;
-
-    })
-  ;
-  </script>
+<!-- Start the main body -->
+<body>
+<!-- Start the top menu -->
+<div class="ui fixed inverted top large text menu">
+		<div class="item">
+			<h1 class="ui inverted yellow header">
+      foam
+			</h1>
+		</div>
+		<div class="item">
+			<div class="ui mini icon input">
+			  <input type="text" placeholder="Search...">
+			  <i class="search link icon"></i>
+			</div>
+		</div>
+  	<div class="right item">
+			A Fomantic Ampache web player.
+		</div>
+</div> <!-- End the top menu -->

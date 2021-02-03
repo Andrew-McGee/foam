@@ -23,7 +23,7 @@
 			<!-- Include the side menu code -->
 			<?php
 				include 'includes/menu.php';
-				active_menu('newest');
+				active_menu('newest', $hshake);
 			?>
 
 			</div> <!-- Close container -->

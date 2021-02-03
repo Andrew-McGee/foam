@@ -5,7 +5,7 @@
 echo '<div class="ui left compact vertical inverted side menu">';
 
 // Function to build the correct active menu item based on which page was passed.
-function active_menu($page){
+function active_menu($page, $hshake){
   if ($page == 'recent') {
     echo '<a class="active item" href="index.php"><i class="clock icon"></i>Recent</a>';
   } else {

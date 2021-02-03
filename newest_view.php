@@ -29,7 +29,9 @@
 					<a class="item" href="albums_view.php"><i class="record vinyl icon"></i>Albums</a>
 					<a class="item" href="tracks_view.php"><i class="music icon"></i>Tracks</a>
 					<a class="item" href="playlists_view.php"><i class="stream icon"></i>Playlists</a>
+					<a class="item" href="frequent_view.php"><i class="chart line icon"></i>Frequent</a>
 					<a class="item" href="favourites_view.php"><i class="star icon"></i>Favourites</a>
+					<a class="item" href="random_view.php"><i class="dice icon"></i>Random</a>
 
 					<div class="item">
 						<h1 class="ui small dim header">Stats</h1>

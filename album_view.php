@@ -45,15 +45,15 @@
 								echo "<img class='ui massive image' src='" . $albm_results[art] . "' >";
 								echo '<br>' . $albm_results[artist][name];
 								echo '<br>' . $albm_results[year];
-								echo '<br>' . $albm_results[songcount] . 'songs';
-								echo '<br>' . $albm_results[time] . 'hoours, x minutes';
+								echo '<br>' . $albm_results[songcount] . ' songs';
+								echo '<br>' . $albm_results[time] . ' hours, x minutes';
 							echo '</div>'; // End of 1st column
 
 							// Right column for album songs in table
 							echo '<div class="ui twelve wide column">';
 								echo '<div class="ui huge smoke header">' . $albm_results[name] . '</div>';
 								//Let's make the table for the song list
-								echo '<table class="ui selectable inverted grey table">';
+								echo '<table class="ui selectable inverted black table">';
 								echo '<thead><tr>';
 								echo '<th>#</th><th>Title</th><th>Artist</th><th>Time</th><th>DL</th>';
 								echo '</tr></thead>';

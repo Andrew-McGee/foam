@@ -52,18 +52,17 @@ function active_menu($page, $hshake){
     echo '<a class="item" href="random_view.php"><i class="dice icon"></i>Random</a>';
   }
 
-  // Build the stats section below menu
+  echo '</div>';
+  // Build the stats section below the menu
 
-  echo '<div class="item"><h1 class="ui small dim header">Stats</h1>';
+  echo '<h1 class="ui small dim header">Stats</h1>';
   echo '<div class="ui list">';
   echo '<div class="item">Albums<div class="content">' . $hshake[albums] . '</div></div>';
   echo '<div class="item">Artists<div class="content">' . $hshake[artists] . '</div></div>';
   echo '<div class="item">Songs<div class="content">' . $hshake[songs] . '</div></div>';
   echo '<div class="item">Genres<div class="content">' . $hshake[genres] . '</div></div>';
   echo '<div class="item">Playlists<div class="content">' . $hshake[playlists] . '</div></div>';
-  echo '</div>';  
-
-  echo '</div></div>';
+  echo '</div>';
 
   return;
 }

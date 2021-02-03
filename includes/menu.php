@@ -37,9 +37,9 @@ function active_menu($page){
     echo '<a class="item" href="playlists_view.php"><i class="stream icon"></i>Playlists</a>';
   }
   if ($page == 'frequent') {
-    echo '<a class="active item" href="frequent_view.php"><i class="chart icon"></i>Frequent</a>';
+    echo '<a class="active item" href="frequent_view.php"><i class="chart line icon"></i>Frequent</a>';
   } else {
-    echo '<a class="item" href="frequent_view.php"><i class="chart icon"></i>Frequent</a>';
+    echo '<a class="item" href="frequent_view.php"><i class="chart line icon"></i>Frequent</a>';
   }
   if ($page == 'favourites') {
     echo '<a class="active item" href="favourites_view.php"><i class="star icon"></i>Favourites</a>';

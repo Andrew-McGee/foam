@@ -45,8 +45,8 @@
 							echo "<img class='ui large image' src='" . $albm_results[art] . "' >";
 							echo '<br>Songs: ' . $albm_results[songcount];
 
-							echo '</div>'
-						echo '</div>' //End of content grid.
+							echo '</div>';
+						echo '</div>'; //End of content grid.
 					?>
 			  </div>
 		  </div> <!-- End of the content container -->

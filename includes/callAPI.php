@@ -8,7 +8,7 @@ function handshakeAPI(){
 
   $result = c_init($auth, $call);
 
-  return $result
+  return $result;
 }
 
 //
@@ -20,7 +20,7 @@ function statsAPI($auth, $filter){
 
   $result = c_init($auth, $call);
 
-  return $result
+  return $result;
 }
 
 //

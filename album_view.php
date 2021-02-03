@@ -61,8 +61,8 @@
 							// Right column for album songs in table
 							echo '<div class="ui twelve wide column">';
 								echo '<div class="ui huge smoke header">' . $albm_results[name] . '</div>';
-								echo '<button class="ui small button"><i class="play icon"></i>PLAY</button>';
-								echo '<i class="ellipsis vertical icon"></i>';
+								echo '<button class="ui tiny button"><i class="play icon"></i>PLAY</button>';
+								echo '&nbsp;<i class="ellipsis vertical icon"></i>';
 								//Let's make the table for the song list
 								echo '<table class="ui selectable inverted black table">';
 								echo '<thead><tr>';

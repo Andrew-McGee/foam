@@ -43,10 +43,10 @@
 							// Left column for album art and stats
 							echo '<div class="ui four wide column">';
 								echo "<img class='ui massive image' src='" . $albm_results[art] . "' >";
-								echo '<br>Artist: ' . $albm_results[artist][name];
-								echo '<br>Songs: ' . $albm_results[songcount];
-								echo '<br>Time: ' . $albm_results[time];
-								echo '<br>Year: ' . $albm_results[year];
+								echo '<br>' . $albm_results[artist][name];
+								echo '<br>' . $albm_results[year];
+								echo '<br>' . $albm_results[songcount] . 'songs';
+								echo '<br>' . $albm_results[time] . 'hoours, x minutes';
 							echo '</div>'; // End of 1st column
 
 							// Right column for album songs in table
@@ -55,13 +55,14 @@
 								//Let's make the table for the song list
 								echo '<table class="ui selectable inverted grey table">';
 								echo '<thead><tr>';
-								echo '<th>Title</th><th>Artist</th><th>Time</th><th>DL</th>';
+								echo '<th>#</th><th>Title</th><th>Artist</th><th>Time</th><th>DL</th>';
 								echo '</tr></thead>';
 								echo '<tbody>';
 								//Loop through the songs to display each on a table row
 								$cnt = $albm_results[songcount]; //Set counter to number of songs on album
 								for ($i = 0; $i < $cnt; $i++){
 									echo '<tr>';
+									echo '<td>' . $song_results[song][$i][track] . '</td>';
 									echo '<td>' . $song_results[song][$i][title] . '</td>';
 									echo '<td>' . $song_results[song][$i][artist][name] . '</td>';
 									echo '<td>' . $song_results[song][$i][time] . '</td>';

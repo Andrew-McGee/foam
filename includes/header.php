@@ -1,5 +1,4 @@
-<!-- Header for McGee Technology - Copyright 2018-2020 McGee Technology
-     Mostly the meta data for SEO and CSS stylesheets -->
+<!-- Header for foam - Copyright 2021 Andrew McGee -->
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>

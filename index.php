@@ -20,30 +20,11 @@
 		<div class="ui three wide sidemenu column"><!-- Start of page column 1 - left sidebar -->
 			<div class="ui container"> <!-- Container to constrain width of Vertical Menu -->
 
-				<!-- Side Vertical Menus - have a seperate menu for each section-->
-				<div class="ui left compact vertical inverted side menu">
-
-					<a class="active item" href="index.php"><i class="clock icon"></i>Recent</a>
-					<a class="item" href="newest_view.php"><i class="meteor icon"></i>Newest</a>
-					<a class="item" href="artists_view.php"><i class="user icon"></i>Artists</a>
-					<a class="item" href="albums_view.php"><i class="record vinyl icon"></i>Albums</a>
-					<a class="item" href="tracks_view.php"><i class="music icon"></i>Tracks</a>
-					<a class="item" href="playlists_view.php"><i class="stream icon"></i>Playlists</a>
-					<a class="item" href="frequent_view.php"><i class="chart line icon"></i>Frequent</a>
-					<a class="item" href="favourites_view.php"><i class="star icon"></i>Favourites</a>
-					<a class="item" href="random_view.php"><i class="dice icon"></i>Random</a>
-
-					<div class="item">
-						<h1 class="ui small dim header">Stats</h1>
-						<?php
-							echo 'Albums: '. $hshake[albums];
-							echo '<br>Artists: '. $hshake[artists];
-							echo '<br>Tracks: '. $hshake[songs];
-							echo '<br>Genres: '. $hshake[genres];
-							echo '<br>Playlists: '. $hshake[playlists];
-						?>
-					</div>
-				</div>
+			<!-- Include the side menu code -->
+			<?php
+				include 'includes/menu.php';
+				active_menu('recent');
+			?>
 
 			</div> <!-- Close container -->
 		</div> <!-- End of Column 1 -->

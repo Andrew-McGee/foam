@@ -8,10 +8,10 @@
 
 	$auth=$hshake[auth];
 
-	$get_data = albumAPI($auth, 'random');
+	$get_data = albumAPI($auth, $uid);
 	$albm_results = json_decode($get_data, true);
 
-	$get_data = albumsongsAPI($auth, 'random');
+	$get_data = albumsongsAPI($auth, $uid);
 	$song_results = json_decode($get_data, true);
 
 	//Include all the inital HTML including doctype, html, head and body tags

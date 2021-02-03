@@ -46,7 +46,7 @@
 								echo '<br>' . $albm_results[artist][name];
 								echo '<br>' . $albm_results[year];
 								echo '<br>' . $albm_results[songcount] . ' songs';
-								echo '<br>' . date("H:i:s", $albm_results[time]) . ' hours, x minutes';
+								echo '<br>' . date("G:i:s", $albm_results[time]) . ' hours, or ' . $albm_results[time] . ' minutes';
 							echo '</div>'; // End of 1st column
 
 							// Right column for album songs in table

@@ -23,6 +23,7 @@
 		p {
 			font-family: 'Noto Sans SC', sans-serif;
 			font-size: 1rem !important;
+			color: #A5A5A5 !important;
 		}
 
 		a:link { color: gold; text-decoration: none; }

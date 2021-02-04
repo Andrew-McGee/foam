@@ -54,9 +54,10 @@
 						echo "</div>";
 					}
 					?>
+				  </div>
 			  </div>
 		  </div>
-	  </div><!-- END of main column 2 -->
+		</div><!-- END of main column 2 -->
 	</div>
 
 	<?php

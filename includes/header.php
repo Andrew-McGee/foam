@@ -51,9 +51,9 @@
 		</div>
 
 		<div class="column">
-			<p>00:23</p>
+			<span class="ui small text">00:23</span>
 			<div class="ui small slider" id="track1"></div>
-			<p>04:13</p>
+			<span class="ui small text">04:13</span>
 		</div>
 
 		<div class="column">

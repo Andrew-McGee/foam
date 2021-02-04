@@ -49,15 +49,15 @@
 				<i class="step backward icon"></i>
 				<i class="play icon"></i>
 				<i class="step forward icon"></i>
-			</div>
-
-			<div class="column">
 				<span class="ui medium text">00:23</span>
-				<div class="ui small slider" id="track1"></div>
-				<span class="ui medium text">04:13</span>
 			</div>
 
 			<div class="column">
+				<div class="ui small slider" id="track1"></div>
+			</div>
+
+			<div class="column">
+				<span class="ui medium text">04:13</span>
 				<i class="hamburger icon"></i>
 				<i class="volume up icon"></i>
 				<i class="volume mute icon"></i>

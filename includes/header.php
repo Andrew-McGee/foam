@@ -28,7 +28,7 @@
 <body>
 <!-- Start the top menu - changed to a grid container -->
 <div class="ui inverted top segment">
-	<div class="ui six column grid">
+	<div class="ui middle aligned six column grid">
 
 		  <!-- Title -->
 			<div class="two wide column">
@@ -44,7 +44,7 @@
 			</div>
 
 			<!-- Micro player -->
-			<div class="middle aligned column">
+			<div class="column">
 				<span class="ui small text">MICROPLAY</span>
 				<i class="step backward icon"></i>
 				<i class="play icon"></i>

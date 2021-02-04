@@ -43,6 +43,7 @@
 		</div>
 
 		<!-- Micro player -->
+		<span class="ui mini text">MICROPLAY</span>
 		<div class="item">
 			<i class="step backward icon"></i>
 			<i class="play icon"></i>
@@ -50,9 +51,9 @@
 		</div>
 
 		<div class="item">
-			<div class="ui tiny header">00:23</div>
+			<p>00:23</p>
 			<div class="ui small slider" id="track1"></div>
-			<div class="ui tiny header">04:13</div>
+			<p>04:13</p>
 		</div>
 
 		<!-- Tagline -->

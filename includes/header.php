@@ -31,7 +31,7 @@
 	<div class="ui middle aligned seven column grid">
 
 		  <!-- Title -->
-			<div class="two wide column">
+			<div class="column">
 				<h1 class="ui inverted yellow header">foam</h1>
 			</div>
 
@@ -68,7 +68,7 @@
 				<i class="volume up icon"></i>
 			</div>
 
-			<div class="column">
+			<div class="two wide column">
 				<div class="ui small blue slider" id="vol1"></div>
 			</div>
 

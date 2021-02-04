@@ -30,7 +30,7 @@
 <div class="ui six column fluid grid container">
 
 	  <!-- Title -->
-		<div class="column">
+		<div class="two wide column">
 			<h1 class="ui inverted yellow header">foam</h1>
 		</div>
 
@@ -50,7 +50,7 @@
 			<i class="step forward icon"></i>
 		</div>
 
-		<div class="four wide column">
+		<div class="column">
 			<span class="ui medium text">00:23</span>
 			<div class="ui small slider" id="track1"></div>
 			<span class="ui medium text">04:13</span>

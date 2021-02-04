@@ -44,7 +44,7 @@
 			</div>
 
 			<!-- Micro player -->
-			<div class="column">
+			<div class="middle aligned column">
 				<span class="ui small text">MICROPLAY</span>
 				<i class="step backward icon"></i>
 				<i class="play icon"></i>

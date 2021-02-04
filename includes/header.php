@@ -27,43 +27,45 @@
 <!-- Start the main body -->
 <body>
 <!-- Start the top menu - changed to a grid container -->
-<div class="ui six column fluid grid container">
+<div class="ui inverted top segment">
+	<div class="ui six column grid">
 
-	  <!-- Title -->
-		<div class="two wide column">
-			<h1 class="ui inverted yellow header">foam</h1>
-		</div>
-
-		<!-- Search bar -->
-		<div class="column">
-			<div class="ui mini icon input">
-			  <input type="text" placeholder="Search...">
-			  <i class="search link icon"></i>
+		  <!-- Title -->
+			<div class="two wide column">
+				<h1 class="ui inverted yellow header">foam</h1>
 			</div>
-		</div>
 
-		<!-- Micro player -->
-		<div class="column">
-			<span class="ui small text">MICROPLAY</span>
-			<i class="step backward icon"></i>
-			<i class="play icon"></i>
-			<i class="step forward icon"></i>
-		</div>
+			<!-- Search bar -->
+			<div class="column">
+				<div class="ui mini icon input">
+				  <input type="text" placeholder="Search...">
+				  <i class="search link icon"></i>
+				</div>
+			</div>
 
-		<div class="column">
-			<span class="ui medium text">00:23</span>
-			<div class="ui small slider" id="track1"></div>
-			<span class="ui medium text">04:13</span>
-		</div>
+			<!-- Micro player -->
+			<div class="column">
+				<span class="ui small text">MICROPLAY</span>
+				<i class="step backward icon"></i>
+				<i class="play icon"></i>
+				<i class="step forward icon"></i>
+			</div>
 
-		<div class="column">
-			<i class="hamburger icon"></i>
-			<i class="volume up icon"></i>
-			<i class="volume mute icon"></i>
-		</div>
+			<div class="column">
+				<span class="ui medium text">00:23</span>
+				<div class="ui small slider" id="track1"></div>
+				<span class="ui medium text">04:13</span>
+			</div>
 
-		<!-- Tagline -->
-  	<div class="column">
-			A Fomantic Ampache web player.
-		</div>
-</div> <!-- End the top menu -->
+			<div class="column">
+				<i class="hamburger icon"></i>
+				<i class="volume up icon"></i>
+				<i class="volume mute icon"></i>
+			</div>
+
+			<!-- Tagline -->
+	  	<div class="column">
+				A Fomantic Ampache web player.
+			</div>
+	</div>
+</div> <!-- End the top segment -->

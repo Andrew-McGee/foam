@@ -27,7 +27,7 @@
 <!-- Start the main body -->
 <body>
 <!-- Start the top menu - changed to a grid container -->
-<div class="ui six column grid container">
+<div class="ui six column fluid grid container">
 
 	  <!-- Title -->
 		<div class="column">

@@ -50,10 +50,10 @@
 			<i class="step forward icon"></i>
 		</div>
 
-		<div class="column">
-			<span class="ui small text">00:23</span>
+		<div class="four wide column">
+			<span class="ui medium text">00:23</span>
 			<div class="ui small slider" id="track1"></div>
-			<span class="ui small text">04:13</span>
+			<span class="ui medium text">04:13</span>
 		</div>
 
 		<div class="column">

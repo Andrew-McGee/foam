@@ -28,7 +28,7 @@
 <body>
 <!-- Start the top menu - changed to a grid container -->
 <div class="ui inverted top segment">
-	<div class="ui middle aligned six column grid">
+	<div class="ui middle aligned seven column grid">
 
 		  <!-- Title -->
 			<div class="two wide column">
@@ -46,6 +46,7 @@
 			<!-- Micro player -->
 			<div class="column">
 				<span class="ui small text">MICROPLAY</span>
+				&nbsp;&nbsp;&nbsp;
 				<i class="step backward icon"></i>
 				<i class="play icon"></i>
 				<i class="step forward icon"></i>
@@ -54,15 +55,21 @@
 			</div>
 
 			<div class="column">
-				<div class="ui small slider" id="track1"></div>
+				<div class="ui small grey slider" id="track1"></div>
 			</div>
 
 			<div class="column">
 				<span class="ui medium text">04:13</span>
 				&nbsp;&nbsp;&nbsp;
 				<i class="hamburger icon"></i>
-				<i class="volume up icon"></i>
+				&nbsp;
 				<i class="volume mute icon"></i>
+				&nbsp;
+				<i class="volume up icon"></i>
+			</div>
+
+			<div class="column">
+				<div class="ui small blue slider" id="vol1"></div>
 			</div>
 
 			<!-- Tagline -->

@@ -55,9 +55,9 @@
 		<div class="item">
 			<p>00:23</p>
 		</div>
-		
+
 		<div class="item">
-			<div class="ui trackslider container">
+			<div class="ui compact trackslider container">
 				<div class="ui small slider" id="track1"></div>
 			</div>
 		</div>

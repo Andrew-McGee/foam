@@ -57,7 +57,7 @@
 		</div>
 
 		<div class="item">
-			<div class="ui compact trackslider container">
+			<div class="ui compact trackslider segment">
 				<div class="ui small slider" id="track1"></div>
 			</div>
 		</div>

@@ -50,9 +50,9 @@
 		</div>
 
 		<div class="item">
-			<div class="ui tiny header">00:23</i>
+			<div class="ui tiny header">00:23</div>
 			<div class="ui small slider" id="track1"></div>
-			<div class="ui tiny header">04:13</i>
+			<div class="ui tiny header">04:13</div>
 		</div>
 
 		<!-- Tagline -->

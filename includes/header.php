@@ -28,17 +28,34 @@
 <body>
 <!-- Start the top menu -->
 <div class="ui fixed inverted top large text menu">
+
+	  <!-- Title -->
 		<div class="item">
-			<h1 class="ui inverted yellow header">
-      foam
-			</h1>
+			<h1 class="ui inverted yellow header">foam</h1>
 		</div>
+
+		<!-- Search bar -->
 		<div class="item">
 			<div class="ui mini icon input">
 			  <input type="text" placeholder="Search...">
 			  <i class="search link icon"></i>
 			</div>
 		</div>
+
+		<!-- Micro player -->
+		<div class="item">
+			<i class="step backward icon"></i>
+			<i class="play icon"></i>
+			<i class="step forward icon"></i>
+		</div>
+
+		<div class="item">
+			<div class="ui tiny header">00:23</i>
+			<div class="ui small slider" id="track1"></div>
+			<div class="ui tiny header">04:13</i>
+		</div>
+
+		<!-- Tagline -->
   	<div class="right item">
 			A Fomantic Ampache web player.
 		</div>

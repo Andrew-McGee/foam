@@ -26,16 +26,16 @@
 
 <!-- Start the main body -->
 <body>
-<!-- Start the top menu -->
-<div class="ui fixed inverted top large text menu">
+<!-- Start the top menu - changed to a grid container -->
+<div class="ui six column grid container">
 
 	  <!-- Title -->
-		<div class="item">
+		<div class="column">
 			<h1 class="ui inverted yellow header">foam</h1>
 		</div>
 
 		<!-- Search bar -->
-		<div class="item">
+		<div class="column">
 			<div class="ui mini icon input">
 			  <input type="text" placeholder="Search...">
 			  <i class="search link icon"></i>
@@ -43,31 +43,27 @@
 		</div>
 
 		<!-- Micro player -->
-		<div class="item">
+		<div class="column">
 			<span class="ui small text">MICROPLAY</span>
-		</div>
-		<div class="item">
 			<i class="step backward icon"></i>
 			<i class="play icon"></i>
 			<i class="step forward icon"></i>
 		</div>
 
-		<div class="item">
+		<div class="column">
 			<p>00:23</p>
-		</div>
-
-		<div class="item">
-			<div class="ui compact trackslider segment">
-				<div class="ui small slider" id="track1"></div>
-			</div>
-		</div>
-
-		<div class="item">
+			<div class="ui small slider" id="track1"></div>
 			<p>04:13</p>
 		</div>
 
+		<div class="column">
+			<i class="hamburger icon"></i>
+			<i class="volume up icon"></i>
+			<i class="volume mute icon"></i>
+		</div>
+
 		<!-- Tagline -->
-  	<div class="right item">
+  	<div class="column">
 			A Fomantic Ampache web player.
 		</div>
 </div> <!-- End the top menu -->

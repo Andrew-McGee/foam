@@ -79,7 +79,7 @@
 
 		.sidemenu.column {
 		 background-color: var(--space-cadet);
-		 margin: 1em 0em 0em 0em;
+		 margin: 0em 0em 0em 0em;
 		}
 
      .ui.inverted.side.menu {

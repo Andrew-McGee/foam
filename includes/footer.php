@@ -15,12 +15,7 @@ $('.ui.dropdown')
 ;
 
 $('.ui.slider')
-  .slider({
-    min: 0,
-    max: 10,
-    start: 2,
-    step: 0
-  })
+  .slider()
 ;
 
 </script>

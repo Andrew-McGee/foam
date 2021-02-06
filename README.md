@@ -19,9 +19,13 @@ Some limited options can be found in config/foam.conf.php which sets a few php v
 ## Contributions
 Once I have a working release then contributions and suggestions always welcome.
 
-## Acknowledgements
-- Inspired by the subsonic player [subplayer](https://github.com/peguerosdc/subplayer) - a really nice looking player for subsonic.
+## Acknowledgements & Dependencies
+- Inspired by the subsonic player [subplayer](https://github.com/peguerosdc/subplayer) - a really nice looking web player for subsonic.
 - Using [Fomantic UI](https://github.com/fomantic/Fomantic-UI) components.
+- Using [howler.js](https://github.com/goldfire/howler.js) audio library for media playback.
+- Fomantic (Semantic) UI is still dependent on jquery.
+- Of course you need a backend [Ampache](https://github.com/ampache/ampache) server.
+- And a PHP enabled webserver.
 
 ## License
 

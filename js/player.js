@@ -4,7 +4,7 @@
  */
 
 const setVol = 1.0;
-const this.muted = false;
+const muted = false;
 
 //Define some player functions
 

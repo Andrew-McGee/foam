@@ -8,8 +8,10 @@
 // Begin playing the sound
 function playnew(track) {
 
-  // Stop all playing
-  trk01.stop();
+  // If trk01 is defined something might be playing so just stop everything
+  if (typeof trk01 !== 'undefined') {
+    trk01.stop();
+  }
 
   // First we need to load in our track to howler
   this.trk01 = new Howl({

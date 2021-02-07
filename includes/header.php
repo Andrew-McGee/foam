@@ -48,7 +48,8 @@
 				<span class="ui small text">MICROPLAY</span>
 				&nbsp;&nbsp;&nbsp;
 				<i class="step backward icon"></i>
-				<i class="play icon"></i>
+				<i class="play icon" id="playBtn"></i>
+				<i class="pause icon" id="pauseBtn"></i>
 				<i class="step forward icon"></i>
 				&nbsp;&nbsp;&nbsp;
 				<span class="ui medium text">00:23</span>
@@ -78,3 +79,7 @@
 			</div>
 	</div>
 </div> <!-- End the top segment -->
+
+<!-- Scripts -->
+<script src="dist/howler.js"></script>
+<script src="js/player.js"></script>

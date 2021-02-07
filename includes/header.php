@@ -44,15 +44,27 @@
 			</div>
 
 			<!-- Micro player -->
-			<div class="column">
-				<span class="ui small text">MICROPLAY</span>
-				&nbsp;&nbsp;&nbsp;
-				<i class="bordered step backward icon" id="backBtn"></i>
-				<i class="bordered play icon" id="playBtn"></i>
-				<i class="bordered pause icon" id="pauseBtn"></i>
-				<i class="bordered step forward icon" id="frwdBtn"></i>
-				&nbsp;&nbsp;&nbsp;
-				<span class="ui medium text" id="timer">00:23</span>
+			<div class="column"> //Transport Controls
+				<div class="ui horizontal basic segments">
+					<div class="ui segment">
+						<span class="ui small text">MICROPLAY</span>
+					</div>
+					<div class="ui segment">
+						<i class="bordered step backward icon" id="backBtn"></i>
+					</div>
+					<div class="ui segment">
+						<i class="bordered play icon" id="playBtn"></i>
+					</div>
+					<div class="ui segment">
+						<i class="bordered pause icon" id="pauseBtn"></i>
+					</div>
+					<div class="ui segment">
+						<i class="bordered step forward icon" id="frwdBtn"></i>
+					</div>
+					<div class="ui segment">
+						<span class="ui medium text" id="timer">00:23</span>
+					</div>
+				</div>
 			</div>
 
 			<div class="column">

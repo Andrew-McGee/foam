@@ -15,7 +15,7 @@ function play(track) {
   });
 
   // Play the sound
-  this.trk01.play();
+  trk01.play();
 
   // Show the pause button.
   pauseBtn.style.display = 'block';

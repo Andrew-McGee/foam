@@ -27,7 +27,7 @@ function play(track) {
 function pause() {
 
   // Pause the sound
-  this.trk01.pause();
+  trk01.pause();
 
   // Show the play button.
   playBtn.style.display = 'block';
@@ -39,7 +39,7 @@ function pause() {
 function mute() {
 
   // mute the sound
-  this.trk01.mute(true);
+  trk01.mute(true);
 
   // Show the mute button.
   muteBtn.style.display = 'block';

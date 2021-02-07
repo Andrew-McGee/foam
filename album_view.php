@@ -82,8 +82,8 @@
 									echo '<td><a href="' . $song_results[song][$i][url] . '"><i class="download icon"></i></a></td>';
 									echo '</tr>';
 									//Make a listener for clicking on this track title or number
-									//echo "<script>trk" . $i + 1 . ".addEventListener('click', function() {";
-									//echo "  play('" . $song_results[song][$i][url] . "');});</script>";
+									echo "<script>trk" . ($i + 1) . ".addEventListener('click', function() {";
+									echo "  play('" . $song_results[song][$i][url] . "');});</script>";
 
 								}
 								echo '</tbody></table>';

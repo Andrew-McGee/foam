@@ -24,8 +24,9 @@ function playnew(track) {
   trk01.play();
 
   // Show the pause button.
-  pauseBtn.style.display = 'block';
-  playBtn.style.display = 'none';
+  //pauseBtn.style.display = 'block';
+  //playBtn.style.display = 'none';
+  document.getElementById("playBtn").className = "bordered pause icon";
 
   document.getElementById("status_msg").textContent="Now Playing: " + track;
 }
@@ -37,9 +38,9 @@ function play() {
   trk01.play();
 
   // Show the pause button.
-  pauseBtn.style.display = 'block';
-  playBtn.style.display = 'none';
-
+  //pauseBtn.style.display = 'block';
+  //playBtn.style.display = 'none';
+  document.getElementById("playBtn").className = "bordered pause icon";
 }
 
 // Pause playing the sound
@@ -49,9 +50,9 @@ function pause() {
   trk01.pause();
 
   // Show the play button.
-  playBtn.style.display = 'block';
-  pauseBtn.style.display = 'none';
-
+  //playBtn.style.display = 'block';
+  //pauseBtn.style.display = 'none';
+  document.getElementById("playBtn").className = "bordered play icon";
 }
 
 // mute playing the sound
@@ -63,6 +64,7 @@ function mute() {
   // Show the mute button.
   muteBtn.style.display = 'block';
   volBtn.style.display = 'none';
+  document.getElementById("volBtn").className = "bordered volume mute icon";
 
 }
 

@@ -45,46 +45,38 @@
 
 			<!-- Micro player -->
 			<div class="four wide column"> <!-- Transport Controls -->
-				<div class="ui horizontal basic segments">
-					<div class="ui segment">
-						<span class="ui small text">MICROPLAY</span>
-					</div>
-					<div class="ui segment">
-						<i class="bordered step backward icon" id="backBtn"></i>
-					</div>
-					<div class="ui segment">
-						<i class="bordered play icon" id="playBtn"></i>
-					</div>
-					<div class="ui segment">
-						<i class="bordered pause icon" id="pauseBtn"></i>
-					</div>
-					<div class="ui segment">
-						<i class="bordered step forward icon" id="frwdBtn"></i>
-					</div>
-					<div class="ui segment">
-						<span class="ui medium text" id="timer">00:23</span>
-					</div>
-				</div>
-			</div>
-
-			<div class="two wide column">
-				<div class="ui small blue slider" id="track1"></div>
-			</div>
-
-			<div class="four wide column">
 				<table><tr>
-					<td><span class="ui medium text" id="length">04:13</span></td>
-					<td><img class="ui image"  id="playrThumb" src="img/vinyl.png" width="50" height="50"></td>
-					<td><strong><div class="ui small text" id="playrTitle"></strong></div>
-					<div class="ui small text" id="playrArtist"></div></td>
-					<td><i class="sort down icon" id="queueBtn"></i></td>
-					<td><i class="volume mute icon" id="muteBtn"></i></td>
-					<td><i class="volume up icon" id="volBtn"></i></td>
+					<td><span class="ui small text">MICROPLAY</span></td>
+					<td><i class="bordered step backward icon" id="backBtn"></i></td>
+					<td><i class="bordered play icon" id="playBtn"></i></td>
+					<!-- <td><i class="bordered pause icon" id="pauseBtn"></i></td> -->
+					<td><i class="bordered step forward icon" id="frwdBtn"></i></td>
 				</tr></table>
 			</div>
 
 			<div class="two wide column">
-				<div class="ui small blue slider" id="vol1"></div>
+				<table><tr>
+					<td><span class="ui medium text" id="timer">00:23</span></td>
+					<div class="ui small blue slider" id="track1"></div></td>
+					<td><span class="ui medium text" id="length">04:13</span></td>
+				</tr></table>
+			</div>
+
+			<div class="four wide column">
+				<table><tr>
+					<td><img class="ui image"  id="playrThumb" src="img/vinyl.png" width="50" height="50"></td>
+					<td><strong><div class="ui small text" id="playrTitle"></strong></div>
+					<div class="ui small text" id="playrArtist"></div></td>
+					<td><i class="sort down icon" id="queueBtn"></i></td>
+				</tr></table>
+			</div>
+
+			<div class="two wide column">
+				<table><tr>
+					<!-- <td><i class="volume mute icon" id="muteBtn"></i></td> -->
+					<td><i class="volume up icon" id="volBtn"></i></td>
+					<td><div class="ui small blue slider" id="vol1"></div></td>
+				</tr></table>
 			</div>
 
 			<!-- Tagline -->

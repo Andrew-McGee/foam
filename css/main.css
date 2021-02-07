@@ -26,11 +26,11 @@
 			color: #A5A5A5 !important;
 		}
 
-/*		a:link { color: gold; text-decoration: none; }
-		a:visited { color: gold; text-decoration: none; }
-		a:active { color: gold; text-decoration: none; }
-		a:hover { color: gold; text-decoration: underline; }
-*/
+		a:link { color: #A5A5A5; text-decoration: none; }
+		a:visited { color: #A5A5A5; text-decoration: none; }
+		a:active { color: #A5A5A5; text-decoration: none; }
+		a:hover { color: #A5A5A5; text-decoration: underline; }
+
 		.ui.vertical.menu .item > i.icon.left {
 		    float: none;
 		    margin: 0em 0.35714286em 0em 0em;

@@ -16,9 +16,30 @@ Simply drop everything into your public html directory of your PHP enabled web s
 You need an [Ampache](https://github.com/ampache/ampache) server somewhere.
 
 Some limited options can be found in config/foam.conf.php which sets a few php variables.
+Note: During pre-release authentication to Ampache is in this config file for ease of testing purposes.
+Final version will move this to use browser authentication.
 
 ## TODO
 - Early days - still building the base functionality to get to a working release stage.
+
+#### _Working_
+- Recent, newest, frequent and random albums views.
+- Single album view with track listing when clicking on an album
+- Play track in album view by clicking track title or track number
+- DL link in track listing
+- pause/play toggle in microplayer
+- mute/unmute volume button in microplayer
+
+#### _Not Yet Working_
+- Artist view, track view, playlists
+- Search
+- Track seeking or play time updates
+- volume slider
+- links to artist from track listing (or anywhere artist name appears)
+- Queue pulldown and queue manipulation
+- Album play and shuffle
+- Favouriting and favourites
+- advanced player option
 
 ## Contributions
 Once I have a working release then contributions and suggestions always welcome.

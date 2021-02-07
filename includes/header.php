@@ -44,7 +44,7 @@
 			</div>
 
 			<!-- Micro player -->
-			<div class="three wide column"> <!-- Transport Controls -->
+			<div class="two wide column"> <!-- Transport Controls -->
 				<table><tr>
 					<td><span class="ui small text">MICROPLAY</span></td>
 					<td><i class="bordered step backward icon" id="backBtn"></i></td>
@@ -53,7 +53,7 @@
 				</tr></table>
 			</div>
 
-			<div class="two wide column">
+			<div class="three wide column">
 				<table><tr>
 					<td><span class="ui medium text" id="timer">00:23</span></td>
 					<td style="width:70%"><div class="ui small blue slider" id="track1"></div></td></td>

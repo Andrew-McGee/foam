@@ -11,6 +11,7 @@ function playnew(track) {
   // First we need to load in our track to howler
   this.trk01 = new Howl({
     src: [track],
+    html5: true,
     loop: false
   });
 

@@ -31,7 +31,7 @@
 	<div class="ui middle aligned seven column grid">
 
 		  <!-- Title -->
-			<div class="column">
+			<div class="one wide column">
 				<h1 class="ui inverted yellow header">foam</h1>
 			</div>
 
@@ -44,7 +44,7 @@
 			</div>
 
 			<!-- Micro player -->
-			<div class="column"> //Transport Controls
+			<div class="four wide column"> <!-- Transport Controls -->
 				<div class="ui horizontal basic segments">
 					<div class="ui segment">
 						<span class="ui small text">MICROPLAY</span>
@@ -72,16 +72,15 @@
 			</div>
 
 			<div class="column">
-				<span class="ui medium text" id="length">04:13</span>
-				&nbsp;&nbsp;&nbsp;
-				<img class="ui image"  id="playrThumb" src="img/vinyl.png" width="50" height="50">
-				<div class="ui small text" id="playrTitle"></div>
-				<div class="ui small text" id="playrArtist"></div>
-				<i class="sort down icon" id="queueBtn"></i>
-				&nbsp;
-				<i class="volume mute icon" id="muteBtn"></i>
-				&nbsp;
-				<i class="volume up icon" id="volBtn"></i>
+				<table><tr>
+					<td><span class="ui medium text" id="length">04:13</span></td>
+					<td><img class="ui image"  id="playrThumb" src="img/vinyl.png" width="50" height="50"></td>
+					<td><div class="ui small text" id="playrTitle"></div></td>
+					<td><div class="ui small text" id="playrArtist"></div></td>
+					<td><i class="sort down icon" id="queueBtn"></i></td>
+					<td><i class="volume mute icon" id="muteBtn"></i></td>
+					<td><i class="volume up icon" id="volBtn"></i></td>
+				</tr></table>
 			</div>
 
 			<div class="two wide column">

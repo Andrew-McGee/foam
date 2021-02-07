@@ -6,13 +6,25 @@
 //Define some player functions
 
 // Begin playing the sound
-function play(track) {
+function playnew(track) {
 
   // First we need to load in our track to howler
   this.trk01 = new Howl({
-    src: ['./tmp1.flac'],
+    src: [track],
     loop: false
   });
+
+  // Play the sound
+  trk01.play();
+
+  // Show the pause button.
+  pauseBtn.style.display = 'block';
+  playBtn.style.display = 'none';
+
+}
+
+// Resume playing the sound
+function play() {
 
   // Play the sound
   trk01.play();

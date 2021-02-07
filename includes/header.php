@@ -74,7 +74,7 @@
 			</div>
 
 			<!-- Tagline -->
-	  	<div class="column">
+	  	<div class="column" id="status_msg">
 				A Fomantic Ampache web player.
 			</div>
 	</div>

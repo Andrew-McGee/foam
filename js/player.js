@@ -21,6 +21,7 @@ function playnew(track) {
   pauseBtn.style.display = 'block';
   playBtn.style.display = 'none';
 
+  document.getElementById("status_msg").textContent="Now Playing";
 }
 
 // Resume playing the sound

@@ -36,7 +36,7 @@
 			</div>
 
 			<!-- Search bar -->
-			<div class="column">
+			<div class="two wide column">
 				<div class="ui mini icon input">
 				  <input type="text" placeholder="Search...">
 				  <i class="search link icon"></i>
@@ -67,16 +67,16 @@
 				</div>
 			</div>
 
-			<div class="column">
+			<div class="two wide column">
 				<div class="ui small blue slider" id="track1"></div>
 			</div>
 
-			<div class="column">
+			<div class="four wide column">
 				<table><tr>
 					<td><span class="ui medium text" id="length">04:13</span></td>
 					<td><img class="ui image"  id="playrThumb" src="img/vinyl.png" width="50" height="50"></td>
-					<td><div class="ui small text" id="playrTitle"></div></td>
-					<td><div class="ui small text" id="playrArtist"></div></td>
+					<td><strong><div class="ui small text" id="playrTitle"></strong></div>
+					<div class="ui small text" id="playrArtist"></div></td>
 					<td><i class="sort down icon" id="queueBtn"></i></td>
 					<td><i class="volume mute icon" id="muteBtn"></i></td>
 					<td><i class="volume up icon" id="volBtn"></i></td>
@@ -88,7 +88,7 @@
 			</div>
 
 			<!-- Tagline -->
-	  	<div class="column" id="status_msg">
+	  	<div class="one wide column" id="status_msg">
 				A Fomantic Ampache web player.
 			</div>
 	</div>

@@ -46,7 +46,7 @@ function playToggle() {
 // mute or unmute the sound
 function mute() {
 
-  if (muted()) {
+  if (muted) {
     // if muted then unmute the sound & show volume button
     trk01.mute(false);
     document.getElementById("volBtn").className = "bordered volume up icon";

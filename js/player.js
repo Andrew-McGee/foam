@@ -8,6 +8,9 @@
 // Begin playing the sound
 function playnew(track) {
 
+  // Stop all playing
+  trk01.stop();
+
   // First we need to load in our track to howler
   this.trk01 = new Howl({
     src: [track],

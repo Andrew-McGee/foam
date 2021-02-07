@@ -6,7 +6,13 @@
 //Define some player functions
 
 // Begin playing the sound
-function play() {
+function play(track) {
+
+  // First we need to load in our track to howler
+  var trk01 = new Howl({
+    src: ['./tmp1.flac'],
+    loop: false
+  });
 
   // Play the sound
   trk01.play();
@@ -33,7 +39,7 @@ function pause() {
 function mute() {
 
   // mute the sound
-  trk01.mute();
+  trk01.mute(true);
 
   // Show the mute button.
   muteBtn.style.display = 'block';
@@ -53,16 +59,12 @@ function unmute() {
 
 }
 
-// First we need to load in our track to howler
-var trk01 = new Howl({
-  src: ['./tmp1.flac'],
-  loop: false
-});
 
 // We need to set some listener events for our player control buttons.
 playBtn.addEventListener('click', function() {
   play();
 });
+
 pauseBtn.addEventListener('click', function() {
   pause();
 });

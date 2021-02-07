@@ -79,8 +79,14 @@
 									echo '<td>' . $song_results[song][$i][artist][name] . '</td>';
 									$result = sec2mins($song_results[song][$i][time]);
 									echo '<td>' . $result[minutes] . ':' . sprintf("%02d", $result[seconds]) . '</td>';
-									echo '<td><i class="download icon"></i></td>';
+									echo '<td><a href="' . $song_results[song][$i][url] . '"><i class="download icon"></i></a></td>';
 									echo '</tr>';
+									//Make a listener for clicking on this track
+
+									/* trk1 playBtn.addEventListener('click', function() {
+									  play();
+									}); */
+
 								}
 								echo '</tbody></table>';
 							echo '</div>'; // End of 2nd column

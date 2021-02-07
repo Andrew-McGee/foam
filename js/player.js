@@ -50,10 +50,12 @@ function mute() {
     // if muted then unmute the sound & show volume button
     trk01.mute(false);
     document.getElementById("volBtn").className = "bordered volume up icon";
+    muted = false;
   } else {
     // if unmuted then mute the sound & show mute button
     trk01.mute(true);
     document.getElementById("volBtn").className = "bordered volume mute icon";
+    muted = true;
   }
 }
 

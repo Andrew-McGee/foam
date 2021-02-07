@@ -44,7 +44,7 @@
 			</div>
 
 			<!-- Micro player -->
-			<div class="four wide column"> <!-- Transport Controls -->
+			<div class="three wide column"> <!-- Transport Controls -->
 				<table><tr>
 					<td><span class="ui small text">MICROPLAY</span></td>
 					<td><i class="bordered step backward icon" id="backBtn"></i></td>
@@ -73,13 +73,13 @@
 			<div class="two wide column">
 				<table><tr>
 					<!-- <td><i class="volume mute icon" id="muteBtn"></i></td> -->
-					<td><div class="ui small blue slider" id="vol1"></div></td>
+					<td><div class="ui container"><div class="ui small blue slider" id="vol1"></div></div></td>
 					<td><i class="bordered volume up icon" id="volBtn"></i></td>
 				</tr></table>
 			</div>
 
 			<!-- Tagline -->
-	  	<div class="one wide column" id="status_msg">
+	  	<div class="two wide column" id="status_msg">
 				A Fomantic Ampache web player.
 			</div>
 	</div>

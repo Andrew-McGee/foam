@@ -87,14 +87,14 @@
 									echo 'document.getElementById("playrThumb").src="' . $albm_results[art] . '";';
 									echo 'document.getElementById("playrTitle").textContent="' . $song_results[song][$i][title] . '";';
 									echo 'document.getElementById("playrArtist").textContent="' . $song_results[song][$i][artist][name] . '";';
-									echo '});</script>'
+									echo '});</script>';
 
 									echo "<script>tno" . ($i + 1) . ".addEventListener('click', function() {";
 									echo "  playnew('" . $song_results[song][$i][url] . "');";
 									echo 'document.getElementById("playrThumb").src="' . $albm_results[art] . '";';
 									echo 'document.getElementById("playrTitle").textContent="' . $song_results[song][$i][title] . '";';
 									echo 'document.getElementById("playrArtist").textContent="' . $song_results[song][$i][artist][name] . '";';
-									echo '});</script>'
+									echo '});</script>';
 								}
 								echo '</tbody></table>';
 							echo '</div>'; // End of 2nd column

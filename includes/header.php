@@ -47,22 +47,25 @@
 			<div class="column">
 				<span class="ui small text">MICROPLAY</span>
 				&nbsp;&nbsp;&nbsp;
-				<i class="step backward icon"></i>
-				<i class="play icon" id="playBtn"></i>
-				<i class="pause icon" id="pauseBtn"></i>
-				<i class="step forward icon"></i>
+				<i class="bordered step backward icon" id="backBtn"></i>
+				<i class="bordered play icon" id="playBtn"></i>
+				<i class="bordered pause icon" id="pauseBtn"></i>
+				<i class="bordered step forward icon" id="frwdBtn"></i>
 				&nbsp;&nbsp;&nbsp;
-				<span class="ui medium text">00:23</span>
+				<span class="ui medium text" id="timer">00:23</span>
 			</div>
 
 			<div class="column">
-				<div class="ui small grey slider" id="track1"></div>
+				<div class="ui small blue slider" id="track1"></div>
 			</div>
 
 			<div class="column">
-				<span class="ui medium text">04:13</span>
+				<span class="ui medium text" id="length">04:13</span>
 				&nbsp;&nbsp;&nbsp;
-				<i class="hamburger icon"></i>
+				<img class="ui image"  id="playrThumb" src="img/vinyl.png" width="50" height="50">
+				<div class="ui small text" id="playrTitle"></div>
+				<div class="ui small text" id="playrArtist"></div>
+				<i class="sort down icon" id="queueBtn"></i>
 				&nbsp;
 				<i class="volume mute icon" id="muteBtn"></i>
 				&nbsp;

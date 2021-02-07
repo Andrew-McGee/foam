@@ -74,17 +74,27 @@
 								$cnt = $albm_results[songcount]; //Set counter to number of songs on album
 								for ($i = 0; $i < $cnt; $i++){
 									echo '<tr>';
-									echo '<td>' . $song_results[song][$i][track] . '</td>';
+									echo '<td id="tno' . ($i + 1) . '">' . $song_results[song][$i][track] . '</td>';
 									echo '<td id="trk' . ($i + 1) . '"><strong>' . $song_results[song][$i][title] . '</strong></td>';
 									echo '<td>' . $song_results[song][$i][artist][name] . '</td>';
 									$result = sec2mins($song_results[song][$i][time]);
 									echo '<td>' . $result[minutes] . ':' . sprintf("%02d", $result[seconds]) . '</td>';
 									echo '<td><a href="' . $song_results[song][$i][url] . '"><i class="download icon"></i></a></td>';
 									echo '</tr>';
-									//For each table row make a listener for clicking on this track title or number
+									//For each table row make a listener for clicking on this track title or track number
 									echo "<script>trk" . ($i + 1) . ".addEventListener('click', function() {";
-									echo "  playnew('" . $song_results[song][$i][url] . "');});</script>";
+									echo "  playnew('" . $song_results[song][$i][url] . "');";
+									echo 'document.getElementById("playrThumb").src="' . $albm_results[art] . '";';
+									echo 'document.getElementById("playrTitle").textContent="' . $song_results[song][$i][title] . '";';
+									echo 'document.getElementById("playrArtist").textContent="' . $song_results[song][$i][artist][name] . '";';
+									echo '});</script>'
 
+									echo "<script>tno" . ($i + 1) . ".addEventListener('click', function() {";
+									echo "  playnew('" . $song_results[song][$i][url] . "');";
+									echo 'document.getElementById("playrThumb").src="' . $albm_results[art] . '";';
+									echo 'document.getElementById("playrTitle").textContent="' . $song_results[song][$i][title] . '";';
+									echo 'document.getElementById("playrArtist").textContent="' . $song_results[song][$i][artist][name] . '";';
+									echo '});</script>'
 								}
 								echo '</tbody></table>';
 							echo '</div>'; // End of 2nd column

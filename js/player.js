@@ -29,8 +29,31 @@ function pause() {
 
 }
 
+// mute playing the sound
+function mute() {
+
+  // mute the sound
+  trk01.mute();
+
+  // Show the mute button.
+  muteBtn.style.display = 'block';
+  volBtn.style.display = 'none';
+
+}
+
+// unmute playing the sound
+function unmute() {
+
+  // Unmute the sound
+  trk01.mute(false);
+
+  // Show the vol button.
+  muteBtn.style.display = 'none';
+  volBtn.style.display = 'block';
+
+}
+
 // First we need to load in our track to howler
-// First set the beats
 var trk01 = new Howl({
   src: ['./tmp1.flac'],
   loop: false
@@ -42,4 +65,12 @@ playBtn.addEventListener('click', function() {
 });
 pauseBtn.addEventListener('click', function() {
   pause();
+});
+
+volBtn.addEventListener('click', function() {
+  mute();
+});
+
+muteBtn.addEventListener('click', function() {
+  unmute();
 });

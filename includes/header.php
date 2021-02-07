@@ -64,9 +64,9 @@
 				&nbsp;&nbsp;&nbsp;
 				<i class="hamburger icon"></i>
 				&nbsp;
-				<i class="volume mute icon"></i>
+				<i class="volume mute icon" id="muteBtn"></i>
 				&nbsp;
-				<i class="volume up icon"></i>
+				<i class="volume up icon" id="volBtn"></i>
 			</div>
 
 			<div class="two wide column">

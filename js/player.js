@@ -3,7 +3,7 @@
  * Copyright Andrew McGee 2021
  */
 
-const setVol = 10.0;
+const setVol = 1.0;
 const muted = false;
 
 //Define some player functions

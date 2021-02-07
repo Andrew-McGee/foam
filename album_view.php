@@ -75,17 +75,15 @@
 								for ($i = 0; $i < $cnt; $i++){
 									echo '<tr>';
 									echo '<td>' . $song_results[song][$i][track] . '</td>';
-									echo '<td><strong>' . $song_results[song][$i][title] . '</strong></td>';
+									echo '<td id="trk' . $i + 1 . '"><strong>' . $song_results[song][$i][title] . '</strong></td>';
 									echo '<td>' . $song_results[song][$i][artist][name] . '</td>';
 									$result = sec2mins($song_results[song][$i][time]);
 									echo '<td>' . $result[minutes] . ':' . sprintf("%02d", $result[seconds]) . '</td>';
 									echo '<td><a href="' . $song_results[song][$i][url] . '"><i class="download icon"></i></a></td>';
 									echo '</tr>';
-									//Make a listener for clicking on this track
-
-									/* trk1 playBtn.addEventListener('click', function() {
-									  play();
-									}); */
+									//Make a listener for clicking on this track title or number
+									echo "<script>trk" . $i + 1 . ".addEventListener('click', function() {";
+									echo "  play('" . $song_results[song][$i][url] . "');});</script>";
 
 								}
 								echo '</tbody></table>';

@@ -29,6 +29,10 @@ function playnew(track) {
 
   // Show the pause button.
   document.getElementById("playBtn").className = "bordered pause icon";
+
+  // Set up a trigger for end of song to change button back to play
+  trk01.on('end', function(){
+  document.getElementById("playBtn").className = "bordered play icon";
 }
 
 // Play or pause the sound

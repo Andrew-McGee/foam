@@ -31,16 +31,16 @@ function playnew(track) {
   document.getElementById("status_msg").textContent="Now Playing: " + track;
 }
 
-// Resume playing the sound
-function play() {
+// Play or pause the sound
+function playToggle() {
 
-  // Play the sound
-  trk01.play();
-
-  // Show the pause button.
-  //pauseBtn.style.display = 'block';
-  //playBtn.style.display = 'none';
-  document.getElementById("playBtn").className = "bordered pause icon";
+  if (trk01.playing()) {
+    trk01.pause(); // Pause the sound & show play button
+    document.getElementById("playBtn").className = "bordered play icon";
+  } else {
+    trk01.play();  // Play the sound & show pause button
+    document.getElementById("playBtn").className = "bordered pause icon";
+  }
 }
 
 // Pause playing the sound
@@ -62,8 +62,8 @@ function mute() {
   trk01.mute(true);
 
   // Show the mute button.
-  muteBtn.style.display = 'block';
-  volBtn.style.display = 'none';
+  //muteBtn.style.display = 'block';
+  //volBtn.style.display = 'none';
   document.getElementById("volBtn").className = "bordered volume mute icon";
 
 }
@@ -83,7 +83,7 @@ function unmute() {
 
 // We need to set some listener events for our player control buttons.
 playBtn.addEventListener('click', function() {
-  play();
+  playToggle();
 });
 
 pauseBtn.addEventListener('click', function() {

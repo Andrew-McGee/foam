@@ -9,13 +9,13 @@
 function play(track) {
 
   // First we need to load in our track to howler
-  var trk01 = new Howl({
+  this.trk01 = new Howl({
     src: ['./tmp1.flac'],
     loop: false
   });
 
   // Play the sound
-  trk01.play();
+  this.trk01.play();
 
   // Show the pause button.
   pauseBtn.style.display = 'block';
@@ -27,7 +27,7 @@ function play(track) {
 function pause() {
 
   // Pause the sound
-  trk01.pause();
+  this.trk01.pause();
 
   // Show the play button.
   playBtn.style.display = 'block';
@@ -39,7 +39,7 @@ function pause() {
 function mute() {
 
   // mute the sound
-  trk01.mute(true);
+  this.trk01.mute(true);
 
   // Show the mute button.
   muteBtn.style.display = 'block';

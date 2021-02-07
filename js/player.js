@@ -3,6 +3,9 @@
  * Copyright Andrew McGee 2021
  */
 
+const setVol = 10.0;
+const muted = false;
+
 //Define some player functions
 
 // Begin playing the sound
@@ -17,18 +20,15 @@ function playnew(track) {
   this.trk01 = new Howl({
     src: [track],
     html5: true,
-    loop: false
+    loop: false,
+    volume: [setVol]
   });
 
   // Play the sound
   trk01.play();
 
   // Show the pause button.
-  //pauseBtn.style.display = 'block';
-  //playBtn.style.display = 'none';
   document.getElementById("playBtn").className = "bordered pause icon";
-
-  document.getElementById("status_msg").textContent="Now Playing: " + track;
 }
 
 // Play or pause the sound
@@ -43,57 +43,25 @@ function playToggle() {
   }
 }
 
-// Pause playing the sound
-function pause() {
-
-  // Pause the sound
-  trk01.pause();
-
-  // Show the play button.
-  //playBtn.style.display = 'block';
-  //pauseBtn.style.display = 'none';
-  document.getElementById("playBtn").className = "bordered play icon";
-}
-
-// mute playing the sound
+// mute or unmute the sound
 function mute() {
 
-  // mute the sound
-  trk01.mute(true);
-
-  // Show the mute button.
-  //muteBtn.style.display = 'block';
-  //volBtn.style.display = 'none';
-  document.getElementById("volBtn").className = "bordered volume mute icon";
-
+  if (muted()) {
+    // if muted then unmute the sound & show volume button
+    trk01.mute(false);
+    document.getElementById("volBtn").className = "bordered volume up icon";
+  } else {
+    // if unmuted then mute the sound & show mute button
+    trk01.mute(true);
+    document.getElementById("volBtn").className = "bordered volume mute icon";
+  }
 }
-
-// unmute playing the sound
-function unmute() {
-
-  // Unmute the sound
-  trk01.mute(false);
-
-  // Show the vol button.
-  muteBtn.style.display = 'none';
-  volBtn.style.display = 'block';
-
-}
-
 
 // We need to set some listener events for our player control buttons.
 playBtn.addEventListener('click', function() {
   playToggle();
 });
 
-pauseBtn.addEventListener('click', function() {
-  pause();
-});
-
 volBtn.addEventListener('click', function() {
   mute();
-});
-
-muteBtn.addEventListener('click', function() {
-  unmute();
 });

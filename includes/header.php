@@ -49,7 +49,6 @@
 					<td><span class="ui small text">MICROPLAY</span></td>
 					<td><i class="bordered step backward icon" id="backBtn"></i></td>
 					<td><i class="bordered play icon" id="playBtn"></i></td>
-					<!-- <td><i class="bordered pause icon" id="pauseBtn"></i></td> -->
 					<td><i class="bordered step forward icon" id="frwdBtn"></i></td>
 				</tr></table>
 			</div>
@@ -67,15 +66,15 @@
 					<td><img class="ui image"  id="playrThumb" src="img/vinyl.png" width="50" height="50"></td>
 					<td><strong><div class="ui small text" id="playrTitle"></strong></div>
 					<div class="ui small text" id="playrArtist"></div></td>
-					<td><i class="sort down icon" id="queueBtn"></i></td>
+					<td><i class="bordered large sort down icon" id="queueBtn"></i></td>
 				</tr></table>
 			</div>
 
 			<div class="two wide column">
 				<table><tr>
 					<!-- <td><i class="volume mute icon" id="muteBtn"></i></td> -->
-					<td><i class="volume up icon" id="volBtn"></i></td>
 					<td><div class="ui small blue slider" id="vol1"></div></td>
+					<td><i class="bordered volume up icon" id="volBtn"></i></td>
 				</tr></table>
 			</div>
 

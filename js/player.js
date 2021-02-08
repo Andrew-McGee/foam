@@ -30,11 +30,16 @@ function playnew(track) {
   // Show the pause button.
   document.getElementById("playBtn").className = "bordered pause icon";
 
+  // Update the length of track in th UI
+  trk01.on('load', function(){
+    document.getElementById("length").textContent = sec2mins(Math.round(trk01.duration()));
+  });
+
   // Set up a trigger for end of song to change button back to play
   trk01.on('end', function(){
-  document.getElementById("playBtn").className = "bordered play icon";
-  });
-}
+    document.getElementById("playBtn").className = "bordered play icon";
+    });
+  }
 
 // Play or pause the sound
 function playToggle() {
@@ -73,6 +78,14 @@ function changeVol(newVol) {
   }
   this.setVol = newVol;
 }
+
+function sec2mins(secs) {
+  var minutes = Math.floor(secs / 60) || 0;
+  var seconds = (secs - minutes * 60) || 0;
+  return minutes + ':' + (seconds < 10 ? '0' : '') + seconds;
+}
+
+
 
 // We need to set some listener events for our player control buttons.
 playBtn.addEventListener('click', function() {

@@ -29,12 +29,13 @@ Final version will move this to use browser authentication.
 - DL link in track listing
 - pause/play toggle in microplayer
 - mute/unmute volume button in microplayer
+- volume slider
 
 #### _Not Yet Working_
 - Artist view, track view, playlists
 - Search
 - Track seeking or play time updates
-- volume slider
+- pagination
 - links to artist from track listing (or anywhere artist name appears)
 - Queue pulldown and queue manipulation
 - Album play and shuffle

@@ -66,13 +66,12 @@
 					<td><img class="ui image"  id="playrThumb" src="img/vinyl.png" width="50" height="50"></td>
 					<td><strong><div class="ui small text" id="playrTitle"></strong></div>
 					<div class="ui small text" id="playrArtist"></div></td>
-					<td><i class="large sort down icon" id="queueBtn"></i></td>
 				</tr></table>
 			</div>
 
-			<div class="two wide column">
+			<div class="three wide column">
 				<table><tr>
-					<!-- <td><i class="volume mute icon" id="muteBtn"></i></td> -->
+					<td><i class="big sort down icon" id="queueBtn"></i></td>
 					<td style="width:70%"><div class="ui small blue vol slider" id="vol1"></div></td>
 					<td><i class="bordered volume up icon" id="volBtn"></i></td>
 				</tr></table>

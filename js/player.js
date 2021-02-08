@@ -83,7 +83,7 @@ volBtn.addEventListener('click', function() {
   mute();
 });
 
-$('.ui.slider')
+$('.ui.vol.slider')
   .slider({
     min: 0,
     max: 1,

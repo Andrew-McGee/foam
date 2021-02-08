@@ -21,7 +21,7 @@ function playnew(track) {
     src: [track],
     html5: true,
     loop: false,
-    volume: [setVol]
+    volume: [this.setVol]
   });
 
   // Play the sound
@@ -64,6 +64,16 @@ function mute() {
   }
 }
 
+// Change volume as set by slider value
+function changeVol(newVol) {
+
+  // If trk01 is not yet defined don't try calling howler
+  if (typeof trk01 !== 'undefined') {
+    trk01.volume(newVol);
+  }
+  this.setVol = newVol;
+}
+
 // We need to set some listener events for our player control buttons.
 playBtn.addEventListener('click', function() {
   playToggle();
@@ -72,3 +82,16 @@ playBtn.addEventListener('click', function() {
 volBtn.addEventListener('click', function() {
   mute();
 });
+
+$('.ui.slider')
+  .slider({
+    min: 0,
+    max: 1,
+    start: 1,
+    step: 0.1,
+    smooth: true,
+    onChange: function() {
+      changeVol($(this).slider('get value'));
+    }
+  })
+;

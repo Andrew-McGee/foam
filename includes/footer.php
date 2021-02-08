@@ -14,9 +14,7 @@ $('.ui.dropdown')
   .dropdown()
 ;
 
-$('.ui.slider')
-  .slider()
-;
+
 
 </script>
 </html>

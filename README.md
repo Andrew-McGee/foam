@@ -16,8 +16,10 @@ Simply drop everything into your public html directory of your PHP enabled web s
 You need an [Ampache](https://github.com/ampache/ampache) server somewhere.
 
 Some limited options can be found in config/foam.conf.php which sets a few php variables.
-Note: During pre-release authentication to Ampache is in this config file for ease of testing purposes.
-Final version will move this to use browser authentication.
+
+Note: During pre-release authentication to Ampache is hard coded in this config file for ease of testing purposes. Because of this you should not leave your testing foam site exposed to the public as anyone will be able to access it, use your bandwidth and download your media.
+
+The next version will change this to use browser authentication.
 
 ## TODO
 - Early days - still building the base functionality to get to a working release stage.
@@ -47,11 +49,11 @@ Once I have a working release then contributions and suggestions always welcome.
 
 ## Acknowledgements & Dependencies
 - Inspired by the subsonic player [subplayer](https://github.com/peguerosdc/subplayer) - a really nice looking web player for subsonic.
-- Using [Fomantic UI](https://github.com/fomantic/Fomantic-UI) components.
-- Using [howler.js](https://github.com/goldfire/howler.js) audio library for media playback.
-- Fomantic (Semantic) UI is still dependent on jquery.
+- Using [Fomantic UI](https://github.com/fomantic/Fomantic-UI) components (v2.8.7 included).
+- Using [howler.js](https://github.com/goldfire/howler.js) audio library for media playback (In HTML mode for better FLAC playback).
+- Fomantic (Semantic) UI is still dependent on jquery (pulled from CDN - no need to include it).
 - Of course you need a backend [Ampache](https://github.com/ampache/ampache) server.
-- And a PHP enabled webserver.
+- And a PHP enabled webserver (PHP version 7.4+ recommended).
 
 ## License
 

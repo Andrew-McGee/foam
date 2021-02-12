@@ -6,6 +6,8 @@
 const setVol = 1.0;
 const muted = false;
 
+this.setVol = 1.0;
+
 //Define some player functions
 
 // Begin playing the sound

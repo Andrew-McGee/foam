@@ -62,8 +62,8 @@
 							// Right column for album songs in table
 							echo '<div class="ui twelve wide column">';
 								echo '<div class="ui huge smoke header">' . $albm_results[name] . '</div>';
-								echo '<button class="ui tiny grey button"><i class="play icon"></i>PLAY</button>';
-								echo '&nbsp;<button class="ui tiny grey button"><i class="random icon"></i>SHUFFLE</button>';
+								echo '<button class="ui tiny button"><i class="play icon"></i>PLAY</button>';
+								echo '&nbsp;<button class="ui tiny button"><i class="random icon"></i>SHUFFLE</button>';
 								echo '&nbsp;<i class="ellipsis vertical icon"></i>';
 								//Let's make the table for the song list
 								echo '<table class="ui selectable inverted black table">';
@@ -83,14 +83,14 @@
 									echo '<td>' . $result[minutes] . ':' . sprintf("%02d", $result[seconds]) . '</td>';
 									echo '<td><a href="' . $song_results[song][$i][url] . '"><i class="download icon"></i></a></td>';
 									echo '</tr>';
-									//For each table row make a listener for clicking on this track title or track number
+									//For each table row make a listener for clicking on this track title
 									echo "<script>trk" . ($i + 1) . ".addEventListener('click', function() {";
 									echo "  playnew('" . $song_results[song][$i][url] . "');";
 									echo 'document.getElementById("playrThumb").src="' . $albm_results[art] . '";';
 									echo 'document.getElementById("playrTitle").textContent="' . $song_results[song][$i][title] . '";';
 									echo 'document.getElementById("playrArtist").textContent="' . $song_results[song][$i][artist][name] . '";';
 									echo '});</script>';
-
+									//For each table row make a listener for clicking on this track number
 									echo "<script>tno" . ($i + 1) . ".addEventListener('click', function() {";
 									echo "  playnew('" . $song_results[song][$i][url] . "');";
 									echo 'document.getElementById("playrThumb").src="' . $albm_results[art] . '";';

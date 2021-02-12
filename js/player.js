@@ -6,7 +6,7 @@
 const setVol = 1.0;
 const muted = false;
 
-this.setVol = 1.0;
+this.setVol = 0.5;
 
 //Define some player functions
 
@@ -81,6 +81,7 @@ function changeVol(newVol) {
   this.setVol = newVol;
 }
 
+// Convert seconds to minutes & seconds for better display
 function sec2mins(secs) {
   var minutes = Math.floor(secs / 60) || 0;
   var seconds = (secs - minutes * 60) || 0;
@@ -102,7 +103,7 @@ $('.ui.vol.slider')
   .slider({
     min: 0,
     max: 1,
-    start: 1,
+    start: 0.5,
     step: 0.1,
     smooth: true,
     onChange: function() {

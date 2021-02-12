@@ -64,7 +64,7 @@
 			<div class="three wide column">
 				<table><tr>
 					<td><img class="ui image"  id="playrThumb" src="img/vinyl.png" width="50" height="50"></td>
-					<td><strong><div class="ui small text" id="playrTitle"></div></strong>
+					<td><strong><div class="ui small blue header" id="playrTitle"></div></strong>
 					<div class="ui small text" id="playrArtist"></div></td>
 				</tr></table>
 			</div>

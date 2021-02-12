@@ -57,7 +57,7 @@
 
      .ui.inverted.top.segment {
        background-color: var(--space-cadet) !important;
-       color: #A5A5A5 !important;
+       color: #A5A5A5;
 			 padding: 1em 2em;
      }
 

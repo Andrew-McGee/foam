@@ -76,7 +76,8 @@
 									echo '<tr>';
 									echo '<td id="tno' . ($i + 1) . '">' . $song_results[song][$i][track] . '</td>';
 									echo '<td id="trk' . ($i + 1) . '"><strong>' . $song_results[song][$i][title] . '</strong></td>';
-									echo '<td>' . $song_results[song][$i][artist][name] . '</td>';
+									echo '<td><a href="artist_albums.php?uid=' . $song_results[song][$i][artist][id] . '">';
+									echo $song_results[song][$i][artist][name] . '</a></td>';
 									$result = sec2mins($song_results[song][$i][time]);
 									echo '<td>' . $result[minutes] . ':' . sprintf("%02d", $result[seconds]) . '</td>';
 									echo '<td><a href="' . $song_results[song][$i][url] . '"><i class="download icon"></i></a></td>';

@@ -42,7 +42,7 @@
 
 							// Left column for album art and stats
 							echo '<div class="ui four wide column">';
-								echo '<br>' . $artist_results[name];
+								echo '<br><strong>' . $artist_results[name] . '</strong>';
 								echo '<br>' . $artist_results[albumcount] . ' albums';
 								echo '<br>' . $artist_results[songcount] . ' songs';
 							echo '</div>'; // End of 1st column
@@ -56,16 +56,16 @@
 								//Let's make the table for the song list
 								echo '<table class="ui selectable inverted black table">';
 								echo '<thead><tr>';
-								echo '<th>#</th><th>Title</th><th>Artist</th><th>Time</th><th>DL</th>';
+								echo '<th>Title</th><th>Album</th><th>Time</th><th>DL</th>';
 								echo '</tr></thead>';
 								echo '<tbody>';
 								//Loop through the songs to display each on a table row
-								$cnt = $albm_results[songcount]; //Set counter to number of songs on album
+								$cnt = $artist_results[songcount]; //Set counter to number of songs on album
 								for ($i = 0; $i < $cnt; $i++){
 									echo '<tr>';
-									echo '<td id="tno' . ($i + 1) . '">' . $song_results[song][$i][track] . '</td>';
 									echo '<td id="trk' . ($i + 1) . '"><strong>' . $song_results[song][$i][title] . '</strong></td>';
-									echo '<td>' . $song_results[song][$i][artist][name] . '</td>';
+									echo '<td><a href="album_view.php?uid=' . $song_results[song][$i][album][id] . '">';
+									echo $song_results[song][$i][album][name] . '</a></td>';
 									$result = sec2mins($song_results[song][$i][time]);
 									echo '<td>' . $result[minutes] . ':' . sprintf("%02d", $result[seconds]) . '</td>';
 									echo '<td><a href="' . $song_results[song][$i][url] . '"><i class="download icon"></i></a></td>';
@@ -73,17 +73,11 @@
 									//For each table row make a listener for clicking on this track title or track number
 									echo "<script>trk" . ($i + 1) . ".addEventListener('click', function() {";
 									echo "  playnew('" . $song_results[song][$i][url] . "');";
-									echo 'document.getElementById("playrThumb").src="' . $albm_results[art] . '";';
+									echo 'document.getElementById("playrThumb").src="' . $song_results[song][$i][art] . '";';
 									echo 'document.getElementById("playrTitle").textContent="' . $song_results[song][$i][title] . '";';
 									echo 'document.getElementById("playrArtist").textContent="' . $song_results[song][$i][artist][name] . '";';
 									echo '});</script>';
 
-									echo "<script>tno" . ($i + 1) . ".addEventListener('click', function() {";
-									echo "  playnew('" . $song_results[song][$i][url] . "');";
-									echo 'document.getElementById("playrThumb").src="' . $albm_results[art] . '";';
-									echo 'document.getElementById("playrTitle").textContent="' . $song_results[song][$i][title] . '";';
-									echo 'document.getElementById("playrArtist").textContent="' . $song_results[song][$i][artist][name] . '";';
-									echo '});</script>';
 								}
 								echo '</tbody></table>';
 							echo '</div>'; // End of 2nd column

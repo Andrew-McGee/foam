@@ -60,6 +60,18 @@ function artistsongsAPI($auth, $uid){
 }
 
 //
+// Artistsongs API call to return tracks on specific album UID
+//
+function artistalbumsAPI($auth, $uid){
+
+  $call = '?action=artist_albums&filter=' . $uid;
+
+  $result = c_init($auth, $call);
+
+  return $result;
+}
+
+//
 // Generic CURL stuff used by the various calls to call the Ampache API.
 //
 function c_init($auth, $call){

@@ -43,7 +43,8 @@
 							// Left column for album art and stats
 							echo '<div class="ui four wide column">';
 								echo "<img class='ui massive image' src='" . $albm_results[art] . "' >";
-								echo '<br>' . $albm_results[artist][name];
+								echo '<br><a href="artist_albums.php?uid=' . $albm_results[artist][id] . '">';
+								echo $albm_results[artist][name] . '</a>';
 								echo '<br>' . $albm_results[year];
 								echo '<br>' . $albm_results[songcount] . ' songs';
 								$result = sec2mins($albm_results[time]);

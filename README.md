@@ -32,13 +32,13 @@ The next version will change this to use browser authentication.
 - pause/play toggle in microplayer
 - mute/unmute volume button in microplayer
 - volume slider
+- links to artist from track listing (or anywhere artist name appears)
 
 #### _Not Yet Working_
 - Artist view, track view, playlists
 - Search
 - Track seeking or play time updates
 - pagination
-- links to artist from track listing (or anywhere artist name appears)
 - Queue pulldown and queue manipulation
 - Album play and shuffle
 - Favouriting and favourites

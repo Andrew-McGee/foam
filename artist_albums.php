@@ -54,6 +54,7 @@
 								echo '<a href="artist_tracks.php?uid=' . $artistresults[id] . '">';
 								echo "<img class='ui small image' src='img/allsongs.png' ></a>";
 								echo "</div>";
+								$cnt--;
 							} else {
 								echo "<div class='ui column'>";
 								echo '<a href="album_view.php?uid=' . $results[album][$cnt][id] . '">';

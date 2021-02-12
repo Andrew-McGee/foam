@@ -42,7 +42,8 @@
 
 							// Left column for album art and stats
 							echo '<div class="ui four wide column">';
-								echo '<br><strong>' . $artist_results[name] . '</strong>';
+								echo '<br><a href="artist_albums.php?uid=' . $artist_results[id] . '">';
+								echo '<strong>' . $artist_results[name] . '</strong></a>';
 								echo '<br>' . $artist_results[albumcount] . ' albums';
 								echo '<br>' . $artist_results[songcount] . ' songs';
 							echo '</div>'; // End of 1st column

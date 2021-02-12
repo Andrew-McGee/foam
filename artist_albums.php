@@ -8,6 +8,9 @@
 
 	$auth=$hshake[auth];
 
+	$get_data = artistAPI($auth, $uid);
+	$artistresults = json_decode($get_data, true);
+
 	$get_data = artistalbumsAPI($auth, $uid);
 	$results = json_decode($get_data, true);
 
@@ -36,7 +39,7 @@
 			  <div class="ui inverted space segment">
 
 					<?php
-					echo '<h1 class="ui smoke header">' . $results[album][1][artist][name] . '</h1>';
+					echo '<h1 class="ui smoke header">' . $artistresults[name] . '</h1>';
 
 					$cnt = 0; //Reset our counter to build grid of 24 entries
 					echo "<div class='ui six column grid container'>";

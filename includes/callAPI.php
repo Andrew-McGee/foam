@@ -48,7 +48,19 @@ function albumsongsAPI($auth, $uid){
 }
 
 //
-// Artistsongs API call to return tracks on specific album UID
+// Artist API call to return info on specific artist UID
+//
+function artistAPI($auth, $uid){
+
+  $call = '?action=artist&filter=' . $uid;
+
+  $result = c_init($auth, $call);
+
+  return $result;
+}
+
+//
+// Artistsongs API call to return tracks of specific artist UID
 //
 function artistsongsAPI($auth, $uid){
 
@@ -60,7 +72,7 @@ function artistsongsAPI($auth, $uid){
 }
 
 //
-// Artistsongs API call to return tracks on specific album UID
+// Artistalbums API call to return albums of specific artist UID
 //
 function artistalbumsAPI($auth, $uid){
 

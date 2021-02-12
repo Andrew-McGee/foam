@@ -47,7 +47,7 @@
 							echo "<img class='ui small image' src='" . $results[album][$cnt][art] . "' ></a>";
 							echo '<center><br>'. $results[album][$cnt][name];
 							echo '<br><a href="artist_albums.php?uid=' . $results[album][$cnt][artist][id] . '">';
-							echo $results[album][$cnt][artist][name] . "' ></a>";
+							echo $results[album][$cnt][artist][name] . "</a>";
 							echo '<br>'. $results[album][$cnt][year];
 							echo "</center></div>";
 							$cnt++; //Increment our counter

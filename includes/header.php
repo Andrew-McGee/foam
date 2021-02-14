@@ -55,9 +55,9 @@
 
 			<div class="three wide column">
 				<table><tr>
-					<td><span class="ui medium text" id="timer">00:23</span></td>
+					<td><span class="ui medium text" id="timer">00:00</span></td>
 					<td style="width:70%"><div class="ui small blue track slider" id="track1"></div></td></td>
-					<td><span class="ui medium text" id="length">04:13</span></td>
+					<td><span class="ui medium text" id="length">00:00</span></td>
 				</tr></table>
 			</div>
 

@@ -10,9 +10,10 @@ this.setVol = 0.5;
 
 //Define some player functions
 
-// Begin playing the sound
+// Function called to begin playing the sound
 function playnew(track) {
 
+  var self = this;
   // If trk01 is defined something might be playing so just stop everything
   if (typeof trk01 !== 'undefined') {
     trk01.stop();
@@ -32,12 +33,14 @@ function playnew(track) {
   // Show the pause button.
   document.getElementById("playBtn").className = "bordered pause icon";
 
-  // Update the length of track in th UI
-  trk01.on('load', function(){
+  // Update the length of track in the UI once it starts playing
+  trk01.on('play', function(){
     document.getElementById("length").textContent = sec2mins(Math.round(trk01.duration()));
+  // Start upating the progress slider and playtime of the track.
+  requestAnimationFrame(progress);
   });
 
-  // Set up a trigger for end of song to change button back to play
+  // Set up a trigger for end of song to change button to play & update doc title
   trk01.on('end', function(){
     document.getElementById("playBtn").className = "bordered play icon";
     document.title = "foam";
@@ -81,6 +84,18 @@ function changeVol(newVol) {
   }
   this.setVol = newVol;
 }
+
+// Update progress slider and play time - recursive function called within requestAnimationFrame
+function progress() {
+  var self = this;
+  var seek = trk01.seek() || 0;
+  document.getElementById("timer").textContent = sec2mins(Math.round(seek));
+  // If the track is still playing, continue updating by calling function again.
+  if (trk01.playing()) {
+    requestAnimationFrame(progress);
+  }
+}
+
 
 // Convert seconds to minutes & seconds for better display
 function sec2mins(secs) {

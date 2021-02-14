@@ -40,6 +40,7 @@ function playnew(track) {
   // Set up a trigger for end of song to change button back to play
   trk01.on('end', function(){
     document.getElementById("playBtn").className = "bordered play icon";
+    document.title = "foam";
     });
   }
 

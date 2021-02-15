@@ -89,7 +89,8 @@ function changeVol(newVol) {
 function progress() {
   var self = this;
   var seek = trk01.seek() || 0;
-  document.getElementById("timer").textContent = sec2mins(Math.round(seek));
+  document.getElementById("timer").textContent = sec2mins(Math.round(seek)); // Updates playtime
+  $('.ui.track.slider').slider('set value', ((seek / trk01.duration()) * 100) || 0); // Update slider postion
   // If the track is still playing, continue updating by calling function again.
   if (trk01.playing()) {
     requestAnimationFrame(progress);
@@ -125,5 +126,18 @@ $('.ui.vol.slider')
     onChange: function() {
       changeVol($(this).slider('get value'));
     }
+  })
+;
+
+
+$('.ui.track.slider')
+  .slider({
+    min: 0,
+    max: 100,
+    start: 0,
+    step: 1
+//    onChange: function() {
+//      seek($(this).slider('get value'));
+//    }
   })
 ;

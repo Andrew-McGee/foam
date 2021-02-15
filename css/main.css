@@ -54,6 +54,10 @@
 		.icon:hover {
 		  	color: whitesmoke !important;
 		}
+
+		.ui.slider .inner .track {
+	  	background-color: DimGrey !important;
+		}
 /* Hack to center images that are links
 		a.ui.image.centered{
     	display: block;

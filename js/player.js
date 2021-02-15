@@ -90,13 +90,12 @@ function progress() {
   var self = this;
   var seek = trk01.seek() || 0;
   document.getElementById("timer").textContent = sec2mins(Math.round(seek)); // Updates playtime
-  $('.ui.track.slider').slider('set value', ((seek / trk01.duration()) * 100) || 0); // Update slider postion
+  $('.ui.track.slider').slider('set value', ((seek / trk01.duration()) * 100) || 0); // Update ui slider postion
   // If the track is still playing, continue updating by calling function again.
   if (trk01.playing()) {
     requestAnimationFrame(progress);
   }
 }
-
 
 // Convert seconds to minutes & seconds for better display
 function sec2mins(secs) {
@@ -104,8 +103,6 @@ function sec2mins(secs) {
   var seconds = (secs - minutes * 60) || 0;
   return minutes + ':' + (seconds < 10 ? '0' : '') + seconds;
 }
-
-
 
 // We need to set some listener events for our player control buttons.
 playBtn.addEventListener('click', function() {
@@ -128,7 +125,6 @@ $('.ui.vol.slider')
     }
   })
 ;
-
 
 $('.ui.track.slider')
   .slider({

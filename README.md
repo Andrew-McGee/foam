@@ -33,11 +33,15 @@ The next version will change this to use browser authentication.
 - mute/unmute volume button in microplayer
 - volume slider
 - links to artist from track listing (or anywhere artist name appears)
+- Artist all tracks view
+- Artists all albums view
+- Playback timer and slider position update during playback.
 
 #### _Not Yet Working_
-- Artist view, track view, playlists
+- iFrame to separate player from content
+- Track seeking via slider
+- All artists view, all tracks view, playlists view
 - Search
-- Track seeking or play time updates
 - pagination
 - Queue pulldown and queue manipulation
 - Album play and shuffle

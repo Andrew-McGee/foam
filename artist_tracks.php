@@ -71,12 +71,15 @@
 									echo '<td>' . $result[minutes] . ':' . sprintf("%02d", $result[seconds]) . '</td>';
 									echo '<td><a href="' . $song_results[song][$i][url] . '"><i class="download icon"></i></a></td>';
 									echo '</tr>';
+
 									//For each table row make a listener for clicking on this track title or track number
 									echo "<script>trk" . ($i + 1) . ".addEventListener('click', function() {";
 									echo "  playnew('" . $song_results[song][$i][url] . "');";
 									echo 'document.getElementById("playrThumb").src="' . $song_results[song][$i][art] . '";';
 									echo 'document.getElementById("playrTitle").textContent="' . $song_results[song][$i][title] . '";';
 									echo 'document.getElementById("playrArtist").textContent="' . $song_results[song][$i][artist][name] . '";';
+									// Update document title while track plays
+									echo 'document.title = "' . $song_results[song][$i][title] . " - " . $song_results[song][$i][artist][name] . '";';
 									echo '});</script>';
 
 								}

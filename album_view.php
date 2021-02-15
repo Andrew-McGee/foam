@@ -91,17 +91,17 @@
 									echo 'document.getElementById("playrTitle").textContent="' . $song_results[song][$i][title] . '";';
 									echo 'document.getElementById("playrArtist").textContent="' . $song_results[song][$i][artist][name] . '";';
 									// Update document title while track plays
-									echo 'document.title = "' . $song_results[song][$i][title] . $song_results[song][$i][artist][name] . '";';
+									echo 'document.title = "' . $song_results[song][$i][title] . " - " . $song_results[song][$i][artist][name] . '";';
 									echo '});</script>';
 
 									//For each table row make a listener for clicking on this track number
 									echo "<script>tno" . ($i + 1) . ".addEventListener('click', function() {";
 									echo "  playnew('" . $song_results[song][$i][url] . "');";
 									echo 'document.getElementById("playrThumb").src="' . $albm_results[art] . '";';
-									echo 'document.getElementById("playrTitle").textContent="' . $song_results[song][$i][title] . ' - ";';
+									echo 'document.getElementById("playrTitle").textContent="' . $song_results[song][$i][title] . '";';
 									echo 'document.getElementById("playrArtist").textContent="' . $song_results[song][$i][artist][name] . '";';
 									// Update document title while track plays
-									echo 'document.title = "' . $song_results[song][$i][title] . $song_results[song][$i][artist][name] . '";';
+									echo 'document.title = "' . $song_results[song][$i][title] . " - " . $song_results[song][$i][artist][name] . '";';
 									echo '});</script>';
 								}
 								echo '</tbody></table>';

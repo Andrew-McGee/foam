@@ -5,19 +5,24 @@
 
 const setVol = 1.0;
 const muted = false;
+var list = [];
+var queue = [];
 
 this.setVol = 0.5;
 
 //Define some player functions
 
 // Function called to begin playing the sound
-function playnew(track) {
+function playnew(pointer) {
 
   var self = this;
   // If trk01 is defined something might be playing so just stop everything
   if (typeof trk01 !== 'undefined') {
     trk01.stop();
   }
+
+  // We gotta get the track from the playlist based on our pointer
+  track = this.queue[pointer][4];
 
   // First we need to load in our track to howler
   this.trk01 = new Howl({
@@ -37,13 +42,14 @@ function playnew(track) {
   trk01.on('play', function(){
     document.getElementById("length").textContent = sec2mins(Math.round(trk01.duration()));
   // Start upating the progress slider and playtime of the track.
-  requestAnimationFrame(progress);
+    requestAnimationFrame(progress);
   });
 
-  // Set up a trigger for end of song to change button to play & update doc title
+  // Set up a trigger for end of song to do a bunch of stuff
   trk01.on('end', function(){
-    document.getElementById("playBtn").className = "bordered play icon";
-    document.title = "foam";
+    // Need to check if there is another song in the queue - if yes load it - if no end
+    document.getElementById("playBtn").className = "bordered play icon"; // change button back to play
+    document.title = "foam"; // update doc title
     });
   }
 
@@ -95,6 +101,25 @@ function progress() {
   if (trk01.playing()) {
     requestAnimationFrame(progress);
   }
+}
+
+// Build a completely new queue if user clicked a new track from album or tracklist view
+// Or user clicked Play or Shuffle buttons
+// @param = number of which song in the playlist should be played (pointer)
+function newQueue(pointer) {
+  queue = []; // Empty the current queue array
+  // Now lets copy the contents of the list array into our new queue array
+  // loop through outer array and copy the 5 inner values
+  for (var i = 0, l1 = this.list.length; i < l1; i++) {
+    this.queue[i] = [];
+    this.queue[i][0] = this.list[i][0]; // Track title
+    this.queue[i][1] = this.list[i][1]; // Artist name
+    this.queue[i][2] = this.list[i][2]; // duration
+    this.queue[i][3] = this.list[i][3]; // art link
+    this.queue[i][4] = this.list[i][4]; // song link
+  }
+  // Last call the playnew function to kick it off
+  playnew(pointer); // Pass the pointer so he knows what track in the queue to play
 }
 
 // Convert seconds to minutes & seconds for better display

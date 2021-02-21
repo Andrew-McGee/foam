@@ -51,17 +51,28 @@
 							// Right column for album songs in table
 							echo '<div class="ui twelve wide column">';
 								echo '<div class="ui huge smoke header">' . $artist_results[name] . '</div>';
-								echo '<button class="ui tiny grey button"><i class="play icon"></i>PLAY</button>';
-								echo '&nbsp;<button class="ui tiny grey button"><i class="random icon"></i>SHUFFLE</button>';
+								echo '<button class="ui tiny grey button" id="playb"><i class="play icon"></i>PLAY</button>';
+								echo '&nbsp;<button class="ui tiny grey button" id="shufb"><i class="random icon"></i>SHUFFLE</button>';
 								echo '&nbsp;<i class="ellipsis vertical icon"></i>';
+								// Make a listener for clicking on the play button
+								echo "<script>playb.addEventListener('click', function() {";
+								echo "  newQueue('0');";
+								echo '});</script>';
+
+								// Make a listener for clicking on the shuffle button
+								echo "<script>shufb.addEventListener('click', function() {";
+								echo "  shuffle('0');";
+								echo '});</script>';
+
 								//Let's make the table for the song list
 								echo '<table class="ui selectable inverted black table">';
 								echo '<thead><tr>';
 								echo '<th>Title</th><th>Album</th><th>Time</th><th>DL</th>';
 								echo '</tr></thead>';
 								echo '<tbody>';
-								//Loop through the songs to display each on a table row
 								$cnt = $artist_results[songcount]; //Set counter to number of songs on album
+
+								//Loop through the songs to display each on a table row
 								for ($i = 0; $i < $cnt; $i++){
 									echo '<tr>';
 									echo '<td id="trk' . ($i + 1) . '"><strong>' . $song_results[song][$i][title] . '</strong></td>';
@@ -72,17 +83,22 @@
 									echo '<td><a href="' . $song_results[song][$i][url] . '"><i class="download icon"></i></a></td>';
 									echo '</tr>';
 
-									//For each table row make a listener for clicking on this track title or track number
-									echo "<script>trk" . ($i + 1) . ".addEventListener('click', function() {";
-									echo "  playnew('" . $song_results[song][$i][url] . "');";
-									echo 'document.getElementById("playrThumb").src="' . $song_results[song][$i][art] . '";';
-									echo 'document.getElementById("playrTitle").textContent="' . $song_results[song][$i][title] . '";';
-									echo 'document.getElementById("playrArtist").textContent="' . $song_results[song][$i][artist][name] . '";';
-									// Update document title while track plays
-									echo 'document.title = "' . $song_results[song][$i][title] . " - " . $song_results[song][$i][artist][name] . '";';
-									echo '});</script>';
+									// Let's add this entry to our js 'list' array in case it becomes a new playlist or queue
+									echo '<script>';
+									echo 'list[' . $i . '] = [];';
+									echo 'list[' . $i . '][0] = "' . $song_results[song][$i][title] . '";';
+									echo 'list[' . $i . '][1] = "' . $artist_results[name] . '";';
+									echo 'list[' . $i . '][2] = "' . $result[minutes] . ':' . sprintf("%02d", $result[seconds]) . '";';
+									echo 'list[' . $i . '][3] = "' . $song_results[song][$i][art] . '";';
+									echo 'list[' . $i . '][4] = "' . $song_results[song][$i][url] . '";';
+									echo '</script>';
 
-								}
+									// Make a listener for clicking on this track title
+									echo "<script>trk" . ($i + 1) . ".addEventListener('click', function() {";
+									echo "  newQueue('" . $i . "');";
+									echo '});</script>';
+								}//End of row loop
+
 								echo '</tbody></table>';
 							echo '</div>'; // End of 2nd column
 

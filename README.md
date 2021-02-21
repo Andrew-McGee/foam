@@ -47,7 +47,6 @@ The next version will change this to use browser authentication.
 - Search
 - pagination
 - Queue pulldown and queue manipulation
-
 - Favouriting and favourites
 - advanced player option
 

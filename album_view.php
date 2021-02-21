@@ -63,11 +63,16 @@
 							echo '<div class="ui twelve wide column">';
 								echo '<div class="ui huge smoke header">' . $albm_results[name] . '</div>';
 								echo '<button class="ui tiny button" id="playb"><i class="play icon"></i>PLAY</button>';
-								echo '&nbsp;<button class="ui tiny button"><i class="random icon"></i>SHUFFLE</button>';
+								echo '&nbsp;<button class="ui tiny button" id="shufb"><i class="random icon"></i>SHUFFLE</button>';
 								echo '&nbsp;<i class="ellipsis vertical icon"></i>';
 								// Make a listener for clicking on the play button
 								echo "<script>playb.addEventListener('click', function() {";
 								echo "  newQueue('0');";
+								echo '});</script>';
+
+								// Make a listener for clicking on the shuffle button
+								echo "<script>shufb.addEventListener('click', function() {";
+								echo "  shuffle('0');";
 								echo '});</script>';
 
 								//Let's make the table for the song list

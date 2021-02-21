@@ -120,7 +120,7 @@ function progress() {
 }
 
 // Build a completely new queue if user clicked a new track from album or tracklist view
-// Or user clicked Play or Shuffle buttons
+// Or user clicked Play buttons
 // @param = number of which song in the playlist should be played (pointer)
 function newQueue(pointer) {
   queue = []; // Empty the current queue array
@@ -133,6 +133,37 @@ function newQueue(pointer) {
     this.queue[i][2] = this.list[i][2]; // duration
     this.queue[i][3] = this.list[i][3]; // art link
     this.queue[i][4] = this.list[i][4]; // song link
+  }
+  // Last call the playnew function to kick it off
+  playnew(pointer); // Pass the pointer so he knows what track in the queue to play
+}
+
+// Build a shuffled queue if user clicked shuffle button
+function shuffle(pointer) {
+  queue = []; // Empty the current queue array
+
+  // Now lets copy the contents of the list array into our new queue array
+  // loop through outer array and copy the 5 inner values
+  for (var i = 0, l1 = this.list.length; i < l1; i++) {
+    this.queue[i] = [];
+    this.queue[i][0] = this.list[i][0]; // Track title
+    this.queue[i][1] = this.list[i][1]; // Artist name
+    this.queue[i][2] = this.list[i][2]; // duration
+    this.queue[i][3] = this.list[i][3]; // art link
+    this.queue[i][4] = this.list[i][4]; // song link
+  }
+
+  // Now we do some randomising to the queue array
+  var currentIndex = this.queue.length, temporaryValue, randomIndex;
+  // While there remain elements to shuffle...
+  while (0 !== currentIndex) {
+    // Pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+    // And swap it with the current element.
+    temporaryValue = queue[currentIndex];
+    queue[currentIndex] = queue[randomIndex];
+    queue[randomIndex] = temporaryValue;
   }
   // Last call the playnew function to kick it off
   playnew(pointer); // Pass the pointer so he knows what track in the queue to play

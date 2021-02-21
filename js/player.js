@@ -5,6 +5,7 @@
 
 const setVol = 1.0;
 const muted = false;
+const pointer = 0;
 var list = [];
 var queue = [];
 
@@ -16,6 +17,7 @@ this.setVol = 0.5;
 function playnew(pointer) {
 
   var self = this;
+  this.pointer = pointer; // save the parm in our permanent pointer
   // If trk01 is defined something might be playing so just stop everything
   if (typeof trk01 !== 'undefined') {
     trk01.stop();
@@ -124,6 +126,7 @@ function progress() {
 // @param = number of which song in the playlist should be played (pointer)
 function newQueue(pointer) {
   queue = []; // Empty the current queue array
+  this.pointer = pointer; // save the parm in our permanent pointer
   // Now lets copy the contents of the list array into our new queue array
   // loop through outer array and copy the 5 inner values
   for (var i = 0, l1 = this.list.length; i < l1; i++) {
@@ -141,6 +144,7 @@ function newQueue(pointer) {
 // Build a shuffled queue if user clicked shuffle button
 function shuffle(pointer) {
   queue = []; // Empty the current queue array
+  this.pointer = pointer; // save the parm in our permanent pointer
 
   // Now lets copy the contents of the list array into our new queue array
   // loop through outer array and copy the 5 inner values
@@ -169,6 +173,32 @@ function shuffle(pointer) {
   playnew(pointer); // Pass the pointer so he knows what track in the queue to play
 }
 
+// Skip next function
+function next() {
+  if (this.pointer == this.queue.length - 1) {
+    // We're at the end so lets stop playback
+    trk01.stop();
+    // Do some tidy up
+    document.getElementById("playBtn").className = "bordered play icon"; // change button back to play
+    document.title = "foam"; // update doc title back to default
+    this.pointer = 0; // reset our position in the queue
+  } else {
+    this.pointer++;
+    playnew(this.pointer);
+  }
+}
+
+// Skip prev function
+function prev() {
+  // Check if we've been playing for 5 seconds if so just rewind this song
+  if (trk01.seek() >= 5) {
+    playnew(this.pointer); // Just start playback again with current pointer
+  } else {
+    if (this.pointer !== 0) this.pointer--; // Decrement the pointer to the previous song if it's not at the start
+    playnew(this.pointer);
+  }
+}
+
 // Convert seconds to minutes & seconds for better display
 function sec2mins(secs) {
   var minutes = Math.floor(secs / 60) || 0;
@@ -183,6 +213,14 @@ playBtn.addEventListener('click', function() {
 
 volBtn.addEventListener('click', function() {
   mute();
+});
+
+frwdBtn.addEventListener('click', function() {
+  next();
+});
+
+backBtn.addEventListener('click', function() {
+  prev();
 });
 
 $('.ui.vol.slider')

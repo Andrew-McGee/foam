@@ -72,7 +72,7 @@
 								echo '</tr></thead>';
 								echo '<tbody>';
 								$cnt = $albm_results[songcount]; //Set counter to total number of songs on album
-								echo 'var list = [];';
+
 								//Loop through the songs to display each on a table row
 								for ($i = 0; $i < $cnt; $i++){
 									echo '<tr>';
@@ -85,7 +85,7 @@
 									echo '<td><a href="' . $song_results[song][$i][url] . '"><i class="download icon"></i></a></td>';
 									echo '</tr>';
 
-									// Let's add this entry to our js list array in case it becomes a new playlist or queue
+									// Let's add this entry to our js 'list' array in case it becomes a new playlist or queue
 									echo '<script>';
 									echo 'list[' . $i . '] = [];';
 									echo 'list[' . $i . '][0] = "' . $song_results[song][$i][title] . '";';
@@ -95,24 +95,14 @@
 									echo 'list[' . $i . '][4] = "' . $song_results[song][$i][url] . '";';
 									echo '</script>';
 
-									//For each table row make a listener for clicking on this track title
+									// Make a listener for clicking on this track title
 									echo "<script>trk" . ($i + 1) . ".addEventListener('click', function() {";
 									echo "  newQueue('" . $i . "');";
-									echo 'document.getElementById("playrThumb").src="' . $albm_results[art] . '";';
-									echo 'document.getElementById("playrTitle").textContent="' . $song_results[song][$i][title] . '";';
-									echo 'document.getElementById("playrArtist").textContent="' . $song_results[song][$i][artist][name] . '";';
-									// Update document title while track plays
-									echo 'document.title = "' . $song_results[song][$i][title] . " - " . $song_results[song][$i][artist][name] . '";';
 									echo '});</script>';
 
-									//For each table row make a listener for clicking on this track number
+									// Make a listener for clicking on this track number
 									echo "<script>tno" . ($i + 1) . ".addEventListener('click', function() {";
-									echo "  playnew('" . $song_results[song][$i][url] . "');";
-									echo 'document.getElementById("playrThumb").src="' . $albm_results[art] . '";';
-									echo 'document.getElementById("playrTitle").textContent="' . $song_results[song][$i][title] . '";';
-									echo 'document.getElementById("playrArtist").textContent="' . $song_results[song][$i][artist][name] . '";';
-									// Update document title while track plays
-									echo 'document.title = "' . $song_results[song][$i][title] . " - " . $song_results[song][$i][artist][name] . '";';
+									echo "  newQueue('" . $i . "');";
 									echo '});</script>';
 								} //End of row loop
 

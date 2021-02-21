@@ -38,6 +38,14 @@ function playnew(pointer) {
   // Show the pause button.
   document.getElementById("playBtn").className = "bordered pause icon";
 
+  // Update the album art, title and artist in the microplayer
+  document.getElementById("playrThumb").src = this.queue[pointer][3];
+  document.getElementById("playrTitle").textContent = this.queue[pointer][0];
+  document.getElementById("playrArtist").textContent= this.queue[pointer][1];
+
+  // Update the document title with the song and artist
+  document.title = this.queue[pointer][0] + ' - ' + this.queue[pointer][1];
+
   // Update the length of track in the UI once it starts playing
   trk01.on('play', function(){
     document.getElementById("length").textContent = sec2mins(Math.round(trk01.duration()));
@@ -49,9 +57,9 @@ function playnew(pointer) {
   trk01.on('end', function(){
     // Need to check if there is another song in the queue - if yes load it - if no end
     document.getElementById("playBtn").className = "bordered play icon"; // change button back to play
-    document.title = "foam"; // update doc title
-    });
-  }
+    document.title = "foam"; // update doc title back to default
+  });
+}
 
 // Play or pause the sound
 function playToggle() {

@@ -55,9 +55,17 @@ function playnew(pointer) {
 
   // Set up a trigger for end of song to do a bunch of stuff
   trk01.on('end', function(){
+    pointer++;
     // Need to check if there is another song in the queue - if yes load it - if no end
-    document.getElementById("playBtn").className = "bordered play icon"; // change button back to play
-    document.title = "foam"; // update doc title back to default
+    if (pointer == queue.length) {
+      // We're at the end so lets tidy up
+      document.getElementById("playBtn").className = "bordered play icon"; // change button back to play
+      document.title = "foam"; // update doc title back to default
+      pointer = 0; // reset our position in the queue
+    } else {
+      // We're not finished the queue yet so lets keep going
+      playnew(pointer);  // Call the playnew function again with our updated pointer
+    }
   });
 }
 

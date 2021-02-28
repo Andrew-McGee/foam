@@ -14,30 +14,11 @@
 	$get_data = artistalbumsAPI($auth, $uid);
 	$results = json_decode($get_data, true);
 
-	//Include all the inital HTML including doctype, html, head and body tags
-	//Also includes the heading and top menu
-	include 'includes/header.php';
+	include 'includes/header_iframe.php';
 ?>
 
-<!-- Main Body -->
-	<!-- 2 column grid -->
-	<div class="ui two column grid">
-		<div class="ui two wide sidemenu column"><!-- Start of page column 1 - left sidebar -->
-			<div class="ui container"> <!-- Container to constrain width of Vertical Menu -->
-
-			<!-- Include the side menu code -->
-			<?php
-				include 'includes/menu.php';
-				active_menu('none', $hshake);
-			?>
-
-			</div> <!-- Close container -->
-		</div> <!-- End of Column 1 -->
-
-    <div class="ui fourteen wide column"><!-- START of main column 2 -->
-		  <div class="ui inverted manatee segment">
+<body style="overflow:hidden">
 			  <div class="ui inverted space segment">
-
 					<?php
 					echo '<h1 class="ui smoke header">' . $artistresults[name] . '</h1>';
 
@@ -69,13 +50,8 @@
 						}
 						echo "</div>";
 					}
+					echo "</div>";
 					?>
 					</div>
-			  </div>
-		  </div>
-	  </div><!-- END of main column 2 -->
-	</div>
-
-	<?php
-		include 'includes/footer.php';
-	?>
+</body>
+</html>

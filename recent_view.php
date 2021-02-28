@@ -6,7 +6,7 @@
 
 	$auth=$hshake[auth];
 
-	$get_data = statsAPI($auth, 'frequent');
+	$get_data = statsAPI($auth, 'recent');
 	$results = json_decode($get_data, true);
 
 	include 'includes/header_iframe.php';
@@ -14,7 +14,7 @@
 
 <body style="overflow:hidden">
 			  <div class="ui inverted space segment">
-			    <h1 class="ui smoke header">Frequent Albums</h1>
+			    <h1 class="ui smoke header">Recent Albums</h1>
 
 					<?php
 					$cnt = 0; //Reset our counter to build grid of 24 entries
@@ -37,7 +37,8 @@
 						}
 						echo "</div>";
 					}
+					echo "</div>";
 					?>
-				  </div>
+				</div>
 </body>
 </html>

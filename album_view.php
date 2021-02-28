@@ -14,28 +14,10 @@
 	$get_data = albumsongsAPI($auth, $uid);
 	$song_results = json_decode($get_data, true);
 
-	//Include all the inital HTML including doctype, html, head and body tags
-	//Also includes the heading and top menu
-	include 'includes/header.php';
+	include 'includes/header_iframe.php';
 ?>
 
-<!-- Main Body -->
-	<!-- 2 column grid -->
-	<div class="ui two column grid">
-		<div class="ui two wide sidemenu column"><!-- Start of page column 1 - left sidebar -->
-			<div class="ui container"> <!-- Container to constrain width of Vertical Menu -->
-
-			<!-- Include the side menu code -->
-			<?php
-				include 'includes/menu.php';
-				active_menu('none', $hshake);
-			?>
-
-			</div> <!-- Close container -->
-		</div> <!-- End of Column 1 -->
-
-    <div class="ui fourteen wide column"><!-- START of main column 2 -->
-		  <div class="ui inverted manatee segment"> <!-- START of content container -->
+<body style="overflow:hidden">
 			  <div class="ui inverted space segment">
 					<?php
 						echo '<div class="ui two column grid">'; //Two columns for album view - art on left, tracks on right.
@@ -67,12 +49,12 @@
 								echo '&nbsp;<i class="ellipsis vertical icon"></i>';
 								// Make a listener for clicking on the play button
 								echo "<script>playb.addEventListener('click', function() {";
-								echo "  newQueue('0');";
+								echo "  parent.newQueue('0');";
 								echo '});</script>';
 
 								// Make a listener for clicking on the shuffle button
 								echo "<script>shufb.addEventListener('click', function() {";
-								echo "  shuffle('0');";
+								echo "  parent.shuffle('0');";
 								echo '});</script>';
 
 								//Let's make the table for the song list
@@ -97,22 +79,22 @@
 
 									// Let's add this entry to our js 'list' array in case it becomes a new playlist or queue
 									echo '<script>';
-									echo 'list[' . $i . '] = [];';
-									echo 'list[' . $i . '][0] = "' . $song_results[song][$i][title] . '";';
-									echo 'list[' . $i . '][1] = "' . $song_results[song][$i][artist][name] . '";';
-									echo 'list[' . $i . '][2] = "' . $result[minutes] . ':' . sprintf("%02d", $result[seconds]) . '";';
-									echo 'list[' . $i . '][3] = "' . $albm_results[art] . '";';
-									echo 'list[' . $i . '][4] = "' . $song_results[song][$i][url] . '";';
+									echo 'parent.list[' . $i . '] = [];';
+									echo 'parent.list[' . $i . '][0] = "' . $song_results[song][$i][title] . '";';
+									echo 'parent.list[' . $i . '][1] = "' . $song_results[song][$i][artist][name] . '";';
+									echo 'parent.list[' . $i . '][2] = "' . $result[minutes] . ':' . sprintf("%02d", $result[seconds]) . '";';
+									echo 'parent.list[' . $i . '][3] = "' . $albm_results[art] . '";';
+									echo 'parent.list[' . $i . '][4] = "' . $song_results[song][$i][url] . '";';
 									echo '</script>';
 
 									// Make a listener for clicking on this track title
 									echo "<script>trk" . ($i + 1) . ".addEventListener('click', function() {";
-									echo "  newQueue('" . $i . "');";
+									echo "  parent.newQueue('" . $i . "');";
 									echo '});</script>';
 
 									// Make a listener for clicking on this track number
 									echo "<script>tno" . ($i + 1) . ".addEventListener('click', function() {";
-									echo "  newQueue('" . $i . "');";
+									echo "  parent.newQueue('" . $i . "');";
 									echo '});</script>';
 								} //End of row loop
 
@@ -122,10 +104,5 @@
 						echo '</div>'; //End of content grid.
 					?>
 			  </div>
-		  </div> <!-- End of the content container -->
-	  </div><!-- END of main column 2 -->
-	</div>
-
-	<?php
-		include 'includes/footer.php';
-	?>
+</body>
+</html>

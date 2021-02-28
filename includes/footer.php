@@ -7,14 +7,11 @@
     </div>
   </div>
 
-</body>
 <!-- JS to initialise dropdowns-->
 <script>
 $('.ui.dropdown')
   .dropdown()
 ;
-
-
-
 </script>
+</body>
 </html>

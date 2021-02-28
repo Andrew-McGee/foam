@@ -55,9 +55,27 @@
 		  	color: whitesmoke !important;
 		}
 
+		.bordered.icon {
+		  	-webkit-box-shadow: 0 0 0 0.1em rgba(165, 165, 165, 0.1) inset !important;
+          box-shadow: 0 0 0 0.1em rgba(165, 165, 165, 0.1) inset !important;
+		}
+
 		.ui.slider .inner .track {
 	  	background-color: DimGrey !important;
 		}
+
+		.rotate{
+	    -moz-transition: all 0.25s linear;
+	    -webkit-transition: all 0.25s linear;
+	    transition: all 0.25s linear;
+		}
+
+		.rotate.down{
+	    -moz-transform:rotate(180deg);
+	    -webkit-transform:rotate(180deg);
+	    transform:rotate(180deg);
+		}
+
 /* Hack to center images that are links
 		a.ui.image.centered{
     	display: block;

@@ -72,7 +72,7 @@
 			<div class="three wide column"> <!-- Queue dropdown and volume slider -->
 				<table><tr>
 					<td><div class="ui inline dropdown">
-						<i class="big sort down icon" id="queueBtn"></i>
+						<i class="big caret down icon rotate" id="queueBtn"></i>
 			      <div class="menu" id="queueMenu">
 			        <div class="active item">Song - Artist</div>
       			</div>

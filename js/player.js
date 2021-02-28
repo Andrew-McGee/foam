@@ -275,3 +275,7 @@ $('.ui.track.slider')
 //    }
   })
 ;
+
+$(".rotate").click(function(){
+ $(this).toggleClass("down")  ;
+})

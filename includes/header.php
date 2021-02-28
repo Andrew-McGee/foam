@@ -53,7 +53,7 @@
 				</tr></table>
 			</div>
 
-			<div class="three wide column">
+			<div class="three wide column"> <!-- Duration and track slider -->
 				<table><tr>
 					<td><span class="ui medium text" id="timer">00:00</span></td>
 					<td style="width:70%"><div class="ui small blue track slider" id="track1"></div></td></td>
@@ -69,9 +69,14 @@
 				</tr></table>
 			</div>
 
-			<div class="three wide column">
+			<div class="three wide column"> <!-- Queue dropdown and volume slider -->
 				<table><tr>
-					<td><i class="big sort down icon" id="queueBtn"></i></td>
+					<td><div class="ui inline dropdown">
+						<i class="big sort down icon" id="queueBtn"></i>
+			      <div class="queue menu" id="queueMenu">
+			        <div class="active item">Song - Artist</div>
+      			</div>
+					</div></td>
 					<td style="width:70%"><div class="ui small blue vol slider" id="vol1"></div></td>
 					<td><i class="bordered volume up icon" id="volBtn"></i></td>
 				</tr></table>

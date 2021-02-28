@@ -67,6 +67,7 @@
   Add Custom Colours to Semantic Components
 *******************************************/
 		 .ui.header.smoke {color: whitesmoke;}
+		 .ui.header.space {color: var(--space-cadet);}
 		 .ui.header.dim {
 			 color: #A5A5A5 !important;
 			 margin: 1em 2em 0em 3em !important;
@@ -99,6 +100,14 @@
 
 		 .ui.menu .item:hover {
 			 color: whitesmoke !important;
+		 }
+
+		 .ui.dropdown .menu {
+			 background-color: var(--manatee) !important;
+		 }
+
+		 .ui.dropdown .menu>.item {
+			 color: #A5A5A5 !important;
 		 }
 
 		 .ui.compact.table {

@@ -55,6 +55,9 @@ function playnew(pointer) {
     requestAnimationFrame(progress);
   });
 
+  // Call the queueDropdown function to write our queue to the dropdown menu with the new active track
+  queueDropdown();
+
   // Set up a trigger for end of song to do a bunch of stuff
   trk01.on('end', function(){
     pointer++;
@@ -215,6 +218,19 @@ function activeMenu(activeitem) {
       document.getElementById("item"+i).className = "item";
     }
   }
+}
+
+// Function to dynamically build the queue dropdown list
+function queueDropdown() {
+  var items;
+  for (var i = 0, l1 = this.queue.length; i < l1; i++) {
+    if (this.pointer == i) {
+      items = items + '<div class="active item"><div class="ui small space header">' + this.queue[i][0] + ' - ' + this.queue[i][1]  + '</div></div>';
+    } else {
+      items = items + '<div class="item">' + this.queue[i][0] + ' - ' + this.queue[i][1]  + '</div>';
+    }
+  }
+  document.getElementById("queueMenu").innerHTML = items;
 }
 
 // We need to set some listener events for our player control buttons.

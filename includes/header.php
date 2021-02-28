@@ -73,7 +73,7 @@
 				<table><tr>
 					<td><div class="ui inline dropdown">
 						<i class="big sort down icon" id="queueBtn"></i>
-			      <div class="queue menu" id="queueMenu">
+			      <div class="menu" id="queueMenu">
 			        <div class="active item">Song - Artist</div>
       			</div>
 					</div></td>

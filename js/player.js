@@ -225,9 +225,10 @@ function queueDropdown() {
   var items;
   for (var i = 0, l1 = this.queue.length; i < l1; i++) {
     if (this.pointer == i) {
-      items = items + '<div class="active item"><div class="ui small space header">' + this.queue[i][0] + ' - ' + this.queue[i][1]  + '</div></div>';
+      items = items + '<div class="item"><strong><div class="ui small space header">' + this.queue[i][0] + ' - '
+      + this.queue[i][1]  + '</div></strong></div>';
     } else {
-      items = items + '<div class="item">' + this.queue[i][0] + ' - ' + this.queue[i][1]  + '</div>';
+      items = items + '<div class="item" onclick="playnew(' + i + ')">' + this.queue[i][0] + ' - ' + this.queue[i][1]  + '</div>';
     }
   }
   document.getElementById("queueMenu").innerHTML = items;
@@ -273,4 +274,8 @@ $('.ui.track.slider')
 //      seek($(this).slider('get value'));
 //    }
   })
+;
+
+$('.ui.inline.dropdown')
+  .dropdown()
 ;

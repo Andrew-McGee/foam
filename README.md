@@ -39,15 +39,17 @@ The next version will change this to use browser authentication.
 - Album play and shuffle buttons and functions
 - Previous and Next skip buttons working
 - Album view and artist track views now create a queue when played.
+- iFrame to separate player from content
+- favourites view
+- Queue pulldown from micro player
 
 #### _Not Yet Working_
-- iFrame to separate player from content
 - Track seeking via slider
 - All artists view, all tracks view, playlists view
 - Search
 - pagination
-- Queue pulldown and queue manipulation
-- Favouriting and favourites
+- Queue manipulation (add to queue)
+- Adding or removing favourites (tagged)
 - advanced player option
 
 ## Contributions

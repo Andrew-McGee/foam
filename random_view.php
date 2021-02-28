@@ -11,6 +11,7 @@
 
 	include 'includes/header_iframe.php';
 ?>
+<script>parent.activeMenu(9);</script> <!-- Call js function in parent to highlight the correct active menu item -->
 
 <body style="overflow:hidden">
 			  <div class="ui inverted space segment">

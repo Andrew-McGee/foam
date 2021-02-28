@@ -206,6 +206,17 @@ function sec2mins(secs) {
   return minutes + ':' + (seconds < 10 ? '0' : '') + seconds;
 }
 
+// Function to update the active menu item on side menu (called from iframe)
+function activeMenu(activeitem) {
+  for (var i = 1; i <= 9; i++) {
+    if (activeitem == i) {
+      document.getElementById("item"+i).className = "active item";
+    } else {
+      document.getElementById("item"+i).className = "item";
+    }
+  }
+}
+
 // We need to set some listener events for our player control buttons.
 playBtn.addEventListener('click', function() {
   playToggle();

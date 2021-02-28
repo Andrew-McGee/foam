@@ -1,4 +1,9 @@
 <?php
+	include 'includes/callAPI.php';
+
+	$get_data = handshakeAPI();
+	$hshake = json_decode($get_data, true);
+
 	//Include all the inital HTML including doctype, html, head and body tags
 	//Also includes the heading and top microplayer menu
 	//Include function to build side menu - we call it later
@@ -15,7 +20,7 @@
 			<div class="ui container"> <!-- Container to constrain width of Vertical Menu -->
 			<!-- Include the side menu code -->
 			<?php
-				active_menu('recent', $hshake);
+				active_menu($hshake);
 			?>
 			</div> <!-- Close container -->
 		</div> <!-- End of Column 1 -->

@@ -39,21 +39,28 @@ The next version will change this to use browser authentication.
 - Album play and shuffle buttons and functions
 - Previous and Next skip buttons working
 - Album view and artist track views now create a queue when played.
-- iFrame to separate player from content
+- iFrame to separate micro player from content browsing
 - favourites view
 - Queue pulldown from micro player
 
 #### _Not Yet Working_
+- Browser authentication for Ampache with cookies
 - Track seeking via slider
 - All artists view, all tracks view, playlists view
-- Search
-- pagination
-- Queue manipulation (add to queue)
+- Search from top bar
+- pagination for results
+- Queue manipulation (add to queue, re-order)
 - Adding or removing favourites (tagged)
 - advanced player option
 
 ## Contributions
 Once I have a working release then contributions and suggestions always welcome.
+
+## Testing
+Mostly only testing on Chrome in Windows and Linux during initial development.
+Ampache: dev
+Apache: 2.4.41
+PHP: 7.4.3
 
 ## Acknowledgements & Dependencies
 - Inspired by the subsonic player [subplayer](https://github.com/peguerosdc/subplayer) - a really nice looking web player for subsonic.

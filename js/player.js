@@ -9,6 +9,9 @@ const pointer = 0;
 var list = [];
 var queue = [];
 
+var upClass = 'toggle-up';
+var downClass = 'toggle-down';
+
 this.setVol = 0.5;
 
 //Define some player functions
@@ -251,6 +254,16 @@ backBtn.addEventListener('click', function() {
   prev();
 });
 
+queueBtn.addEventListener('click', function() {
+  var icon = document.getElementById('queueBtn');
+
+  if (~icon.className.indexOf(downClass)) {
+    icon.className = icon.className.replace(downClass, upClass);
+  } else {
+    icon.className = icon.className.replace(upClass, downClass);
+  }
+});
+
 $('.ui.vol.slider')
   .slider({
     min: 0,
@@ -275,7 +288,3 @@ $('.ui.track.slider')
 //    }
   })
 ;
-
-$(".rotate").click(function(){
- $(this).toggleClass("down")  ;
-})

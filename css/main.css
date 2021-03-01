@@ -64,16 +64,14 @@
 	  	background-color: DimGrey !important;
 		}
 
-		.rotate{
-	    -moz-transition: all 0.25s linear;
-	    -webkit-transition: all 0.25s linear;
+		.toggle-down {
+			transform: rotate(0deg);
 	    transition: all 0.25s linear;
 		}
 
-		.rotate.down{
-	    -moz-transform:rotate(180deg);
-	    -webkit-transform:rotate(180deg);
+		.toggle-up {
 	    transform:rotate(180deg);
+	    transition: all 0.25s linear;
 		}
 
 /* Hack to center images that are links

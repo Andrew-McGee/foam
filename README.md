@@ -8,7 +8,7 @@ The player is made with js and uses the howler audio library.
 
 - TBA - but expect all the normal album, artist, song, playlist searching.
 
-![Overview](/img/screenshot_pre-release_wip_sml.png)
+![Overview](/img/screenshot_pre-release_wip2_sml.png)
 
 ## Installation
 Simply drop everything into your public html directory of your PHP enabled web server and away you go. No building should be necessary as it is designed to be self contained.

@@ -61,22 +61,36 @@
 								//Let's make the table for the song list
 								echo '<table class="ui selectable inverted black table">';
 								echo '<thead><tr>';
-								echo '<th>#</th><th>Title</th><th>Artist</th><th>Time</th><th>DL</th>';
+								echo '<th>#</th><th>Title</th><th>Artist</th><th></th><th>Time</th><th>DL</th>';
 								echo '</tr></thead>';
 								echo '<tbody>';
 								$cnt = $albm_results[songcount]; //Set counter to total number of songs on album
 
 								//Loop through the songs to display each on a table row
 								for ($i = 0; $i < $cnt; $i++){
-									echo '<tr>';
+									echo '<tr id="row' . $i . '">';
 									echo '<td id="tno' . ($i + 1) . '">' . $song_results[song][$i][track] . '</td>';
 									echo '<td id="trk' . ($i + 1) . '"><strong>' . $song_results[song][$i][title] . '</strong></td>';
 									echo '<td><a href="artist_albums.php?uid=' . $song_results[song][$i][artist][id] . '">';
 									echo $song_results[song][$i][artist][name] . '</a></td>';
+
+									// hidden star and elipse reveal on mouseover row (see listeners below)
+									// some code here to test if song is flagged or not (favourite = blue star)
+									$fav = $song_results[song][$i][flag];
+									if ($fav == true) {
+										$favi = "blue star icon";
+									} else {
+										$favi = "hidden star outline icon";
+									}
+
+									echo '<td><i class="' . $favi . '" id="hiddenstar' . $i . '"></i>&nbsp';
+									echo '<i class="hidden ellipsis vertical icon" id="hiddenelipse' . $i . '"></i></td>';
+
 									$result = sec2mins($song_results[song][$i][time]);
 									echo '<td>' . $result[minutes] . ':' . sprintf("%02d", $result[seconds]) . '</td>';
+
 									echo '<td><a href="' . $song_results[song][$i][url] . '"><i class="download icon"></i></a></td>';
-									echo '</tr>';
+									echo '</tr>'; // End of the row but theres some other stuff still to do in this loop
 
 									// Let's add this entry to our js 'list' array in case it becomes a new playlist or queue
 									echo '<script>';
@@ -88,6 +102,7 @@
 									echo 'parent.list[' . $i . '][4] = "' . $song_results[song][$i][url] . '";';
 									echo '</script>';
 
+									// ** TEMP NOTE ** Remove these duplicate functions and create single named functions for better performance
 									// Make a listener for clicking on this track title
 									echo "<script>trk" . ($i + 1) . ".addEventListener('click', function() {";
 									echo "  parent.newQueue('" . $i . "');";
@@ -97,6 +112,19 @@
 									echo "<script>tno" . ($i + 1) . ".addEventListener('click', function() {";
 									echo "  parent.newQueue('" . $i . "');";
 									echo '});</script>';
+
+									// Make a listener for hovering over a row to make star and elipse visible
+									echo "<script>row" . $i . ".addEventListener('mouseover', function() {";
+									echo '	hiddenstar' . $i . '.setAttribute("style", "opacity:1 !important");  ';
+									echo '	hiddenelipse' . $i . '.setAttribute("style", "opacity:1 !important");  ';
+									echo '});</script>';
+
+									// Make a listener for moving off a row to make star and elipse invisible
+									echo "<script>row" . $i . ".addEventListener('mouseout', function() {";
+									echo '	hiddenstar' . $i . '.setAttribute("style", "opacity:0 !important");  ';
+									echo '	hiddenelipse' . $i . '.setAttribute("style", "opacity:0 !important");  ';
+									echo '});</script>';
+
 								} //End of row loop
 
 								echo '</tbody></table>';

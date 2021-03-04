@@ -16,8 +16,22 @@
 
 	include 'includes/header_iframe.php';
 ?>
-<script>parent.activeMenu(0);</script> <!-- Call js function in parent to highlight the correct active menu item -->
+<script>
+parent.activeMenu(0); // Call js function in parent to highlight the correct active menu item -->
 
+// Function to hide star and elipse on track listing row
+function hideicon(num) {
+		if (document.getElementById("hiddenstar"+num).className !== "blue star icon") {
+    	document.getElementById("hiddenstar"+num).setAttribute("style", "opacity:0 !important");
+		}
+    document.getElementById("hiddenelipse"+num).setAttribute("style", "opacity:0 !important");
+}
+// Function to reveal star and elipse on track listing row
+function revealicon(num) {
+    document.getElementById("hiddenstar"+num).setAttribute("style", "opacity:1 !important");
+    document.getElementById("hiddenelipse"+num).setAttribute("style", "opacity:1 !important");
+}
+</script>
 <body style="overflow:hidden">
 			  <div class="ui inverted space segment">
 					<?php
@@ -47,7 +61,11 @@
 								echo '<div class="ui huge smoke header">' . $albm_results[name] . '</div>';
 								echo '<button class="ui tiny button" id="playb"><i class="play icon"></i>PLAY</button>';
 								echo '&nbsp;<button class="ui tiny button" id="shufb"><i class="random icon"></i>SHUFFLE</button>';
-								echo '&nbsp;<i class="ellipsis vertical icon"></i>';
+								echo '&nbsp;<div class="ui inline dropdown"><i class="ellipsis vertical icon"></i>';
+								echo '	<div class="menu" id="albumMenu">';
+								echo '	<div class="item">Play next</div>';
+								echo '	<div class="item">Add to queue</div>';
+								echo '</div></div>';
 								// Make a listener for clicking on the play button
 								echo "<script>playb.addEventListener('click', function() {";
 								echo "  parent.newQueue('0');";
@@ -84,7 +102,14 @@
 									}
 
 									echo '<td><i class="' . $favi . '" id="hiddenstar' . $i . '"></i>&nbsp';
-									echo '<i class="hidden ellipsis vertical icon" id="hiddenelipse' . $i . '"></i></td>';
+									echo '<div class="ui inline dropdown"><i class="hidden ellipsis vertical icon" id="hiddenelipse' . $i . '"></i>';
+									echo '	<div class="menu" id="albumMenu">';
+									echo '		<div class="item">Play next</div>';
+									echo '		<div class="item">Add to queue</div>';
+									echo '		<div class="item">Go to album</div>';
+									echo '		<div class="item">Go to artist</div>';
+									echo '	</div>';
+									echo '</div></td>';
 
 									$result = sec2mins($song_results[song][$i][time]);
 									echo '<td>' . $result[minutes] . ':' . sprintf("%02d", $result[seconds]) . '</td>';
@@ -115,15 +140,13 @@
 
 									// Make a listener for hovering over a row to make star and elipse visible
 									echo "<script>row" . $i . ".addEventListener('mouseover', function() {";
-									echo '	hiddenstar' . $i . '.setAttribute("style", "opacity:1 !important");  ';
-									echo '	hiddenelipse' . $i . '.setAttribute("style", "opacity:1 !important");  ';
-									echo '});</script>';
+									echo "	revealicon('" . $i . "');";
+									echo "});</script>";
 
 									// Make a listener for moving off a row to make star and elipse invisible
-									echo "<script>row" . $i . ".addEventListener('mouseout', function() {";
-									echo '	hiddenstar' . $i . '.setAttribute("style", "opacity:0 !important");  ';
-									echo '	hiddenelipse' . $i . '.setAttribute("style", "opacity:0 !important");  ';
-									echo '});</script>';
+									echo "<script>row" . $i . ".addEventListener('mouseout',  function() {";
+									echo "	hideicon('" . $i . "');";
+									echo "});</script>";
 
 								} //End of row loop
 
@@ -133,5 +156,11 @@
 						echo '</div>'; //End of content grid.
 					?>
 			  </div>
+<!-- JS to initialise dropdowns-->
+<script>
+$('.ui.dropdown')
+  .dropdown()
+;
+</script>
 </body>
 </html>

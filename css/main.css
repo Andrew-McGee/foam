@@ -74,6 +74,9 @@
 	    transition: all 0.25s linear;
 		}
 
+		.icon.hidden {
+			opacity:0 !important;
+		}
 /* Hack to center images that are links
 		a.ui.image.centered{
     	display: block;

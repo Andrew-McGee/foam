@@ -21,11 +21,11 @@ function active_menu($hshake){
   echo '<br><h1 class="ui small dim header">Stats</h1>';
 
   echo '<table class="ui very compact very basic collapsing table"><tbody>';
-    echo '<tr><td>Albums:</td><td>' . $hshake[albums] . '</td></tr>';
-    echo '<tr><td>Artists:</td><td>' . $hshake[artists] . '</td></tr>';
-    echo '<tr><td>Songs:</td><td>' . $hshake[songs] . '</td></tr>';
-    echo '<tr><td>Genres:</td><td>' . $hshake[genres] . '</td></tr>';
-    echo '<tr><td>Playlists:</td><td>' . $hshake[playlists] . '</td></tr>';
+    echo '<tr><td>Albums:</td><td>' . $hshake['albums'] . '</td></tr>';
+    echo '<tr><td>Artists:</td><td>' . $hshake['artists'] . '</td></tr>';
+    echo '<tr><td>Songs:</td><td>' . $hshake['songs'] . '</td></tr>';
+    echo '<tr><td>Genres:</td><td>' . $hshake['genres'] . '</td></tr>';
+    echo '<tr><td>Playlists:</td><td>' . $hshake['playlists'] . '</td></tr>';
   echo '</tbody></table>';
 
   return;

@@ -127,9 +127,9 @@ function c_init($auth, $call){
 // Sneaking a little time conversion function in here to convert seconds into hours, minutes, seconds.
 //
 function sec2mins($seconds){
-  $result[hours] = floor($seconds / 3600);
-  $result[minutes] = floor(($seconds / 60) % 60);
-  $result[seconds] = $seconds % 60;
+  $result['hours'] = floor($seconds / 3600);
+  $result['minutes'] = floor(($seconds / 60) % 60);
+  $result['seconds'] = $seconds % 60;
 
   return $result;;
 }

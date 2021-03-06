@@ -133,6 +133,7 @@ function progress() {
 function newQueue(pointer) {
   queue = []; // Empty the current queue array
   this.pointer = pointer; // save the parm in our permanent pointer
+  this.queue = [];  //Empty existing queue so we don't get old entries hanging over
   // Now lets copy the contents of the list array into our new queue array
   // loop through outer array and copy the 5 inner values
   for (var i = 0, l1 = this.list.length; i < l1; i++) {
@@ -151,7 +152,7 @@ function newQueue(pointer) {
 function shuffle(pointer) {
   queue = []; // Empty the current queue array
   this.pointer = pointer; // save the parm in our permanent pointer
-
+  this.queue = [];  //Empty existing queue so we don't get old entries hanging over
   // Now lets copy the contents of the list array into our new queue array
   // loop through outer array and copy the 5 inner values
   for (var i = 0, l1 = this.list.length; i < l1; i++) {

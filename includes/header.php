@@ -74,7 +74,7 @@
 						<td><div class="ui inline dropdown">
 							<i class="big caret down icon toggle-down" id="queueBtn"></i>
 						  <div class="menu" id="queueMenu">
-			        <div class="active item">Song - Artist</div>
+			        <div class="active item">No Music Here!</div>
       			</div>
 					</div></td>
 					<td style="width:70%"><div class="ui small blue vol slider" id="vol1"></div></td>

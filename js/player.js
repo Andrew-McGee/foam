@@ -187,26 +187,26 @@ function shuffle(pointer) {
 }
 
 // Add a single track to the end of teh existing queue
-function addT2Q(pointer) {
+function addT2Q(song) {
   var newtrk = this.queue.length; // Determine the next entry at end of the queue array
 
   // Now lets copy the list entry into our new queue entry
   this.queue[newtrk] = [];
-  this.queue[newtrk][0] = this.list[pointer][0]; // Track title
-  this.queue[newtrk][1] = this.list[pointer][1]; // Artist name
-  this.queue[newtrk][2] = this.list[pointer][2]; // duration
-  this.queue[newtrk][3] = this.list[pointer][3]; // art link
-  this.queue[newtrk][4] = this.list[pointer][4]; // song link
+  this.queue[newtrk][0] = this.list[song][0]; // Track title
+  this.queue[newtrk][1] = this.list[song][1]; // Artist name
+  this.queue[newtrk][2] = this.list[song][2]; // duration
+  this.queue[newtrk][3] = this.list[song][3]; // art link
+  this.queue[newtrk][4] = this.list[song][4]; // song link
 
   // Call the queueDropdown function to re-write our queue to the dropdown menu with the new track
   queueDropdown();
 }
 
 // Insert a track into existing queue in the next playable position
-function playNext(pointer) {
+function playNext(song) {
   var newtrk = this.pointer + 1; // Determine the next entry after the one currently playing
 
-  this.queue.splice(newtrk, 0, this.list[pointer]);
+  this.queue.splice(newtrk, 0, this.list[song]);
 
   // Call the queueDropdown function to re-write our queue to the dropdown menu with the new track
   queueDropdown();
@@ -261,10 +261,14 @@ function queueDropdown() {
   var items = '';
   for (var i = 0, l1 = this.queue.length; i < l1; i++) {
     if (this.pointer == i) {
-      items = items + '<div class="item"><div class="ui small space header"><i class="tiny play space icon"></i>' + this.queue[i][0] +
+      items = items + '<div class="item">';
+      items = items + '<div class="ui small space header"><i class="tiny play space icon"></i>' + this.queue[i][0] +
       ' - ' + this.queue[i][1]  + '</div></div>';
     } else {
-      items = items + '<div class="item" onclick="playnew(' + i + ')">' + this.queue[i][0] + ' - ' + this.queue[i][1]  + '</div>';
+      items = items + '<div class="item" onclick="playnew(' + i + ')">';
+      items = items + this.queue[i][0] + ' - ' + this.queue[i][1];
+      items = items + '</div>';
+      //items = items + '<div class="item" onclick="playnew(' + i + ')">' + this.queue[i][0] + ' - ' + this.queue[i][1]  + '</div>';
     }
   }
   document.getElementById("queueMenu").innerHTML = items;

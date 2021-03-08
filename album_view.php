@@ -106,7 +106,7 @@ function revealicon(num) {
 										echo '<div class="ui inline dropdown"><i class="hidden ellipsis vertical icon" id="hiddenelipse' . $i . '"></i>';
 										echo '	<div class="menu" id="albumMenu">';
 										echo '		<div class="item">Play next</div>';
-										echo '		<div class="item">Add to queue</div>';
+										echo '		<div class="item" id="addT2Q' . $i . '">Add to queue</div>';
 										echo '		<div class="item">Go to album</div>';
 										echo '		<div class="item">Go to artist</div>';
 										echo '	</div>';
@@ -148,6 +148,11 @@ function revealicon(num) {
 									// Make a listener for moving off a row to make star and elipse invisible
 									echo "<script>row" . $i . ".addEventListener('mouseout',  function() {";
 									echo "	hideicon('" . $i . "');";
+									echo "});</script>";
+
+									// Make a listener for add track to queue (addT2Q) menu item
+									echo "<script>addT2Q" . $i . ".addEventListener('click',  function() {";
+									echo "	parent.addT2Q('" . $i . "');";
 									echo "});</script>";
 
 								} //End of row loop

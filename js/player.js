@@ -180,6 +180,22 @@ function shuffle(pointer) {
   playnew(pointer); // Pass the pointer so he knows what track in the queue to play
 }
 
+// Add a single track to the end of teh existing queue
+function addT2Q(pointer) {
+  var newtrk = this.queue.length; // Determine the next entry at end of the queue array
+
+  // Now lets copy the list entry into our new queue entry
+  this.queue[newtrk] = [];
+  this.queue[newtrk][0] = this.list[pointer][0]; // Track title
+  this.queue[newtrk][1] = this.list[pointer][1]; // Artist name
+  this.queue[newtrk][2] = this.list[pointer][2]; // duration
+  this.queue[newtrk][3] = this.list[pointer][3]; // art link
+  this.queue[newtrk][4] = this.list[pointer][4]; // song link
+
+  // Call the queueDropdown function to write our queue to the dropdown menu with the new track
+  queueDropdown();
+}
+
 // Skip next function
 function next() {
   if (this.pointer == this.queue.length - 1) {

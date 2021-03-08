@@ -80,12 +80,18 @@ function playnew(pointer) {
 // Play or pause the sound
 function playToggle() {
 
-  if (trk01.playing()) {
-    trk01.pause(); // Pause the sound & show play button
-    document.getElementById("playBtn").className = "bordered play icon";
+  // First check if Howler is already set up with a defined trk
+  if (typeof trk01 !== 'undefined') {
+    if (trk01.playing()) {
+      trk01.pause(); // Pause the sound & show play button
+      document.getElementById("playBtn").className = "bordered play icon";
+    } else {
+      trk01.play();  // Play the sound & show pause button
+      document.getElementById("playBtn").className = "bordered pause icon";
+    }
   } else {
-    trk01.play();  // Play the sound & show pause button
-    document.getElementById("playBtn").className = "bordered pause icon";
+    // Ok Howler is not set up but do we have a queue yet? If yes then playnew from position 0
+    if (typeof this.queue[0] !== 'undefined') playnew('0');
   }
 }
 
@@ -192,7 +198,17 @@ function addT2Q(pointer) {
   this.queue[newtrk][3] = this.list[pointer][3]; // art link
   this.queue[newtrk][4] = this.list[pointer][4]; // song link
 
-  // Call the queueDropdown function to write our queue to the dropdown menu with the new track
+  // Call the queueDropdown function to re-write our queue to the dropdown menu with the new track
+  queueDropdown();
+}
+
+// Insert a track into existing queue in the next playable position
+function playNext(pointer) {
+  var newtrk = this.pointer + 1; // Determine the next entry after the one currently playing
+
+  this.queue.splice(newtrk, 0, this.list[pointer]);
+
+  // Call the queueDropdown function to re-write our queue to the dropdown menu with the new track
   queueDropdown();
 }
 

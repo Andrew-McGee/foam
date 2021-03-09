@@ -1,8 +1,8 @@
 # foam = Fomantic & Ampache
 
-foam is a web player frontend for Ampache using the Fomantic UI CSS framework. It is mostly PHP, CSS and HTML and designed to be simple and portable.
+foam is a web player frontend for Ampache using the Fomantic UI CSS framework. It is mostly PHP, JS, CSS and HTML and designed to be simple and portable.
 
-The player is made with js and uses the howler audio library.
+The micro player is js and uses the howler audio library. The Ampache json API calls are made via PHP.
 
 ## Core Features
 
@@ -40,7 +40,9 @@ Note: During pre-release authentication to Ampache is hard coded in this config 
 The next version will change this to use browser authentication.
 
 ## TODO
-- Early days - still building the base functionality to get to a working release stage.
+Status: 60% operational with some missing functions and mild formatting issues.
+
+Still finishing core functionality to get to a working release stage.
 
 #### _Working_
 - Recent, newest, frequent, favourites and random albums views.
@@ -58,6 +60,8 @@ The next version will change this to use browser authentication.
 - Album view and artist track views now create a queue when played.
 - iFrame to separate micro player from content browsing
 - Queue pulldown from micro player with clickable tracks
+- Add a track to queue from hidden vertical ellipsis menu per song
+- Add track to next queue position as Play Next option from menu
 
 #### _Not Yet Working_
 - Browser authentication for Ampache with cookies
@@ -65,7 +69,7 @@ The next version will change this to use browser authentication.
 - All artists view, all tracks view, playlists view
 - Search from top bar
 - pagination for results
-- Queue manipulation (add to queue, re-order)
+- Queue manipulation (re-order, remove track)
 - Adding or removing favourites (tagged)
 
 ## Contributions

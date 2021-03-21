@@ -47,6 +47,7 @@ Still finishing core functionality to get to a working release stage.
 #### _Working_
 - Recent, newest, frequent, favourites and random albums views.
 - Single album view with track listing after clicking on an album
+- All albums view with pagination navigation
 - Play track in album view by clicking track title or track number
 - DL link in track listing
 - pause/play toggle, Previous/Next skip buttons in microplayer

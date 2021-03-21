@@ -47,7 +47,7 @@ parent.activeMenu(3); // Call js function in parent to highlight the correct act
 
 								echo '<div class="ui grid">';
 									echo '<div class="left floated four wide column">';
-										echo '<h1 class="ui smoke header">Artists</h1>';
+										echo '<h1 class="ui smoke header">Artists&nbsp;&nbsp;&nbsp;<i class="small user icon"></i></h1>';
 									echo '</div>';
 									echo '<div class="right floated right aligned four wide column">';
 											echo '<a href="artists_view.php?ofst=' . $poffset . '"><i class="arrow circle left icon"></i></a>&nbsp;&nbsp;&nbsp;';

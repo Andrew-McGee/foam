@@ -32,7 +32,7 @@
 			  <div class="ui inverted space segment">
 					<div class='ui grid'>
 						<div class="left floated four wide column">
-							<h1 class="ui smoke header">Albums</h1>
+							<h1 class="ui smoke header">Albums&nbsp;&nbsp;&nbsp;<i class="small record vinyl icon"></i></h1>
 						</div>
 						<div class="right floated right aligned four wide column">
 								<a href="albums_view.php?ofst=<?php echo $poffset; ?>"><i class="arrow circle left icon"></i></a>&nbsp;&nbsp;&nbsp;

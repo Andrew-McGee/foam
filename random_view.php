@@ -15,7 +15,7 @@
 
 <body style="overflow:hidden">
 			  <div class="ui inverted space segment">
-			    <h1 class="ui smoke header">Random Albums</h1>
+			    <h1 class="ui smoke header">Random Albums&nbsp;&nbsp;&nbsp;<i class="small dice icon"></i></h1>
 
 					<?php
 					$cnt = 0; //Reset our counter to build grid of 24 entries

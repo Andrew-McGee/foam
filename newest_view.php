@@ -32,7 +32,7 @@
 			  <div class="ui inverted space segment">
 					<div class='ui grid'>
 						<div class="left floated five wide column">
-							<h1 class="ui smoke header">Newest Albums</h1>
+							<h1 class="ui smoke header">Newest Albums&nbsp;&nbsp;&nbsp;<i class="small meteor icon"></i></h1>
 						</div>
 						<div class="right floated right aligned five wide column">
 								<a href="newest_view.php?ofst=<?php echo $poffset; ?>"><i class="arrow circle left icon"></i></a>&nbsp;&nbsp;&nbsp;

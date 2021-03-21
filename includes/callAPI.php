@@ -61,6 +61,18 @@ function albumsongsAPI($auth, $uid){
 }
 
 //
+// Artists API call to return artists listing
+//
+function artistsAPI($auth, $offset){
+
+  $call = '?action=artists&limit=20&offset=' . $offset;
+
+  $result = c_init($auth, $call);
+
+  return $result;
+}
+
+//
 // Artist API call to return info on specific artist UID
 //
 function artistAPI($auth, $uid){

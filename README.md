@@ -62,13 +62,16 @@ Still finishing core functionality to get to a working release stage.
 - Queue pulldown from micro player with clickable tracks
 - Add a track to queue from hidden vertical ellipsis menu per song
 - Add track to next queue position as Play Next option from menu
+- Playlists view and playlist tracks view when you click a playlist
+- Playlists can be played, shuffled or tracks added to the queue like albums
+- Pagination on recent, frequent and newest album views for next/prev navigation
 
 #### _Not Yet Working_
 - Browser authentication for Ampache with cookies
 - Track seeking via slider
-- All artists view, all tracks view, playlists view
+- All artists view, all tracks view
 - Search from top bar
-- pagination for results
+- Some quirky pagination bugs and better logic for start/end
 - Queue manipulation (re-order, remove track)
 - Adding or removing favourites (tagged)
 

@@ -16,8 +16,8 @@ function handshakeAPI(){
 //
 function statsAPI($auth, $filter, $offset){
 
-  //$call = '?action=stats&type=album&limit=24&filter=' . $filter . '&offset=' . $offset;
-  $call = '?action=stats&type=album&offset=25&limit=24&filter=' . $filter;
+  $call = '?action=stats&type=album&limit=24&filter=' . $filter . '&offset=' . $offset;
+  //$call = '?action=stats&type=album&offset=25&limit=24&filter=' . $filter;
 
   $result = c_init($auth, $call);
 

@@ -1,11 +1,20 @@
 <?php
 	include 'includes/callAPI.php';
 
+	// Check if we have an offset value passed for pagination
 	if (!empty($_GET["ofst"])) {
 		$offset = $_GET["ofst"];
 	} else {
 		$offset = 0;
 	}
+
+	//Set up some offset values for our next and prev buttons
+  if ($offset == 0) {
+		$poffset = 0;
+	} else {
+		$poffset = $offset - 25;
+	}
+	$noffset = $offset + 25;
 
 	$get_data = handshakeAPI();
 	$hshake = json_decode($get_data, true);
@@ -22,13 +31,13 @@
 <body style="overflow:hidden">
 			  <div class="ui inverted space segment">
 					<div class='ui grid'>
-						<div class="left floated five wide column">
+						<div class="left floated four wide column">
 							<h1 class="ui smoke header">Recent Albums</h1>
 						</div>
-						<div class="right floated right aligned five wide column">
-								<a href="recent_view.php?ofst=0"><i class="arrow circle left icon"></i></a>&nbsp;&nbsp;&nbsp;
+						<div class="right floated right aligned four wide column">
+								<a href="recent_view.php?ofst=<?php echo $poffset; ?>"><i class="arrow circle left icon"></i></a>&nbsp;&nbsp;&nbsp;
 								<span><?php echo $offset; ?></span>
-								<a href="recent_view.php?ofst=25"><i class="arrow circle right icon"></i></a>
+								<a href="recent_view.php?ofst=<?php echo $noffset; ?>"><i class="arrow circle right icon"></i></a>
 						</div>
 					</div>
 

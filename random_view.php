@@ -6,7 +6,7 @@
 
 	$auth=$hshake['auth'];
 
-	$get_data = statsAPI($auth, 'random');
+	$get_data = statsAPI($auth, 'random', 0);
 	$results = json_decode($get_data, true);
 
 	include 'includes/header_iframe.php';

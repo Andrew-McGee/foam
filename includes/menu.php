@@ -6,7 +6,7 @@
 function active_menu($hshake){
   echo '<div class="ui left compact vertical inverted side menu">';
 
-  echo '<a class="item" id="item1" href="recent_view.php?ofst=0" target="iframe_main"><i class="clock icon"></i>Recent</a>';
+  echo '<a class="item" id="item1" href="recent_view.php" target="iframe_main"><i class="clock icon"></i>Recent</a>';
   echo '<a class="item" id="item2" href="newest_view.php" target="iframe_main"><i class="meteor icon"></i>Newest</a>';
   echo '<a class="item" id="item3" href="artists_view.php" target="iframe_main"><i class="user icon"></i>Artists</a>';
   echo '<a class="item" id="item4" href="albums_view.php" target="iframe_main"><i class="record vinyl icon"></i>Albums</a>';

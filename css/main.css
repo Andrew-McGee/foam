@@ -88,6 +88,7 @@
 		 .ui.header.smoke {color: whitesmoke;}
 		 .ui.header.space {color: var(--space-cadet);}
 		 .ui.icon.space {color: var(--space-cadet);}
+		 .ui.icon.header {color: #A5A5A5;}
 		 .ui.header.dim {
 			 color: #A5A5A5 !important;
 			 margin: 1em 2em 0em 3em !important;

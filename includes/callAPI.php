@@ -85,6 +85,42 @@ function artistalbumsAPI($auth, $uid){
 }
 
 //
+// Playlists API call to return list of playlists
+//
+function playlistsAPI($auth){
+
+  $call = '?action=playlists&limit=24';
+
+  $result = c_init($auth, $call);
+
+  return $result;
+}
+
+//
+// Playlist API call to return single playlist info
+//
+function playlistAPI($auth, $uid){
+
+  $call = '?action=playlist&filter=' . $uid;
+
+  $result = c_init($auth, $call);
+
+  return $result;
+}
+
+//
+// Playlistsongs API call to return tracks of specific playlist UID
+//
+function playlistsongsAPI($auth, $uid){
+
+  $call = '?action=playlist_songs&filter=' . $uid;
+
+  $result = c_init($auth, $call);
+
+  return $result;
+}
+
+//
 // Generic CURL stuff used by the various calls to call the Ampache API.
 //
 function c_init($auth, $call){

@@ -1,12 +1,18 @@
 <?php
 	include 'includes/callAPI.php';
 
+	if (!empty($_GET["ofst"])) {
+		$offset = $_GET["ofst"];
+	} else {
+		$offset = 0;
+	}
+
 	$get_data = handshakeAPI();
 	$hshake = json_decode($get_data, true);
 
 	$auth=$hshake['auth'];
 
-	$get_data = statsAPI($auth, 'recent');
+	$get_data = statsAPI($auth, 'recent', $offset);
 	$results = json_decode($get_data, true);
 
 	include 'includes/header_iframe.php';
@@ -15,7 +21,16 @@
 
 <body style="overflow:hidden">
 			  <div class="ui inverted space segment">
-			    <h1 class="ui smoke header">Recent Albums</h1>
+					<div class='ui grid'>
+						<div class="left floated five wide column">
+							<h1 class="ui smoke header">Recent Albums</h1>
+						</div>
+						<div class="right floated right aligned five wide column">
+								<a href="recent_view.php?ofst=0"><i class="arrow circle left icon"></i></a>&nbsp;&nbsp;&nbsp;
+								<span><?php echo $offset; ?></span>
+								<a href="recent_view.php?ofst=25"><i class="arrow circle right icon"></i></a>
+						</div>
+					</div>
 
 					<?php
 					$cnt = 0; //Reset our counter to build grid of 24 entries

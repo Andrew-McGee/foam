@@ -1,7 +1,20 @@
 <?php
 	include 'includes/callAPI.php';
 
-	$uid = $_GET["uid"];
+	// Check if we have an offset value passed for pagination
+	if (!empty($_GET["ofst"])) {
+		$offset = $_GET["ofst"];
+	} else {
+		$offset = 0;
+	}
+
+	//Set up some offset values for our next and prev buttons
+  if ($offset == 0) {
+		$poffset = 0;
+	} else {
+		$poffset = $offset - 25;
+	}
+	$noffset = $offset + 25;
 
 	$get_data = handshakeAPI();
 	$hshake = json_decode($get_data, true);
@@ -23,15 +36,23 @@ parent.activeMenu(3); // Call js function in parent to highlight the correct act
 
 							// Left column for album art and stats
 							echo '<div class="ui four wide column">';
-								echo '<br><a href="artist_albums.php?uid=' . $artist_results['id'] . '">';
-								echo '<strong>' . $artist_results['name'] . '</strong></a>';
-								echo '<br>' . $artist_results['albumcount'] . ' albums';
-								echo '<br>' . $artist_results['songcount'] . ' songs';
+								echo '<br>';
+								echo '<strong>Artists</strong></a>';
+								echo '<br>A - Z';
+								echo '<br> songs';
 							echo '</div>'; // End of 1st column
 
 							// Right column for list of artists in table
 							echo '<div class="ui twelve wide column">';
-								echo '<div class="ui huge smoke header">Artists</div>';
+
+								echo '<div class="ui grid">';
+									echo '<div class="left floated four wide column">';
+										echo '<h1 class="ui smoke header">Artists</h1>';
+									echo '</div>';
+									echo '<div class="right floated right aligned four wide column">';
+											echo '<a href="artists_view.php?ofst=' . $poffset . '"><i class="arrow circle left icon"></i></a>&nbsp;&nbsp;&nbsp;';
+											echo '<a href="artists_view.php?ofst=' . $noffset . '"><i class="arrow circle right icon"></i></a>';
+									echo '</div>';
 								echo '</div>';
 
 								//Let's make the table for the song list

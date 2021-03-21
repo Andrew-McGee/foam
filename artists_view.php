@@ -74,8 +74,12 @@ parent.activeMenu(3); // Call js function in parent to highlight the correct act
 
 										// Calculate artist play time from seconds
 										$result = sec2mins($artist_results['artist'][$i]['time']);
-										echo '<td>' . $result['minutes'] . ':' . sprintf("%02d", $result['seconds']) . '</td>';
 
+										if ($result['hours'] == 0) {
+												echo '<td>' . $result['minutes'] . ':' . sprintf("%02d", $result['seconds']) . '</td>';
+										} else {
+											echo '<td>' . $result['hours'] . ':' . sprintf("%02d", $result['minutes']) . ':' . sprintf("%02d", $result['seconds']) . '</td>';
+										}
 										echo '<td>' . $artist_results['artist'][$i]['genre'][0] . '</td>';
 									echo '</tr>'; // End of the row but theres some other stuff still to do in this loop
 

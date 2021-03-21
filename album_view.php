@@ -40,8 +40,6 @@ function revealicon(num) {
 
 							// Left column for album art and stats
 							echo '<div class="ui four wide column">';
-							  //var_dump($albm_results);
-								//echo '<br><br>Value is:  ' . $albm_results['album'][0]['name'];
 								echo "<img class='ui massive image' src='" . $albm_results['album'][0]['art'] . "' >";
 								echo '<br><a href="artist_albums.php?uid=' . $albm_results['album'][0]['artist']['id'] . '">';
 								echo $albm_results['album'][0]['artist']['name'] . '</a>';

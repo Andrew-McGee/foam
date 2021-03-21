@@ -78,7 +78,7 @@ function revealicon(num) {
 								for ($i = 0; $i < $cnt; $i++){
 									echo '<tr id="row' . $i . '">'; // Start of the track listing row
 										echo '<td id="trk' . ($i + 1) . '"><strong>' . $song_results['song'][$i]['title'] . '</strong></td>';
-										echo '<td><a href="album_view.php?uid=' . $song_results['song'][$i]['artist']['id'] . '">';
+										echo '<td><a href="artist_albums.php?uid=' . $song_results['song'][$i]['artist']['id'] . '">';
 										echo $song_results['song'][$i]['artist']['name'] . '</a></td>';
 
 											// hidden star and elipse reveal on mouseover row (see listeners below)

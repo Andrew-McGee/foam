@@ -35,9 +35,8 @@
 							<h1 class="ui smoke header">Playlists</h1>
 						</div>
 						<div class="right floated right aligned four wide column">
-								<a href="recent_view.php?ofst=<?php echo $poffset; ?>"><i class="arrow circle left icon"></i></a>&nbsp;&nbsp;&nbsp;
-								<span><?php echo $offset; ?></span>
-								<a href="recent_view.php?ofst=<?php echo $noffset; ?>"><i class="arrow circle right icon"></i></a>
+								<a href="playlists_view.php?ofst=<?php echo $poffset; ?>"><i class="arrow circle left icon"></i></a>&nbsp;&nbsp;&nbsp;
+								<a href="playlists_view.php?ofst=<?php echo $noffset; ?>"><i class="arrow circle right icon"></i></a>
 						</div>
 					</div>
 

@@ -36,7 +36,6 @@
 						</div>
 						<div class="right floated right aligned five wide column">
 								<a href="newest_view.php?ofst=<?php echo $poffset; ?>"><i class="arrow circle left icon"></i></a>&nbsp;&nbsp;&nbsp;
-								<span><?php echo $offset; ?></span>
 								<a href="newest_view.php?ofst=<?php echo $noffset; ?>"><i class="arrow circle right icon"></i></a>
 						</div>
 					</div>

@@ -25,6 +25,18 @@ function statsAPI($auth, $filter, $offset){
 }
 
 //
+// Albums API call to return albums listing
+//
+function albumsAPI($auth, $offset){
+
+  $call = '?action=albums&limit=24&offset=' . $offset;
+
+  $result = c_init($auth, $call);
+
+  return $result;
+}
+
+//
 // Album API call to return details on specific album UID
 //
 function albumAPI($auth, $uid){

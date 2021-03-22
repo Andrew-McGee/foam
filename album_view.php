@@ -55,7 +55,8 @@ function revealicon(num) {
 								} else {
 									echo '<br>' . $result['minutes'] . ' minutes';
 								}
-								echo '<br>time element = ' . $albm_results['album'][0]['time'];
+								//echo '<br>time element = ' . $albm_results['album'][0]['time'];
+								//var_dump($albm_results);
 							echo '</div>'; // End of 1st column
 
 							// Right column for album songs in table

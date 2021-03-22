@@ -113,7 +113,7 @@ function artistalbumsAPI($auth, $uid){
 //
 function playlistsAPI($auth){
 
-  $call = '?action=playlists&limit=24';
+  $call = '?action=playlists&limit=24&hide_search=1';
 
   $result = c_init($auth, $call);
 

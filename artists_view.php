@@ -75,23 +75,14 @@ parent.activeMenu(3); // Call js function in parent to highlight the correct act
 										// Calculate artist play time from seconds
 										$result = sec2mins($artist_results['artist'][$i]['time']);
 
+										// If we have only minutes and seconds format differently than if we have hours
 										if ($result['hours'] == 0) {
 												echo '<td>' . $result['minutes'] . ':' . sprintf("%02d", $result['seconds']) . '</td>';
 										} else {
 											echo '<td>' . $result['hours'] . ':' . sprintf("%02d", $result['minutes']) . ':' . sprintf("%02d", $result['seconds']) . '</td>';
 										}
 										echo '<td>' . $artist_results['artist'][$i]['genre'][0] . '</td>';
-									echo '</tr>'; // End of the row but theres some other stuff still to do in this loop
-
-									// Let's add this entry to our js 'list' array in case it becomes a new playlist or queue
-									echo '<script>';
-									echo 'parent.list[' . $i . '] = [];';
-									echo 'parent.list[' . $i . '][0] = "' . $song_results['song'][$i]['title'] . '";';
-									echo 'parent.list[' . $i . '][1] = "' . $artist_results['name'] . '";';
-									echo 'parent.list[' . $i . '][2] = "' . $result['minutes'] . ':' . sprintf("%02d", $result['seconds']) . '";';
-									echo 'parent.list[' . $i . '][3] = "' . $song_results['song'][$i]['art'] . '";';
-									echo 'parent.list[' . $i . '][4] = "' . $song_results['song'][$i]['url'] . '";';
-									echo '</script>';
+									echo '</tr>'; // End of the row 
 
 								}//End of row loop
 

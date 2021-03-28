@@ -66,11 +66,14 @@ Still finishing core functionality to get to a working release stage.
 - Playlists view and playlist tracks view when you click a playlist
 - Playlists can be played, shuffled or tracks added to the queue like albums
 - Pagination on recent, frequent and newest album views for next/prev navigation
+- All artists view and all tracks view
+- Popup song menus for Play next, Add to queue, go to album, go to artist
+- Album and Playlist menu to add all songs to end of queue
+- Filters now work on albums view, artists view and tracks view
 
 #### _Not Yet Working_
 - Browser authentication for Ampache with cookies
 - Track seeking via slider
-- All artists view, all tracks view
 - Search from top bar
 - Some quirky pagination bugs and better logic for start/end
 - Queue manipulation (re-order, remove track)

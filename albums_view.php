@@ -63,8 +63,8 @@
 						</div>
 
 						<div class="right floated right aligned four wide column">
-								<a href="albums_view.php?filt=<?php echo $filt;?>&ofst=<?php echo $poffset;?>"><i class="arrow circle left icon"></i></a>&nbsp;&nbsp;&nbsp;
-								<a href="albums_view.php?filt=<?php echo $filt;?>&ofst=<?php echo $noffset;?>"><i class="arrow circle right icon"></i></a>
+								<a class="icn" href="albums_view.php?filt=<?php echo $filt;?>&ofst=<?php echo $poffset;?>"><i class="arrow circle left icon"></i></a>&nbsp;&nbsp;&nbsp;
+								<a class="icn" href="albums_view.php?filt=<?php echo $filt;?>&ofst=<?php echo $noffset;?>"><i class="arrow circle right icon"></i></a>
 						</div>
 					</div>
 

@@ -30,13 +30,13 @@
 
 <body style="overflow:hidden">
 			  <div class="ui inverted space segment">
-					<div class='ui grid'>
+					<div class='ui middle aligned grid'>
 						<div class="left floated five wide column">
 							<h1 class="ui smoke header">Frequent Albums&nbsp;&nbsp;&nbsp;<i class="small chart line icon"></i></h1>
 						</div>
 						<div class="right floated right aligned five wide column">
-								<a href="frequent_view.php?ofst=<?php echo $poffset; ?>"><i class="arrow circle left icon"></i></a>&nbsp;&nbsp;&nbsp;
-								<a href="frequent_view.php?ofst=<?php echo $noffset; ?>"><i class="arrow circle right icon"></i></a>
+								<a class="icn" href="frequent_view.php?ofst=<?php echo $poffset; ?>"><i class="arrow circle left icon"></i></a>&nbsp;&nbsp;&nbsp;
+								<a class="icn" href="frequent_view.php?ofst=<?php echo $noffset; ?>"><i class="arrow circle right icon"></i></a>
 						</div>
 					</div>
 

@@ -90,8 +90,8 @@ function revealicon(num) {
 									echo '</div>';
 
 									echo '<div class="right floated right aligned four wide column">';
-											echo '<a href="tracks_view.php?filt=' . $filt . '&ofst=' . $poffset . '"><i class="arrow circle left icon"></i></a>&nbsp;&nbsp;&nbsp;';
-											echo '<a href="tracks_view.php?filt=' . $filt . '&ofst=' . $noffset . '"><i class="arrow circle right icon"></i></a>';
+											echo '<a class="icn" href="tracks_view.php?filt=' . $filt . '&ofst=' . $poffset . '"><i class="arrow circle left icon"></i></a>&nbsp;&nbsp;&nbsp;';
+											echo '<a class="icn" href="tracks_view.php?filt=' . $filt . '&ofst=' . $noffset . '"><i class="arrow circle right icon"></i></a>';
 									echo '</div>';
 								echo '</div>';
 

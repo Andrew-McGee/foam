@@ -76,8 +76,8 @@ parent.activeMenu(3); // Call js function in parent to highlight the correct act
 									echo '</div>';
 
 									echo '<div class="right floated right aligned four wide column">';
-											echo '<a href="artists_view.php?filt=' . $filt . '&ofst=' . $poffset . '"><i class="arrow circle left icon"></i></a>&nbsp;&nbsp;&nbsp;';
-											echo '<a href="artists_view.php?filt=' . $filt . '&ofst=' . $noffset . '"><i class="arrow circle right icon"></i></a>';
+											echo '<a class="icn" href="artists_view.php?filt=' . $filt . '&ofst=' . $poffset . '"><i class="arrow circle left icon"></i></a>&nbsp;&nbsp;&nbsp;';
+											echo '<a class="icn" href="artists_view.php?filt=' . $filt . '&ofst=' . $noffset . '"><i class="arrow circle right icon"></i></a>';
 									echo '</div>';
 								echo '</div>';
 

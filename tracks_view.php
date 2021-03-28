@@ -1,6 +1,15 @@
 <?php
 	include 'includes/callAPI.php';
 
+	// Check if we have a filter parm
+	if (!empty($_GET["filt"])) {
+		$filt = $_GET["filt"];
+		$plfilt = $filt;
+	} else {
+		$filt = '';
+		$plfilt = 'Filter...';
+	}
+
 	// Check if we have an offset value passed for pagination
 	if (!empty($_GET["ofst"])) {
 		$offset = $_GET["ofst"];
@@ -21,7 +30,7 @@
 
 	$auth=$hshake['auth'];
 
-	$get_data = songsAPI($auth, $offset);
+	$get_data = songsAPI($auth, $filt, $offset);
 	$song_results = json_decode($get_data, true);
 
 	include 'includes/header_iframe.php';
@@ -63,9 +72,26 @@ function revealicon(num) {
 									echo '<div class="left floated four wide column">';
 										echo '<h1 class="ui smoke header">Tracks&nbsp;&nbsp;&nbsp;<i class="small music icon"></i></h1>';
 									echo '</div>';
+
+									// Tag column
+									echo '<div class="two wide column">';
+										if ($filt !== '') {echo '<div class="ui label">' . $filt . '<a href="tracks_view.php"><i class="icon close"></i></a></div>';}
+									echo '</div>';
+
+									// Filter bar column
+									echo '<div class="three wide column">';
+										echo '<form class="ui form" method="GET" action="tracks_view.php">';
+											echo '<div class="field">';
+												echo '<div class="ui mini icon input">';
+										  		echo '<input name="filt" type="text" placeholder="' . $plfilt . '"><i class="search link icon"></i>';
+												echo '</div>';
+											echo '</div>';
+										echo '</form>';
+									echo '</div>';
+
 									echo '<div class="right floated right aligned four wide column">';
-											echo '<a href="tracks_view.php?ofst=' . $poffset . '"><i class="arrow circle left icon"></i></a>&nbsp;&nbsp;&nbsp;';
-											echo '<a href="tracks_view.php?ofst=' . $noffset . '"><i class="arrow circle right icon"></i></a>';
+											echo '<a href="tracks_view.php?filt=' . $filt . '&ofst=' . $poffset . '"><i class="arrow circle left icon"></i></a>&nbsp;&nbsp;&nbsp;';
+											echo '<a href="tracks_view.php?filt=' . $filt . '&ofst=' . $noffset . '"><i class="arrow circle right icon"></i></a>';
 									echo '</div>';
 								echo '</div>';
 

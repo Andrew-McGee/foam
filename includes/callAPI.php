@@ -63,9 +63,9 @@ function albumsongsAPI($auth, $uid){
 //
 // Artists API call to return artists listing
 //
-function artistsAPI($auth, $offset){
+function artistsAPI($auth, $filt, $offset){
 
-  $call = '?action=artists&limit=20&offset=' . $offset;
+  $call = '?action=artists&limit=20&filter=' . $filt . '&offset=' . $offset;
 
   $result = c_init($auth, $call);
 
@@ -111,9 +111,9 @@ function artistalbumsAPI($auth, $uid){
 //
 // Songs API call to return all tracks listing
 //
-function songsAPI($auth, $offset){
+function songsAPI($auth, $filt, $offset){
 
-  $call = '?action=songs&limit=20&offset=' . $offset;
+  $call = '?action=songs&limit=20&filter=' . $filt . '&offset=' . $offset;
 
   $result = c_init($auth, $call);
 

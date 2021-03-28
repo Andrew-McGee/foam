@@ -44,6 +44,13 @@
 							<h1 class="ui smoke header">Albums&nbsp;&nbsp;&nbsp;<i class="small record vinyl icon"></i></h1>
 						</div>
 
+						<!-- Tag column -->
+									<div class="two wide column">
+										<?php
+										if ($filt !== '') {echo '<div class="ui label">' . $filt . '<a href="albums_view.php"><i class="icon close"></i></a></div>';}
+										?>
+									</div>
+
 						<!-- Filter bar -->
 						<div class="two wide column">
 							<form class="ui form" method="GET" action="albums_view.php">

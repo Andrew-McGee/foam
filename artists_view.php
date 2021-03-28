@@ -12,9 +12,9 @@
   if ($offset == 0) {
 		$poffset = 0;
 	} else {
-		$poffset = $offset - 25;
+		$poffset = $offset - 20;
 	}
-	$noffset = $offset + 25;
+	$noffset = $offset + 20;
 
 	$get_data = handshakeAPI();
 	$hshake = json_decode($get_data, true);
@@ -82,7 +82,7 @@ parent.activeMenu(3); // Call js function in parent to highlight the correct act
 											echo '<td>' . $result['hours'] . ':' . sprintf("%02d", $result['minutes']) . ':' . sprintf("%02d", $result['seconds']) . '</td>';
 										}
 										echo '<td>' . $artist_results['artist'][$i]['genre'][0] . '</td>';
-									echo '</tr>'; // End of the row 
+									echo '</tr>'; // End of the row
 
 								}//End of row loop
 

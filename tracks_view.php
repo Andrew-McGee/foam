@@ -96,9 +96,9 @@ function revealicon(num) {
 										echo '<td><i class="' . $favi . '" id="hiddenstar' . $i . '"></i>&nbsp';
 										echo '<div class="ui inline dropdown"><i class="hidden ellipsis vertical icon" id="hiddenelipse' . $i . '"></i>';
 										echo '	<div class="menu" id="albumMenu">';
-										echo '		<div class="item" id="playNext' . $i . '">Play next</div>';
 										echo '		<div class="item" id="addT2Q' . $i . '">Add to queue</div>';
-										echo '		<div class="item">Go to album</div>';
+										echo '		<div class="item" id="playNext' . $i . '">Play next</div>';
+										echo '		<div class="item"><a href="album_view.php?uid=' . $song_results['song'][$i]['album']['id'] . '">Go to album</a></div>';
 										echo '		<div class="item">Go to artist</div>';
 										echo '	</div>';
 										echo '</div></td>';
@@ -144,7 +144,6 @@ function revealicon(num) {
 									echo "<script>playNext" . $i . ".addEventListener('click',  function() {";
 									echo "	parent.playNext('" . $i . "');";
 									echo "});</script>";
-
 
 								}//End of row loop
 

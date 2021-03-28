@@ -1,6 +1,15 @@
 <?php
 	include 'includes/callAPI.php';
 
+	// Check if we have a filter parm
+	if (!empty($_GET["filt"])) {
+		$filt = $_GET["filt"];
+		$plfilt = $filt;
+	} else {
+		$filt = '';
+		$plfilt = 'Filter...';
+	}
+
 	// Check if we have an offset value passed for pagination
 	if (!empty($_GET["ofst"])) {
 		$offset = $_GET["ofst"];
@@ -21,7 +30,7 @@
 
 	$auth=$hshake['auth'];
 
-	$get_data = albumsAPI($auth, $offset);
+	$get_data = albumsAPI($auth, $filt, $offset);
 	$results = json_decode($get_data, true);
 
 	include 'includes/header_iframe.php';
@@ -34,9 +43,21 @@
 						<div class="left floated four wide column">
 							<h1 class="ui smoke header">Albums&nbsp;&nbsp;&nbsp;<i class="small record vinyl icon"></i></h1>
 						</div>
+
+						<!-- Filter bar -->
+						<div class="two wide column">
+							<form class="ui form" method="GET" action="albums_view.php">
+								<div class="field">
+									<div class="ui mini icon input">
+							  		<input name="filt" type="text" placeholder="<?php echo $plfilt;?>"><i class="search link icon"></i>
+									</div>
+								</div>
+							</form>
+						</div>
+
 						<div class="right floated right aligned four wide column">
-								<a href="albums_view.php?ofst=<?php echo $poffset; ?>"><i class="arrow circle left icon"></i></a>&nbsp;&nbsp;&nbsp;
-								<a href="albums_view.php?ofst=<?php echo $noffset; ?>"><i class="arrow circle right icon"></i></a>
+								<a href="albums_view.php?filt=<?php echo $filt;?>&ofst=<?php echo $poffset;?>"><i class="arrow circle left icon"></i></a>&nbsp;&nbsp;&nbsp;
+								<a href="albums_view.php?filt=<?php echo $filt;?>&ofst=<?php echo $noffset;?>"><i class="arrow circle right icon"></i></a>
 						</div>
 					</div>
 

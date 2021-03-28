@@ -27,9 +27,9 @@ function statsAPI($auth, $filter, $offset){
 //
 // Albums API call to return albums listing
 //
-function albumsAPI($auth, $offset){
+function albumsAPI($auth, $filt, $offset){
 
-  $call = '?action=albums&limit=24&offset=' . $offset;
+  $call = '?action=albums&limit=24&filter=' . $filt . '&offset=' . $offset;
 
   $result = c_init($auth, $call);
 

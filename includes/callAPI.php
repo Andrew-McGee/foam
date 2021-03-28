@@ -109,6 +109,18 @@ function artistalbumsAPI($auth, $uid){
 }
 
 //
+// Songs API call to return all tracks listing
+//
+function songsAPI($auth, $offset){
+
+  $call = '?action=songs&limit=20&offset=' . $offset;
+
+  $result = c_init($auth, $call);
+
+  return $result;
+}
+
+//
 // Playlists API call to return list of playlists
 //
 function playlistsAPI($auth){

@@ -186,6 +186,25 @@ function shuffle(pointer) {
   playnew(pointer); // Pass the pointer so he knows what track in the queue to play
 }
 
+// Build a completely new queue and add a single track
+// if user clicked a new track from tracklist view
+// @param = number of which song in the playlist should be played (pointer)
+function newSingle(pointer) {
+  queue = []; // Empty the current queue array
+  this.pointer = pointer; // save the parm in our permanent pointer
+  this.queue = [];  //Empty existing queue so we don't get old entries hanging over
+
+  // Now lets copy the contents of the new array into our new queue array
+  this.queue[0] = [];
+  this.queue[0][0] = this.list[pointer][0]; // Track title
+  this.queue[0][1] = this.list[pointer][1]; // Artist name
+  this.queue[0][2] = this.list[pointer][2]; // duration
+  this.queue[0][3] = this.list[pointer][3]; // art link
+  this.queue[0][4] = this.list[pointer][4]; // song link
+  // Last call the playnew function to kick it off
+  playnew('0'); // There's only one song in the queue so just pass 0 as the pointer
+}
+
 // Add a single track to the end of teh existing queue
 function addT2Q(song) {
   var newtrk = this.queue.length; // Determine the next entry at end of the queue array

@@ -54,14 +54,14 @@ parent.activeMenu(3); // Call js function in parent to highlight the correct act
 							// Right column for list of artists in table
 							echo '<div class="ui twelve wide column">';
 
-								echo '<div class="ui grid">';
+								echo '<div class="ui middle aligned grid">';
 									echo '<div class="left floated four wide column">';
 										echo '<h1 class="ui smoke header">Artists&nbsp;&nbsp;&nbsp;<i class="small user icon"></i></h1>';
 									echo '</div>';
 
 									// Tag column
 									echo '<div class="two wide column">';
-										if ($filt !== '') {echo '<div class="ui label">' . $filt . '<a href="artists_view.php"><i class="icon close"></i></a></div>';}
+										if ($filt !== '') {echo '<div class="ui filter label">' . $filt . '&nbsp;<a href="artists_view.php"><i class="icon close"></i></a></div>';}
 									echo '</div>';
 
 									// Filter bar column

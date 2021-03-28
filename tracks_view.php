@@ -68,14 +68,14 @@ function revealicon(num) {
 							// Right column for list of songs in table
 							echo '<div class="ui twelve wide column">';
 
-								echo '<div class="ui grid">';
+								echo '<div class="ui middle aligned grid">';
 									echo '<div class="left floated four wide column">';
 										echo '<h1 class="ui smoke header">Tracks&nbsp;&nbsp;&nbsp;<i class="small music icon"></i></h1>';
 									echo '</div>';
 
 									// Tag column
 									echo '<div class="two wide column">';
-										if ($filt !== '') {echo '<div class="ui label">' . $filt . '<a href="tracks_view.php"><i class="icon close"></i></a></div>';}
+										if ($filt !== '') {echo '<div class="ui filter label">' . $filt . '&nbsp;<a href="tracks_view.php"><i class="icon close"></i></a></div>';}
 									echo '</div>';
 
 									// Filter bar column

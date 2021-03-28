@@ -39,7 +39,7 @@
 
 <body style="overflow:hidden">
 			  <div class="ui inverted space segment">
-					<div class='ui grid'>
+					<div class='ui middle aligned grid'>
 						<div class="left floated four wide column">
 							<h1 class="ui smoke header">Albums&nbsp;&nbsp;&nbsp;<i class="small record vinyl icon"></i></h1>
 						</div>
@@ -47,7 +47,7 @@
 						<!-- Tag column -->
 									<div class="two wide column">
 										<?php
-										if ($filt !== '') {echo '<div class="ui label">' . $filt . '<a href="albums_view.php"><i class="icon close"></i></a></div>';}
+										if ($filt !== '') {echo '<div class="ui filter label">' . $filt . '&nbsp;<a href="albums_view.php"><i class="icon close"></i></a></div>';}
 										?>
 									</div>
 

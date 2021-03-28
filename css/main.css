@@ -39,6 +39,7 @@
 
 		.ui.input input {
 			background-color: var(--manatee) !important;
+			color: whitesmoke !important;
 		}
 
 		.ui.button {
@@ -49,6 +50,11 @@
 		.ui.button:hover {
 			background-color: var(--manatee) !important;
 			color: whitesmoke !important;
+		}
+
+		.ui.label.filter {
+			background-color: var(--manatee) !important;
+			color: #A5A5A5 !important;
 		}
 
 		.icon:hover {

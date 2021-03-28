@@ -53,7 +53,7 @@ function revealicon(num) {
 								echo '&nbsp;<button class="ui tiny grey button" id="shufb"><i class="random icon"></i>SHUFFLE</button>';
 								echo '&nbsp;<div class="ui inline dropdown"><i class="ellipsis vertical icon"></i>';
 								echo '	<div class="menu" id="albumMenu">';
-								echo '	<div class="item" id="addAll2Q' . $i . '">Add to queue</div>';
+								echo '	<div class="item" id="addAll2Q">Add to queue</div>';
 								echo '	<div class="item">Play next</div>';
 								echo '</div></div>';
 								// Make a listener for clicking on the play button

@@ -53,8 +53,8 @@ function revealicon(num) {
 								echo '&nbsp;<button class="ui tiny grey button" id="shufb"><i class="random icon"></i>SHUFFLE</button>';
 								echo '&nbsp;<div class="ui inline dropdown"><i class="ellipsis vertical icon"></i>';
 								echo '	<div class="menu" id="albumMenu">';
+								echo '	<div class="item" id="addAll2Q' . $i . '">Add to queue</div>';
 								echo '	<div class="item">Play next</div>';
-								echo '	<div class="item">Add to queue</div>';
 								echo '</div></div>';
 								// Make a listener for clicking on the play button
 								echo "<script>playb.addEventListener('click', function() {";
@@ -64,6 +64,11 @@ function revealicon(num) {
 								// Make a listener for clicking on the shuffle button
 								echo "<script>shufb.addEventListener('click', function() {";
 								echo "  parent.shuffle('0');";
+								echo '});</script>';
+
+								// Make a listener for Add to Queue menu item
+								echo "<script>addAll2Q.addEventListener('click', function() {";
+								echo "	parent.addAll2Q();";
 								echo '});</script>';
 
 								//Let's make the table for the song list

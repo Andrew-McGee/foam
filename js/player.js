@@ -221,6 +221,25 @@ function addT2Q(song) {
   queueDropdown();
 }
 
+// Add all tracks from an album or playlist to the end of the existing queue
+function addAll2Q() {
+  var newpos = this.queue.length; // Determine the next entry at end of the queue array
+
+  // Now lets copy the list entry into our new queue entry
+  // loop through outer array and copy the 5 inner values
+  for (var i = 0, l1 = this.list.length; i < l1; i++) {
+    this.queue[newpos] = [];
+    this.queue[newpos][0] = this.list[i][0]; // Track title
+    this.queue[newpos][1] = this.list[i][1]; // Artist name
+    this.queue[newpos][2] = this.list[i][2]; // duration
+    this.queue[newpos][3] = this.list[i][3]; // art link
+    this.queue[newpos][4] = this.list[i][4]; // song link
+    newpos++;
+  }
+  // Call the queueDropdown function to re-write our queue to the dropdown menu with the new track
+  queueDropdown();
+}
+
 // Insert a track into existing queue in the next playable position
 function playNext(song) {
   var newtrk = this.pointer + 1; // Determine the next entry after the one currently playing

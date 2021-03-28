@@ -35,8 +35,8 @@
 							<h1 class="ui smoke header">Playlists&nbsp;&nbsp;&nbsp;<i class="small stream icon"></i></h1>
 						</div>
 						<div class="right floated right aligned four wide column">
-								<a href="playlists_view.php?ofst=<?php echo $poffset; ?>"><i class="arrow circle left icon"></i></a>&nbsp;&nbsp;&nbsp;
-								<a href="playlists_view.php?ofst=<?php echo $noffset; ?>"><i class="arrow circle right icon"></i></a>
+								<a class="icn" href="playlists_view.php?ofst=<?php echo $poffset; ?>"><i class="arrow circle left icon"></i></a>&nbsp;&nbsp;&nbsp;
+								<a class="icn" href="playlists_view.php?ofst=<?php echo $noffset; ?>"><i class="arrow circle right icon"></i></a>
 						</div>
 					</div>
 
@@ -49,7 +49,7 @@
 						//Loop 6 columns
 						for ($j = 1; $j <=6; $j++){
 							echo "<div class='ui column'>";
-							echo '<a href="playlist_tracks.php?uid=' . $results['playlist'][$cnt]['id'] . '">';
+							echo '<a class="icn" href="playlist_tracks.php?uid=' . $results['playlist'][$cnt]['id'] . '">';
 
 							echo '<h3 class="ui center aligned icon header"><i class="bordered stream icon"></i>';
 							echo $results['playlist'][$cnt]['name'] . '</h3></a>';

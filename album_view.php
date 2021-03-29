@@ -40,12 +40,12 @@ function revealicon(num) {
 
 							// Left column for album art and stats
 							echo '<div class="ui four wide column">';
-								echo "<img class='ui massive image' src='" . $albm_results['album'][0]['art'] . "' >";
-								echo '<br><a href="artist_albums.php?uid=' . $albm_results['album'][0]['artist']['id'] . '">';
-								echo $albm_results['album'][0]['artist']['name'] . '</a>';
-								echo '<br>' . $albm_results['album'][0]['year'];
-								echo '<br>' . $albm_results['album'][0]['songcount'] . ' songs';
-								$result = sec2mins($albm_results['album'][0]['time']);
+								echo "<img class='ui massive image' src='" . $albm_results['art'] . "' >";
+								echo '<br><a href="artist_albums.php?uid=' . $albm_results['artist']['id'] . '">';
+								echo $albm_results['artist']['name'] . '</a>';
+								echo '<br>' . $albm_results['year'];
+								echo '<br>' . $albm_results['songcount'] . ' songs';
+								$result = sec2mins($albm_results['time']);
 								if ($result['hours'] > 0) {
 									if ($result['hours'] > 1) {
 										echo '<br>' . $result['hours'] . ' hours, ' . $result['minutes'] . ' minutes';
@@ -61,12 +61,12 @@ function revealicon(num) {
 
 							// Right column for album songs in table
 							echo '<div class="ui twelve wide column">';
-								echo '<div class="ui huge smoke header">' . $albm_results['album'][0]['name'] . '</div>';
+								echo '<div class="ui huge smoke header">' . $albm_results['name'] . '</div>';
 								echo '<button class="ui tiny button" id="playb"><i class="play icon"></i>PLAY</button>';
 								echo '&nbsp;<button class="ui tiny button" id="shufb"><i class="random icon"></i>SHUFFLE</button>';
 								echo '&nbsp;<div class="ui inline dropdown"><i class="ellipsis vertical icon"></i>';
 								echo '	<div class="menu" id="albumMenu">';
-								echo '	<div class="item" id="addAll2Q' . $i . '">Add to queue</div>';
+								echo '	<div class="item" id="addAll2Q">Add to queue</div>';
 								echo '	<div class="item">Play next</div>';
 								echo '</div></div>';
 								// Make a listener for clicking on the play button
@@ -90,7 +90,7 @@ function revealicon(num) {
 								echo '<th>#</th><th>Title</th><th>Artist</th><th></th><th>Time</th><th>DL</th>';
 								echo '</tr></thead>';
 								echo '<tbody>';
-								$cnt = $albm_results['album'][0]['songcount']; //Set counter to total number of songs on album
+								$cnt = $albm_results['songcount']; //Set counter to total number of songs on album
 
 								//Loop through the songs to display each on a table row
 								for ($i = 0; $i < $cnt; $i++){
@@ -133,7 +133,7 @@ function revealicon(num) {
 									echo 'parent.list[' . $i . '][0] = "' . $song_results['song'][$i]['title'] . '";';
 									echo 'parent.list[' . $i . '][1] = "' . $song_results['song'][$i]['artist']['name'] . '";';
 									echo 'parent.list[' . $i . '][2] = "' . $result['minutes'] . ':' . sprintf("%02d", $result['seconds']) . '";';
-									echo 'parent.list[' . $i . '][3] = "' . $albm_results['album'][0]['art'] . '";';
+									echo 'parent.list[' . $i . '][3] = "' . $albm_results['art'] . '";';
 									echo 'parent.list[' . $i . '][4] = "' . $song_results['song'][$i]['url'] . '";';
 									echo '</script>';
 

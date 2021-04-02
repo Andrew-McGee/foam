@@ -32,6 +32,7 @@
 
 	$get_data = songsAPI($auth, $filt, $offset);
 	$song_results = json_decode($get_data, true);
+	$cnt = count($song_results['song']); //Set counter to number of songs returned
 
 	include 'includes/header_iframe.php';
 ?>
@@ -89,6 +90,7 @@ function revealicon(num) {
 										echo '</form>' . "\r\n";
 									echo '</div>' . "\r\n";
 
+									// Pagination column
 									echo '<div class="right floated right aligned four wide column">' . "\r\n";
 											echo '<a class="icn" href="tracks_view.php?filt=' . $filt . '&ofst=' . $poffset . '"><i class="arrow circle left icon"></i></a>&nbsp;&nbsp;&nbsp;';
 											echo '<a class="icn" href="tracks_view.php?filt=' . $filt . '&ofst=' . $noffset . '"><i class="arrow circle right icon"></i></a>';
@@ -101,7 +103,6 @@ function revealicon(num) {
 								echo '<th>Title</th><th>Artist</th><th></th><th>Time</th><th>DL</th>';
 								echo '</tr></thead>' . "\r\n";
 								echo '<tbody>' . "\r\n";
-								$cnt = 20; //Set counter to number of songs returned
 
 								//Loop through the songs to display each on a table row
 								for ($i = 0; $i < $cnt; $i++){

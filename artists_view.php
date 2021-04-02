@@ -32,6 +32,7 @@
 
 	$get_data = artistsAPI($auth, $filt, $offset);
 	$artist_results = json_decode($get_data, true);
+	$cnt = count($artist_results['artist']); //Set counter to number of artists returned
 
 	include 'includes/header_iframe.php';
 ?>
@@ -87,7 +88,6 @@ parent.activeMenu(3); // Call js function in parent to highlight the correct act
 								echo '<th>Artist</th><th>Songs</th><th>Albums</th><th>Time</th><th>Genres</th>';
 								echo '</tr></thead>';
 								echo '<tbody>';
-								$cnt = 20; //Set counter to number of artists returned
 
 								//Loop through the artists to display each on a table row
 								for ($i = 0; $i < $cnt; $i++){

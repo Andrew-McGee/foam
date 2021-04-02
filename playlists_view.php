@@ -23,6 +23,7 @@
 
 	$get_data = playlistsAPI($auth);
 	$results = json_decode($get_data, true);
+	$total = count($results['playlist']);
 
 	include 'includes/header_iframe.php';
 ?>
@@ -49,13 +50,14 @@
 						//Loop 6 columns
 						for ($j = 1; $j <=6; $j++){
 							echo "<div class='ui column'>";
-							echo '<a class="icn" href="playlist_tracks.php?uid=' . $results['playlist'][$cnt]['id'] . '">';
 
-							echo '<h3 class="ui center aligned icon header"><i class="bordered stream icon"></i>';
-							echo $results['playlist'][$cnt]['name'] . '</h3></a>';
-
-							echo '<center>' . $results['playlist'][$cnt]['items'] . ' items in playlist';
-							echo "</center></div>";
+							if ($cnt < $total) {
+								echo '<a class="icn" href="playlist_tracks.php?uid=' . $results['playlist'][$cnt]['id'] . '">';
+								echo '<h3 class="ui center aligned icon header"><i class="bordered stream icon"></i>';
+								echo $results['playlist'][$cnt]['name'] . '</h3></a>';
+								echo '<center>' . $results['playlist'][$cnt]['items'] . ' items in playlist</center>';
+							}
+							echo "</div>";
 							$cnt++; //Increment our counter
 						}
 						echo "</div>";

@@ -75,15 +75,15 @@ function revealicon(num) {
 									echo '</div>' . "\r\n";
 
 									// Tag column
-									echo '<div class="two wide column">' . "\r\n";
-										if ($filt !== '') {echo '<div class="ui filter label">' . $filt . '&nbsp;<a href="tracks_view.php"><i class="icon close"></i></a></div>';}
+									echo '<div class="three wide column">' . "\r\n";
+										if ($filt !== '') {echo '<div class="ui filter large label">' . $filt . '&nbsp;<a href="tracks_view.php"><i class="icon close"></i></a></div>';}
 									echo '</div>' . "\r\n";
 
 									// Filter bar column
 									echo '<div class="three wide column">' . "\r\n";
 										echo '<form class="ui form" method="GET" action="tracks_view.php">' . "\r\n";
 											echo '<div class="field">' . "\r\n";
-												echo '<div class="ui mini icon input">' . "\r\n";
+												echo '<div class="ui small icon input">' . "\r\n";
 										  		echo '<input name="filt" type="text" placeholder="' . $plfilt . '"><i class="search link icon"></i>' . "\r\n";
 												echo '</div>' . "\r\n";
 											echo '</div>' . "\r\n";

@@ -46,9 +46,9 @@
 						</div>
 
 						<!-- Tag column -->
-									<div class="two wide column">
+									<div class="three wide column">
 										<?php
-										if ($filt !== '') {echo '<div class="ui filter label">' . $filt . '&nbsp;<a href="albums_view.php"><i class="icon close"></i></a></div>';}
+										if ($filt !== '') {echo '<div class="ui filter large label">' . $filt . '&nbsp;<a href="albums_view.php"><i class="icon close"></i></a></div>';}
 										?>
 									</div>
 
@@ -56,7 +56,7 @@
 						<div class="two wide column">
 							<form class="ui form" method="GET" action="albums_view.php">
 								<div class="field">
-									<div class="ui mini icon input">
+									<div class="ui small icon input">
 							  		<input name="filt" type="text" placeholder="<?php echo $plfilt;?>"><i class="search link icon"></i>
 									</div>
 								</div>

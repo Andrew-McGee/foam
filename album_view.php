@@ -136,6 +136,7 @@ function revealicon(num) {
 									echo ' parent.list[' . $i . '][2] = "' . $result['minutes'] . ':' . sprintf("%02d", $result['seconds']) . '";' . "\r\n";
 									echo ' parent.list[' . $i . '][3] = "' . $albm_results['art'] . '";' . "\r\n";
 									echo ' parent.list[' . $i . '][4] = "' . $song_results['song'][$i]['url'] . '";' . "\r\n";
+									echo ' parent.list[' . $i . '][5] = "' . $song_results['song'][$i]['album']['id'] . '";' . "\r\n";
 									echo '</script>' . "\r\n";
 
 									// ** TEMP NOTE ** Remove these duplicate functions and create single named functions for better performance

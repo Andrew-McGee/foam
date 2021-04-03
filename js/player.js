@@ -45,6 +45,7 @@ function playnew(pointer) {
 
   // Update the album art, title and artist in the microplayer
   document.getElementById("playrThumb").src = this.queue[pointer][3];
+  document.getElementById("albmLink").href = 'album_view.php?uid='  + this.queue[pointer][5];
   document.getElementById("playrTitle").textContent = this.queue[pointer][0];
   document.getElementById("playrArtist").textContent= this.queue[pointer][1];
 
@@ -149,6 +150,7 @@ function newQueue(pointer) {
     this.queue[i][2] = this.list[i][2]; // duration
     this.queue[i][3] = this.list[i][3]; // art link
     this.queue[i][4] = this.list[i][4]; // song link
+    this.queue[i][5] = this.list[i][5]; // album id
   }
   // Last call the playnew function to kick it off
   playnew(pointer); // Pass the pointer so he knows what track in the queue to play
@@ -168,6 +170,7 @@ function shuffle(pointer) {
     this.queue[i][2] = this.list[i][2]; // duration
     this.queue[i][3] = this.list[i][3]; // art link
     this.queue[i][4] = this.list[i][4]; // song link
+    this.queue[i][5] = this.list[i][5]; // album id
   }
 
   // Now we do some randomising to the queue array
@@ -201,21 +204,23 @@ function newSingle(pointer) {
   this.queue[0][2] = this.list[pointer][2]; // duration
   this.queue[0][3] = this.list[pointer][3]; // art link
   this.queue[0][4] = this.list[pointer][4]; // song link
+  this.queue[0][5] = this.list[pointer][5]; // album id
   // Last call the playnew function to kick it off
-  playnew('0'); // There's only one song in the queue so just pass 0 as the pointer
+  playnew('0'); // There's only one song in the queue so always pass 0 as the pointer
 }
 
 // Add a single track to the end of teh existing queue
-function addT2Q(song) {
+function addT2Q(pointer) {
   var newtrk = this.queue.length; // Determine the next entry at end of the queue array
 
   // Now lets copy the list entry into our new queue entry
   this.queue[newtrk] = [];
-  this.queue[newtrk][0] = this.list[song][0]; // Track title
-  this.queue[newtrk][1] = this.list[song][1]; // Artist name
-  this.queue[newtrk][2] = this.list[song][2]; // duration
-  this.queue[newtrk][3] = this.list[song][3]; // art link
-  this.queue[newtrk][4] = this.list[song][4]; // song link
+  this.queue[newtrk][0] = this.list[pointer][0]; // Track title
+  this.queue[newtrk][1] = this.list[pointer][1]; // Artist name
+  this.queue[newtrk][2] = this.list[pointer][2]; // duration
+  this.queue[newtrk][3] = this.list[pointer][3]; // art link
+  this.queue[newtrk][4] = this.list[pointer][4]; // song link
+  this.queue[newtrk][5] = this.list[pointer][5]; // album id
 
   // Call the queueDropdown function to re-write our queue to the dropdown menu with the new track
   queueDropdown();
@@ -234,6 +239,7 @@ function addAll2Q() {
     this.queue[newpos][2] = this.list[i][2]; // duration
     this.queue[newpos][3] = this.list[i][3]; // art link
     this.queue[newpos][4] = this.list[i][4]; // song link
+    this.queue[newpos][5] = this.list[i][5]; // album id
     newpos++;
   }
   // Call the queueDropdown function to re-write our queue to the dropdown menu with the new track

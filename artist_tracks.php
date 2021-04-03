@@ -115,12 +115,13 @@ function revealicon(num) {
 									// Let's add this entry to our js 'list' array in case it becomes a new playlist or queue
 									$safeTitle = addslashes($song_results['song'][$i]['title']);  // escapes any quotes in the title
 									echo "\r\n" . '<script>' . "\r\n";
-									echo 'parent.list[' . $i . '] = [];' . "\r\n";
-									echo 'parent.list[' . $i . '][0] = "' . $safeTitle . '";' . "\r\n";
-									echo 'parent.list[' . $i . '][1] = "' . $artist_results['name'] . '";' . "\r\n";
-									echo 'parent.list[' . $i . '][2] = "' . $result['minutes'] . ':' . sprintf("%02d", $result['seconds']) . '";' . "\r\n";
-									echo 'parent.list[' . $i . '][3] = "' . $song_results['song'][$i]['art'] . '";' . "\r\n";
-									echo 'parent.list[' . $i . '][4] = "' . $song_results['song'][$i]['url'] . '";' . "\r\n";
+									echo ' parent.list[' . $i . '] = [];' . "\r\n";
+									echo ' parent.list[' . $i . '][0] = "' . $safeTitle . '";' . "\r\n";
+									echo ' parent.list[' . $i . '][1] = "' . $artist_results['name'] . '";' . "\r\n";
+									echo ' parent.list[' . $i . '][2] = "' . $result['minutes'] . ':' . sprintf("%02d", $result['seconds']) . '";' . "\r\n";
+									echo ' parent.list[' . $i . '][3] = "' . $song_results['song'][$i]['art'] . '";' . "\r\n";
+									echo ' parent.list[' . $i . '][4] = "' . $song_results['song'][$i]['url'] . '";' . "\r\n";
+									echo ' parent.list[' . $i . '][5] = "' . $song_results['song'][$i]['album']['id'] . '";' . "\r\n";
 									echo '</script>' . "\r\n";
 
 									// Make a listener for clicking on this track title

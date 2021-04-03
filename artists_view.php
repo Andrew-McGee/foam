@@ -61,15 +61,15 @@ parent.activeMenu(3); // Call js function in parent to highlight the correct act
 									echo '</div>';
 
 									// Tag column
-									echo '<div class="two wide column">';
-										if ($filt !== '') {echo '<div class="ui filter label">' . $filt . '&nbsp;<a href="artists_view.php"><i class="icon close"></i></a></div>';}
+									echo '<div class="three wide column">';
+										if ($filt !== '') {echo '<div class="ui filter large label">' . $filt . '&nbsp;<a href="artists_view.php"><i class="icon close"></i></a></div>';}
 									echo '</div>';
 
 									// Filter bar column
 									echo '<div class="three wide column">';
 										echo '<form class="ui form" method="GET" action="artists_view.php">';
 											echo '<div class="field">';
-												echo '<div class="ui mini icon input">';
+												echo '<div class="ui small icon input">';
 										  		echo '<input name="filt" type="text" placeholder="' . $plfilt . '"><i class="search link icon"></i>';
 												echo '</div>';
 											echo '</div>';

@@ -29,6 +29,7 @@ function statsAPI($auth, $filter, $offset){
 //
 function albumsAPI($auth, $filt, $offset){
 
+  $filt = urlencode($filt);
   $call = '?action=albums&limit=24&filter=' . $filt . '&offset=' . $offset;
 
   $result = c_init($auth, $call);
@@ -205,5 +206,20 @@ function sec2mins($seconds){
   $result['seconds'] = $seconds % 60;
 
   return $result;;
+}
+
+//
+// Doing some string manipulation to create a cut down album title for series match filter search.
+//
+function smatch($album){
+  $strings = array("(disc", "[disc", "(cd", "[cd", "vol");
+
+  foreach ($strings as $str) {
+    $pos = stripos($album, $str);
+    if ($pos !== false) {
+      $album = substr($album, 0, $pos + 1);
+    }
+  }
+  return $album;
 }
 ?>

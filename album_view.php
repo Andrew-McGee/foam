@@ -14,6 +14,9 @@
 	$get_data = albumsongsAPI($auth, $uid);
 	$song_results = json_decode($get_data, true);
 
+	// Create a stripped down album title we can use in a link for series match
+	$seriesMatch = smatch($albm_results['name']);
+
 	include 'includes/header_iframe.php';
 ?>
 <script>
@@ -68,6 +71,7 @@ function revealicon(num) {
 								echo '	<div class="menu" id="albumMenu">' . "\r\n";
 								echo '	<div class="item" id="addAll2Q">Add to queue</div>' . "\r\n";
 								echo '	<div class="item">Play next</div>' . "\r\n";
+								echo '	<div class="item"><a href="albums_view.php?filt=' . $seriesMatch . '">Series match</a></div>' . "\r\n";
 								echo '</div></div>' . "\r\n";
 								// Make a listener for clicking on the play button
 								echo "\r\n<script>playb.addEventListener('click', function() {";

@@ -109,10 +109,8 @@ function revealicon(num) {
 										$fav = $song_results['song'][$i]['flag'];
 										if ($fav == true) {
 											$favi = "blue star icon";
-											$flag = 0;
 										} else {
 											$favi = "hidden star outline icon";
-											$flag = 1;
 										}
 
 										echo '<td><i class="' . $favi . '" id="hiddenstar' . $i . '"></i>&nbsp;' . "\r\n";

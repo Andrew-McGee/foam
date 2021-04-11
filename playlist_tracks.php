@@ -96,6 +96,7 @@ function revealicon(num) {
 											}
 
 											echo '<td><i class="' . $favi . '" id="hiddenstar' . $i . '"></i>&nbsp;' . "\r\n";
+
 											echo '<div class="ui inline dropdown"><i class="hidden ellipsis vertical icon" id="hiddenelipse' . $i . '"></i>' . "\r\n";
 											echo '	<div class="menu" id="albumMenu">' . "\r\n";
 											echo '		<div class="item" id="addT2Q' . $i . '">Add to queue</div>' . "\r\n";
@@ -139,6 +140,17 @@ function revealicon(num) {
 									echo "<script>row" . $i . ".addEventListener('mouseout',  function() {";
 									echo "	hideicon('" . $i . "');";
 									echo "});</script>" . "\r\n";
+
+									// Make a listener for clicking the favourite star
+									echo "<script>hiddenstar" . $i . ".addEventListener('click',  function() {";
+									echo '	if (document.getElementById("hiddenstar' . $i . '").className !== "blue star icon") {';
+									echo '   	  document.getElementById("hiddenstar' . $i . '").className = "blue star icon";';
+									echo '	    $.get("includes/favAPI.php?type=song&id=' . $song_results['song'][$i]['id'] . '&flag=1");';
+									echo '	} else { ';
+									echo '			document.getElementById("hiddenstar' . $i . '").className = "hidden star outline icon";';
+									echo '	    $.get("includes/favAPI.php?type=song&id=' . $song_results['song'][$i]['id'] . '&flag=0");';
+									echo '	}';
+									echo '});</script>' . "\r\n";
 
 									// Make a listener for add track to queue (addT2Q) menu item
 									echo "<script>addT2Q" . $i . ".addEventListener('click',  function() {";

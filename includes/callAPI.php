@@ -162,6 +162,7 @@ function playlistsongsAPI($auth, $uid){
 //
 function smartAPI($auth, $search, $type){
 
+  $search = urlencode($search);
   $call = '?action=advanced_search&type=' . $type . '&limit=6&rule_1=title&rule_1_operator=0&rule_1_input=' . $search;
 
   $result = c_init($auth, $call);

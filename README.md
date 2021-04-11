@@ -72,13 +72,13 @@ Finishing core functionality to get a working stable release.
 - Filters now work on albums view, artists view and tracks view
 - Series match to find other albums in multi disc or multi volume sets
 - Smart search from top bar with results page
+- Adding or removing favourites (blue star) from tracks and albums
 
 #### _Not Yet Working_
 - Browser authentication for Ampache with cookies
 - Track seeking via slider
 - Some quirky pagination bugs and better logic for start/end
 - Queue manipulation (re-order, remove track)
-- Adding or removing favourites (tagged)
 
 ## Contributions
 Once I have a working release then contributions and suggestions always welcome.

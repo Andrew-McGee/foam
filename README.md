@@ -40,9 +40,16 @@ Note: During pre-release authentication to Ampache is hard coded in this config 
 The next version will change this to use browser authentication.
 
 ## TODO
-Status: 75% operational with some minor functions missing and mild formatting issues.
+Status: 80% operational with some minor functions missing and mild formatting issues.
 
+Phase 1:
 Finishing core functionality to get a working stable release.
+
+Phase 2:
+Adjust styling to polish fonts, palette, element position, theme options etc.
+
+Phase 3:
+Code optimisation, minimisation, minify etc.
 
 #### _Working_
 - Recent, newest, frequent, favourites and random albums views.

@@ -83,6 +83,7 @@ Code optimisation, minimisation, minify etc.
 
 #### _Not Yet Working_
 - Browser authentication for Ampache with cookies
+- Playlist create, add & remove
 - Track seeking via slider
 - Some quirky pagination bugs and better logic for start/end
 - Queue manipulation (re-order, remove track)

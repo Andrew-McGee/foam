@@ -39,7 +39,23 @@
 
 	include 'includes/header_iframe.php';
 ?>
-<script>parent.activeMenu(1);</script> <!-- Call js function in parent to highlight the correct active menu item -->
+<script>
+parent.activeMenu(0);
+parent.list = []; // Clean out the old list before we build a new one
+
+// Function to hide star and elipse on track listing row
+function hideicon(num) {
+		if (document.getElementById("hiddenstar"+num).className !== "blue star icon") {
+    	document.getElementById("hiddenstar"+num).setAttribute("style", "opacity:0 !important");
+		}
+    document.getElementById("hiddenelipse"+num).setAttribute("style", "opacity:0 !important");
+}
+// Function to reveal star and elipse on track listing row
+function revealicon(num) {
+    document.getElementById("hiddenstar"+num).setAttribute("style", "opacity:1 !important");
+    document.getElementById("hiddenelipse"+num).setAttribute("style", "opacity:1 !important");
+}
+</script> <!-- Call js function in parent to highlight the correct active menu item -->
 
 <body style="overflow:hidden">
 			  <div class="ui inverted space segment">
@@ -208,5 +224,11 @@
 
 				</div>
 				<!-- End of track search results -->
+<!-- JS to initialise dropdowns-->
+<script>
+$('.ui.dropdown')
+  .dropdown()
+;
+</script>
 </body>
 </html>

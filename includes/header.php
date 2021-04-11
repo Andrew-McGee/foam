@@ -37,10 +37,14 @@
 
 			<!-- Search bar -->
 			<div class="two wide column">
-				<div class="ui mini icon input">
-				  <input type="text" placeholder="Search...">
-				  <i class="search link icon"></i>
-				</div>
+				<form class="ui form" method="GET" target="iframe_main" action="smart_results.php">
+					<div class="field">
+						<div class="ui mini icon input">
+						  <input name="search" type="text" placeholder="Search...">
+						  <i class="search link icon"></i>
+						</div>
+					</div>
+				</form>
 			</div>
 
 			<!-- Micro player -->

@@ -158,6 +158,18 @@ function playlistsongsAPI($auth, $uid){
 }
 
 //
+// Smart search uses advanced search API call to return artists, albums and tracks that match
+//
+function smartAPI($auth, $search, $type){
+
+  $call = '?action=advanced_search&type=' . $type . '&limit=6&rule_1=title&rule_1_operator=0&rule_1_input=' . $search;
+
+  $result = c_init($auth, $call);
+
+  return $result;
+}
+
+//
 // Generic CURL stuff used by the various calls to call the Ampache API.
 //
 function c_init($auth, $call){

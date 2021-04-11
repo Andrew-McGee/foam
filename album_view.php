@@ -63,16 +63,22 @@ function revealicon(num) {
 							echo '</div>' . "\r\n"; // End of 1st column
 
 							// Right column for album songs in table
-							echo '<div class="ui twelve wide column">' . "\r\n";
-								echo '<div class="ui huge smoke header">' . $albm_results['name'] . '</div>' . "\r\n";
-								echo '<button class="ui tiny button" id="playb"><i class="play icon"></i>PLAY</button>';
-								echo '&nbsp;<button class="ui tiny button" id="shufb"><i class="random icon"></i>SHUFFLE</button>';
-								echo '&nbsp;<div class="ui inline dropdown"><i class="ellipsis vertical icon"></i>' . "\r\n";
-								echo '	<div class="menu" id="albumMenu">' . "\r\n";
-								echo '	<div class="item" id="addAll2Q">Add to queue</div>' . "\r\n";
-								echo '	<div class="item">Play next</div>' . "\r\n";
-								echo '	<div class="item"><a href="albums_view.php?filt=' . $seriesMatch . '">Series match</a></div>' . "\r\n";
-								echo '</div></div>' . "\r\n";
+								echo '<div class="ui twelve wide column">' . "\r\n";
+								echo '  <div class="ui huge smoke header">' . $albm_results['name'] . '</div>' . "\r\n";
+								echo '  <button class="ui tiny button" id="playb"><i class="play icon"></i>PLAY</button>&nbsp;';
+								echo '  <button class="ui tiny button" id="shufb"><i class="random icon"></i>SHUFFLE</button>&nbsp;';
+								echo '  <div class="ui inline dropdown"><i class="ellipsis vertical icon"></i>' . "\r\n";
+								echo '  	<div class="menu" id="albumMenu">' . "\r\n";
+								echo '  	  <div class="item" id="addAll2Q">Add to queue</div>' . "\r\n";
+								echo '  	  <div class="item">Play next</div>' . "\r\n";
+								echo '  	  <div class="item"><a href="albums_view.php?filt=' . $seriesMatch . '">Series match</a></div>' . "\r\n";
+								echo '    </div></div>' . "\r\n";
+								if ($albm_results['flag'] == 0 ) {
+									echo '<i id="albumStar" class="star outline icon"></i>';
+								} else {
+									echo '<i id="albumStar" class="blue star icon"></i>';
+								}
+
 								// Make a listener for clicking on the play button
 								echo "\r\n<script>playb.addEventListener('click', function() {";
 								echo "  parent.newQueue('0');";
@@ -86,6 +92,17 @@ function revealicon(num) {
 								// Make a listener for Add to Queue menu item
 								echo "<script>addAll2Q.addEventListener('click', function() {";
 								echo "	parent.addAll2Q();";
+								echo '});</script>' . "\r\n";
+
+								// Make a listener for clicking on the favourite star for album
+								echo "<script>albumStar.addEventListener('click',  function() {";
+								echo '	if (document.getElementById("albumStar").className !== "blue star icon") {';
+								echo '   	  document.getElementById("albumStar").className = "blue star icon";';
+								echo '	    $.get("includes/favAPI.php?type=album&id=' . $albm_results['id'] . '&flag=1");';
+								echo '	} else { ';
+								echo '			document.getElementById("albumStar").className = "star outline icon";';
+								echo '	    $.get("includes/favAPI.php?type=album&id=' . $albm_results['id'] . '&flag=0");';
+								echo '	}';
 								echo '});</script>' . "\r\n";
 
 								//Let's make the table for the song list

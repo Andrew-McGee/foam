@@ -40,9 +40,9 @@ Note: During pre-release authentication to Ampache is hard coded in this config 
 The next version will change this to use browser authentication.
 
 ## TODO
-Status: 60% operational with some missing functions and mild formatting issues.
+Status: 75% operational with some minor functions missing and mild formatting issues.
 
-Still finishing core functionality to get to a working release stage.
+Finishing core functionality to get a working stable release.
 
 #### _Working_
 - Recent, newest, frequent, favourites and random albums views.
@@ -70,11 +70,12 @@ Still finishing core functionality to get to a working release stage.
 - Popup song menus for Play next, Add to queue, go to album, go to artist
 - Album and Playlist menu to add all songs to end of queue
 - Filters now work on albums view, artists view and tracks view
+- Series match to find other albums in multi disc or multi volume sets
+- Smart search from top bar with results page
 
 #### _Not Yet Working_
 - Browser authentication for Ampache with cookies
 - Track seeking via slider
-- Search from top bar
 - Some quirky pagination bugs and better logic for start/end
 - Queue manipulation (re-order, remove track)
 - Adding or removing favourites (tagged)

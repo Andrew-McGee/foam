@@ -146,10 +146,10 @@ function revealicon(num) {
 										// Loop to add all our known playlists to the sub menu
 										$j = 0;
 										foreach ($playlist_results['playlist'] as $playlist) {
-											echo '        <div class="item" id="playlist' . $i, $j . '">' . $playlist['name'] . '</div>' . "\r\n";
+											echo '      <div class="item" id="playlist' . $i, $j . '">' . $playlist['name'] . '</div>' . "\r\n";
 											$j++;
 										}
-										echo '        <div class="item"><i class="small plus icon"></i>NEW</div>' . "\r\n";
+										echo '        <div class="item" id="newplaylist' . $i . '"><i class="small plus icon"></i>NEW</div>' . "\r\n";
 										echo '      </div>' . "\r\n";
 										echo '    </div>' . "\r\n";
 										echo '		<div class="item"><a href="album_view.php?uid=' . $song_results['song'][$i]['album']['id'] . '">Go to album</a></div>' . "\r\n";
@@ -232,6 +232,18 @@ function revealicon(num) {
 										$j++;
 									}
 
+									// Make a listener for clicking new playlist menu item
+									echo "<script>newplaylist" . $i . ".addEventListener('click',  function() {";
+									echo "	$('.ui.modal')";
+									echo "    .modal({";
+									echo "       onApprove : function() {";
+									echo "         var nn = document.getElementById('newname').value;";
+									echo '         $.get("includes/playlistAPI.php?action=new&filter=" + nn + "&song=' . $song_results['song'][$i]['id'] . '");';
+									echo "       }";
+									echo "     })";
+									echo "    .modal('show')";
+									echo "  ;";
+									echo '});</script>' . "\r\n";
 
 								} //End of row loop
 
@@ -241,6 +253,19 @@ function revealicon(num) {
 						echo '</div>' . "\r\n"; //End of content grid.
 					?>
 			  </div>
+
+				<!-- Set up new playlist modal -->
+			  <div class="ui modal">
+					<div class="ui inverted space segment">
+						<div class="ui huge smoke header">New Playlist</div>
+				    <div class="item"><input id="newname" type="text" placeholder="Title"></div><br>
+						<div class="actions">
+							<button class="ui tiny cancel button" id="cancel">CANCEL</button>&nbsp;
+							<button class="ui tiny approve button" id="save">SAVE</button>
+						</div>
+					</div>
+			  </div>
+
 <!-- JS to initialise dropdowns-->
 <script>
 $('.ui.dropdown')

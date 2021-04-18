@@ -1,6 +1,6 @@
 <?php
 	// Check if we have a filter parm (we should always)
-	// filter should contain uid of playlist
+	// filter should contain uid of playlist unless action = new then filter will be new playlist name
 	if (!empty($_GET["filter"])) {
 		$filter = $_GET["filter"];
 	} else {
@@ -16,11 +16,11 @@
   }
 
 	// Check if we have an action parm (we should always)
-	// action must contain 'add' or 'remove'
+	// action must contain 'add' or 'remove' or 'new'
 	if (isset($_GET["action"])) {
 		$action = $_GET["action"];
 	}
-  if ($action != 'add' && $action != 'remove') {
+  if ($action != 'add' && $action != 'remove' && $action != 'new') {
     exit;
   }
 
@@ -31,6 +31,16 @@
 
 	$hshake = json_decode($result, true);
 	$auth=$hshake['auth'];
+
+  // If it's a new playlist lets first create it with playlist_create API call
+	if ($action == 'new') {
+		$call = '?action=playlist_create&name=' . $filter;
+		$result = c_init($auth, $call);
+		error_log("playlistAPI.php: " . $action . " call complete.", 0);
+		$playlist = json_decode($result, true);
+		$filter = $playlist['id'];
+		$action = 'add';
+	}
 
   // Playlist add or remove song API call - $action determines if add or remove
   $call = '?action=playlist_' . $action . '_song&filter=' . $filter . '&song=' . $song;
@@ -58,7 +68,7 @@
 
       //Non-handshake calls can be built from this format using the url and parms
       $url = $ampurl . '/server/json.server.php' . $call . '&auth=' . $auth;
-      //error_log("playlistAPI.php: call = $call", 0);
+      error_log("playlistAPI.php: call = $call", 0);
     }
 
     // CURL options.

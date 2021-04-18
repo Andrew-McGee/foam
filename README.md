@@ -80,10 +80,11 @@ Code optimisation, minimisation, minify etc.
 - Series match to find other albums in multi disc or multi volume sets
 - Smart search from top bar with results page
 - Adding or removing favourites (blue star) from tracks and albums
+- Playlist create, add & remove tracks from new or existing playlists
 
 #### _Not Yet Working_
 - Browser authentication for Ampache with cookies
-- Playlist create, add & remove
+- Delete playlists
 - Track seeking via slider
 - Some quirky pagination bugs and better logic for start/end
 - Queue manipulation (re-order, remove track)

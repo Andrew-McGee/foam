@@ -53,7 +53,7 @@
       $key = hash('sha256', $amppas);
       $passphrase = hash('sha256',$time . $key);
       $url = $ampurl.'/server/json.server.php?action=handshake&auth='.$passphrase.'&timestamp='.$time.'&version=350001&user='.$ampusr;
-      error_log("favAPI.php: Handshake call built and ready.", 0);
+      error_log("playlistAPI.php: Handshake call built and ready.", 0);
     } else {
 
       //Non-handshake calls can be built from this format using the url and parms

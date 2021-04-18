@@ -34,6 +34,10 @@
 	$song_results = json_decode($get_data, true);
 	$cnt = count($song_results['song']); //Set counter to number of songs returned
 
+	// Get playlist info so we can have them listed in our per track menu
+	$get_data = playlistsAPI($auth);
+	$playlists_results = json_decode($get_data, true);
+
 	include 'includes/header_iframe.php';
 ?>
 <script>
@@ -115,18 +119,29 @@ function revealicon(num) {
 										// some code here to test if song is flagged or not (favourite = blue star)
 										$fav = $song_results['song'][$i]['flag'];
 										if ($fav == true) {
-											$favi = "blue star icon";
+											$favi = "blue star icon"; // Blue star if it's a fav
 										} else {
-											$favi = "hidden star outline icon";
+											$favi = "hidden star outline icon"; // Hidden star outline if not fav
 										}
-
 										echo '<td><i class="' . $favi . '" id="hiddenstar' . $i . '"></i>&nbsp;' . "\r\n";
 
+										// Here's the code for the hidden drop down menu that appears on each track row under vertical elipsis
 										echo '<div class="ui inline dropdown"><i class="hidden ellipsis vertical icon" id="hiddenelipse' . $i . '"></i>' . "\r\n";
 										echo '	<div class="menu" id="albumMenu">' . "\r\n";
 										echo '		<div class="item" id="addT2Q' . $i . '">Add to queue</div>' . "\r\n";
 										echo '		<div class="item" id="playNext' . $i . '">Play next</div>' . "\r\n";
 										echo '		<div class="item" id="playOnly' . $i . '">Play only</div>' . "\r\n";
+										echo '		<div class="item" id="addT2P' . $i . '">Add to playlist' . "\r\n";
+										echo '      <div class="menu">' . "\r\n";  // Add to playlist spawns another submenu
+										// Loop to add all our known playlists to the sub menu
+										$j = 0;
+										foreach ($playlists_results['playlist'] as $playlist) {
+											echo '        <div class="item" id="playlist' . $i, $j . '">' . $playlist['name'] . '</div>' . "\r\n";
+											$j++;
+										}
+										echo '        <div class="item"><i class="small plus icon"></i>NEW</div>' . "\r\n";
+										echo '      </div>' . "\r\n";
+										echo '    </div>' . "\r\n";
 										echo '		<div class="item"><a href="album_view.php?uid=' . $song_results['song'][$i]['album']['id'] . '">Go to album</a></div>' . "\r\n";
 										echo '		<div class="item"><a href="artist_albums.php?uid=' . $song_results['song'][$i]['artist']['id'] . '">Go to artist</a></div>' . "\r\n";
 										echo '	</div>' . "\r\n";
@@ -191,6 +206,15 @@ function revealicon(num) {
 									echo "<script>playOnly" . $i . ".addEventListener('click',  function() {";
 									echo "	parent.newSingle('" . $i . "');";
 									echo "});</script>" . "\r\n";
+
+									// Make a listener for clicking the add to playlist menu item - we need a loop to create 1 for each playlist
+									$j = 0;
+									foreach ($playlists_results['playlist'] as $playlist) {
+										echo "<script>playlist" . $i, $j . ".addEventListener('click',  function() {";
+										echo '	    $.get("includes/playlistAPI.php?action=add&filter=' . $playlist['id'] . '&song=' . $song_results['song'][$i]['id'] . '");';
+										echo '});</script>' . "\r\n";
+										$j++;
+									}
 
 								}//End of row loop
 

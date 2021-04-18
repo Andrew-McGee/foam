@@ -27,7 +27,7 @@
   $auth = 'new';
   $call = 'hshake';
   $result = c_init($auth, $call);
-  error_log("playlistAPI.php: Handshake call complete.", 0);
+  //error_log("playlistAPI.php: Handshake call complete.", 0);
 
 	$hshake = json_decode($result, true);
 	$auth=$hshake['auth'];
@@ -36,7 +36,7 @@
   $call = '?action=playlist_' . $action . '_song&filter=' . $filter . '&song=' . $song;
 
   $result = c_init($auth, $call);
-  error_log("playlistAPI.php: " . $action . " call complete.", 0);
+  //error_log("playlistAPI.php: " . $action . " call complete.", 0);
   //
   // Generic CURL stuff used by the various calls to call the Ampache API.
   //
@@ -53,12 +53,12 @@
       $key = hash('sha256', $amppas);
       $passphrase = hash('sha256',$time . $key);
       $url = $ampurl.'/server/json.server.php?action=handshake&auth='.$passphrase.'&timestamp='.$time.'&version=350001&user='.$ampusr;
-      error_log("playlistAPI.php: Handshake call built and ready.", 0);
+      //error_log("playlistAPI.php: Handshake call built and ready.", 0);
     } else {
 
       //Non-handshake calls can be built from this format using the url and parms
       $url = $ampurl . '/server/json.server.php' . $call . '&auth=' . $auth;
-      error_log("playlistAPI.php: call = $call", 0);
+      //error_log("playlistAPI.php: call = $call", 0);
     }
 
     // CURL options.

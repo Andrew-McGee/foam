@@ -40,6 +40,14 @@
 		exit;
 	}
 
+  // If the action is to delete
+	if ($action == 'delete') {
+		$call = '?action=playlist_delete&filter=' . $filter;
+		$result = c_init($auth, $call);
+		//error_log("playlistAPI.php: " . $action . " call complete.", 0);
+		exit;
+	}
+
   // If it's a new playlist lets first create it with playlist_create API call
 	if ($action == 'new') {
 		$call = '?action=playlist_create&name=' . $filter;

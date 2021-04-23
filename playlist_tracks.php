@@ -83,8 +83,23 @@ function revealicon(num) {
 								echo "    .modal({";
 								echo "       onApprove : function() {";
 								echo "         var nn = document.getElementById('rename').value;";
-								echo '         $.get("includes/playlistAPI.php?action=rename&song=" + nn + "&filter=' . $uid . '");';
-								echo '         location.reload();';  // Do a reload so we can see the change
+								echo '         $.get("includes/playlistAPI.php?action=rename&song=" + nn + "&filter=' . $uid . '", function(){';
+								echo '           location.reload();';  // Do a reload so we can see the change
+								echo '           });';
+								echo "       }";
+								echo "     })";
+								echo "    .modal('show')";
+								echo "  ;";
+								echo '});</script>' . "\r\n";
+
+								// Make a listener for clicking delete playlist menu item
+								echo "<script>delpl.addEventListener('click',  function() {";
+								echo "	$('.delete.ui.modal')";
+								echo "    .modal({";
+								echo "       onApprove : function() {";
+								echo '         $.get("includes/playlistAPI.php?action=delete&song=8888&filter=' . $uid . '", function(){';
+								echo '           window.location.href="playlists_view.php";';  // back to the playlists_view as this playlist will be deleted
+								echo '           });';
 								echo "       }";
 								echo "     })";
 								echo "    .modal('show')";

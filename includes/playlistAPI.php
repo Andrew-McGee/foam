@@ -16,11 +16,11 @@
   }
 
 	// Check if we have an action parm (we should always)
-	// action must contain 'add' or 'remove' or 'new'
+	// action must contain 'add' or 'remove' or 'new' or 'rename' or 'delete'
 	if (isset($_GET["action"])) {
 		$action = $_GET["action"];
 	}
-  if ($action != 'add' && $action != 'remove' && $action != 'new') {
+  if ($action != 'add' && $action != 'remove' && $action != 'new' && $action != 'rename' && $action != 'delete') {
     exit;
   }
 
@@ -32,11 +32,19 @@
 	$hshake = json_decode($result, true);
 	$auth=$hshake['auth'];
 
+  // If the action is to rename
+	if ($action == 'rename') {
+		$call = '?action=playlist_edit&filter=' . $filter . '&name=' . $song;
+		$result = c_init($auth, $call);
+		//error_log("playlistAPI.php: " . $action . " call complete.", 0);
+		exit;
+	}
+
   // If it's a new playlist lets first create it with playlist_create API call
 	if ($action == 'new') {
 		$call = '?action=playlist_create&name=' . $filter;
 		$result = c_init($auth, $call);
-		error_log("playlistAPI.php: " . $action . " call complete.", 0);
+		//error_log("playlistAPI.php: " . $action . " call complete.", 0);
 		$playlist = json_decode($result, true);
 		$filter = $playlist['id'];
 		$action = 'add';
@@ -68,7 +76,7 @@
 
       //Non-handshake calls can be built from this format using the url and parms
       $url = $ampurl . '/server/json.server.php' . $call . '&auth=' . $auth;
-      error_log("playlistAPI.php: call = $call", 0);
+      //error_log("playlistAPI.php: call = $call", 0);
     }
 
     // CURL options.

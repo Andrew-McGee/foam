@@ -59,6 +59,8 @@ function revealicon(num) {
 								echo '	<div class="menu" id="albumMenu">' . "\r\n";
 								echo '	<div class="item" id="addAll2Q">Add to queue</div>' . "\r\n";
 								echo '	<div class="item">Play next</div>' . "\r\n";
+								echo '	<div class="item" id="renpl">Rename playlist</div>' . "\r\n";
+								echo '	<div class="item" id="delpl">Delete playlist</div>' . "\r\n";
 								echo '</div></div>' . "\r\n";
 								// Make a listener for clicking on the play button
 								echo "\r\n<script>playb.addEventListener('click', function() {";
@@ -73,6 +75,20 @@ function revealicon(num) {
 								// Make a listener for Add to Queue menu item
 								echo "<script>addAll2Q.addEventListener('click', function() {";
 								echo "	parent.addAll2Q();";
+								echo '});</script>' . "\r\n";
+
+								// Make a listener for clicking rename playlist menu item
+								echo "<script>renpl.addEventListener('click',  function() {";
+								echo "	$('.rename.ui.modal')";
+								echo "    .modal({";
+								echo "       onApprove : function() {";
+								echo "         var nn = document.getElementById('rename').value;";
+								echo '         $.get("includes/playlistAPI.php?action=rename&song=" + nn + "&filter=' . $uid . '");';
+								echo '         location.reload();';  // Do a reload so we can see the change
+								echo "       }";
+								echo "     })";
+								echo "    .modal('show')";
+								echo "  ;";
 								echo '});</script>' . "\r\n";
 
 								//Let's make the table for the song list
@@ -200,7 +216,7 @@ function revealicon(num) {
 
 									// Make a listener for clicking new playlist menu item
 									echo "<script>newplaylist" . $i . ".addEventListener('click',  function() {";
-									echo "	$('.ui.modal')";
+									echo "	$('.new.ui.modal')";
 									echo "    .modal({";
 									echo "       onApprove : function() {";
 									echo "         var nn = document.getElementById('newname').value;";
@@ -221,13 +237,37 @@ function revealicon(num) {
 			  </div>
 
 				<!-- Set up new playlist modal -->
-			  <div class="ui modal">
+			  <div class="ui new modal">
 					<div class="ui inverted space segment">
 						<div class="ui huge smoke header">New Playlist</div>
 				    <div class="item"><input id="newname" type="text" placeholder="Title"></div><br>
 						<div class="actions">
 							<button class="ui tiny cancel button" id="cancel">CANCEL</button>&nbsp;
 							<button class="ui tiny approve button" id="save">SAVE</button>
+						</div>
+					</div>
+			  </div>
+
+				<!-- Set up rename playlist modal -->
+			  <div class="ui rename modal">
+					<div class="ui inverted space segment">
+						<div class="ui huge smoke header">Rename Playlist</div>
+				    <div class="item"><input id="rename" type="text" placeholder="Title"></div><br>
+						<div class="actions">
+							<button class="ui tiny cancel button" id="cancel">CANCEL</button>&nbsp;
+							<button class="ui tiny approve button" id="save">SAVE</button>
+						</div>
+					</div>
+			  </div>
+
+				<!-- Set up delete playlist modal -->
+			  <div class="ui delete modal">
+					<div class="ui inverted space segment">
+						<div class="ui huge smoke header">Delete Playlist</div><br>
+						<div class="ui huge smoke header">Are You Sure?</div>
+						<div class="actions">
+							<button class="ui tiny cancel button" id="cancel">NO</button>&nbsp;
+							<button class="ui tiny approve button" id="save">YES</button>
 						</div>
 					</div>
 			  </div>

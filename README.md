@@ -40,9 +40,9 @@ Note: During pre-release authentication to Ampache is hard coded in this config 
 The next version will change this to use browser authentication.
 
 ## TODO
-Status: 80% operational with some minor functions missing and mild formatting issues.
+Status: 85% operational with some minor functions missing and mild formatting issues.
 
-Phase 1:
+Phase 1 (Current):
 Finishing core functionality to get a working stable release.
 
 Phase 2:
@@ -81,13 +81,15 @@ Code optimisation, minimisation, minify etc.
 - Smart search from top bar with results page
 - Adding or removing favourites (blue star) from tracks and albums
 - Playlist create, add & remove tracks from new or existing playlists
+- Rename and delete playlists from playlist tracks view
 
 #### _Not Yet Working_
 - Browser authentication for Ampache with cookies
-- Delete playlists
 - Track seeking via slider
 - Some quirky pagination bugs and better logic for start/end
 - Queue manipulation (re-order, remove track)
+- Save current queue to a playlist
+- Clear queue
 
 ## Contributions
 Once I have a working release then contributions and suggestions always welcome.

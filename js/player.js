@@ -80,7 +80,6 @@ function playnew(pointer) {
 
 // Play or pause the sound
 function playToggle() {
-
   // First check if Howler is already set up with a defined trk
   if (typeof trk01 !== 'undefined') {
     if (trk01.playing()) {
@@ -98,7 +97,6 @@ function playToggle() {
 
 // mute or unmute the sound
 function mute() {
-
   if (this.muted) {
     // if muted then unmute the sound & show volume button
     trk01.mute(false);
@@ -114,8 +112,7 @@ function mute() {
 
 // Change volume as set by slider value
 function changeVol(newVol) {
-
-  // If trk01 is not yet defined don't try calling howler
+  // Only call howler if trk01 is defined otherwise don't call but just save the vol
   if (typeof trk01 !== 'undefined') {
     trk01.volume(newVol);
   }
@@ -134,15 +131,11 @@ function progress() {
   }
 }
 
-// Build a completely new queue if user clicked a new track from album or tracklist view
-// Or user clicked Play buttons
-// @param = number of which song in the playlist should be played (pointer)
+// Build a completely new queue if user clicked track from album or tracklist or Play button
 function newQueue(pointer) {
-  queue = []; // Empty the current queue array
   this.pointer = pointer; // save the parm in our permanent pointer
   this.queue = [];  //Empty existing queue so we don't get old entries hanging over
-  // Now lets copy the contents of the list array into our new queue array
-  // loop through outer array and copy the 5 inner values
+  // loop through outer array and copy the 5 inner list values to queue
   for (var i = 0, l1 = this.list.length; i < l1; i++) {
     this.queue[i] = [];
     this.queue[i][0] = this.list[i][0]; // Track title
@@ -158,11 +151,9 @@ function newQueue(pointer) {
 
 // Build a shuffled queue if user clicked shuffle button
 function shuffle(pointer) {
-  queue = []; // Empty the current queue array
   this.pointer = pointer; // save the parm in our permanent pointer
   this.queue = [];  //Empty existing queue so we don't get old entries hanging over
-  // Now lets copy the contents of the list array into our new queue array
-  // loop through outer array and copy the 5 inner values
+  // loop through outer array and copy the 5 inner list values to queue
   for (var i = 0, l1 = this.list.length; i < l1; i++) {
     this.queue[i] = [];
     this.queue[i][0] = this.list[i][0]; // Track title
@@ -190,14 +181,10 @@ function shuffle(pointer) {
 }
 
 // Build a completely new queue and add a single track
-// if user clicked a new track from tracklist view
-// @param = number of which song in the playlist should be played (pointer)
 function newSingle(pointer) {
-  queue = []; // Empty the current queue array
   this.pointer = pointer; // save the parm in our permanent pointer
   this.queue = [];  //Empty existing queue so we don't get old entries hanging over
-
-  // Now lets copy the contents of the new array into our new queue array
+  // Now lets copy the list entry into our new queue entry
   this.queue[0] = [];
   this.queue[0][0] = this.list[pointer][0]; // Track title
   this.queue[0][1] = this.list[pointer][1]; // Artist name
@@ -209,10 +196,9 @@ function newSingle(pointer) {
   playnew('0'); // There's only one song in the queue so always pass 0 as the pointer
 }
 
-// Add a single track to the end of teh existing queue
+// Add a single track to the end of the existing queue
 function addT2Q(pointer) {
   var newtrk = this.queue.length; // Determine the next entry at end of the queue array
-
   // Now lets copy the list entry into our new queue entry
   this.queue[newtrk] = [];
   this.queue[newtrk][0] = this.list[pointer][0]; // Track title
@@ -221,17 +207,13 @@ function addT2Q(pointer) {
   this.queue[newtrk][3] = this.list[pointer][3]; // art link
   this.queue[newtrk][4] = this.list[pointer][4]; // song link
   this.queue[newtrk][5] = this.list[pointer][5]; // album id
-
-  // Call the queueDropdown function to re-write our queue to the dropdown menu with the new track
-  queueDropdown();
+  queueDropdown(); // Call queueDropdown() to re-write our dropdown menu with the new track
 }
 
 // Add all tracks from an album or playlist to the end of the existing queue
 function addAll2Q() {
   var newpos = this.queue.length; // Determine the next entry at end of the queue array
-
-  // Now lets copy the list entry into our new queue entry
-  // loop through outer array and copy the 5 inner values
+  // loop through outer array and copy the 5 inner list values to queue
   for (var i = 0, l1 = this.list.length; i < l1; i++) {
     this.queue[newpos] = [];
     this.queue[newpos][0] = this.list[i][0]; // Track title
@@ -242,18 +224,14 @@ function addAll2Q() {
     this.queue[newpos][5] = this.list[i][5]; // album id
     newpos++;
   }
-  // Call the queueDropdown function to re-write our queue to the dropdown menu with the new track
-  queueDropdown();
+  queueDropdown(); // Call queueDropdown() to re-write our dropdown menu with the new track
 }
 
 // Insert a track into existing queue in the next playable position
 function playNext(song) {
   var newtrk = this.pointer + 1; // Determine the next entry after the one currently playing
-
-  this.queue.splice(newtrk, 0, this.list[song]);
-
-  // Call the queueDropdown function to re-write our queue to the dropdown menu with the new track
-  queueDropdown();
+  this.queue.splice(newtrk, 0, this.list[song]); // Use splice() to insert into array
+  queueDropdown(); // Call queueDropdown() to re-write our dropdown menu with the new track
 }
 
 // Skip next function
@@ -273,7 +251,7 @@ function next() {
 
 // Skip prev function
 function prev() {
-  // Check if we've been playing for 5 seconds if so just rewind this song
+  // Check if we've been playing for 5 seconds if so just rewind this song, if not decrement pointer to previous song
   if (trk01.seek() >= 5) {
     playnew(this.pointer); // Just start playback again with current pointer
   } else {
@@ -317,6 +295,7 @@ function queueDropdown() {
   }
   document.getElementById("queueMenu").innerHTML = items;
 }
+// End of functions - mainline below
 
 // We need to set some listener events for our player control buttons.
 playBtn.addEventListener('click', function() {
@@ -345,6 +324,7 @@ queueBtn.addEventListener('click', function() {
   }
 });
 
+// Some jquery to set up sliders with callbacks
 $('.ui.vol.slider')
   .slider({
     min: 0,

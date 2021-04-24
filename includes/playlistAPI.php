@@ -34,6 +34,7 @@
 
   // If the action is to rename
 	if ($action == 'rename') {
+		$song = urlencode($song);
 		$call = '?action=playlist_edit&filter=' . $filter . '&name=' . $song;
 		$result = c_init($auth, $call);
 		//error_log("playlistAPI.php: " . $action . " call complete.", 0);

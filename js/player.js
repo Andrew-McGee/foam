@@ -280,7 +280,8 @@ function activeMenu(activeitem) {
 
 // Function to dynamically build the queue dropdown list
 function queueDropdown() {
-  var items = '';
+  var items = '<div class="item" onclick="clearQueue()">Clear queue</div>';
+  var items = items + '<div class="item">Save queue</div>';
   for (var i = 0, l1 = this.queue.length; i < l1; i++) {
     if (this.pointer == i) {
       items = items + '<div class="item">';
@@ -293,6 +294,13 @@ function queueDropdown() {
       //items = items + '<div class="item" onclick="playnew(' + i + ')">' + this.queue[i][0] + ' - ' + this.queue[i][1]  + '</div>';
     }
   }
+  document.getElementById("queueMenu").innerHTML = items;
+}
+
+// Clear the queue
+function clearQueue() {
+  this.queue = [];  //Empty existing queue
+  items = '<div class="active item">No Music Here!</div>';
   document.getElementById("queueMenu").innerHTML = items;
 }
 // End of functions - mainline below

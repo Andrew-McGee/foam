@@ -223,6 +223,7 @@ function revealicon(num) {
 									echo "       onApprove : function() {";
 									echo "         var nn = document.getElementById('newname').value;";
 									echo '         $.get("includes/playlistAPI.php?action=new&filter=" + nn + "&song=' . $song_results['song'][$i]['id'] . '");';
+									echo "         location.reload();";  // Do a reload so we can see the change"
 									echo "       }";
 									echo "     })";
 									echo "    .modal('show')";

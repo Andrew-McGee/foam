@@ -51,6 +51,7 @@
 
   // If it's a new playlist lets first create it with playlist_create API call
 	if ($action == 'new') {
+		$filter = urlencode($filter);
 		$call = '?action=playlist_create&name=' . $filter;
 		$result = c_init($auth, $call);
 		//error_log("playlistAPI.php: " . $action . " call complete.", 0);

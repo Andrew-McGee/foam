@@ -41,11 +41,13 @@ The next version will change this to use browser authentication.
 
 ## TODO
 Status: 85% operational with some minor functions missing and mild formatting issues.
+You can see a video of all current working features here:
+https://www.youtube.com/watch?v=VK_6-VN4e8o
 
 Phase 1 (Current):
-Finishing core functionality to get a working stable release.
+Finishing the core functionality to get a working stable release.
 
-Phase 2:
+Phase 2 (next):
 Adjust styling to polish fonts, palette, element position, theme options etc.
 
 Phase 3:
@@ -82,6 +84,7 @@ Code optimisation, minimisation, minify etc.
 - Adding or removing favourites (blue star) from tracks and albums
 - Playlist create, add & remove tracks from new or existing playlists
 - Rename and delete playlists from playlist tracks view
+- Clear queue
 
 #### _Not Yet Working_
 - Browser authentication for Ampache with cookies
@@ -89,7 +92,7 @@ Code optimisation, minimisation, minify etc.
 - Some quirky pagination bugs and better logic for start/end
 - Queue manipulation (re-order, remove track)
 - Save current queue to a playlist
-- Clear queue
+
 
 ## Contributions
 Once I have a working release then contributions and suggestions always welcome.

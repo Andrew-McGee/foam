@@ -1,8 +1,8 @@
 <?php
 	include 'includes/header_iframe.php';
 
-	if(!empty($_POST["authError"])) {
-		$authError = $_POST["authError"];
+	if(!empty($_GET["authError"])) {
+		$authError = $_GET["authError"];
 	}
 ?>
 

@@ -176,12 +176,29 @@ function smartAPI($auth, $search, $type){
 // Generic CURL stuff used by the various calls to call the Ampache API.
 //
 function c_init($auth, $call){
-  include 'config/foam.conf.php';
+  //include 'config/foam.conf.php';
 
   $curl = curl_init();
 
   //If the call is initial handsake we need to build a different format
   if ($call == 'hshake') {
+
+    // Let's check the cookies are set
+    if (isset($_COOKIE["host"])) {
+      $ampurl = $_COOKIE["host"];
+    } else {
+      header ('Location: auth.php');
+    }
+    if (isset($_COOKIE["name"])) {
+      $ampusr = $_COOKIE["name"];
+    } else {
+      header ('Location: auth.php');
+    }
+    if (isset($_COOKIE["pass"])) {
+      $amppas = $_COOKIE["pass"];
+    } else {
+      header ('Location: auth.php');
+    }
 
     //Build the handshake string to get auth key
     $time = time();
@@ -190,6 +207,8 @@ function c_init($auth, $call){
     $url = $ampurl.'/server/json.server.php?action=handshake&auth='.$passphrase.'&timestamp='.$time.'&version=350001&user='.$ampusr;
 
   } else {
+
+    $ampurl = $_COOKIE["host"];
 
     //Non-handshake calls can be built from this format using the url and parms
     $url = $ampurl . '/server/json.server.php' . $call . '&auth=' . $auth;

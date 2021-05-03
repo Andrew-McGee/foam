@@ -35,23 +35,26 @@ You need an [Ampache](https://github.com/ampache/ampache) server somewhere.
 
 Some limited options can be found in config/foam.conf.php which sets a few php variables.
 
-Note: During pre-release authentication to Ampache is hard coded in this config file for ease of testing purposes. Because of this you should not leave your testing foam site exposed to the public as anyone will be able to access it, use your bandwidth and download your media.
+Ampache authentication is stored in browser cookies. If "Remember me" is NOT selected cookies will expire after the current browser session.
+This is advisable on a public or borrowed computer - always close your browser when finished to destroy all session cookies.
 
-The next version will change this to use browser authentication.
+If "Remember me" is selected cookies will live for 1 year. Use the logout option in settings to remove cookies and force login.
 
-## TODO
-Status: 85% operational with some minor functions missing and mild formatting issues.
+Note: If you change Ampache credentials so your current cookies no longer validate you will be asked to re-login.
+
+## To Do
+Status: 90% operational with some minor functions missing. Formatting improvements are yet to be completed and will happen in Phase 2.
 You can see a video of all current working features here:
 https://www.youtube.com/watch?v=VK_6-VN4e8o
 
-Phase 1 (Current):
+*Phase 1* (Current):
 Finishing the core functionality to get a working stable release.
 
-Phase 2 (next):
+*Phase 2* (next):
 Adjust styling to polish fonts, palette, element position, theme options etc.
 
-Phase 3:
-Code optimisation, minimisation, minify etc.
+*Phase 3*:
+Code optimisation, minimisation, speed, minify etc.
 
 #### _Working_
 - Recent, newest, frequent, favourites and random albums views.
@@ -85,9 +88,9 @@ Code optimisation, minimisation, minify etc.
 - Playlist create, add & remove tracks from new or existing playlists
 - Rename and delete playlists from playlist tracks view
 - Clear queue
+- Browser authentication for Ampache with cookies
 
 #### _Not Yet Working_
-- Browser authentication for Ampache with cookies
 - Track seeking via slider
 - Some quirky pagination bugs and better logic for start/end
 - Queue manipulation (re-order, remove track)

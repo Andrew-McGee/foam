@@ -2,7 +2,7 @@
 // Verify login info for Ampache API and set cookies.
 // If remember me was selected make cookie permanent otherwise limit lifespan with time().
 
-	/*
+	//Let's try and login with the passed credentials
 	$curl = curl_init();
 
   //Build the handshake string to get auth key
@@ -25,7 +25,12 @@
   $result = curl_exec($curl);
   if(!$result){die("Connection Failure");}
   curl_close($curl);
-	*/
+
+	$hshake = json_decode($get_data, true);
+
+	if (!isset($hshake['auth'])) {
+		header ('Location: auth.php?authError="Login Failed"');
+	}
 
 
 	if(!empty($_POST["remember"])) {

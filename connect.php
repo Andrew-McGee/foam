@@ -28,6 +28,7 @@
 
 	$hshake = json_decode($get_data, true);
 
+	// If we don't have an auth token returned something went wrong - redirect back to login screen with an error msg
 	if (!isset($hshake['auth'])) {
 		header ('Location: auth.php?authError="Login Failed"');
 	}

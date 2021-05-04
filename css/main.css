@@ -85,6 +85,14 @@
 		.icon.hidden {
 			opacity:0 !important;
 		}
+
+		.ui.form .field>label {
+			color: #A5A5A5 !important;
+		}
+
+		.ui.checkbox label, .ui.checkbox+label {
+			color: #A5A5A5 !important;
+		}
 /* Hack to center images that are links
 		a.ui.image.centered{
     	display: block;

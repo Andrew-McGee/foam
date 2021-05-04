@@ -12,26 +12,33 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Noto+sans+SC&display=swap'); */
 
 		:root {
+			--colrfgd1: #2a2c41;  /* Space Cadet */
+			--colrbgd1: #556177;  /* Manatee */
+			--colrfnt1: #A5A5A5;  /* Main grey text */
+			--colrfnt2: #F5F5F5;  /* WhiteSmoke - highlight text and headings */
+			--colrfnt3: #556177;  /* Manatee - Now playing text */
+			--colrhilt: #0E6EB8;  /* Blue highlight */
+
 			--space-cadet: hsla(235, 21%, 21%, 1);
 			--manatee: #556177;
 		}
 		body {
-		 background-color: var(--manatee);
-		 color: #A5A5A5 !important;
+		 background-color: var(--colrbgd1);
+		 color: var(--colrfnt1) !important;
 		}
 
 		p {
 			font-family: 'Noto Sans SC', sans-serif;
 			font-size: 1rem !important;
-			color: #A5A5A5 !important;
+			color: var(--colrfnt1) !important;
 		}
 
-		a:link { color: #A5A5A5; text-decoration: none; }
-		a:visited { color: #A5A5A5; text-decoration: none; }
-		a:active { color: #A5A5A5; text-decoration: none; }
-		a:hover { color: #A5A5A5; text-decoration: underline; }
+		a:link { color: var(--colrfnt1); text-decoration: none; }
+		a:visited { color: var(--colrfnt1); text-decoration: none; }
+		a:active { color: var(--colrfnt1); text-decoration: none; }
+		a:hover { color: var(--colrfnt1); text-decoration: underline; }
 
-		a.icn:hover { color: #A5A5A5; text-decoration: none; }
+		a.icn:hover { color: var(--colrfnt1); text-decoration: none; }
 
 		.ui.vertical.menu .item > i.icon.left {
 		    float: none;
@@ -40,27 +47,27 @@
 		}
 
 		.ui.input input {
-			background-color: var(--manatee) !important;
-			color: whitesmoke !important;
+			background-color: var(--colrbgd1) !important;
+			color: var(--colrfnt2) !important;
 		}
 
 		.ui.button {
-			background-color: var(--manatee) !important;
-			color: #A5A5A5 !important;
+			background-color: var(--colrbgd1) !important;
+			color: var(--colrfnt1) !important;
 		}
 
 		.ui.button:hover {
-			background-color: var(--manatee) !important;
-			color: whitesmoke !important;
+			background-color: var(--colrbgd1) !important;
+			color: var(--colrfnt2) !important;
 		}
 
 		.ui.label.filter {
-			background-color: var(--manatee) !important;
-			color: #A5A5A5 !important;
+			background-color: var(--colrbgd1) !important;
+			color: var(--colrfnt1) !important;
 		}
 
 		.icon:hover {
-		  	color: whitesmoke !important;
+		  	color: var(--colrfnt2) !important;
 		}
 
 		.bordered.icon {
@@ -87,11 +94,11 @@
 		}
 
 		.ui.form .field>label {
-			color: #A5A5A5 !important;
+			color: var(--colrfnt1) !important;
 		}
 
 		.ui.checkbox label, .ui.checkbox+label {
-			color: #A5A5A5 !important;
+			color: var(--colrfnt1) !important;
 		}
 /* Hack to center images that are links
 		a.ui.image.centered{
@@ -102,77 +109,77 @@
   Add Custom Colours to Semantic Components
 *******************************************/
 		 .ui.header.smoke {color: whitesmoke;}
-		 .ui.header.space {color: var(--space-cadet);}
-		 .ui.icon.space {color: var(--space-cadet);}
+		 .ui.header.space {color: var(--colrfgd1);}
+		 .ui.icon.space {color: var(--colrfgd1);}
 		 .ui.icon.header {color: #A5A5A5;}
 		 .ui.header.dim {
-			 color: #A5A5A5 !important;
+			 color: var(--colrfnt1) !important;
 			 margin: 1em 2em 0em 3em !important;
 		 }
 
      .ui.inverted.top.segment {
-       background-color: var(--space-cadet) !important;
-       color: #A5A5A5;
+       background-color: var(--colrfgd1) !important;
+       color: var(--colrfnt1);
 			 padding: 1em 2em;
      }
 
 		.sidemenu.column {
-		 background-color: var(--space-cadet);
+		 background-color: var(--colrfgd1);
 		 margin: 0em 0em 0em 0em;
 		}
 
      .ui.inverted.side.menu {
-       background-color: var(--space-cadet) !important;
-			 color: #A5A5A5 !important;
+       background-color: var(--colrfgd1) !important;
+			 color: var(--colrfnt1) !important;
 			 margin: 2em 0em 0em 2em;
      }
 
 		 .ui.menu .active.item {
-			 background-color: var(--manatee) !important;
+			 background-color: var(--colrbgd1) !important;
 		 }
 
 		 .ui.menu .item {
-			 color: #A5A5A5 !important;
+			 color: var(--colrfnt1) !important;
 		 }
 
 		 .ui.menu .item:hover {
-			 color: whitesmoke !important;
+			 color: var(--colrfnt2) !important;
 		 }
 
 		 .ui.dropdown .menu {
-			 background-color: var(--manatee) !important;
+			 background-color: var(--colrbgd1) !important;
 		 }
 
 		 .ui.dropdown .menu>.item {
-			 color: #A5A5A5 !important;
+			 color: var(--colrfnt1) !important;
 		 }
 
 		 .ui.compact.table {
-			 color: #A5A5A5 !important;
+			 color: var(--colrfnt1) !important;
 			 margin: 1em 2em 0em 3em !important;
 		 }
 
 		 .ui.inverted.table {
-			 color: #A5A5A5 !important;
-			 background-color: var(--space-cadet) !important;
+			 color: var(--colrfnt1) !important;
+			 background-color: var(--colrfgd1) !important;
 		 }
 
      .ui.inverted.spacecadet.segment {
-       background-color: var(--space-cadet) !important;
-       color: #A5A5A5 !important;
+       background-color: var(--colrfgd1) !important;
+       color: var(--colrfnt1) !important;
 			 padding: 3em 1em 3em 1em !important;
 			 margin: 25em 2em 2em 2em !important;
 			 font-size: 1.15rem !important;
      }
 
      .ui.inverted.manatee.segment {
-       background-color: var(--manatee) !important;
-       color: whitesmoke !important;
+       background-color: var(--colrbgd1) !important;
+       color: var(--colrfnt2) !important;
      }
 
      .ui.inverted.space.segment {
-       background-color: var(--space-cadet) !important;
-       color: #A5A5A5 !important;
+       background-color: var(--colrfgd1) !important;
+       color: var(--colrfnt1) !important;
 			 padding: 3em 4em 3em 4em !important;
 			 margin: 1.5em !important;
 			 font-size: 1rem !important;

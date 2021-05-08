@@ -2,6 +2,8 @@
 // Verify login info for Ampache API and set cookies.
 // If remember me was selected make cookie permanent otherwise limit lifespan with time().
 
+	$sessionTime = 365 * 24 * 3600; // Seconds in 1 year
+
 	//Let's try and login with the passed credentials
 	$curl = curl_init();
 
@@ -35,14 +37,14 @@
 
 
 	if(!empty($_POST["remember"])) {
-		setcookie ("host",$_POST["host"],time()+ 3600);
-		setcookie ("name",$_POST["name"],time()+ 3600);
-		setcookie ("pass",$_POST["pass"],time()+ 3600);
+		setcookie ("host",$_POST["host"],time()+ $sessionTime, "/");
+		setcookie ("name",$_POST["name"],time()+ $sessionTime, "/");
+		setcookie ("pass",$_POST["pass"],time()+ $sessionTime, "/");
 		echo "Cookies Set Successfully";
 	} else {
-		setcookie ("host",$_POST["host"],0);
-		setcookie ("name",$_POST["name"],0);
-		setcookie ("pass",$_POST["pass"],0);
+		setcookie ("host",$_POST["host"],0, "/");
+		setcookie ("name",$_POST["name"],0, "/");
+		setcookie ("pass",$_POST["pass"],0, "/");
 		echo "Cookies expire at end of session";
 	}
 

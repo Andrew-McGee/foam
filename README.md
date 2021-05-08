@@ -89,13 +89,12 @@ Code optimisation, minimisation, speed, minify etc.
 - Rename and delete playlists from playlist tracks view
 - Clear queue
 - Browser authentication for Ampache with cookies
+- Save current queue to a playlist
 
 #### _Not Yet Working_
 - Track seeking via slider
-- Some quirky pagination bugs and better logic for start/end
+- Some quirky pagination bugs and better logic for first/last page
 - Queue manipulation (re-order, remove track)
-- Save current queue to a playlist
-
 
 ## Contributions
 Once I have a working release then contributions and suggestions always welcome.

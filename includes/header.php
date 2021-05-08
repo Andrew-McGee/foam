@@ -94,6 +94,18 @@
 	</div>
 </div> <!-- End the top segment -->
 
+<!-- Set up new playlist pfromq modal -->
+<div class="ui pfromq modal">
+	<div class="ui inverted space segment">
+		<div class="ui huge smoke header">New Playlist</div>
+    <div class="item"><input id="newname" type="text" placeholder="Title"></div><br>
+		<div class="actions">
+			<button class="ui tiny cancel button" id="cancel">CANCEL</button>&nbsp;
+			<button class="ui tiny approve button" id="save">SAVE</button>
+		</div>
+	</div>
+</div>
+
 <!-- Scripts -->
 <script src="dist/howler.js"></script>
 <script src="js/player.js"></script>

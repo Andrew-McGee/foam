@@ -135,7 +135,7 @@ function progress() {
 function newQueue(pointer) {
   this.pointer = pointer; // save the parm in our permanent pointer
   this.queue = [];  //Empty existing queue so we don't get old entries hanging over
-  // loop through outer array and copy the 5 inner list values to queue
+  // loop through outer array and copy the 6 inner list values to queue
   for (var i = 0, l1 = this.list.length; i < l1; i++) {
     this.queue[i] = [];
     this.queue[i][0] = this.list[i][0]; // Track title
@@ -144,6 +144,7 @@ function newQueue(pointer) {
     this.queue[i][3] = this.list[i][3]; // art link
     this.queue[i][4] = this.list[i][4]; // song link
     this.queue[i][5] = this.list[i][5]; // album id
+    this.queue[i][6] = this.list[i][6]; // song id
   }
   // Last call the playnew function to kick it off
   playnew(pointer); // Pass the pointer so he knows what track in the queue to play
@@ -153,7 +154,7 @@ function newQueue(pointer) {
 function shuffle(pointer) {
   this.pointer = pointer; // save the parm in our permanent pointer
   this.queue = [];  //Empty existing queue so we don't get old entries hanging over
-  // loop through outer array and copy the 5 inner list values to queue
+  // loop through outer array and copy the 6 inner list values to queue
   for (var i = 0, l1 = this.list.length; i < l1; i++) {
     this.queue[i] = [];
     this.queue[i][0] = this.list[i][0]; // Track title
@@ -162,6 +163,7 @@ function shuffle(pointer) {
     this.queue[i][3] = this.list[i][3]; // art link
     this.queue[i][4] = this.list[i][4]; // song link
     this.queue[i][5] = this.list[i][5]; // album id
+    this.queue[i][6] = this.list[i][6]; // song id
   }
 
   // Now we do some randomising to the queue array
@@ -192,6 +194,7 @@ function newSingle(pointer) {
   this.queue[0][3] = this.list[pointer][3]; // art link
   this.queue[0][4] = this.list[pointer][4]; // song link
   this.queue[0][5] = this.list[pointer][5]; // album id
+  this.queue[0][6] = this.list[pointer][6]; // song id
   // Last call the playnew function to kick it off
   playnew('0'); // There's only one song in the queue so always pass 0 as the pointer
 }
@@ -207,6 +210,7 @@ function addT2Q(pointer) {
   this.queue[newtrk][3] = this.list[pointer][3]; // art link
   this.queue[newtrk][4] = this.list[pointer][4]; // song link
   this.queue[newtrk][5] = this.list[pointer][5]; // album id
+  this.queue[newtrk][6] = this.list[pointer][6]; // song id
   queueDropdown(); // Call queueDropdown() to re-write our dropdown menu with the new track
 }
 
@@ -222,6 +226,7 @@ function addAll2Q() {
     this.queue[newpos][3] = this.list[i][3]; // art link
     this.queue[newpos][4] = this.list[i][4]; // song link
     this.queue[newpos][5] = this.list[i][5]; // album id
+    this.queue[newpos][6] = this.list[i][6]; // song id
     newpos++;
   }
   queueDropdown(); // Call queueDropdown() to re-write our dropdown menu with the new track
@@ -299,6 +304,19 @@ function queueDropdown() {
 
 // Save the queue
 function saveQueue() {
+	$('.pfromq.ui.modal')
+	  .modal({
+	     onApprove : function() {
+         var songs = "";
+	       var nn = document.getElementById('newname').value;
+         for (var i = 0, l1 = parent.queue.length; i < l1; i++) {
+           songs = songs + "&songs[]=" + parent.queue[i][6];
+         }
+	       $.get("includes/playlistfromqAPI.php?filter=" + nn + songs);
+	     }
+	   })
+	  .modal('show')
+	;
 }
 
 // Clear the queue

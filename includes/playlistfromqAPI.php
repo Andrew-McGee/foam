@@ -43,9 +43,6 @@
 
     $curl = curl_init();
 
-    //If the call is initial handsake we need to build a different format
-    if ($call == 'hshake') {
-
 	    // Let's check the cookies are set
 	    if (isset($_COOKIE["host"])) {
 	      $ampurl = $_COOKIE["host"];
@@ -62,6 +59,9 @@
 	    } else {
 	      header ('Location: auth.php');
 	    }
+
+    //If the call is initial handsake we need to build a different format
+    if ($call == 'hshake') {
 
       //Build the handshake string to get auth key
       $time = time();

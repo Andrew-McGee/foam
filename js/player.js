@@ -285,8 +285,8 @@ function activeMenu(activeitem) {
 
 // Function to dynamically build the queue dropdown list
 function queueDropdown() {
-  var items = '<div class="item" onclick="clearQueue()">Clear queue</div>';
-  var items = items + '<div class="item" onclick="saveQueue()">Save queue</div>';
+  var items = '<div class="item" onclick="clearQueue()">CLEAR</div>';
+  var items = items + '<div class="item" onclick="saveQueue()">SAVE</div>';
   for (var i = 0, l1 = this.queue.length; i < l1; i++) {
     if (this.pointer == i) {
       items = items + '<div class="item">';
@@ -294,6 +294,7 @@ function queueDropdown() {
       ' - ' + this.queue[i][1]  + '</div></div>';
     } else {
       items = items + '<div class="item" onclick="playnew(' + i + ')">';
+      items = items + '<span class="draggable"><i class="sort icon"></i></span>';
       items = items + this.queue[i][0] + ' - ' + this.queue[i][1];
       items = items + '</div>';
       //items = items + '<div class="item" onclick="playnew(' + i + ')">' + this.queue[i][0] + ' - ' + this.queue[i][1]  + '</div>';

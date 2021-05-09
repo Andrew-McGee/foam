@@ -100,6 +100,11 @@
 		.ui.checkbox label, .ui.checkbox+label {
 			color: var(--colrfnt1) !important;
 		}
+
+		.draggable {
+			cursor: move;
+			user-select: none;
+		}
 /* Hack to center images that are links
 		a.ui.image.centered{
     	display: block;

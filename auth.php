@@ -11,7 +11,7 @@
 			  <div class="ui inverted space compact segment">
 					<?php if (isset($authError)) echo '<h2 class="ui inverted red header">' . $authError . '</h2>'; ?>
 					<h1 class="ui inverted yellow header">foam</h1>
-					<form class="ui form" method="POST" action="connect.php">
+					<form class="ui form" method="POST" action="includes/connect.php">
 						<div class="field">
 							<label>Host</label>
 			  			<input name="host" type="text" placeholder="host:port">

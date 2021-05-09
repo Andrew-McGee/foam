@@ -1,6 +1,8 @@
 <?php
 // Verify login info for Ampache API and set cookies.
-// If remember me was selected make cookie permanent otherwise limit lifespan with time().
+// If remember me was selected make cookie not expire until the sessionTime parm, otherwise cookie lasts only for this browser session.
+
+	include '../config/foam.conf.php';
 
 	$sessionTime = 365 * 24 * 3600; // Seconds in 1 year
 
@@ -32,7 +34,7 @@
 
 	// If we don't have an auth token returned something went wrong - redirect back to login screen with an error msg
 	if (!isset($hshake['auth'])) {
-		header ('Location: auth.php?authError="Login Failed"');
+		header ('Location: ../auth.php?authError="Login Failed"');
 	}
 
 
@@ -48,6 +50,6 @@
 		echo "Cookies expire at end of session";
 	}
 
-	header ('Location: index.php');
+	header ('Location: ../index.php');
 
 ?>

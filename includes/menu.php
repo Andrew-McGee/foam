@@ -36,6 +36,7 @@ function active_menu($hshake){
   echo '</tbody></table>' . "\r\n";
 
   // Add a listener for the logout menu item
+  // If logout is clicked set all the cookies to an expiry date in the past so they are deleted
   echo '<script>logOut.addEventListener("click", function() {';
   echo '	document.cookie = "host=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";';
   echo '	document.cookie = "name=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";';

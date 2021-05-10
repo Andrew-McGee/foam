@@ -44,7 +44,8 @@ function revealicon(num) {
 
 							// Left column for album art and stats
 							echo '<div class="ui four wide column">' . "\r\n";
-								echo '<br><a href="artist_albums.php?uid=' . $artist_results['id'] . '">';
+							  echo '<i class="massive bordered music icon"></i>';
+								echo '<br><br><a href="artist_albums.php?uid=' . $artist_results['id'] . '">';
 								echo '<strong>' . $artist_results['name'] . '</strong></a>';
 								echo '<br>' . $artist_results['albumcount'] . ' albums';
 								echo '<br>' . $artist_results['songcount'] . ' songs';

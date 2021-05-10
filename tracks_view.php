@@ -64,7 +64,8 @@ function revealicon(num) {
 
 							// Left column for album art and stats
 							echo '<div class="ui four wide column">' . "\r\n";
-								echo '<br>';
+							  echo '<i class="massive bordered music icon"></i>';
+								echo '<br><br>';
 								echo '<strong>Tracks</strong></a>';
 								echo '<br>A - Z';
 								echo '<br> songs';

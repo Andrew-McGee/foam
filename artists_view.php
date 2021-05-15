@@ -45,8 +45,9 @@ parent.activeMenu(3); // Call js function in parent to highlight the correct act
 						echo '<div class="ui one column grid">'; //Two columns - first column just for spacing.
 
 							// Left column for album art and stats
-							echo '<div class="ui four wide column">';
-								echo '<br>';
+							echo '<div class="ui four wide column">' . "\r\n";
+								echo '<i class="massive bordered user icon"></i>';
+								echo '<br><br>';
 								echo '<strong>Artists</strong></a>';
 								echo '<br>A - Z';
 								echo '<br> songs';

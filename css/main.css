@@ -1,16 +1,10 @@
 /*
   Name: main.css 2021
-  Date: JAN 2021
   Description: Simple layout for Fomantic UI Ampache web player - foam
-  Version: 1.0
-  Author: Andrew McGee
-  Note: Some of this is a hack - overrides may not be necessary if we re-build fomantic with a new theme and variables
 */
 
-/* Imports */
-/* @import 'https://fonts.googleapis.com/css?family=Lato:100,300,400,700'; */
-/* @import url('https://fonts.googleapis.com/css2?family=Noto+sans+SC&display=swap'); */
-
+/** Set up root varaibles for theme colours **/
+/* @import 'themes.css.php'; */
 		:root {
 			--colrfgd1: #2a2c41;  /* Space Cadet */
 			--colrbgd1: #556177;  /* Manatee */
@@ -18,10 +12,8 @@
 			--colrfnt2: #F5F5F5;  /* WhiteSmoke - highlight text and headings */
 			--colrfnt3: #556177;  /* Manatee - Now playing text */
 			--colrhilt: #0E6EB8;  /* Blue highlight */
-
-			--space-cadet: hsla(235, 21%, 21%, 1);
-			--manatee: #556177;
 		}
+
 		body {
 		 background-color: var(--colrbgd1);
 		 color: var(--colrfnt1) !important;
@@ -33,6 +25,7 @@
 			color: var(--colrfnt1) !important;
 		}
 
+/** link styling **/
 		a:link { color: var(--colrfnt1); text-decoration: none; }
 		a:visited { color: var(--colrfnt1); text-decoration: none; }
 		a:active { color: var(--colrfnt1); text-decoration: none; }
@@ -46,6 +39,7 @@
 				font-size: 1rem !important;
 		}
 
+/** form elements styling **/
 		.ui.input input {
 			background-color: var(--colrbgd1) !important;
 			color: var(--colrfnt2) !important;

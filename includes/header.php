@@ -68,7 +68,7 @@
 			<div class="three wide column">
 				<table><tr>
 					<td><a id="albmLink" href="albums_view.php" target="iframe_main">
-						<img class="ui image"  id="playrThumb" src="img/vinyl.png" width="50" height="50"></a></td>
+						<img id="playrThumb" src="img/vinyl.png" height="50"></a></td>
 					<td><strong><div class="ui small blue header" id="playrTitle"></div></strong>
 					<div class="ui small text" id="playrArtist"></div></td>
 				</tr></table>

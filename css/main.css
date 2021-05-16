@@ -38,7 +38,7 @@
 		a:active { color: var(--colrfnt1); text-decoration: none; }
 		a:hover { color: var(--colrfnt1); text-decoration: underline; }
 
-		a.icn:hover { color: var(--colrfnt1); text-decoration: none; }
+		a.icn:hover { color: var(--colrfnt2); text-decoration: none; }
 
 		.ui.vertical.menu .item > i.icon.left {
 		    float: none;
@@ -118,12 +118,7 @@
 			 margin: 1em 2em 0em 3em !important;
 		 }
 
-     .ui.inverted.top.segment {
-       background-color: var(--colrfgd1) !important;
-       color: var(--colrfnt1);
-			 padding: 1em 2em;
-     }
-
+/** Main side menu styling **/
 		.sidemenu.column {
 		 background-color: var(--colrfgd1);
 		 margin: 0em 0em 0em 0em;
@@ -147,6 +142,7 @@
 			 color: var(--colrfnt2) !important;
 		 }
 
+/** Drop Down menu styling **/
 		 .ui.dropdown .menu {
 			 background-color: var(--colrbgd1) !important;
 		 }
@@ -155,6 +151,11 @@
 			 color: var(--colrfnt1) !important;
 		 }
 
+		 .ui.dropdown .menu>.item:hover {
+			 color: var(--colrfnt2) !important;
+		 }
+
+/** Main table styling **/
 		 .ui.compact.table {
 			 color: var(--colrfnt1) !important;
 			 margin: 1em 2em 0em 3em !important;
@@ -164,6 +165,13 @@
 			 color: var(--colrfnt1) !important;
 			 background-color: var(--colrfgd1) !important;
 		 }
+
+/** Page segments styling **/
+     .ui.inverted.top.segment {
+       background-color: var(--colrfgd1) !important;
+       color: var(--colrfnt1);
+			 padding: 1em 2em;
+     }
 
      .ui.inverted.spacecadet.segment {
        background-color: var(--colrfgd1) !important;

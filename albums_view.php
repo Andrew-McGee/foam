@@ -48,7 +48,7 @@
 						<!-- Tag column -->
 									<div class="three wide column">
 										<?php
-										if ($filt !== '') {echo '<div class="ui filter large label">' . $filt . '&nbsp;<a href="albums_view.php"><i class="icon close"></i></a></div>';}
+										if ($filt !== '') {echo '<div class="ui filter large label">' . $filt . '&nbsp;<a class="icn" href="albums_view.php"><i class="icon close"></i></a></div>';}
 										?>
 									</div>
 

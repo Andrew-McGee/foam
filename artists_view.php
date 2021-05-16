@@ -63,7 +63,7 @@ parent.activeMenu(3); // Call js function in parent to highlight the correct act
 
 									// Tag column
 									echo '<div class="three wide column">';
-										if ($filt !== '') {echo '<div class="ui filter large label">' . $filt . '&nbsp;<a href="artists_view.php"><i class="icon close"></i></a></div>';}
+										if ($filt !== '') {echo '<div class="ui filter large label">' . $filt . '&nbsp;<a class="icn" href="artists_view.php"><i class="icon close"></i></a></div>';}
 									echo '</div>';
 
 									// Filter bar column

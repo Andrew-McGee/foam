@@ -4,15 +4,15 @@
 */
 
 /** Set up root varaibles for theme colours **/
-/* @import 'themes.css.php'; */
-		:root {
-			--colrfgd1: #2a2c41;  /* Space Cadet */
-			--colrbgd1: #556177;  /* Manatee */
-			--colrfnt1: #A5A5A5;  /* Main grey text */
-			--colrfnt2: #F5F5F5;  /* WhiteSmoke - highlight text and headings */
-			--colrfnt3: #556177;  /* Manatee - Now playing text */
-			--colrhilt: #0E6EB8;  /* Blue highlight */
-		}
+/* @import '../config/themes.php'; */
+/*		:root {
+			--colrfgd1: #2a2c41;
+			--colrbgd1: #556177;
+			--colrfnt1: #A5A5A5;
+			--colrfnt2: #F5F5F5;
+			--colrfnt3: #556177;
+			--colrhilt: #0E6EB8;
+		} */
 
 		body {
 		 background-color: var(--colrbgd1);

@@ -4,6 +4,9 @@
 
 // Function to build the correct active menu item based on which page was passed.
 function active_menu($hshake){
+
+  include 'config/foam.conf.php';
+
   echo '<div class="ui left compact vertical inverted side menu">';
 
   echo '  <a class="item" id="item1" href="recent_view.php" target="iframe_main"><i class="clock icon"></i>Recent</a>';
@@ -18,8 +21,29 @@ function active_menu($hshake){
   echo '  <div class="item" id="item10">' . "\r\n";
   echo '    <div class="ui inline dropdown">Settings &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="cog icon"></i>' . "\r\n";
   echo '  	  <div class="menu" id="settingsMenu">' . "\r\n";
-  echo '  	    <div class="item" id="theme1">Theme 1</div>' . "\r\n";
-  echo '  	    <div class="item" id="theme2">Theme 2</div>' . "\r\n";
+
+ // Loop to generate each theme menu item
+  $cnt = count($theme);
+  for ($i = 1; $i <= $cnt; $i++){
+    echo '  	    <div class="item" id="theme' . $i . '">' . $theme[$i]['name'] . '</div>' . "\r\n";
+    // Add a listener for clicking this theme menu item
+    echo '<script>theme' . $i . '.addEventListener("click", function() {';
+    echo '  document.body.style.setProperty("--colrfgd1", "' . $theme[$i]['colrfgd1'] . '");';
+    echo '  document.body.style.setProperty("--colrbgd1", "' . $theme[$i]['colrbgd1'] . '");';
+    echo '  document.body.style.setProperty("--colrfnt1", "' . $theme[$i]['colrfnt1'] . '");';
+    echo '  document.body.style.setProperty("--colrfnt2", "' . $theme[$i]['colrfnt2'] . '");';
+    echo '  document.body.style.setProperty("--colrfnt3", "' . $theme[$i]['colrfnt3'] . '");';
+    echo '  document.body.style.setProperty("--colrhilt", "' . $theme[$i]['colrhilt'] . '");';
+    echo '  window.frames.iframe_main.document.body.style.setProperty("--colrfgd1", "' . $theme[$i]['colrfgd1'] . '");';
+    echo '  window.frames.iframe_main.document.body.style.setProperty("--colrbgd1", "' . $theme[$i]['colrbgd1'] . '");';
+    echo '  window.frames.iframe_main.document.body.style.setProperty("--colrfnt1", "' . $theme[$i]['colrfnt1'] . '");';
+    echo '  window.frames.iframe_main.document.body.style.setProperty("--colrfnt2", "' . $theme[$i]['colrfnt2'] . '");';
+    echo '  window.frames.iframe_main.document.body.style.setProperty("--colrfnt3", "' . $theme[$i]['colrfnt3'] . '");';
+    echo '  window.frames.iframe_main.document.body.style.setProperty("--colrhilt", "' . $theme[$i]['colrhilt'] . '");';
+    echo '	document.cookie = "theme=' . $i . '; max-age=31536000; path=/";';
+    echo '});</script>' . "\r\n";
+  }
+
   echo '  	    <div class="item" id="logOut">Log out</div>' . "\r\n";
   echo '      </div>' . "\r\n";
   echo '    </div>' . "\r\n";
@@ -45,6 +69,8 @@ function active_menu($hshake){
   echo '	document.cookie = "pass=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";';
   echo '  location.reload();';
   echo '});</script>' . "\r\n";
+
+
 
   // Add a listener for theme 1 menu item
   echo '<script>theme1.addEventListener("click", function() {';

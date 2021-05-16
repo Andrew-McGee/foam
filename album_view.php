@@ -75,7 +75,7 @@ function revealicon(num) {
 								echo '  	<div class="menu" id="albumMenu">' . "\r\n";
 								echo '  	  <div class="item" id="addAll2Q">Add to queue</div>' . "\r\n";
 								echo '  	  <div class="item">Play next</div>' . "\r\n";
-								echo '  	  <div class="item"><a href="albums_view.php?filt=' . $seriesMatch . '">Series match</a></div>' . "\r\n";
+								echo '  	  <div class="item"><a class="icn" href="albums_view.php?filt=' . $seriesMatch . '">Series match</a></div>' . "\r\n";
 								echo '    </div></div>' . "\r\n";
 								if ($albm_results['flag'] == 0 ) {
 									echo '<i id="albumStar" class="star outline icon"></i>';

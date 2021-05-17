@@ -12,5 +12,6 @@
 	<script src="dist/semantic.min.js"></script>
 
 <!-- CSS Overrides -->
+	<link rel="stylesheet" href="config/settheme.php" type="text/css" />
   <link rel="stylesheet" href="css/main.css" type="text/css" />
 </head>

@@ -45,8 +45,9 @@ parent.activeMenu(3); // Call js function in parent to highlight the correct act
 						echo '<div class="ui one column grid">'; //Two columns - first column just for spacing.
 
 							// Left column for album art and stats
-							echo '<div class="ui four wide column">';
-								echo '<br>';
+							echo '<div class="ui four wide column">' . "\r\n";
+								echo '<i class="massive bordered feature user icon"></i>';
+								echo '<br><br>';
 								echo '<strong>Artists</strong></a>';
 								echo '<br>A - Z';
 								echo '<br> songs';
@@ -62,7 +63,7 @@ parent.activeMenu(3); // Call js function in parent to highlight the correct act
 
 									// Tag column
 									echo '<div class="three wide column">';
-										if ($filt !== '') {echo '<div class="ui filter large label">' . $filt . '&nbsp;<a href="artists_view.php"><i class="icon close"></i></a></div>';}
+										if ($filt !== '') {echo '<div class="ui filter large label">' . $filt . '&nbsp;<a class="icn" href="artists_view.php"><i class="icon close"></i></a></div>';}
 									echo '</div>';
 
 									// Filter bar column

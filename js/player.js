@@ -285,8 +285,8 @@ function activeMenu(activeitem) {
 
 // Function to dynamically build the queue dropdown list
 function queueDropdown() {
-  var items = '<div class="item" onclick="clearQueue()">CLEAR</div>';
-  var items = items + '<div class="item" onclick="saveQueue()">SAVE</div>';
+  var items = '<div class="item"><center><button class="ui tiny basic button" onclick="clearQueue()">CLEAR</button>&nbsp;';
+  var items = items + '<button class="ui tiny basic button" onclick="saveQueue()">SAVE</button></center></div>';
   for (var i = 0, l1 = this.queue.length; i < l1; i++) {
     if (this.pointer == i) {
       items = items + '<div class="item">';

@@ -1,27 +1,8 @@
 /*
   Name: main.css 2021
-  Date: JAN 2021
   Description: Simple layout for Fomantic UI Ampache web player - foam
-  Version: 1.0
-  Author: Andrew McGee
-  Note: Some of this is a hack - overrides may not be necessary if we re-build fomantic with a new theme and variables
 */
 
-/* Imports */
-/* @import 'https://fonts.googleapis.com/css?family=Lato:100,300,400,700'; */
-/* @import url('https://fonts.googleapis.com/css2?family=Noto+sans+SC&display=swap'); */
-
-		:root {
-			--colrfgd1: #2a2c41;  /* Space Cadet */
-			--colrbgd1: #556177;  /* Manatee */
-			--colrfnt1: #A5A5A5;  /* Main grey text */
-			--colrfnt2: #F5F5F5;  /* WhiteSmoke - highlight text and headings */
-			--colrfnt3: #556177;  /* Manatee - Now playing text */
-			--colrhilt: #0E6EB8;  /* Blue highlight */
-
-			--space-cadet: hsla(235, 21%, 21%, 1);
-			--manatee: #556177;
-		}
 		body {
 		 background-color: var(--colrbgd1);
 		 color: var(--colrfnt1) !important;
@@ -33,12 +14,13 @@
 			color: var(--colrfnt1) !important;
 		}
 
+/** link styling **/
 		a:link { color: var(--colrfnt1); text-decoration: none; }
 		a:visited { color: var(--colrfnt1); text-decoration: none; }
 		a:active { color: var(--colrfnt1); text-decoration: none; }
 		a:hover { color: var(--colrfnt1); text-decoration: underline; }
 
-		a.icn:hover { color: var(--colrfnt1); text-decoration: none; }
+		a.icn:hover { color: var(--colrfnt2); text-decoration: none; }
 
 		.ui.vertical.menu .item > i.icon.left {
 		    float: none;
@@ -46,6 +28,7 @@
 				font-size: 1rem !important;
 		}
 
+/** form elements styling **/
 		.ui.input input {
 			background-color: var(--colrbgd1) !important;
 			color: var(--colrfnt2) !important;
@@ -61,6 +44,15 @@
 			color: var(--colrfnt2) !important;
 		}
 
+		.ui.form .field>label {
+			color: var(--colrfnt1) !important;
+		}
+
+		.ui.checkbox label, .ui.checkbox+label {
+			color: var(--colrfnt1) !important;
+		}
+
+/** icons & labels styling **/
 		.ui.label.filter {
 			background-color: var(--colrbgd1) !important;
 			color: var(--colrfnt1) !important;
@@ -68,6 +60,10 @@
 
 		.icon:hover {
 		  	color: var(--colrfnt2) !important;
+		}
+
+		.feature.icon:hover {
+		  	color: var(--colrfnt1) !important;
 		}
 
 		.bordered.icon {
@@ -93,22 +89,10 @@
 			opacity:0 !important;
 		}
 
-		.ui.form .field>label {
-			color: var(--colrfnt1) !important;
-		}
-
-		.ui.checkbox label, .ui.checkbox+label {
-			color: var(--colrfnt1) !important;
-		}
-
 		.draggable {
 			cursor: move;
 			user-select: none;
 		}
-/* Hack to center images that are links
-		a.ui.image.centered{
-    	display: block;
-		}*/
 
 /******************************************
   Add Custom Colours to Semantic Components
@@ -122,12 +106,7 @@
 			 margin: 1em 2em 0em 3em !important;
 		 }
 
-     .ui.inverted.top.segment {
-       background-color: var(--colrfgd1) !important;
-       color: var(--colrfnt1);
-			 padding: 1em 2em;
-     }
-
+/** Main side menu styling **/
 		.sidemenu.column {
 		 background-color: var(--colrfgd1);
 		 margin: 0em 0em 0em 0em;
@@ -151,6 +130,7 @@
 			 color: var(--colrfnt2) !important;
 		 }
 
+/** Drop Down menu styling **/
 		 .ui.dropdown .menu {
 			 background-color: var(--colrbgd1) !important;
 		 }
@@ -159,6 +139,11 @@
 			 color: var(--colrfnt1) !important;
 		 }
 
+		 .ui.dropdown .menu>.item:hover {
+			 color: var(--colrfnt2) !important;
+		 }
+
+/** Main table styling **/
 		 .ui.compact.table {
 			 color: var(--colrfnt1) !important;
 			 margin: 1em 2em 0em 3em !important;
@@ -168,6 +153,13 @@
 			 color: var(--colrfnt1) !important;
 			 background-color: var(--colrfgd1) !important;
 		 }
+
+/** Page segments styling **/
+     .ui.inverted.top.segment {
+       background-color: var(--colrfgd1) !important;
+       color: var(--colrfnt1);
+			 padding: 1em 2em;
+     }
 
      .ui.inverted.spacecadet.segment {
        background-color: var(--colrfgd1) !important;

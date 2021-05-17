@@ -75,7 +75,7 @@ function revealicon(num) {
 								echo '  	<div class="menu" id="albumMenu">' . "\r\n";
 								echo '  	  <div class="item" id="addAll2Q">Add to queue</div>' . "\r\n";
 								echo '  	  <div class="item">Play next</div>' . "\r\n";
-								echo '  	  <div class="item"><a href="albums_view.php?filt=' . $seriesMatch . '">Series match</a></div>' . "\r\n";
+								echo '  	  <div class="item"><a class="icn" href="albums_view.php?filt=' . $seriesMatch . '">Series match</a></div>' . "\r\n";
 								echo '    </div></div>' . "\r\n";
 								if ($albm_results['flag'] == 0 ) {
 									echo '<i id="albumStar" class="star outline icon"></i>';
@@ -143,17 +143,17 @@ function revealicon(num) {
 										echo '		<div class="item" id="playOnly' . $i . '">Play only</div>' . "\r\n";
 										echo '		<div class="item" id="addT2P' . $i . '">Add to playlist' . "\r\n";
 										echo '      <div class="menu">' . "\r\n";  // Add to playlist spawns another submenu
+										echo '        <div class="item" id="newplaylist' . $i . '"><center><button class="ui tiny basic button">NEW</button></center></div>' . "\r\n";
 										// Loop to add all our known playlists to the sub menu
 										$j = 0;
 										foreach ($playlist_results['playlist'] as $playlist) {
 											echo '      <div class="item" id="playlist' . $i, $j . '">' . $playlist['name'] . '</div>' . "\r\n";
 											$j++;
 										}
-										echo '        <div class="item" id="newplaylist' . $i . '"><i class="small plus icon"></i>NEW</div>' . "\r\n";
 										echo '      </div>' . "\r\n";
 										echo '    </div>' . "\r\n";
-										echo '		<div class="item"><a href="album_view.php?uid=' . $song_results['song'][$i]['album']['id'] . '">Go to album</a></div>' . "\r\n";
-										echo '		<div class="item"><a href="artist_albums.php?uid=' . $song_results['song'][$i]['artist']['id'] . '">Go to artist</a></div>' . "\r\n";
+										echo '		<div class="item"><a class="icn" href="album_view.php?uid=' . $song_results['song'][$i]['album']['id'] . '">Go to album</a></div>' . "\r\n";
+										echo '		<div class="item"><a class="icn" href="artist_albums.php?uid=' . $song_results['song'][$i]['artist']['id'] . '">Go to artist</a></div>' . "\r\n";
 										echo '	</div>' . "\r\n";
 										echo '</div></td>' . "\r\n";
 

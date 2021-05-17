@@ -44,7 +44,7 @@ function revealicon(num) {
 
 							// Left column for stats
 							echo '<div class="ui four wide column">' . "\r\n";
-							  echo '<i class="massive bordered stream icon"></i>';
+							  echo '<i class="massive bordered feature stream icon"></i>';
 								echo '<br><br>';
 								echo '<strong>' . $playlist_results['name'] . '</strong>';
 								echo '<br>(Playlist)';

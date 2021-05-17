@@ -44,6 +44,15 @@
 			color: var(--colrfnt2) !important;
 		}
 
+		.ui.form .field>label {
+			color: var(--colrfnt1) !important;
+		}
+
+		.ui.checkbox label, .ui.checkbox+label {
+			color: var(--colrfnt1) !important;
+		}
+
+/** icons & labels styling **/
 		.ui.label.filter {
 			background-color: var(--colrbgd1) !important;
 			color: var(--colrfnt1) !important;
@@ -51,6 +60,10 @@
 
 		.icon:hover {
 		  	color: var(--colrfnt2) !important;
+		}
+
+		.feature.icon:hover {
+		  	color: var(--colrfnt1) !important;
 		}
 
 		.bordered.icon {
@@ -74,14 +87,6 @@
 
 		.icon.hidden {
 			opacity:0 !important;
-		}
-
-		.ui.form .field>label {
-			color: var(--colrfnt1) !important;
-		}
-
-		.ui.checkbox label, .ui.checkbox+label {
-			color: var(--colrfnt1) !important;
 		}
 
 		.draggable {

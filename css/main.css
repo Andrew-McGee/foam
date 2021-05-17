@@ -3,17 +3,6 @@
   Description: Simple layout for Fomantic UI Ampache web player - foam
 */
 
-/** Set up root varaibles for theme colours **/
-/* @import '../config/themes.php'; */
-/*		:root {
-			--colrfgd1: #2a2c41;
-			--colrbgd1: #556177;
-			--colrfnt1: #A5A5A5;
-			--colrfnt2: #F5F5F5;
-			--colrfnt3: #556177;
-			--colrhilt: #0E6EB8;
-		} */
-
 		body {
 		 background-color: var(--colrbgd1);
 		 color: var(--colrfnt1) !important;

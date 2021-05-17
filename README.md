@@ -41,19 +41,20 @@ This is advisable on a public or borrowed computer - always close your browser w
 If "Remember me" is selected cookies will live for 1 year. Use the logout option in settings to remove cookies and force login.
 
 Note: If you change Ampache credentials so your current cookies no longer validate you will be asked to re-login.
+Note: You should NOT consider foam as highly secure. It is still in development.
 
 ## To Do
 Status: 90% operational with some minor functions missing. Formatting improvements are yet to be completed and will happen in Phase 2.
 You can see a video of all current working features here:
 https://www.youtube.com/watch?v=VK_6-VN4e8o
 
-*Phase 1* (Current):
+#### Phase 1 (*Current*):
 Finishing the core functionality to get a working stable release.
 
-*Phase 2* (next):
+#### Phase 2 (*Started*):
 Adjust styling to polish fonts, palette, element position, theme options etc.
 
-*Phase 3*:
+#### Phase 3 (*Next*):
 Code optimisation, minimisation, speed, minify etc.
 
 #### _Working_
@@ -95,6 +96,9 @@ Code optimisation, minimisation, speed, minify etc.
 - Track seeking via slider
 - Some quirky pagination bugs and better logic for first/last page
 - Queue manipulation (re-order, remove track)
+- Play next for whole album
+- Genre information in artists view
+- Mobile device friendly view
 
 ## Contributions
 Once I have a working release then contributions and suggestions always welcome.

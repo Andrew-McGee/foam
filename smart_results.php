@@ -87,7 +87,7 @@ function revealicon(num) {
 									foreach ($artist_results['artist'] as $artist) {
 										echo '<div class="column">' . "\r\n";
 											echo '<a class="icn" href="artist_albums.php?uid=' . $artist_results['artist'][$i]['id'] . '">' . "\r\n";
-											echo '<div class="ui filter large label"><i class="user icon"></i>' . $artist_results['artist'][$i]['name'] . '</div></a>';
+											echo '<button class="ui tiny button"><i class="user icon"></i>' . $artist_results['artist'][$i]['name'] . '</button></a>';
 										echo '</div>';
 										$i++;
 									}

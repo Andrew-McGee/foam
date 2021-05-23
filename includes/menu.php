@@ -25,7 +25,7 @@ function active_menu($hshake){
  // Loop to generate each theme menu item
   $cnt = count($theme);
   for ($i = 1; $i <= $cnt; $i++){
-    echo '  	    <div class="item" id="theme' . $i . '">' . $theme[$i]['name'] . '</div>' . "\r\n";
+    echo '  	    <div class="item" id="theme' . $i . '"><i class="paint roller icon"></i>&nbsp;&nbsp;&nbsp;' . $theme[$i]['name'] . '</div>' . "\r\n";
     // Add a listener for clicking this theme menu item
     echo '<script>theme' . $i . '.addEventListener("click", function() {';
     echo '  document.body.style.setProperty("--colrfgd1", "' . $theme[$i]['colrfgd1'] . '");';
@@ -44,7 +44,7 @@ function active_menu($hshake){
     echo '});</script>' . "\r\n";
   }
 
-  echo '  	    <div class="item" id="logOut">Log out</div>' . "\r\n";
+  echo '  	    <div class="item" id="logOut"><i class="sign out icon"></i>&nbsp;&nbsp;&nbsp;Log out</div>' . "\r\n";
   echo '      </div>' . "\r\n";
   echo '    </div>' . "\r\n";
   echo '  </div>' . "\r\n";
@@ -68,24 +68,6 @@ function active_menu($hshake){
   echo '	document.cookie = "name=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";';
   echo '	document.cookie = "pass=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";';
   echo '  location.reload();';
-  echo '});</script>' . "\r\n";
-
-
-
-  // Add a listener for theme 1 menu item
-  echo '<script>theme1.addEventListener("click", function() {';
-  echo '  document.body.style.setProperty("--colrfgd1", "#556177");';
-  echo '  document.body.style.setProperty("--colrbgd1", "#2a2c41");';
-  echo '  window.frames.iframe_main.document.body.style.setProperty("--colrfgd1", "#556177");';
-  echo '  window.frames.iframe_main.document.body.style.setProperty("--colrbgd1", "#2a2c41");';
-  echo '});</script>' . "\r\n";
-
-  // Add a listener for theme 2 menu item
-  echo '<script>theme2.addEventListener("click", function() {';
-  echo '  document.body.style.setProperty("--colrfgd1", "#2a2c41");';
-  echo '  document.body.style.setProperty("--colrbgd1", "#556177");';
-  echo '  window.frames.iframe_main.document.body.style.setProperty("--colrfgd1", "#2a2c41");';
-  echo '  window.frames.iframe_main.document.body.style.setProperty("--colrbgd1", "#556177");';
   echo '});</script>' . "\r\n";
 
   return;

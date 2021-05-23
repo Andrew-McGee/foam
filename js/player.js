@@ -239,6 +239,13 @@ function playNext(song) {
   queueDropdown(); // Call queueDropdown() to re-write our dropdown menu with the new track
 }
 
+// Insert all tracks from album or playlist into existing queue in the next playable position
+function playAllNext() {
+  var newtrk = this.pointer + 1; // Determine the next entry after the one currently playing
+  this.queue.splice(newtrk, 0, ...this.list); // Use splice() to insert into array
+  queueDropdown(); // Call queueDropdown() to re-write our dropdown menu with the new track
+}
+
 // Skip next function
 function next() {
   if (this.pointer == this.queue.length - 1) {

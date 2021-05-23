@@ -74,7 +74,7 @@ function revealicon(num) {
 								echo '  <div class="ui inline dropdown"><i class="ellipsis vertical icon"></i>' . "\r\n";
 								echo '  	<div class="menu" id="albumMenu">' . "\r\n";
 								echo '  	  <div class="item" id="addAll2Q">Add to queue</div>' . "\r\n";
-								echo '  	  <div class="item">Play next</div>' . "\r\n";
+								echo '  	  <div class="item" id="playAllNext">Play next</div>' . "\r\n";
 								echo '  	  <div class="item"><a class="icn" href="albums_view.php?filt=' . $seriesMatch . '">Series match</a></div>' . "\r\n";
 								echo '    </div></div>' . "\r\n";
 								if ($albm_results['flag'] == 0 ) {
@@ -96,6 +96,11 @@ function revealicon(num) {
 								// Make a listener for Add to Queue menu item
 								echo "<script>addAll2Q.addEventListener('click', function() {";
 								echo "	parent.addAll2Q();";
+								echo '});</script>' . "\r\n";
+
+								// Make a listener for Add All to play next menu item
+								echo "<script>playAllNext.addEventListener('click', function() {";
+								echo "	parent.playAllNext();";
 								echo '});</script>' . "\r\n";
 
 								// Make a listener for clicking on the favourite star for album

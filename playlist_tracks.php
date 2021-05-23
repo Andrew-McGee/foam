@@ -59,7 +59,7 @@ function revealicon(num) {
 								echo '&nbsp;<div class="ui inline dropdown"><i class="ellipsis vertical icon"></i>' . "\r\n";
 								echo '	<div class="menu" id="albumMenu">' . "\r\n";
 								echo '	<div class="item" id="addAll2Q">Add to queue</div>' . "\r\n";
-								echo '	<div class="item">Play next</div>' . "\r\n";
+								echo '	<div class="item" id="playAllNext">Play next</div>' . "\r\n";
 								echo '	<div class="item" id="renpl">Rename playlist</div>' . "\r\n";
 								echo '	<div class="item" id="delpl">Delete playlist</div>' . "\r\n";
 								echo '</div></div>' . "\r\n";
@@ -76,6 +76,11 @@ function revealicon(num) {
 								// Make a listener for Add to Queue menu item
 								echo "<script>addAll2Q.addEventListener('click', function() {";
 								echo "	parent.addAll2Q();";
+								echo '});</script>' . "\r\n";
+
+								// Make a listener for Add All to play next menu item
+								echo "<script>playAllNext.addEventListener('click', function() {";
+								echo "	parent.playAllNext();";
 								echo '});</script>' . "\r\n";
 
 								// Make a listener for clicking rename playlist menu item

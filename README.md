@@ -93,11 +93,11 @@ Code optimisation, minimisation, speed, minify etc.
 - Save current queue to a playlist
 - Genre information in artists view
 - Better logic for first/last page and pagination controls
+- Play next for whole album
 
 #### _Not Yet Working_
 - Track seeking via slider
 - Queue manipulation (re-order, remove track)
-- Play next for whole album
 - Mobile device friendly view
 
 ## Contributions

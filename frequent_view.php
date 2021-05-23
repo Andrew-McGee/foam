@@ -23,6 +23,7 @@
 
 	$get_data = statsAPI($auth, 'frequent', $offset);
 	$results = json_decode($get_data, true);
+	$total = count($results['album']);
 
 	include 'includes/header_iframe.php';
 ?>
@@ -35,8 +36,10 @@
 							<h1 class="ui smoke header">Frequent Albums&nbsp;&nbsp;&nbsp;<i class="small chart line icon"></i></h1>
 						</div>
 						<div class="right floated right aligned five wide column">
-								<a class="icn" href="frequent_view.php?ofst=<?php echo $poffset; ?>"><i class="arrow circle left icon"></i></a>&nbsp;&nbsp;&nbsp;
-								<a class="icn" href="frequent_view.php?ofst=<?php echo $noffset; ?>"><i class="arrow circle right icon"></i></a>
+							<?php
+								if ($offset > 0) echo '<a class="icn" href="frequent_view.php?ofst=' . $poffset . '"><i class="arrow circle left icon"></i></a>&nbsp;&nbsp;&nbsp;';
+								if ($total == 24) echo '<a class="icn" href="frequent_view.php?ofst=' . $noffset . '"><i class="arrow circle right icon"></i></a>';
+							?>
 						</div>
 					</div>
 

@@ -36,8 +36,10 @@
 							<h1 class="ui smoke header">Playlists&nbsp;&nbsp;&nbsp;<i class="small stream icon"></i></h1>
 						</div>
 						<div class="right floated right aligned four wide column">
-								<a class="icn" href="playlists_view.php?ofst=<?php echo $poffset; ?>"><i class="arrow circle left icon"></i></a>&nbsp;&nbsp;&nbsp;
-								<a class="icn" href="playlists_view.php?ofst=<?php echo $noffset; ?>"><i class="arrow circle right icon"></i></a>
+							<?php
+								if ($offset > 0) echo '<a class="icn" href="playlists_view.php?ofst=' . $poffset . '"><i class="arrow circle left icon"></i></a>&nbsp;&nbsp;&nbsp;';
+								if ($total == 24) echo '<a class="icn" href="playlists_view.php?ofst=' . $noffset . '"><i class="arrow circle right icon"></i></a>';
+							?>
 						</div>
 					</div>
 

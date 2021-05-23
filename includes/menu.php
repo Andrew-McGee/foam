@@ -19,13 +19,13 @@ function active_menu($hshake){
   echo '  <a class="item" id="item8" href="favourites_view.php" target="iframe_main"><i class="star icon"></i>Favourites</a>';
   echo '  <a class="item" id="item9" href="random_view.php" target="iframe_main"><i class="dice icon"></i>Random</a>';
   echo '  <div class="item" id="item10">' . "\r\n";
-  echo '    <div class="ui inline dropdown">Settings &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="cog icon"></i>' . "\r\n";
+  echo '    <div class="ui dropdown">Settings &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="cog icon"></i>' . "\r\n";
   echo '  	  <div class="menu" id="settingsMenu">' . "\r\n";
 
  // Loop to generate each theme menu item
   $cnt = count($theme);
   for ($i = 1; $i <= $cnt; $i++){
-    echo '  	    <div class="item" id="theme' . $i . '"><i class="paint roller icon"></i>&nbsp;&nbsp;&nbsp;' . $theme[$i]['name'] . '</div>' . "\r\n";
+    echo '  	    <div class="item" id="theme' . $i . '"><i class="paint roller icon"></i>' . $theme[$i]['name'] . '</div>' . "\r\n";
     // Add a listener for clicking this theme menu item
     echo '<script>theme' . $i . '.addEventListener("click", function() {';
     echo '  document.body.style.setProperty("--colrfgd1", "' . $theme[$i]['colrfgd1'] . '");';
@@ -44,7 +44,7 @@ function active_menu($hshake){
     echo '});</script>' . "\r\n";
   }
 
-  echo '  	    <div class="item" id="logOut"><i class="sign out icon"></i>&nbsp;&nbsp;&nbsp;Log out</div>' . "\r\n";
+  echo '  	    <div class="item" id="logOut"><i class="sign out icon"></i>Log out</div>' . "\r\n";
   echo '      </div>' . "\r\n";
   echo '    </div>' . "\r\n";
   echo '  </div>' . "\r\n";

@@ -33,8 +33,8 @@ $sessionTime = 365 * 24 * 3600; // Seconds in 1 year
   // #03 Forest - Uncomment to use
   $theme[3]['name'] = 'Forest';     // Name
   $theme[3]['colrfgd1'] = '#379683'; // Foreground
-  $theme[3]['colrbgd1'] = '#5CDB95'; // Background
-  $theme[3]['colrfnt1'] = '#8EE4AF'; // Main text
+  $theme[3]['colrbgd1'] = '#4CBDA6'; // Background
+  $theme[3]['colrfnt1'] = '#ADEBC5'; // Main text
   $theme[3]['colrfnt2'] = '#EDF5E1'; // Bright text
   $theme[3]['colrfnt3'] = '#05386B'; // Dark text
   $theme[3]['colrhilt'] = '#0E6EB8'; // Highlight

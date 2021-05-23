@@ -91,13 +91,13 @@ Code optimisation, minimisation, speed, minify etc.
 - Clear queue
 - Browser authentication for Ampache with cookies
 - Save current queue to a playlist
+- Genre information in artists view
+- Better logic for first/last page and pagination controls
 
 #### _Not Yet Working_
 - Track seeking via slider
-- Some quirky pagination bugs and better logic for first/last page
 - Queue manipulation (re-order, remove track)
 - Play next for whole album
-- Genre information in artists view
 - Mobile device friendly view
 
 ## Contributions

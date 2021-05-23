@@ -12,9 +12,9 @@
   if ($offset == 0) {
 		$poffset = 0;
 	} else {
-		$poffset = $offset - 25;
+		$poffset = $offset - 24;
 	}
-	$noffset = $offset + 25;
+	$noffset = $offset + 24;
 
 	$get_data = handshakeAPI();
 	$hshake = json_decode($get_data, true);

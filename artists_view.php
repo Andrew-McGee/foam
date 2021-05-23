@@ -108,7 +108,12 @@ parent.activeMenu(3); // Call js function in parent to highlight the correct act
 										} else {
 											echo '<td>' . $result['hours'] . ':' . sprintf("%02d", $result['minutes']) . ':' . sprintf("%02d", $result['seconds']) . '</td>';
 										}
-										echo '<td>' . $artist_results['artist'][$i]['genre'][0] . '</td>';
+										// Display the genres for this artist - if there are any set
+										if (isset($artist_results['artist'][$i]['genre'][0]['name'])) {
+											echo '<td>' . $artist_results['artist'][$i]['genre'][0]['name'] . '</td>';
+										} else {
+											echo '<td></td>';
+										}
 									echo '</tr>'; // End of the row
 
 								}//End of row loop

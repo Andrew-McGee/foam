@@ -54,14 +54,17 @@
 						//Loop 6 columns
 						for ($j = 1; $j <=6; $j++){
 							echo "<div class='ui column'>";
-							echo '<a href="album_view.php?uid=' . $results['album'][$cnt]['id'] . '">';
-							echo "<img class='ui small image' src='" . $results['album'][$cnt]['art'] . "' ></a>";
-							echo '<br><center><a href="album_view.php?uid=' . $results['album'][$cnt]['id'] . '">';
-							echo $results['album'][$cnt]['name'] . "</a>";
-							echo '<br><a href="artist_albums.php?uid=' . $results['album'][$cnt]['artist']['id'] . '">';
-							echo $results['album'][$cnt]['artist']['name'] . "</a>";
-							echo '<br>'. $results['album'][$cnt]['year'];
-							echo "</center></div>";
+
+							if ($cnt < $total) {
+								echo '<a href="album_view.php?uid=' . $results['album'][$cnt]['id'] . '">';
+								echo "<img class='ui small image' src='" . $results['album'][$cnt]['art'] . "' ></a>";
+								echo '<br><center><a href="album_view.php?uid=' . $results['album'][$cnt]['id'] . '">';
+								echo $results['album'][$cnt]['name'] . "</a>";
+								echo '<br><a href="artist_albums.php?uid=' . $results['album'][$cnt]['artist']['id'] . '">';
+								echo $results['album'][$cnt]['artist']['name'] . "</a>";
+								echo '<br>'. $results['album'][$cnt]['year'] . '</center>';
+							}
+							echo "</div>";
 							$cnt++; //Increment our counter
 						}
 						echo "</div>";

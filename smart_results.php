@@ -85,13 +85,12 @@ function revealicon(num) {
 
 							// Build the artist tags in columns
 							echo '<div class="ui six column grid container">';
-							$i = 0;
-							foreach ($artist_results['artist'] as $artist) {
+							$cnt = count($artist_results['artist']);
+							for ($i = 0; $i < $cnt; $i++){
 								echo '<div class="column">' . "\r\n";
 								echo '  <a class="icn" href="artist_albums.php?uid=' . $artist_results['artist'][$i]['id'] . '">' . "\r\n";
 								echo '  <button class="ui tiny button"><i class="user icon"></i>' . $artist_results['artist'][$i]['name'] . '</button></a>';
 								echo '</div>';
-								$i++;
 							}
 							echo '</div>';
 						}
@@ -109,21 +108,20 @@ function revealicon(num) {
 								echo '</div>';
 							echo '</div>';
 
-							$cnt = 0; //Reset our counter to build row of 6 entries
+							$cnt = count($album_results['album']);
 							echo '<div class="ui six column grid container">';
 								echo '<div class="ui row">';
 									//Loop 6 columns
-									for ($j = 1; $j <=6; $j++){
+									for ($j = 0; $j < $cnt; $j++){
 										echo '<div class="ui column">';
-										echo '  <a href="album_view.php?uid=' . $album_results['album'][$cnt]['id'] . '">';
-										echo "  <img class='ui small image' src='" . $album_results['album'][$cnt]['art'] . "' ></a>";
-										echo '  <br><center><a href="album_view.php?uid=' . $album_results['album'][$cnt]['id'] . '">';
-										echo $album_results['album'][$cnt]['name'] . "</a>";
-										echo '  <br><a href="artist_albums.php?uid=' . $album_results['album'][$cnt]['artist']['id'] . '">';
-										echo $album_results['album'][$cnt]['artist']['name'] . "</a>";
-										echo '  <br>'. $album_results['album'][$cnt]['year'];
+										echo '  <a href="album_view.php?uid=' . $album_results['album'][$j]['id'] . '">';
+										echo "  <img class='ui small image' src='" . $album_results['album'][$j]['art'] . "' ></a>";
+										echo '  <br><center><a href="album_view.php?uid=' . $album_results['album'][$j]['id'] . '">';
+										echo $album_results['album'][$j]['name'] . "</a>";
+										echo '  <br><a href="artist_albums.php?uid=' . $album_results['album'][$j]['artist']['id'] . '">';
+										echo $album_results['album'][$j]['artist']['name'] . "</a>";
+										echo '  <br>'. $album_results['album'][$j]['year'];
 										echo '  </center></div>';
-										$cnt++; //Increment our counter
 									}
 								echo '</div>';
 							echo '</div>';

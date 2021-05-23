@@ -97,10 +97,10 @@
 /******************************************
   Add Custom Colours to Semantic Components
 *******************************************/
-		 .ui.header.smoke {color: whitesmoke;}
-		 .ui.header.space {color: var(--colrfgd1);}
+		 .ui.header.smoke {color: var(--colrfnt2);}
+		 .ui.header.space {color: var(--colrfnt3);}
 		 .ui.icon.space {color: var(--colrfgd1);}
-		 .ui.icon.header {color: #A5A5A5;}
+		 .ui.icon.header {color: var(--colrfnt1);}
 		 .ui.header.dim {
 			 color: var(--colrfnt1) !important;
 			 margin: 1em 2em 0em 3em !important;

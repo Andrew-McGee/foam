@@ -296,15 +296,15 @@ function queueDropdown() {
   var items = items + '<button class="ui tiny basic button" onclick="saveQueue()">SAVE</button></center></div>';
   for (var i = 0, l1 = this.queue.length; i < l1; i++) {
     if (this.pointer == i) {
-      items = items + '<div class="item">';
+      items = items + '<div class="item" id="qitem' + i + '">';
       items = items + '<div class="ui small space header"><i class="tiny play space icon"></i>' + this.queue[i][0] +
       ' - ' + this.queue[i][1]  + '</div></div>';
     } else {
-      items = items + '<div class="item" onclick="playnew(' + i + ')">';
-      items = items + '<span class="draggable"><i class="sort icon"></i></span>';
-      items = items + this.queue[i][0] + ' - ' + this.queue[i][1];
+      items = items + '<div class="item queue-row" id="qitem' + i + '">';
+      items = items +     '<span class="draggable"><i class="hidden sort icon" id="sort' + i + '"></i></span>';
+      items = items +     '<span onclick="playnew(' + i + ')">' + this.queue[i][0] + ' - ' + this.queue[i][1] + '</span>';
+      items = items +     '<span>&nbsp;&nbsp;<i class="hidden trash icon" id="trash' + i + '"></i></span>';
       items = items + '</div>';
-      //items = items + '<div class="item" onclick="playnew(' + i + ')">' + this.queue[i][0] + ' - ' + this.queue[i][1]  + '</div>';
     }
   }
   document.getElementById("queueMenu").innerHTML = items;

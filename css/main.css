@@ -89,6 +89,14 @@
 			opacity:0 !important;
 		}
 
+		.queue-row .hidden {
+			opacity: 0 !important;
+		}
+
+		.queue-row:hover .hidden {
+			opacity: 1 !important;
+		}
+
 		.draggable {
 			cursor: move;
 			user-select: none;
@@ -133,6 +141,7 @@
 /** Drop Down menu styling **/
 		 .ui.dropdown .menu {
 			 background-color: var(--colrbgd1) !important;
+			 color: var(--colrfnt1) !important;
 		 }
 
 		 .ui.dropdown .menu>.item {

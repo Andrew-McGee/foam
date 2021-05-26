@@ -21,17 +21,17 @@ $sessionTime = 365 * 24 * 3600; // Seconds in 1 year
   $theme[1]['colrfnt3'] = '#556177'; // Manatee - Now playing text
   $theme[1]['colrhilt'] = '#0E6EB8'; // Blue highlight
 
-  // #02 GoA - Uncomment to use
-  $theme[2]['name'] = 'GoA';     // Name
-  $theme[2]['colrfgd1'] = '#27293D'; // Manatee
-  $theme[2]['colrbgd1'] = '#1E1E2F'; // Space Cadet
-  $theme[2]['colrfnt1'] = '#A5A5A5'; // Main grey text
-  $theme[2]['colrfnt2'] = '#F5F5F5'; // WhiteSmoke - highlight text and headings
-  $theme[2]['colrfnt3'] = '#707070'; // Manatee - Now playing text
-  $theme[2]['colrhilt'] = '#0E6EB8'; // Blue highlight
+  // #02 Dark - Uncomment to use
+  $theme[2]['name'] = 'Dark';     // Name
+  $theme[2]['colrfgd1'] = '#27293D'; // Foreground
+  $theme[2]['colrbgd1'] = '#1E1E2F'; // Background
+  $theme[2]['colrfnt1'] = '#A5A5A5'; // Main text
+  $theme[2]['colrfnt2'] = '#F5F5F5'; // Bright text
+  $theme[2]['colrfnt3'] = '#707070'; // Dark text
+  $theme[2]['colrhilt'] = '#0E6EB8'; // Highlight
 
-  // #03 Forest - Uncomment to use
-  $theme[3]['name'] = 'Forest';     // Name
+  // #03 Mint - Uncomment to use
+  $theme[3]['name'] = 'Mint';     // Name
   $theme[3]['colrfgd1'] = '#379683'; // Foreground
   $theme[3]['colrbgd1'] = '#4CBDA6'; // Background
   $theme[3]['colrfnt1'] = '#ADEBC5'; // Main text

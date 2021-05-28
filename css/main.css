@@ -80,6 +80,10 @@
 	  	background-color: DimGrey !important;
 		}
 
+		.ui.slider .inner .track-fill {
+	  	background-color: var(--colrhilt) !important;
+		}
+
 		.toggle-down {
 			transform: rotate(0deg);
 	    transition: all 0.25s linear;

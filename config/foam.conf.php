@@ -39,4 +39,21 @@ $sessionTime = 365 * 24 * 3600; // Seconds in 1 year
   $theme[3]['colrfnt3'] = '#05386B'; // Dark text
   $theme[3]['colrhilt'] = '#0E6EB8'; // Highlight
 
+  // #04 Ampache - Uncomment to use
+  $theme[4]['name'] = 'ampache-dark';     // Name
+  $theme[4]['colrfgd1'] = '#222222'; // Foreground
+  $theme[4]['colrbgd1'] = '#1D1D1D'; // Background
+  $theme[4]['colrfnt1'] = '#888888'; // Main text
+  $theme[4]['colrfnt2'] = '#ffffff'; // Bright text
+  $theme[4]['colrfnt3'] = '#555555'; // Dark text
+  $theme[4]['colrhilt'] = '#f49600'; // Highlight
+
+  // #05 Ampache - Uncomment to use
+  $theme[5]['name'] = 'ampache-light';     // Name
+  $theme[5]['colrfgd1'] = '#f8f8f8'; // Foreground
+  $theme[5]['colrbgd1'] = '#d8d8d8'; // Background
+  $theme[5]['colrfnt1'] = '#000000'; // Main text
+  $theme[5]['colrfnt2'] = '#1990db'; // Bright text
+  $theme[5]['colrfnt3'] = '#ffffff'; // Dark text
+  $theme[5]['colrhilt'] = '#157dbf'; // Highlight
 ?>

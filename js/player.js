@@ -303,7 +303,7 @@ function queueDropdown() {
       items = items + '<div class="item queue-row" id="qitem' + i + '">';
       items = items +     '<span class="draggable"><i class="hidden sort icon" id="sort' + i + '"></i></span>';
       items = items +     '<span onclick="playnew(' + i + ')">' + this.queue[i][0] + ' - ' + this.queue[i][1] + '</span>';
-      items = items +     '<span>&nbsp;&nbsp;<i class="hidden trash icon" id="trash' + i + '"></i></span>';
+      items = items +     '<span>&nbsp;&nbsp;<i onclick="delTFQueue(' + i + ')" class="hidden trash icon" id="trash' + i + '"></i></span>';
       items = items + '</div>';
     }
   }
@@ -325,6 +325,16 @@ function saveQueue() {
 	   })
 	  .modal('show')
 	;
+}
+
+// Remove a single track from the queue
+function delTFQueue(song) {
+  if (this.queue.length == 1) {
+    clearQueue();
+  } else {
+    this.queue.splice(song, 1); // Use splice() to remove 1 element from array
+    queueDropdown(); // Call queueDropdown() to re-write new queue with track removed
+  }
 }
 
 // Clear the queue

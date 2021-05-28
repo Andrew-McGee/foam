@@ -380,11 +380,8 @@ $('.ui.vol.slider')
     start: 0.5,
     step: 0.1,
     smooth: true,
-    onMove: function() {
-      changeVol($(this).slider('get value'));
-    },
-    onChange: function() {
-      changeVol($(this).slider('get value'));
+    onMove: function(value) {
+      changeVol(value);
     }
   })
 ;

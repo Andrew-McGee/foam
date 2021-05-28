@@ -104,7 +104,6 @@ Code optimisation, minimisation, speed, minify etc.
 
 #### _Known Issues_
 - Page sometimes locks stopping playback until refreshed - http sockets issue
-- Volume slider only adjusts after mouse release (not in real time)
 - Settings menu items get css style overridden
 - Need a timeout if ampache host unreachable in order to sign in again
 - Long album/playlists get tracks truncated

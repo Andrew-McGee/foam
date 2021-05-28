@@ -26,7 +26,7 @@ The micro player is js and uses the howler audio library. The Ampache json API c
 - Auto mixing/crossfading.
 - Streaming and radio.
 
-![Overview](/img/screenshot_pre-release_wip2_sml.png)
+![Overview](/img/screenshot_pre-release_wip3_sml.png)
 
 ## Installation
 Simply drop everything into your public html directory of your PHP enabled web server and away you go. No building should be necessary as it is designed to be self contained.

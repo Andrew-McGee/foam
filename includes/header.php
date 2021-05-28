@@ -33,7 +33,7 @@
 
 		  <!-- Title -->
 			<div class="one wide column">
-				<h1 class="ui inverted yellow header">foam</h1>
+				<h1 class="ui space header">foam</h1>
 			</div>
 
 			<!-- Search bar -->
@@ -70,7 +70,7 @@
 				<table><tr>
 					<td><a id="albmLink" href="albums_view.php" target="iframe_main">
 						<img id="playrThumb" src="img/vinyl.png" height="50"></a></td>
-					<td><strong><div class="ui small blue header" id="playrTitle"></div></strong>
+					<td><strong><div class="ui small space header" id="playrTitle"></div></strong>
 					<div class="ui small text" id="playrArtist"></div></td>
 				</tr></table>
 			</div>

@@ -85,7 +85,7 @@ Code optimisation, minimisation, speed, minify etc.
 - Filters now work on albums view, artists view and tracks view
 - Series match to find other albums in multi disc or multi volume sets
 - Smart search from top bar with results page
-- Adding or removing favourites (blue star) from tracks and albums
+- Adding or removing favourites (coloured star) from tracks and albums
 - Playlist create, add & remove tracks from new or existing playlists
 - Rename and delete playlists from playlist tracks view
 - Clear queue
@@ -94,11 +94,20 @@ Code optimisation, minimisation, speed, minify etc.
 - Genre information in artists view
 - Better logic for first/last page and pagination controls
 - Play next for whole album
+- Customisable themes in foam.conf.php
+- Queue manipulation (remove track)
 
 #### _Not Yet Working_
 - Track seeking via slider
-- Queue manipulation (re-order, remove track)
+- Queue manipulation (re-order)
 - Mobile device friendly view
+
+#### _Known Issues_
+- Page sometimes locks stopping playback until refreshed - http sockets issue
+- Volume slider only adjusts after mouse release (not in real time)
+- Settings menu items get css style overridden
+- Need a timeout if ampache host unreachable in order to sign in again
+- Long album/playlists get tracks truncated
 
 ## Contributions
 Once I have a working release then contributions and suggestions always welcome.

@@ -12,6 +12,7 @@ var queue = [];
 var upClass = 'toggle-up';
 var downClass = 'toggle-down';
 
+var seeking = false;
 this.setVol = 0.5;
 
 //Define some player functions
@@ -119,13 +120,15 @@ function changeVol(newVol) {
   this.setVol = newVol;
 }
 
-// Update progress slider and play time - recursive function called within requestAnimationFrame
+// Update progress slider and play time - recursive anim function called within requestAnimationFrame
 function progress() {
-  var self = this;
   var seek = trk01.seek() || 0;
   document.getElementById("timer").textContent = sec2mins(Math.round(seek)); // Updates playtime
-  $('.ui.track.slider').slider('set value', ((seek / trk01.duration()) * 100) || 0); // Update ui slider postion
-  // If the track is still playing, continue updating by calling function again.
+  // Only update the slider anim if we are not mouse over it so we can grab the slider thumb
+  if (seeking === false) {
+    $('.ui.track.slider').slider('set value', ((seek / trk01.duration()) * 100) || 0); // Update ui slider postion
+  }
+  // If the track is still playing, continue updating anim by calling function again.
   if (trk01.playing()) {
     requestAnimationFrame(progress);
   }
@@ -372,6 +375,16 @@ queueBtn.addEventListener('click', function() {
   }
 });
 
+track1.addEventListener('mouseover', function() {
+  // If we mouse over the track slider set a flag to stop updating the slider animation
+  seeking = true;
+});
+
+track1.addEventListener('mouseout', function() {
+  // If we mouse off the track slider set a flag to resume updating the slider animation
+  seeking = false;
+});
+
 // Some jquery to set up sliders with callbacks
 $('.ui.vol.slider')
   .slider({
@@ -391,9 +404,12 @@ $('.ui.track.slider')
     min: 0,
     max: 100,
     start: 0,
-    step: 1
-//    onChange: function() {
-//      seek($(this).slider('get value'));
-//    }
+    step: 1,
+    onChange: function(value) {
+      if (seeking === true) {
+        var pos = (value / 100) * trk01.duration();
+        trk01.seek(pos);
+      }
+    }
   })
 ;

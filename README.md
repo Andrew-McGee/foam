@@ -44,8 +44,8 @@ Note: If you change Ampache credentials so your current cookies no longer valida
 Note: You should NOT consider foam as highly secure. It is still in development.
 
 ## To Do
-Status: 90% operational with some minor functions missing. Formatting improvements are yet to be completed and will happen in Phase 2.
-You can see a video of all current working features here:
+Status: 98% operational on desktop. Formatting improvements are yet to be completed and will happen in Phase 2 (including mobile version).
+You can see a video of most working features here:
 https://www.youtube.com/watch?v=VK_6-VN4e8o
 
 #### Phase 1 (*Current*):
@@ -96,9 +96,9 @@ Code optimisation, minimisation, speed, minify etc.
 - Play next for whole album
 - Customisable themes in foam.conf.php
 - Queue manipulation (remove track)
+- Track seeking via slider
 
 #### _Not Yet Working_
-- Track seeking via slider
 - Queue manipulation (re-order)
 - Mobile device friendly view
 
@@ -107,6 +107,7 @@ Code optimisation, minimisation, speed, minify etc.
 - Settings menu items get css style overridden
 - Need a timeout if ampache host unreachable in order to sign in again
 - Long album/playlists get tracks truncated
+- Sometimes the track timer glitches after seeking with the slider
 
 ## Contributions
 Once I have a working release then contributions and suggestions always welcome.

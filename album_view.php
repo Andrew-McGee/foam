@@ -241,7 +241,7 @@ parent.list = []; // Clean out the old list before we build a new one
 
 				<!-- Set up new playlist modal -->
 			  <div class="ui modal">
-					<div class="ui inverted space segment">
+					<div class="ui inverted playlist segment">
 						<div class="ui huge smoke header">New Playlist</div>
 				    <div class="item"><input id="newname" type="text" placeholder="Title"></div><br>
 						<div class="actions">

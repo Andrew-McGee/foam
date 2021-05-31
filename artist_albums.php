@@ -37,7 +37,10 @@
 								//Check if this is our first time round then put a special link to All Songs in the top left
 								if ($i == 1 && $j ==1) {
 									echo '<a href="artist_tracks.php?uid=' . $artistresults['id'] . '">';
-									echo "<img class='ui small image' src='img/allsongs.png' ></a>";
+									echo '<div class="ui fluid container">';
+									echo '  <center><i class="huge bordered music icon"></i></center>';
+									echo '</div></a>';
+									//echo "<img class='ui small image' src='img/allsongs.png' ></a>";
 									$cnt--; // Decrement counter because this was a sepcial case and we want to continue from the start
 								} else {
 									echo '<a href="album_view.php?uid=' . $results['album'][$cnt]['id'] . '">';
@@ -53,7 +56,14 @@
 							echo "<div class='ui column'>";
 							if ($cnt < $total) {
 								//Check if this is our first time round then put a special link to All Songs in the top left
-								if ($i !== 1 || $j !== 1) {
+								if ($i == 1 && $j == 1) {
+									echo '<br><center><a href="artist_tracks.php?uid=' . $artistresults['id'] . '"><strong>All Songs</strong></a>';
+									echo '<br>' . $artistresults['albumcount'] . ' albums';
+									echo '<br>' . $artistresults['songcount'] . ' songs';
+									if (isset($artistresults['genre'][0]['name'])) {
+										echo '<br>' . $artistresults['genre'][0]['name'] . '</center>';
+									}
+								} else {
 									echo '<br><center><a href="album_view.php?uid=' . $results['album'][$cnt]['id'] . '">';
 									echo $results['album'][$cnt]['name'] . "</a>";
 									echo '<br>'. $results['album'][$cnt]['artist']['name'];

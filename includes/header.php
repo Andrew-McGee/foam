@@ -97,7 +97,7 @@
 
 <!-- Set up new playlist pfromq modal -->
 <div class="ui pfromq modal">
-	<div class="ui inverted space segment">
+	<div class="ui inverted playlist segment">
 		<div class="ui huge smoke header">New Playlist</div>
     <div class="item"><input id="newname" type="text" placeholder="Title"></div><br>
 		<div class="actions">

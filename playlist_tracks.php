@@ -239,7 +239,7 @@ parent.list = []; // Clean out the old list before we build a new one
 
 				<!-- Set up new playlist modal -->
 			  <div class="ui new modal">
-					<div class="ui inverted space segment">
+					<div class="ui inverted playlist segment">
 						<div class="ui huge smoke header">New Playlist</div>
 				    <div class="item"><input id="newname" type="text" placeholder="Title"></div><br>
 						<div class="actions">
@@ -251,7 +251,7 @@ parent.list = []; // Clean out the old list before we build a new one
 
 				<!-- Set up rename playlist modal -->
 			  <div class="ui rename modal">
-					<div class="ui inverted space segment">
+					<div class="ui inverted playlist segment">
 						<div class="ui huge smoke header">Rename Playlist</div>
 				    <div class="item"><input id="rename" type="text" placeholder="Title"></div><br>
 						<div class="actions">
@@ -263,7 +263,7 @@ parent.list = []; // Clean out the old list before we build a new one
 
 				<!-- Set up delete playlist modal -->
 			  <div class="ui delete modal">
-					<div class="ui inverted space segment">
+					<div class="ui inverted playlist segment">
 						<div class="ui huge smoke header">Delete Playlist</div><br>
 						<div class="ui huge smoke header">Are You Sure?</div>
 						<div class="actions">

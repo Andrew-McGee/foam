@@ -58,14 +58,17 @@
 			color: var(--colrfnt1) !important;
 		}
 
-  	.icon.blue.star {
-			  color: var(--colrhilt) !important;
-			}
-			<i id="albumStar" class="star outline icon"></i>
+		.icon {
+			color: var(--colrfnt1);
+		}
 
 		.icon:hover {
 		  	color: var(--colrfnt2) !important;
 		}
+
+  	.icon.blue.star {
+			  color: var(--colrhilt) !important;
+			}
 
 		.feature.icon:hover {
 		  	color: var(--colrfnt1) !important;

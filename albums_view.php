@@ -53,11 +53,11 @@
 									</div>
 
 						<!-- Filter bar -->
-						<div class="two wide column">
+						<div class="three wide column">
 							<form class="ui form" method="GET" action="albums_view.php">
 								<div class="field">
 									<div class="ui small icon input">
-							  		<input name="filt" type="text" placeholder="<?php echo $plfilt;?>"><i class="search link icon"></i>
+							  		<input name="filt" type="text" placeholder="<?php echo $plfilt;?>"><i class="filter icon"></i>
 									</div>
 								</div>
 							</form>

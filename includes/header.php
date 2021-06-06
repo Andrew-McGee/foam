@@ -42,7 +42,7 @@
 					<div class="field">
 						<div class="ui mini icon input">
 						  <input name="search" type="text" placeholder="Search...">
-						  <i class="search link icon"></i>
+						  <i class="search icon"></i>
 						</div>
 					</div>
 				</form>

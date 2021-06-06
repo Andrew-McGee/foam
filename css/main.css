@@ -44,6 +44,10 @@
 			color: var(--colrfnt2) !important;
 		}
 
+		.ui.button:hover .icon {
+			color: var(--colrfnt2) !important;
+		}
+
 		.ui.form .field>label {
 			color: var(--colrfnt1) !important;
 		}

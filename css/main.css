@@ -34,6 +34,11 @@
 			color: var(--colrfnt2) !important;
 		}
 
+		.ui.input input:focus {
+			color: var(--colrhilt) !important;
+			border: 1px  solid var(--colrhilt) !important;
+		}
+
 		.ui.button {
 			background-color: var(--colrbgd1) !important;
 			color: var(--colrfnt1) !important;

@@ -27,18 +27,6 @@
 parent.activeMenu(0); // Call js function in parent to highlight the correct active menu item -->
 parent.list = []; // Clean out the old list before we build a new one
 
-// Function to hide star and elipse on track listing row
-function hideicon(num) {
-		if (document.getElementById("hiddenstar"+num).className !== "blue star icon") {
-    	document.getElementById("hiddenstar"+num).setAttribute("style", "opacity:0 !important");
-		}
-    document.getElementById("hiddenelipse"+num).setAttribute("style", "opacity:0 !important");
-}
-// Function to reveal star and elipse on track listing row
-function revealicon(num) {
-    document.getElementById("hiddenstar"+num).setAttribute("style", "opacity:1 !important");
-    document.getElementById("hiddenelipse"+num).setAttribute("style", "opacity:1 !important");
-}
 </script>
 <body style="overflow:hidden">
 			  <div class="ui inverted space segment">
@@ -124,7 +112,7 @@ function revealicon(num) {
 
 								//Loop through the songs to display each on a table row
 								for ($i = 0; $i < $cnt; $i++){
-									echo "\r\n" . '<tr id="row' . $i . '">' . "\r\n"; // Start of the track listing row
+									echo "\r\n" . '<tr class="queue-row" id="row' . $i . '">' . "\r\n"; // Start of the track listing row
 										echo '<td id="tno' . ($i + 1) . '">' . $song_results['song'][$i]['track'] . '</td>' . "\r\n";
 										echo '<td id="trk' . ($i + 1) . '"><strong>' . $song_results['song'][$i]['title'] . '</strong></td>' . "\r\n";
 										echo '<td><a href="artist_albums.php?uid=' . $song_results['song'][$i]['artist']['id'] . '">';
@@ -193,16 +181,6 @@ function revealicon(num) {
 									echo "  parent.newQueue('" . $i . "');";
 									echo '});</script>' . "\r\n";
 
-									// Make a listener for hovering over a row to make star and elipse visible
-									echo "<script>row" . $i . ".addEventListener('mouseover', function() {";
-									echo "	revealicon('" . $i . "');";
-									echo '});</script>' . "\r\n";
-
-									// Make a listener for moving off a row to make star and elipse invisible
-									echo "<script>row" . $i . ".addEventListener('mouseout',  function() {";
-									echo "	hideicon('" . $i . "');";
-									echo '});</script>' . "\r\n";
-
 									// Make a listener for clicking the favourite star
 									echo "<script>hiddenstar" . $i . ".addEventListener('click',  function() {";
 									echo '	if (document.getElementById("hiddenstar' . $i . '").className !== "blue star icon") {';
@@ -263,9 +241,9 @@ function revealicon(num) {
 
 				<!-- Set up new playlist modal -->
 			  <div class="ui modal">
-					<div class="ui inverted space segment">
+					<div class="ui inverted playlist segment">
 						<div class="ui huge smoke header">New Playlist</div>
-				    <div class="item"><input id="newname" type="text" placeholder="Title"></div><br>
+				    <div class="ui input"><input class="ui input" id="newname" type="text" placeholder="Title"></div><br>
 						<div class="actions">
 							<button class="ui tiny cancel button" id="cancel">CANCEL</button>&nbsp;
 							<button class="ui tiny approve button" id="save">SAVE</button>

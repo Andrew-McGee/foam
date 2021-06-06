@@ -44,6 +44,10 @@
 			color: var(--colrfnt2) !important;
 		}
 
+		.ui.button:hover .icon {
+			color: var(--colrfnt2) !important;
+		}
+
 		.ui.form .field>label {
 			color: var(--colrfnt1) !important;
 		}
@@ -58,14 +62,17 @@
 			color: var(--colrfnt1) !important;
 		}
 
-  	.icon.blue.star {
-			  color: var(--colrhilt) !important;
-			}
-			<i id="albumStar" class="star outline icon"></i>
+		.icon {
+			color: var(--colrfnt1);
+		}
 
 		.icon:hover {
 		  	color: var(--colrfnt2) !important;
 		}
+
+  	.icon.blue.star {
+			  color: var(--colrhilt) !important;
+			}
 
 		.feature.icon:hover {
 		  	color: var(--colrfnt1) !important;
@@ -118,6 +125,11 @@
 		 .ui.header.space {color: var(--colrhilt);}
 		 .ui.icon.space {color: var(--colrfgd1);}
 		 .ui.icon.header {color: var(--colrfnt1);}
+
+		 .ui.header.smoke .icon {
+			 color: var(--colrfnt2);
+		 }
+
 		 .ui.header.dim {
 			 color: var(--colrfnt1) !important;
 			 margin: 1em 2em 0em 3em !important;
@@ -144,6 +156,10 @@
 		 }
 
 		 .ui.menu .item:hover {
+			 color: var(--colrfnt2) !important;
+		 }
+
+		 .ui.menu .item:hover .icon {
 			 color: var(--colrfnt2) !important;
 		 }
 
@@ -197,5 +213,13 @@
        color: var(--colrfnt1) !important;
 			 padding: 3em 4em 3em 4em !important;
 			 margin: 1em !important;
+			 font-size: 1rem !important;
+     }
+
+     .ui.inverted.playlist.segment {
+       background-color: var(--colrfgd1) !important;
+       color: var(--colrfnt1) !important;
+			 padding: 3em 4em 3em 4em !important;
+			 margin: 0em !important;
 			 font-size: 1rem !important;
      }

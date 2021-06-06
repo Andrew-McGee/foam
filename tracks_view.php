@@ -44,18 +44,6 @@
 parent.activeMenu(5); // Call js function in parent to highlight the correct active menu item -->
 parent.list = []; // Clean out the old list before we build a new one
 
-// Function to hide star and elipse on track listing row
-function hideicon(num) {
-		if (document.getElementById("hiddenstar"+num).className !== "blue star icon") {
-    	document.getElementById("hiddenstar"+num).setAttribute("style", "opacity:0 !important");
-		}
-    document.getElementById("hiddenelipse"+num).setAttribute("style", "opacity:0 !important");
-}
-// Function to reveal star and elipse on track listing row
-function revealicon(num) {
-    document.getElementById("hiddenstar"+num).setAttribute("style", "opacity:1 !important");
-    document.getElementById("hiddenelipse"+num).setAttribute("style", "opacity:1 !important");
-}
 </script>
 <body style="overflow:hidden">
 			  <div class="ui inverted space segment">
@@ -89,7 +77,7 @@ function revealicon(num) {
 										echo '<form class="ui form" method="GET" action="tracks_view.php">' . "\r\n";
 											echo '<div class="field">' . "\r\n";
 												echo '<div class="ui small icon input">' . "\r\n";
-										  		echo '<input name="filt" type="text" placeholder="' . $plfilt . '"><i class="search link icon"></i>' . "\r\n";
+										  		echo '<input name="filt" type="text" placeholder="' . $plfilt . '"><i class="filter icon"></i>' . "\r\n";
 												echo '</div>' . "\r\n";
 											echo '</div>' . "\r\n";
 										echo '</form>' . "\r\n";
@@ -111,7 +99,7 @@ function revealicon(num) {
 
 								//Loop through the songs to display each on a table row
 								for ($i = 0; $i < $cnt; $i++){
-									echo "\r\n" . '<tr id="row' . $i . '">' . "\r\n"; // Start of the song listing row
+									echo "\r\n" . '<tr class="queue-row" id="row' . $i . '">' . "\r\n"; // Start of the song listing row
 										echo '<td id="trk' . ($i + 1) . '"><strong>' . $song_results['song'][$i]['title'] . '</strong></td>' . "\r\n";
 										echo '<td><a href="artist_albums.php?uid=' . $song_results['song'][$i]['artist']['id'] . '">';
 										echo $song_results['song'][$i]['artist']['name'] . '</a></td>' . "\r\n";
@@ -172,16 +160,6 @@ function revealicon(num) {
 									echo "<script>trk" . ($i + 1) . ".addEventListener('click', function() {";
 									echo "  parent.newSingle('" . $i . "');";
 									echo '});</script>' . "\r\n";
-
-									// Make a listener for hovering over a row to make star and elipse visible
-									echo "<script>row" . $i . ".addEventListener('mouseover', function() {";
-									echo "	revealicon('" . $i . "');";
-									echo "});</script>" . "\r\n";
-
-									// Make a listener for moving off a row to make star and elipse invisible
-									echo "<script>row" . $i . ".addEventListener('mouseout',  function() {";
-									echo "	hideicon('" . $i . "');";
-									echo "});</script>" . "\r\n";
 
 									// Make a listener for clicking the favourite star
 									echo "<script>hiddenstar" . $i . ".addEventListener('click',  function() {";

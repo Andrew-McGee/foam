@@ -33,6 +33,11 @@
 
 	</div>
 
-	<?php
-		include 'includes/footer.php';
-	?>
+<!-- JS to initialise dropdowns-->
+<script>
+$('.ui.dropdown')
+  .dropdown()
+;
+</script>
+</body>
+</html>

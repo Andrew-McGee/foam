@@ -44,20 +44,28 @@
 						</div>
 					</div>
 
-
 					<?php
 					$cnt = 0; //Reset our counter to build grid of 24 entries
 					echo "<div class='ui six column grid container'>";
 					//Loop 4 rows
 					for ($i = 1; $i <=4; $i++){
 						echo "<div class='ui row'>";
-						//Loop 6 columns
+
+						//Build out the cover art row with 6 columns
 						for ($j = 1; $j <=6; $j++){
 							echo "<div class='ui column'>";
-
 							if ($cnt < $total) {
 								echo '<a href="album_view.php?uid=' . $results['album'][$cnt]['id'] . '">';
 								echo "<img class='ui small image' src='" . $results['album'][$cnt]['art'] . "' ></a>";
+							}
+							echo "</div>";
+							$cnt++; //Increment our counter
+						}
+						$cnt = $cnt - 6; // Jump back 6 so we can build the same albums again
+						//Build out title and artist row with 6 columns
+						for ($j = 1; $j <=6; $j++){
+							echo "<div class='ui column'>";
+							if ($cnt < $total) {
 								echo '<br><center><a href="album_view.php?uid=' . $results['album'][$cnt]['id'] . '">';
 								echo $results['album'][$cnt]['name'] . "</a>";
 								echo '<br><a href="artist_albums.php?uid=' . $results['album'][$cnt]['artist']['id'] . '">';
@@ -67,9 +75,9 @@
 							echo "</div>";
 							$cnt++; //Increment our counter
 						}
-						echo "</div>";
+						echo "</div>"; // end of row
 					}
-					echo "</div>";
+					echo "</div>"; // end of grid container
 					?>
 				</div>
 </body>

@@ -125,6 +125,11 @@
 		 .ui.header.space {color: var(--colrhilt);}
 		 .ui.icon.space {color: var(--colrfgd1);}
 		 .ui.icon.header {color: var(--colrfnt1);}
+
+		 .ui.header.smoke .icon {
+			 color: var(--colrfnt2);
+		 }
+
 		 .ui.header.dim {
 			 color: var(--colrfnt1) !important;
 			 margin: 1em 2em 0em 3em !important;

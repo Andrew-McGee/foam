@@ -241,7 +241,7 @@ parent.list = []; // Clean out the old list before we build a new one
 			  <div class="ui new modal">
 					<div class="ui inverted playlist segment">
 						<div class="ui huge smoke header">New Playlist</div>
-				    <div class="item"><input id="newname" type="text" placeholder="Title"></div><br>
+				    <div class="ui input"><input id="newname" type="text" placeholder="Title"></div><br>
 						<div class="actions">
 							<button class="ui tiny cancel button" id="cancel">CANCEL</button>&nbsp;
 							<button class="ui tiny approve button" id="save">SAVE</button>
@@ -253,7 +253,7 @@ parent.list = []; // Clean out the old list before we build a new one
 			  <div class="ui rename modal">
 					<div class="ui inverted playlist segment">
 						<div class="ui huge smoke header">Rename Playlist</div>
-				    <div class="item"><input id="rename" type="text" placeholder="Title"></div><br>
+				    <div class="ui input"><input id="rename" type="text" placeholder="Title"></div><br>
 						<div class="actions">
 							<button class="ui tiny cancel button" id="cancel">CANCEL</button>&nbsp;
 							<button class="ui tiny approve button" id="save">SAVE</button>

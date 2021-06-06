@@ -154,6 +154,10 @@
 			 color: var(--colrfnt2) !important;
 		 }
 
+		 .ui.menu .item:hover .icon {
+			 color: var(--colrfnt2) !important;
+		 }
+
 /** Drop Down menu styling **/
 		 .ui.dropdown .menu {
 			 background-color: var(--colrbgd1) !important;

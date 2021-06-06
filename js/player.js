@@ -349,21 +349,13 @@ function clearQueue() {
 // End of functions - mainline below
 
 // We need to set some listener events for our player control buttons.
-playBtn.addEventListener('click', function() {
-  playToggle();
-});
+playBtn.addEventListener('click', playToggle);
 
-volBtn.addEventListener('click', function() {
-  mute();
-});
+volBtn.addEventListener('click', mute);
 
-frwdBtn.addEventListener('click', function() {
-  next();
-});
+frwdBtn.addEventListener('click', next);
 
-backBtn.addEventListener('click', function() {
-  prev();
-});
+backBtn.addEventListener('click', prev);
 
 queueBtn.addEventListener('click', function() {
   var icon = document.getElementById('queueBtn');

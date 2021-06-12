@@ -140,7 +140,7 @@ parent.list = []; // Clean out the old list before we build a new one
 										// Loop to add all our known playlists to the sub menu
 										$j = 0;
 										foreach ($playlist_results['playlist'] as $playlist) {
-											echo '      <div class="item" id="playlist' . $i, $j . '">' . $playlist['name'] . '</div>' . "\r\n";
+											echo '      <div class="item" id="playlist' . $i . "_" . $j . '">' . $playlist['name'] . '</div>' . "\r\n";
 											$j++;
 										}
 										echo '      </div>' . "\r\n";
@@ -210,7 +210,7 @@ parent.list = []; // Clean out the old list before we build a new one
 									// Make a listener for clicking the add to playlist menu item - we need a loop to create 1 for each playlist
 									$j = 0;
 									foreach ($playlist_results['playlist'] as $playlist) {
-										echo "<script>playlist" . $i, $j . ".addEventListener('click',  function() {";
+										echo "<script>playlist" . $i . "_" . $j . ".addEventListener('click',  function() {";
 										echo '	    $.get("includes/playlistAPI.php?action=add&filter=' . $playlist['id'] . '&song=' . $song_results['song'][$i]['id'] . '");';
 										echo '});</script>' . "\r\n";
 										$j++;

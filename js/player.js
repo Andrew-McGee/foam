@@ -12,6 +12,7 @@ var queue = [];
 var upClass = 'toggle-up';
 var downClass = 'toggle-down';
 
+var paused = false;
 var seeking = false;
 this.setVol = 0.5;
 
@@ -90,11 +91,17 @@ function playToggle() {
   // First check if Howler is already set up with a defined trk
   if (typeof trk01 !== 'undefined') {
     if (trk01.playing()) {
+      parent.pause = true;
       trk01.pause(); // Pause the sound & show play button
       document.getElementById("playBtn").className = "bordered play icon";
     } else {
-      trk01.play();  // Play the sound & show pause button
-      document.getElementById("playBtn").className = "bordered pause icon";
+      if (parent.pause === true) {
+        parent.pause = false;
+        trk01.play();  // Play the sound & show pause button
+        document.getElementById("playBtn").className = "bordered pause icon";
+      } else {
+        playnew('0');  // We weren't paused so must have stopped - playnew from the top
+      }
     }
   } else {
     // Ok Howler is not set up but do we have a queue yet? If yes then playnew from position 0

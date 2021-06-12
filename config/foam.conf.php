@@ -37,7 +37,7 @@ $sessionTime = 365 * 24 * 3600; // Seconds in 1 year
   $theme[3]['colrfnt1'] = '#ADEBC5'; // Main text
   $theme[3]['colrfnt2'] = '#EDF5E1'; // Bright text
   $theme[3]['colrfnt3'] = '#05386B'; // Dark text
-  $theme[3]['colrhilt'] = '#0E6EB8'; // Highlight
+  $theme[3]['colrhilt'] = '#D1F5BE'; // Highlight
 
   // #04 Ampache - Uncomment to use
   $theme[4]['name'] = 'ampache-dark';     // Name

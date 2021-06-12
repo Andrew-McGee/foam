@@ -311,6 +311,32 @@ function queueDropdown() {
     }
   }
   document.getElementById("queueMenu").innerHTML = items;
+
+  // Note: Remaining dragging functions are all in dragger.js
+  // Get all the queue elements
+  const queueItems = document.getElementById('queueMenu');
+
+  // Build a listener for each of our draggable menu items in the queue
+  Array.from(queueItems.querySelectorAll('.draggable')).forEach(function(item) {
+    item.addEventListener('mousedown', mouseDownHandler);
+  });
+}
+
+// Reorder the queue
+function reorderQueue(oldPos, newPos) {
+  var debugstats = oldPos + " & " + newPos;
+  document.getElementById("status_msg").innerHTML = debugstats;
+
+  newPos++; // The real position is one more than the one passed
+  if (newPos <= this.pointer) this.pointer++;  // If we insert into the queue before pointer make sure we shift it correctly
+
+  this.queue.splice(newPos, 0, this.queue.splice(oldPos, 1)[0]);
+
+  debugstats = debugstats + "<br>this.pointer = " + this.pointer;
+  document.getElementById("status_msg").innerHTML = debugstats;
+
+  queueDropdown(); // Call queueDropdown() to re-write our dropdown menu with the new track
+
 }
 
 // Save the queue

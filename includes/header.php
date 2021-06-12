@@ -110,3 +110,4 @@
 <!-- Scripts -->
 <script src="dist/howler.js"></script>
 <script src="js/player.js"></script>
+<script src="js/dragger.js"></script>

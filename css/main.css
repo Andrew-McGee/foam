@@ -123,6 +123,10 @@
 			user-select: none;
 		}
 
+		.placeholder {
+			border: 2px dashed var(--colrfnt1);
+		}
+
 /******************************************
   Add Custom Colours to Semantic Components
 *******************************************/

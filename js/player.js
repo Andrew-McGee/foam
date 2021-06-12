@@ -356,11 +356,12 @@ function saveQueue() {
 	;
 }
 
-// Remove a single track from the queue
+// Delete a single track from the queue
 function delTFQueue(song) {
   if (this.queue.length == 1) {
     clearQueue();
   } else {
+    if (song < this.pointer) this.pointer--; // If we remove a song before the pointer make sure we shift it correctly
     this.queue.splice(song, 1); // Use splice() to remove 1 element from array
     queueDropdown(); // Call queueDropdown() to re-write new queue with track removed
   }

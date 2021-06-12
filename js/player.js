@@ -67,18 +67,14 @@ function playnew(pointer) {
   // Set up a trigger for end of song to do a bunch of stuff
   trk01.on('end', function(){
     pointer = parent.pointer;
-    pointer++;
-    // Debug code
-    debugstats = document.getElementById("status_msg").innerHTML;
-    debugstats = debugstats + '<br>end track pointer = ' + pointer;
-    document.getElementById("status_msg").innerHTML = debugstats;
-    // End debug code
+    pointer++; // Increment our pointer to the next song in queue
+
     // Need to check if there is another song in the queue - if yes load it - if no end
     if (pointer == queue.length) {
-      // We're at the end so lets tidy up
+      // We're at the end so lets just tidy up
       document.getElementById("playBtn").className = "bordered play icon"; // change button back to play
       document.title = "foam"; // update doc title back to default
-      parent.pointer = 0; // reset our position in the queue
+      parent.pointer = 0; // reset our position in the queue back to the start
     } else {
       // We're not finished the queue yet so lets keep going
       playnew(pointer);  // Call the playnew function again with our updated pointer
@@ -337,16 +333,14 @@ function queueDropdown() {
 
 // Reorder the queue
 function reorderQueue(oldPos, newPos) {
-  var debugstats = oldPos + " & " + newPos;
-  document.getElementById("status_msg").innerHTML = debugstats;
 
-  newPos++; // The real position is one more than the one passed
-  if (newPos <= this.pointer) this.pointer++;  // If we insert into the queue before pointer make sure we shift it correctly
+  // If we insert a new item into the queue above pointer make sure we shift it correctly
+  if ((oldPos > this.pointer) && (newPos <= this.pointer)) this.pointer++;
+
+  // If we remove an item from the queue above pointer make sure we shift it correctly
+  if ((oldPos < this.pointer) && (newPos >= this.pointer)) this.pointer--;
 
   this.queue.splice(newPos, 0, this.queue.splice(oldPos, 1)[0]);
-
-  debugstats = debugstats + "<br>this.pointer = " + this.pointer;
-  document.getElementById("status_msg").innerHTML = debugstats;
 
   queueDropdown(); // Call queueDropdown() to re-write our dropdown menu with the new track
 

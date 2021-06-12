@@ -7,6 +7,7 @@
 let grabbedSong; // The grabbed song we are dragging
 let spacer; // A spacer to drop the song onto
 let dragging = false; // Flag to track dragging
+let direction; // Track which way the song is dragged
 
 // Initialise mouse co-ords
 let x = 0;
@@ -87,6 +88,7 @@ function mouseMoveHandler(e) {
         // spacer               -> prevEle
         swap(spacer, grabbedSong);
         swap(spacer, prevEle);
+        direction = 'up';
         return;
     }
 
@@ -99,20 +101,27 @@ function mouseMoveHandler(e) {
         // nextEle              -> grabbedSong
         swap(nextEle, spacer);
         swap(nextEle, grabbedSong);
+        direction = 'down';
     }
 };
 
 function mouseUpHandler() {
     // Get the id of the moved song and the id just above it
-    var itemfrom = (grabbedSong.id.substr(5));
-    var exists = grabbedSong.previousElementSibling.id;
-    if (exists) {
-      var itemto = (grabbedSong.previousElementSibling.id.substr(5));
-    } else {
-      var itemto = -1;
+    var oldPos = (grabbedSong.id.substr(5));
+
+      var exists = grabbedSong.previousElementSibling.id;
+      if (exists) {
+        var newPos = (grabbedSong.previousElementSibling.id.substr(5));
+      } else {
+        var newPos = -1;
+      }
+
+    if (direction == 'up') {
+      newPos++;
     }
+
     // Call function to re-write the queue in it's new order
-    reorderQueue(itemfrom, itemto);
+    reorderQueue(oldPos, newPos);
 
 		// Cleanup the spacer
 	  //spacer && spacer.parentNode.removeChild(spacer);
@@ -125,8 +134,9 @@ function mouseUpHandler() {
     x = null;
     y = null;
     grabbedSong = null;
-    // Reset our flag
+    // Reset our flags
     dragging = false;
+    direction = null;
 
     // Clean up the mouse listeners
     document.removeEventListener('mousemove', mouseMoveHandler);

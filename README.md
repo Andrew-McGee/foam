@@ -7,11 +7,12 @@ The micro player is js and uses the howler audio library. The Ampache json API c
 ## Core Features
 
 - Browse by recently played, newest added, most frequent, favourited and random album views.
-- Browse by artists or tracks with filters.
+- Browse by artists, albums or tracks with filters.
 - Browse, create and add to playlists.
 - Play or shuffle albums.
 - Add individual songs or albums to current play queue.
 - View current queue via pulldown list. Jump ahead or back in queue via clickable list.
+- Drag and drop reorder of play queue. Save play queue to permanent playlist.
 - Top of screen micro player with transport controls, mini art thumbnail and volume, mute controls.
 - Favourite or unfavourite individual tracks or albums.
 - Download links for individual tracks.
@@ -33,7 +34,7 @@ Simply drop everything into your public html directory of your PHP enabled web s
 
 You need an [Ampache](https://github.com/ampache/ampache) server somewhere.
 
-Some limited options can be found in config/foam.conf.php which sets a few php variables.
+Some options (mainly theming) can be found in config/foam.conf.php which sets a few php variables.
 
 Ampache authentication is stored in browser cookies. If "Remember me" is NOT selected cookies will expire after the current browser session.
 This is advisable on a public or borrowed computer - always close your browser when finished to destroy all session cookies.
@@ -43,19 +44,22 @@ If "Remember me" is selected cookies will live for 1 year. Use the logout option
 Note: If you change Ampache credentials so your current cookies no longer validate you will be asked to re-login.
 Note: You should NOT consider foam as highly secure. It is still in development.
 
-## To Do
-Status: 98% operational on desktop. Formatting improvements are yet to be completed and will happen in Phase 2 (including mobile version).
-You can see a video of most working features here:
+## Development Status - Early Beta
+Status: 100% operational on desktop. Formatting improvements and bug fixing now underway in Phase 2.
+
+Finally! The last (and hardest to code) features are working. Seek by using the track slider and reorder the queue by drag and drop.
+
+You can see a video of many working features here:
 https://www.youtube.com/watch?v=VK_6-VN4e8o
 
-#### Phase 1 (*Current*):
-Finishing the core functionality to get a working stable release.
+#### Phase 1 (*Complete*):
+Finished the core functionality including all major features for first stable release.
 
-#### Phase 2 (*Started*):
-Adjust styling to polish fonts, palette, element position, theme options etc.
+#### Phase 2 (*Current*):
+Adjust styling to polish fonts, palette, element position, theme options and bug fixing.
 
 #### Phase 3 (*Next*):
-Code optimisation, minimisation, speed, minify etc.
+Code optimisation, clean up, minimisation, speed, etc.
 
 #### _Working_
 - Recent, newest, frequent, favourites and random albums views.
@@ -97,9 +101,9 @@ Code optimisation, minimisation, speed, minify etc.
 - Customisable themes in foam.conf.php
 - Queue manipulation (remove track)
 - Track seeking via slider
+- Queue manipulation (re-order)
 
 #### _Not Yet Working_
-- Queue manipulation (re-order)
 - Mobile device friendly view
 
 #### _Known Issues_

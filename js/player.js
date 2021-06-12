@@ -260,16 +260,17 @@ function playAllNext() {
 
 // Skip next function
 function next() {
-  if (this.pointer == this.queue.length - 1) {
+
+  if (parent.pointer == parent.queue.length - 1) {
     // We're at the end so lets stop playback
     trk01.stop();
     // Do some tidy up
     document.getElementById("playBtn").className = "bordered play icon"; // change button back to play
     document.title = "foam"; // update doc title back to default
-    this.pointer = 0; // reset our position in the queue
+    parent.pointer = 0; // reset our position in the queue
   } else {
-    this.pointer++;
-    playnew(this.pointer);
+    parent.pointer++;
+    playnew(parent.pointer);
   }
 }
 
@@ -277,10 +278,10 @@ function next() {
 function prev() {
   // Check if we've been playing for 5 seconds if so just rewind this song, if not decrement pointer to previous song
   if (trk01.seek() >= 5) {
-    playnew(this.pointer); // Just start playback again with current pointer
+    playnew(parent.pointer); // Just start playback again with current pointer
   } else {
-    if (this.pointer !== 0) this.pointer--; // Decrement the pointer to the previous song if it's not at the start
-    playnew(this.pointer);
+    if (parent.pointer !== 0) parent.pointer--; // Decrement the pointer to the previous song if it's not at first song
+    playnew(parent.pointer);
   }
 }
 

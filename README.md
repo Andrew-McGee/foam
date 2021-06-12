@@ -30,7 +30,7 @@ The micro player is js and uses the howler audio library. The Ampache json API c
 ![Overview](/img/screenshot_pre-release_wip3_sml.png)
 
 ## Installation
-Simply drop everything into your public html directory of your PHP enabled web server and away you go. No building should be necessary as it is designed to be self contained.
+Download the latest release and simply drop everything into your public html directory of your PHP enabled web server and away you go. No building should be necessary as it is designed to be self contained.
 
 You need an [Ampache](https://github.com/ampache/ampache) server somewhere.
 

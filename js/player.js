@@ -36,7 +36,17 @@ function playnew(pointer) {
     src: [track],
     html5: true,
     loop: false,
-    volume: [this.setVol]
+    volume: [this.setVol],
+    onplay: function() {
+      // Update the document title with the song and artist
+      document.getElementById("length").textContent = sec2mins(Math.round(trk01.duration()));
+      // Start upating the progress slider and playtime of the track.
+      requestAnimationFrame(progress);
+    },
+    onseek: function() {
+      // Start upating the progress slider and playtime of the track.
+      requestAnimationFrame(progress);
+    }
   });
 
   // Play the sound
@@ -54,13 +64,6 @@ function playnew(pointer) {
   // Update the document title with the song and artist
   document.title = this.queue[pointer][0] + ' - ' + this.queue[pointer][1];
 
-  // Update the length of track in the UI once it starts playing
-  trk01.on('play', function(){
-    document.getElementById("length").textContent = sec2mins(Math.round(trk01.duration()));
-  // Start upating the progress slider and playtime of the track.
-    requestAnimationFrame(progress);
-  });
-
   // Call the queueDropdown function to write our queue to the dropdown menu with the new active track
   queueDropdown();
 
@@ -75,7 +78,9 @@ function playnew(pointer) {
       document.getElementById("playBtn").className = "bordered play icon"; // change button back to play
       document.title = "foam"; // update doc title back to default
       parent.pointer = 0; // reset our position in the queue back to the start
+      trk01.unload(); // Unload the track from howler to free up mem
     } else {
+      trk01.unload(); // Unload the track from howler to free up mem
       // We're not finished the queue yet so lets keep going
       playnew(pointer);  // Call the playnew function again with our updated pointer
     }

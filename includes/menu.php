@@ -18,7 +18,7 @@ function active_menu($hshake){
   echo '  <a class="item" id="item7" href="frequent_view.php" target="iframe_main"><i class="chart line icon"></i>Frequent</a>';
   echo '  <a class="item" id="item8" href="favourites_view.php" target="iframe_main"><i class="star icon"></i>Favourites</a>';
   echo '  <a class="item" id="item9" href="random_view.php" target="iframe_main"><i class="dice icon"></i>Random</a>';
-  echo '  <div class="item" id="item10">' . "\r\n";
+  echo '  <a class="item" id="item10">';
   echo '    <div class="ui dropdown">Settings &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="cog icon"></i>' . "\r\n";
   echo '  	  <div class="menu" id="settingsMenu">' . "\r\n";
 
@@ -47,7 +47,7 @@ function active_menu($hshake){
   echo '  	    <div class="item" id="logOut"><i class="sign out icon"></i>Log out</div>' . "\r\n";
   echo '      </div>' . "\r\n";
   echo '    </div>' . "\r\n";
-  echo '  </div>' . "\r\n";
+  echo '  </a>' . "\r\n";
 
   echo '</div>' . "\r\n";
   // Build the stats section below the menu

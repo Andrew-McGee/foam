@@ -181,6 +181,26 @@
 			 color: var(--colrfnt2) !important;
 		 }
 
+		 .ui.menu .ui.dropdown .menu>.item {
+			 color: var(--colrfnt1) !important;
+		 }
+
+		 .ui.menu .ui.dropdown .menu>.item.active {
+			 color: var(--colrhilt) !important;
+		 }
+
+		 .ui.menu .ui.dropdown .menu>.item:hover {
+			 color: var(--colrfnt2) !important;
+		 }
+
+		 .ui.menu .ui.dropdown .menu>.item .icon {
+			 color: var(--colrfnt1) !important;
+		 }
+
+		 .ui.menu .ui.dropdown .menu>.item:hover .icon {
+			 color: var(--colrfnt2) !important;
+		 }
+
 /** Drop Down menu styling **/
 		 .ui.dropdown .menu {
 			 background-color: var(--colrbgd1) !important;

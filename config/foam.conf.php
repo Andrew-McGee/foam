@@ -19,7 +19,7 @@ $sessionTime = 365 * 24 * 3600; // Seconds in 1 year
   $theme[1]['colrfnt1'] = '#A5A5A5'; // Main grey text
   $theme[1]['colrfnt2'] = '#F5F5F5'; // WhiteSmoke - highlight text and headings
   $theme[1]['colrfnt3'] = '#556177'; // Manatee - Now playing text
-  $theme[1]['colrhilt'] = '#0E6EB8'; // Blue highlight
+  $theme[1]['colrhilt'] = '#1990db'; // Blue highlight
 
   // #02 Dark - Uncomment to use
   $theme[2]['name'] = 'Dark';     // Name

@@ -35,8 +35,9 @@
 		}
 
 		.ui.input input:focus {
-			color: var(--colrhilt) !important;
-			border: 1px  solid var(--colrhilt) !important;
+			color: var(--colrfnt2) !important;
+			border: 2px  solid var(--colrhilt) !important;
+			font-weight: bold !important;
 		}
 
 		.ui.button {

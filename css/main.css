@@ -197,6 +197,10 @@
 			 background-color: var(--colrfgd1) !important;
 		 }
 
+		 tr:hover {
+			 color: var(--colrfnt2) !important;
+		 }
+
 /** Page segments styling **/
      .ui.inverted.top.segment {
        background-color: var(--colrfgd1) !important;

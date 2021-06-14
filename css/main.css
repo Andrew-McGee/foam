@@ -118,6 +118,14 @@
 			opacity: 1 !important;
 		}
 
+		.albm-row .hidden {
+			opacity: 0 !important;
+		}
+
+		.albm-row:hover .hidden {
+			opacity: 1 !important;
+		}
+
 		.draggable {
 			cursor: move;
 			user-select: none;
@@ -197,7 +205,7 @@
 			 background-color: var(--colrfgd1) !important;
 		 }
 
-		 tr:hover {
+		 tr.albm-row:hover {
 			 color: var(--colrfnt2) !important;
 		 }
 

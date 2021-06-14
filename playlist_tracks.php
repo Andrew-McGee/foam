@@ -110,7 +110,7 @@ parent.list = []; // Clean out the old list before we build a new one
 
 								//Loop through the songs to display each on a table row
 								for ($i = 0; $i < $cnt; $i++){
-									echo '<tr class="queue-row" id="row' . $i . '">' . "\r\n"; // Start of the track listing row
+									echo '<tr class="albm-row" id="row' . $i . '">' . "\r\n"; // Start of the track listing row
 										echo '<td id="trk' . ($i + 1) . '"><strong>' . $song_results['song'][$i]['title'] . '</strong></td>' . "\r\n";
 										echo '<td><a href="artist_albums.php?uid=' . $song_results['song'][$i]['artist']['id'] . '">';
 										echo $song_results['song'][$i]['artist']['name'] . '</a></td>' . "\r\n";

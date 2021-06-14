@@ -55,5 +55,5 @@ $sessionTime = 365 * 24 * 3600; // Seconds in 1 year
   $theme[5]['colrfnt1'] = '#000000'; // Main text
   $theme[5]['colrfnt2'] = '#1990db'; // Bright text
   $theme[5]['colrfnt3'] = '#ffffff'; // Dark text
-  $theme[5]['colrhilt'] = '#157dbf'; // Highlight
+  $theme[5]['colrhilt'] = '#1990db'; // Highlight
 ?>

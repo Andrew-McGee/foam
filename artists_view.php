@@ -93,7 +93,7 @@ parent.activeMenu(3); // Call js function in parent to highlight the correct act
 
 								//Loop through the artists to display each on a table row
 								for ($i = 0; $i < $cnt; $i++){
-									echo '<tr id="row' . $i . '">'; // Start of the artist listing row
+									echo '<tr class="albm-row" id="row' . $i . '">'; // Start of the artist listing row
 										echo '<td><a href="artist_albums.php?uid=' . $artist_results['artist'][$i]['id'] . '">';
 										echo $artist_results['artist'][$i]['name'] . '</a></td>';
 

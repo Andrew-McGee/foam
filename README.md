@@ -58,7 +58,7 @@ Finished the core functionality including all major features for first stable re
 #### Phase 2 (*Current*):
 Adjust styling to polish fonts, palette, element position, theme options and bug fixing.
 
-#### Phase 3 (*Next*):
+#### Phase 3 (*Started*):
 Code optimisation, clean up, minimisation, speed, etc.
 
 #### _Working_
@@ -107,9 +107,7 @@ Code optimisation, clean up, minimisation, speed, etc.
 - Mobile device friendly view
 
 #### _Known Issues_
-- Page sometimes locks stopping playback until refreshed - http sockets issue
-- Settings menu items get css style overridden
-- Need a timeout if ampache host unreachable in order to sign in again
+- Need a timeout if Ampache host unreachable in order to sign in again
 - Long album/playlists get tracks truncated
 - Sometimes the track timer glitches after seeking with the slider
 

@@ -65,7 +65,7 @@
 /** icons & labels styling **/
 		.ui.label.filter {
 			background-color: var(--colrbgd1) !important;
-			color: var(--colrfnt1) !important;
+			color: var(--colrfnt2) !important;
 		}
 
 		.icon {

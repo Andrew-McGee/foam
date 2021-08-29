@@ -71,7 +71,7 @@ parent.activeMenu(3); // Call js function in parent to highlight the correct act
 										echo '<form class="ui form" method="GET" action="artists_view.php">';
 											echo '<div class="field">';
 												echo '<div class="ui small icon input">';
-										  		echo '<input name="filt" type="text" placeholder="' . $plfilt . '"><i class="filter icon"></i>';
+										  		echo '<input name="filt" type="text" placeholder="' . $plfilt . '" value="' . $filt . '"><i class="filter icon"></i>';
 												echo '</div>';
 											echo '</div>';
 										echo '</form>';
@@ -93,7 +93,7 @@ parent.activeMenu(3); // Call js function in parent to highlight the correct act
 
 								//Loop through the artists to display each on a table row
 								for ($i = 0; $i < $cnt; $i++){
-									echo '<tr id="row' . $i . '">'; // Start of the artist listing row
+									echo '<tr class="albm-row" id="row' . $i . '">'; // Start of the artist listing row
 										echo '<td><a href="artist_albums.php?uid=' . $artist_results['artist'][$i]['id'] . '">';
 										echo $artist_results['artist'][$i]['name'] . '</a></td>';
 

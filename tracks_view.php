@@ -77,7 +77,7 @@ parent.list = []; // Clean out the old list before we build a new one
 										echo '<form class="ui form" method="GET" action="tracks_view.php">' . "\r\n";
 											echo '<div class="field">' . "\r\n";
 												echo '<div class="ui small icon input">' . "\r\n";
-										  		echo '<input name="filt" type="text" placeholder="' . $plfilt . '"><i class="filter icon"></i>' . "\r\n";
+										  		echo '<input name="filt" type="text" placeholder="' . $plfilt . '" value="' . $filt . '"><i class="filter icon"></i>';
 												echo '</div>' . "\r\n";
 											echo '</div>' . "\r\n";
 										echo '</form>' . "\r\n";

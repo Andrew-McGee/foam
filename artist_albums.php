@@ -3,6 +3,21 @@
 
 	$uid = $_GET["uid"];
 
+	// Check if we have an offset value passed for pagination
+	if (!empty($_GET["ofst"])) {
+		$offset = $_GET["ofst"];
+	} else {
+		$offset = 0;
+	}
+
+	//Set up some offset values for our next and prev buttons
+  if ($offset == 0) {
+		$poffset = 0;
+	} else {
+		$poffset = $offset - 25;
+	}
+	$noffset = $offset + 25;
+
 	$get_data = handshakeAPI();
 	$hshake = json_decode($get_data, true);
 
@@ -21,9 +36,19 @@
 
 <body style="overflow:hidden">
 			  <div class="ui inverted space segment">
-					<?php
-					echo '<h1 class="ui smoke header">' . $artistresults['name'] . '</h1>';
+					<div class='ui grid'>
+						<div class="left floated four wide column">
+							<h1 class="ui smoke header"><?php echo $artistresults['name']; ?></h1>
+						</div>
+						<div class="right floated right aligned four wide column">
+							<?php
+								if ($offset > 0) echo '<a class="icn" href="playlists_view.php?ofst=' . $poffset . '"><i class="arrow circle left icon"></i></a>&nbsp;&nbsp;&nbsp;';
+								if ($total == 24) echo '<a class="icn" href="playlists_view.php?ofst=' . $noffset . '"><i class="arrow circle right icon"></i></a>';
+							?>
+						</div>
+					</div>
 
+					<?php
 					$cnt = 0; //Reset our counter to build grid of 24 entries
 					echo "<div class='ui six column grid container'>";
 					//Loop 4 rows

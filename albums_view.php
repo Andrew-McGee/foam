@@ -57,7 +57,7 @@
 							<form class="ui form" method="GET" action="albums_view.php">
 								<div class="field">
 									<div class="ui small icon input">
-							  		<input name="filt" type="text" placeholder="<?php echo $plfilt;?>"><i class="filter icon"></i>
+							  		<input name="filt" type="text" placeholder="<?php echo $plfilt;?>" value="<?php echo $filt;?>"><i class="filter icon"></i>
 									</div>
 								</div>
 							</form>

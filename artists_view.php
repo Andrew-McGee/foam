@@ -71,7 +71,7 @@ parent.activeMenu(3); // Call js function in parent to highlight the correct act
 										echo '<form class="ui form" method="GET" action="artists_view.php">';
 											echo '<div class="field">';
 												echo '<div class="ui small icon input">';
-										  		echo '<input name="filt" type="text" placeholder="' . $plfilt . '"><i class="filter icon"></i>';
+										  		echo '<input name="filt" type="text" placeholder="' . $plfilt . '" value="' . $filt . '"><i class="filter icon"></i>';
 												echo '</div>';
 											echo '</div>';
 										echo '</form>';

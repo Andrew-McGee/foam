@@ -11,6 +11,12 @@
 	include 'includes/menu.php';
 
 ?>
+<script>
+  function resizeIframe(obj) {
+		obj.style.height = 0;
+    obj.style.height = obj.contentWindow.document.documentElement.scrollHeight + 'px';
+  }
+</script>
 
 <!-- Main Body -->
 	<!-- 2 column grid -->
@@ -27,7 +33,7 @@
 
     <div class="ui fourteen wide column"><!-- START of main column 2 -->
 		  <div class="ui inverted manatee segment">
-				<iframe src="recent_view.php" name="iframe_main" height="1400px" width="100%" style="border:none;" title="Main Body View"></iframe>
+				<iframe src="recent_view.php" name="iframe_main" width="100%" frameborder="0" scrolling="no" title="Main Body View" onload="resizeIframe(this);"></iframe>
 		  </div>
 		</div><!-- END of main column 2 -->
 

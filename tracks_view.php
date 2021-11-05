@@ -45,7 +45,7 @@ parent.activeMenu(5); // Call js function in parent to highlight the correct act
 parent.list = []; // Clean out the old list before we build a new one
 
 </script>
-<body style="overflow:hidden">
+<body>
 			  <div class="ui inverted space segment">
 					<?php
 						echo '<div class="ui one column grid">' . "\r\n"; //Two columns - first column just for spacing.

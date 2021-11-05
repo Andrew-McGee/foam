@@ -39,7 +39,7 @@
 <script>
 parent.activeMenu(3); // Call js function in parent to highlight the correct active menu item -->
 </script>
-<body style="overflow:hidden">
+<body>
 			  <div class="ui inverted space segment">
 					<?php
 						echo '<div class="ui one column grid">'; //Two columns - first column just for spacing.

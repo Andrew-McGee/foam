@@ -34,7 +34,7 @@
 ?>
 <script>parent.activeMenu(0);</script> <!-- Call js function in parent to highlight the correct active menu item -->
 
-<body style="overflow:hidden">
+<body>
 			  <div class="ui inverted space segment">
 					<div class='ui grid'>
 						<div class="left floated four wide column">

@@ -28,7 +28,7 @@
 <!-- Start the main body -->
 <body>
 <!-- Start the top menu - changed to a grid container -->
-<div class="ui inverted top segment">
+<div class="ui inverted top fixed segment">
 	<div class="ui middle aligned seven column grid">
 
 		  <!-- Title -->
@@ -108,6 +108,6 @@
 </div>
 
 <!-- Scripts -->
-<script src="dist/howler.js"></script>
+<script src="dist/howler.core.min.js"></script>
 <script src="js/player.js"></script>
 <script src="js/dragger.js"></script>

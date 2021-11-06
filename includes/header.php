@@ -23,6 +23,7 @@
 <!-- CSS Overrides -->
   <link rel="stylesheet" href="config/settheme.php" type="text/css" />
 	<link rel="stylesheet" href="css/main.css" type="text/css" />
+	<link rel="stylesheet" href="css/spectograph.css" type="text/css" />
 </head>
 
 <!-- Start the main body -->
@@ -69,8 +70,18 @@
 				<span class="ui medium text" id="length">00:00</span>
 			</div>
 
+			<div class="borderless item"> <!-- Spectograph -->
+					<div class="spectrograph">
+						<div class="spectrograph__off" id="specto1"></div>
+						<div class="spectrograph__off" id="specto2"></div>
+						<div class="spectrograph__off" id="specto3"></div>
+						<div class="spectrograph__off" id="specto4"></div>
+						<div class="spectrograph__off" id="specto5"></div>
+					</div>
+			</div>
+
 			<div class="borderless item"> <!-- Volume mute button -->
-					<td><i class="bordered volume up icon" id="volBtn"></i></td>
+					<i class="bordered volume up icon" id="volBtn"></i>
 			</div>
 
 			<div class="borderless slider item"> <!-- Volume slider -->

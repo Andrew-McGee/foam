@@ -40,6 +40,8 @@ function playnew(pointer) {
     onplay: function() {
       // Update the document title with the song and artist
       document.getElementById("length").textContent = sec2mins(Math.round(trk01.duration()));
+      // Start the spectograph animation
+      specto();
       // Start upating the progress slider and playtime of the track.
       requestAnimationFrame(progress);
     },
@@ -79,6 +81,7 @@ function playnew(pointer) {
       document.title = "foam"; // update doc title back to default
       parent.pointer = 0; // reset our position in the queue back to the start
       trk01.unload(); // Unload the track from howler to free up mem
+      specto();      // Stop the spectograph animation
     } else {
       trk01.unload(); // Unload the track from howler to free up mem
       // We're not finished the queue yet so lets keep going
@@ -95,6 +98,7 @@ function playToggle() {
       parent.pause = true;
       trk01.pause(); // Pause the sound & show play button
       document.getElementById("playBtn").className = "bordered play icon";
+      specto();      // Stop the spectograph animation
     } else {
       if (parent.pause === true) {
         parent.pause = false;
@@ -132,6 +136,23 @@ function changeVol(newVol) {
     trk01.volume(newVol);
   }
   this.setVol = newVol;
+}
+
+// Start or stop the spectograph
+function specto() {
+  if (document.getElementById("specto1").className == "spectrograph__off") {
+    document.getElementById("specto1").className = "spectrograph__bar";
+    document.getElementById("specto2").className = "spectrograph__bar";
+    document.getElementById("specto3").className = "spectrograph__bar";
+    document.getElementById("specto4").className = "spectrograph__bar";
+    document.getElementById("specto5").className = "spectrograph__bar";
+  } else {
+    document.getElementById("specto1").className = "spectrograph__off";
+    document.getElementById("specto2").className = "spectrograph__off";
+    document.getElementById("specto3").className = "spectrograph__off";
+    document.getElementById("specto4").className = "spectrograph__off";
+    document.getElementById("specto5").className = "spectrograph__off";
+  }
 }
 
 // Update progress slider and play time - recursive anim function called within requestAnimationFrame

@@ -1,0 +1,184 @@
+.spectrograph {
+	color: var(--colrhilt);
+	display: flex;
+	align-items: flex-end;
+	width: 44px;
+	height: 20px;
+	overflow: hidden;
+}
+
+.spectrograph__off {
+	margin: 0 1px 0 0;
+	flex: 0 0 8px;
+	height: 100%;
+	background: currentColor;
+	transform: translateY(100%);
+	transform-origin: center bottom;
+	animation: animation 1.5s steps(5, start) 1;
+	will-change: transform;
+}
+
+.spectrograph__bar {
+	margin: 0 1px 0 0;
+	flex: 0 0 8px;
+	height: 100%;
+	background: currentColor;
+	transform: translateY(100%);
+	transform-origin: center bottom;
+	animation: animation 1.5s steps(5, start) infinite alternate;
+	will-change: transform;
+}
+
+.spectrograph__bar:nth-child(1) {
+	animation-name: animation2;
+	animation-delay: 50ms;
+	animation-duration: 1700ms;
+}
+
+.spectrograph__bar:nth-child(2) {
+	animation-name: animation1;
+	animation-delay: 100ms;
+	animation-duration: 1800ms;
+}
+
+.spectrograph__bar:nth-child(3) {
+	animation-name: animation2;
+	animation-delay: 150ms;
+	animation-duration: 1700ms;
+}
+
+.spectrograph__bar:nth-child(4) {
+	animation-name: animation1;
+	animation-delay: 200ms;
+	animation-duration: 1800ms;
+}
+
+.spectrograph__bar:nth-child(5) {
+	animation-name: animation3;
+	animation-delay: 250ms;
+	animation-duration: 1600ms;
+}
+
+.spectrograph__bar:nth-child(6) {
+	animation-name: animation1;
+	animation-delay: 300ms;
+	animation-duration: 1600ms;
+}
+
+.spectrograph__bar:nth-child(7) {
+	animation-name: animation2;
+	animation-delay: 350ms;
+	animation-duration: 1600ms;
+}
+
+.spectrograph__bar:nth-child(8) {
+	animation-name: animation3;
+	animation-delay: 400ms;
+	animation-duration: 1800ms;
+}
+
+.spectrograph__bar:nth-child(9) {
+	animation-name: animation1;
+	animation-delay: 450ms;
+	animation-duration: 1700ms;
+}
+
+.spectrograph__bar:nth-child(10) {
+	animation-name: animation3;
+	animation-delay: 500ms;
+	animation-duration: 1800ms;
+}
+
+.spectrograph__bar:nth-child(11) {
+	animation-name: animation2;
+	animation-delay: 550ms;
+	animation-duration: 1800ms;
+}
+
+.spectrograph__bar:nth-child(12) {
+	animation-name: animation3;
+	animation-delay: 600ms;
+	animation-duration: 1800ms;
+}
+
+.spectrograph__bar:nth-child(13) {
+	animation-name: animation1;
+	animation-delay: 650ms;
+	animation-duration: 1600ms;
+}
+
+.spectrograph__bar:nth-child(14) {
+	animation-name: animation1;
+	animation-delay: 700ms;
+	animation-duration: 1800ms;
+}
+
+.spectrograph__bar:nth-child(15) {
+	animation-name: animation2;
+	animation-delay: 750ms;
+	animation-duration: 1600ms;
+}
+
+.spectrograph__bar:nth-child(16) {
+	animation-name: animation3;
+	animation-delay: 800ms;
+	animation-duration: 1800ms;
+}
+
+.spectrograph__bar:nth-child(17) {
+	animation-name: animation3;
+	animation-delay: 850ms;
+	animation-duration: 1600ms;
+}
+
+.spectrograph__bar:nth-child(18) {
+	animation-name: animation1;
+	animation-delay: 900ms;
+	animation-duration: 1700ms;
+}
+
+.spectrograph__bar:nth-child(19) {
+	animation-name: animation2;
+	animation-delay: 950ms;
+	animation-duration: 1600ms;
+}
+
+.spectrograph__bar:nth-child(20) {
+	animation-name: animation2;
+	animation-delay: 1000ms;
+	animation-duration: 1700ms;
+}
+
+.spectrograph__bar:last-child {
+	margin: 0;
+}
+
+@keyframes animation1 {
+	0%, 5% {
+		transform: translateY(100%);
+	}
+
+	100% {
+		transform: translateY(0);
+	}
+}
+
+@keyframes animation2 {
+	0%, 66% {
+		transform: translateY(100%);
+	}
+
+	33%, 100% {
+		transform: translateY(0);
+	}
+}
+
+@keyframes animation3 {
+	33%, 66% {
+		transform: translateY(100%);
+	}
+
+	0%, 45%, 100% {
+		transform: translateY(0);
+	}
+}

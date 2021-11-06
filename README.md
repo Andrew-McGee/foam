@@ -123,7 +123,7 @@ Testing on Chrome (Windows and Linux) during initial development.
 ## Acknowledgements & Dependencies
 - Inspired by the subsonic player [subplayer](https://github.com/peguerosdc/subplayer) - a really nice looking web player for subsonic.
 - Using [Fomantic UI](https://github.com/fomantic/Fomantic-UI) components (v2.8.8).
-- Using [howler.js](https://github.com/goldfire/howler.js)(v2.2.3) audio library for media playback (In HTML mode for better FLAC playback).
+- Using [howler.js](https://github.com/goldfire/howler.js) (v2.2.3) audio library for media playback (In HTML mode for better FLAC playback).
 - Fomantic (Semantic) UI is still dependent on jquery (pulled from CDN - no need to include it).
 - Of course you need a backend [Ampache](https://github.com/ampache/ampache) server.
 - And a PHP enabled webserver (PHP version 7.4+ recommended).

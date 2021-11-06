@@ -28,16 +28,15 @@
 <!-- Start the main body -->
 <body>
 <!-- Start the top menu - changed to a grid container -->
-<div class="ui inverted top fixed segment">
-	<div class="ui middle aligned seven column grid">
+<div class="ui inverted top fixed menu">
 
 		  <!-- Title -->
-			<div class="one wide column">
+			<div class="item">
 				<h1 class="ui space header">foam</h1>
 			</div>
 
 			<!-- Search bar -->
-			<div class="two wide column">
+			<div class="item">
 				<form class="ui form" method="GET" target="iframe_main" action="smart_results.php">
 					<div class="field">
 						<div class="ui mini icon input">
@@ -49,7 +48,7 @@
 			</div>
 
 			<!-- Micro player -->
-			<div class="two wide column"> <!-- Transport Controls -->
+			<div class="item"> <!-- Transport Controls -->
 				<table><tr>
 					<td><span class="ui small text">MICROPLAY</span></td>
 					<td><i class="bordered step backward icon" id="backBtn"></i></td>
@@ -58,15 +57,19 @@
 				</tr></table>
 			</div>
 
-			<div class="three wide column"> <!-- Duration and track slider -->
-				<table><tr>
-					<td><span class="ui medium text" id="timer">00:00</span></td>
-					<td style="width:70%"><div class="ui small blue track slider" id="track1"></div></td></td>
-					<td><span class="ui medium text" id="length">00:00</span></td>
-				</tr></table>
+			<div class="horizontally fitted item"> <!-- Track timer -->
+					<span class="ui medium text" id="timer">00:00</span>
 			</div>
 
-			<div class="three wide column">
+			<div class="slider item"> <!-- Duration and track slider -->
+				<div class="ui small blue track slider" id="track1"></div>
+			</div>
+
+			<div class="horizontally fitted item"> <!-- Track Length -->
+				<span class="ui medium text" id="length">00:00</span>
+			</div>
+
+			<div class="item"> <!-- Song title and album thumbnail -->
 				<table><tr>
 					<td><a id="albmLink" href="albums_view.php" target="iframe_main">
 						<img id="playrThumb" src="img/vinyl.png" height="50"></a></td>
@@ -75,7 +78,7 @@
 				</tr></table>
 			</div>
 
-			<div class="three wide column"> <!-- Queue dropdown and volume slider -->
+			<div class="item"> <!-- Queue dropdown -->
 				<table><tr>
 						<td><div class="ui inline dropdown">
 							<i class="big caret down icon toggle-down" id="queueBtn"></i>
@@ -83,17 +86,23 @@
 			        <div class="active item">No Music Here!</div>
       			</div>
 					</div></td>
-					<td style="width:70%"><div class="ui small blue vol slider" id="vol1"></div></td>
-					<td><i class="bordered volume up icon" id="volBtn"></i></td>
 				</tr></table>
 			</div>
 
+			<div class="slider item"> <!-- Volume slider -->
+					<div class="ui small blue vol slider" id="vol1"></div>
+			</div>
+
+			<div class="item"> <!-- Volume mute button -->
+					<td><i class="bordered volume up icon" id="volBtn"></i></td>
+			</div>
+
 			<!-- Tagline -->
-	  	<div class="two wide column" id="status_msg">
+	  	<div class="item" id="status_msg">
 				A Fomantic Ampache web player.
 			</div>
-	</div>
-</div> <!-- End the top segment -->
+
+</div> <!-- End the top menu -->
 
 <!-- Set up new playlist pfromq modal -->
 <div class="ui pfromq modal">

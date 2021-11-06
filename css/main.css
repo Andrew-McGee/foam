@@ -166,21 +166,6 @@
 			 padding-top: 1.4em;
 		 }
 
-		 .lshift.item {
-			 display: inline-block;
-			 padding-top: 1.4em;
-			 padding-left: 0em;
-			 padding-right: 3em;
-		 }
-
-		 .rshift.item {
-			 display: inline-block;
-			 padding-top: 1.4em;
-			 padding-left: 3em;
-			 margin-right: 0em;
-		 }
-
-
 /** Main side menu styling **/
 		.sidemenu.column {
 		 background-color: var(--colrfgd1);

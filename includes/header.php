@@ -48,7 +48,7 @@
 			</div>
 
 			<!-- Micro player -->
-			<div class="item"> <!-- Transport Controls -->
+			<div class="borderless item"> <!-- Transport Controls -->
 				<table><tr>
 					<td><span class="ui small text">MICROPLAY</span></td>
 					<td><i class="bordered step backward icon" id="backBtn"></i></td>
@@ -57,19 +57,30 @@
 				</tr></table>
 			</div>
 
-			<div class="horizontally fitted item"> <!-- Track timer -->
+			<div class="horizontally fitted borderless item"> <!-- Track timer -->
 					<span class="ui medium text" id="timer">00:00</span>
 			</div>
 
-			<div class="slider item"> <!-- Duration and track slider -->
+			<div class="borderless slider item"> <!-- Duration and track slider -->
 				<div class="ui small blue track slider" id="track1"></div>
 			</div>
 
-			<div class="horizontally fitted item"> <!-- Track Length -->
+			<div class="horizontally fitted borderless item"> <!-- Track Length -->
 				<span class="ui medium text" id="length">00:00</span>
 			</div>
 
-			<div class="item"> <!-- Song title and album thumbnail -->
+			<div class="borderless item"> <!-- Volume mute button -->
+					<td><i class="bordered volume up icon" id="volBtn"></i></td>
+			</div>
+
+			<div class="borderless slider item"> <!-- Volume slider -->
+					<div class="ui small blue vol slider" id="vol1"></div>
+			</div>
+
+			<div class="item"> <!-- spacer for border -->
+			</div>
+
+			<div class="borderless item"> <!-- Song title and album thumbnail -->
 				<table><tr>
 					<td><a id="albmLink" href="albums_view.php" target="iframe_main">
 						<img id="playrThumb" src="img/vinyl.png" height="50"></a></td>
@@ -78,7 +89,7 @@
 				</tr></table>
 			</div>
 
-			<div class="item"> <!-- Queue dropdown -->
+			<div class="borderless item"> <!-- Queue dropdown -->
 				<table><tr>
 						<td><div class="ui inline dropdown">
 							<i class="big caret down icon toggle-down" id="queueBtn"></i>
@@ -89,17 +100,11 @@
 				</tr></table>
 			</div>
 
-			<div class="slider item"> <!-- Volume slider -->
-					<div class="ui small blue vol slider" id="vol1"></div>
-			</div>
-
-			<div class="item"> <!-- Volume mute button -->
-					<td><i class="bordered volume up icon" id="volBtn"></i></td>
-			</div>
-
 			<!-- Tagline -->
-	  	<div class="item" id="status_msg">
-				A Fomantic Ampache web player.
+			<div class="right menu">
+	  		<div class="item" id="status_msg">
+					A Fomantic Ampache web player.
+				</div>
 			</div>
 
 </div> <!-- End the top menu -->

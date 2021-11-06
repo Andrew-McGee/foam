@@ -25,6 +25,13 @@
 	$results = json_decode($get_data, true);
 	$total = count($results['album']);
 
+	$cnt = 0; //Reset our counter
+	$supastring = '';
+	for ($cnt = 0; $cnt < $total; $cnt++){
+		$supastring .= $results['album'][$cnt]['id'];
+		if ($cnt < $total - 1) $supastring .= ',';
+	}
+
 	include 'includes/header_iframe.php';
 ?>
 <script>parent.activeMenu(7);</script> <!-- Call js function in parent to highlight the correct active menu item -->
@@ -35,6 +42,15 @@
 						<div class="left floated five wide column">
 							<h1 class="ui smoke header">Frequent Albums&nbsp;&nbsp;&nbsp;<i class="small chart line icon"></i></h1>
 						</div>
+
+						<!-- supa-mix column -->
+						<div class="right floated right aligned two wide column">
+							<span class="ui small text">SUPA-MIX</span>
+							<a class="icn" href="supamix_tracks.php?filt=<?php echo $supastring;?>">
+								<i class="bordered blender icon" id="supamix"></i>
+							</a>
+						</div>
+
 						<div class="right floated right aligned five wide column">
 							<?php
 								if ($offset > 0) echo '<a class="icn" href="frequent_view.php?ofst=' . $poffset . '"><i class="arrow circle left icon"></i></a>&nbsp;&nbsp;&nbsp;';
@@ -79,5 +95,10 @@
 					echo "</div>"; // end of grid container
 					?>
 			  </div>
+				<script>
+					supamix.addEventListener('click',  function() {
+						document.getElementById("supamix").className = "spinner loading icon";
+					});
+				</script>
 </body>
 </html>

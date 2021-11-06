@@ -153,6 +153,19 @@
 			 margin: 1em 2em 0em 3em !important;
 		 }
 
+
+/** Main top menu styling **/
+     .ui.inverted.top.menu {
+       background-color: var(--colrfgd1) !important;
+       color: var(--colrfnt1);
+     }
+
+		 .slider.item {
+			 display: inline-block;
+			 width: 10%;
+			 padding-top: 1.4em;
+		 }
+
 /** Main side menu styling **/
 		.sidemenu.column {
 		 background-color: var(--colrfgd1);
@@ -162,7 +175,7 @@
      .ui.inverted.side.menu {
        background-color: var(--colrfgd1) !important;
 			 color: var(--colrfnt1) !important;
-			 margin: 2em 0em 0em 2em;
+			 margin: 8em 0em 0em 2em;
      }
 
 		 .ui.menu .active.item {
@@ -231,12 +244,6 @@
 		 }
 
 /** Page segments styling **/
-     .ui.inverted.top.segment {
-       background-color: var(--colrfgd1) !important;
-       color: var(--colrfnt1);
-			 padding: 1em 2em;
-     }
-
      .ui.inverted.spacecadet.segment {
        background-color: var(--colrfgd1) !important;
        color: var(--colrfnt1) !important;
@@ -248,6 +255,7 @@
      .ui.inverted.manatee.segment {
        background-color: var(--colrbgd1) !important;
        color: var(--colrfnt2) !important;
+			 margin-top: 6em !important;
      }
 
      .ui.inverted.space.segment {

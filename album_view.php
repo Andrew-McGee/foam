@@ -28,7 +28,7 @@ parent.activeMenu(0); // Call js function in parent to highlight the correct act
 parent.list = []; // Clean out the old list before we build a new one
 
 </script>
-<body style="overflow:hidden">
+<body>
 			  <div class="ui inverted space segment">
 					<?php
 						echo '<div class="ui two column grid">' . "\r\n"; //Two columns for album view - art on left, tracks on right.

@@ -48,7 +48,7 @@ parent.activeMenu(0);
 parent.list = []; // Clean out the old list before we build a new one
 </script>
 
-<body style="overflow:hidden">
+<body>
 			  <div class="ui inverted space segment">
 					<div class='ui middle aligned grid'>
 						<div class="left floated column">

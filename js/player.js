@@ -84,6 +84,7 @@ function playnew(pointer) {
       specto();      // Stop the spectograph animation
     } else {
       trk01.unload(); // Unload the track from howler to free up mem
+      specto();      // Stop the spectograph animation
       // We're not finished the queue yet so lets keep going
       playnew(pointer);  // Call the playnew function again with our updated pointer
     }

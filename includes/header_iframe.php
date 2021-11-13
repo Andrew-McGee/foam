@@ -5,7 +5,7 @@
 
 	<title>Iframe</title>
 <!-- JQuery from CDN -->
-	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<script src="dist/jquery.min.js"></script>
 
 <!-- Fomantic UI -->
 	<link rel="stylesheet" type="text/css" href="dist/semantic.min.css">

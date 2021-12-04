@@ -39,7 +39,7 @@
 <body>
 			  <div class="ui inverted space segment">
 					<div class='ui middle aligned grid'>
-						<div class="left floated four wide column">
+						<div class="left floated five wide column">
 							<h1 class="ui smoke header">Recent Albums&nbsp;&nbsp;&nbsp;<i class="small clock icon"></i></h1>
 						</div>
 
@@ -51,7 +51,7 @@
 							</a>
 						</div>
 
-						<div class="right floated right aligned four wide column">
+						<div class="right floated right aligned five wide column">
 							<?php
 								if ($offset > 0) echo '<a class="icn" href="recent_view.php?ofst=' . $poffset . '"><i class="arrow circle left icon"></i></a>&nbsp;&nbsp;&nbsp;';
 								if ($total == 24) echo '<a class="icn" href="recent_view.php?ofst=' . $noffset . '"><i class="arrow circle right icon"></i></a>';

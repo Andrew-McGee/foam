@@ -48,19 +48,20 @@
 <body>
 			  <div class="ui inverted space segment">
 					<div class='ui middle aligned grid'>
-						<div class="left floated four wide column">
+						<div class="left floated left aligned three wide column">
 							<h1 class="ui smoke header">Albums&nbsp;&nbsp;&nbsp;<i class="small record vinyl icon"></i></h1>
 						</div>
 
-						<!-- Tag column -->
-						<div class="two wide column">
-							<?php
-							if ($filt !== '') {echo '<div class="ui filter large label">' . $filt . '&nbsp;<a class="icn" href="albums_view.php"><i class="icon close"></i></a></div>';}
-							?>
+						<!-- Supamix column -->
+						<div class="left floated left aligned three wide column">
+							<span class="ui small text">SUPA-MIX</span>
+							<a class="icn" href="supamix_tracks.php?filt=<?php echo $supastring;?>">
+								<i class="bordered blender icon" id="supamix"></i>
+							</a>
 						</div>
 
 						<!-- Filter bar -->
-						<div class="three wide column">
+						<div class="middle aligned four wide column">
 							<form class="ui form" method="GET" action="albums_view.php">
 								<div class="field">
 									<div class="ui small icon input">
@@ -70,16 +71,8 @@
 							</form>
 						</div>
 
-						<!-- supa-mix column -->
-						<div class="right floated right aligned two wide column">
-							<span class="ui small text">SUPA-MIX</span>
-							<a class="icn" href="supamix_tracks.php?filt=<?php echo $supastring;?>">
-								<i class="bordered blender icon" id="supamix"></i>
-							</a>
-						</div>
-
 						<!-- Pagination -->
-						<div class="right floated right aligned one wide column">
+						<div class="right floated right aligned six wide column">
 							<?php
 								if ($offset > 0) echo '<a class="icn" href="albums_view.php?filt=' . $filt . '&ofst=' . $poffset . '"><i class="arrow circle left icon"></i></a>&nbsp;&nbsp;&nbsp;';
 								if ($total == 24) echo '<a class="icn" href="albums_view.php?filt=' . $filt . '&ofst=' . $noffset . '"><i class="arrow circle right icon"></i></a>';

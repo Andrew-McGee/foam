@@ -30,7 +30,7 @@
   if(!$result){die("Connection Failure");}
   curl_close($curl);
 
-	$hshake = json_decode($get_data, true);
+	$hshake = json_decode($result, true);
 
 	// If we don't have an auth token returned something went wrong - redirect back to login screen with an error msg
 	if (!isset($hshake['auth'])) {

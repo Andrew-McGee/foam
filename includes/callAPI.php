@@ -126,9 +126,9 @@ function songsAPI($auth, $filt, $offset){
 //
 // Playlists API call to return list of playlists
 //
-function playlistsAPI($auth){
+function playlistsAPI($auth, $filt, $offset){
 
-  $call = '?action=playlists&limit=24&hide_search=1';
+  $call = '?action=playlists&limit=24&hide_search=1&filter=' . $filt . '&offset=' . $offset;
 
   $result = c_init($auth, $call);
 

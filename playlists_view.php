@@ -1,6 +1,15 @@
 <?php
 	include 'includes/callAPI.php';
 
+	// Check if we have a filter parm
+	if (!empty($_GET["filt"])) {
+		$filt = $_GET["filt"];
+		$plfilt = $filt;
+	} else {
+		$filt = '';
+		$plfilt = 'Filter...';
+	}
+
 	// Check if we have an offset value passed for pagination
 	if (!empty($_GET["ofst"])) {
 		$offset = $_GET["ofst"];
@@ -21,7 +30,7 @@
 
 	$auth=$hshake['auth'];
 
-	$get_data = playlistsAPI($auth);
+	$get_data = playlistsAPI($auth, $filt, $offset);
 	$results = json_decode($get_data, true);
 	$total = count($results['playlist']);
 
@@ -35,6 +44,18 @@
 						<div class="left floated four wide column">
 							<h1 class="ui smoke header">Playlists&nbsp;&nbsp;&nbsp;<i class="small stream icon"></i></h1>
 						</div>
+
+						<!-- Filter bar -->
+						<div class="middle aligned four wide column">
+							<form class="ui form" method="GET" action="playlists_view.php">
+								<div class="field">
+									<div class="ui small icon input">
+							  		<input name="filt" type="text" placeholder="<?php echo $plfilt;?>" value="<?php echo $filt;?>"><i class="filter icon"></i>
+									</div>
+								</div>
+							</form>
+						</div>
+
 						<div class="right floated right aligned four wide column">
 							<?php
 								if ($offset > 0) echo '<a class="icn" href="playlists_view.php?ofst=' . $poffset . '"><i class="arrow circle left icon"></i></a>&nbsp;&nbsp;&nbsp;';

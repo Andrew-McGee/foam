@@ -35,7 +35,7 @@
 	$cnt = count($song_results['song']); //Set counter to number of songs returned
 
 	// Get playlist info so we can have them listed in our per track menu
-	$get_data = playlistsAPI($auth);
+	$get_data = playlistsAPI($auth, '', 0);
 	$playlists_results = json_decode($get_data, true);
 
 	include 'includes/header_iframe.php';

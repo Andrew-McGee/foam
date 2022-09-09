@@ -15,7 +15,7 @@
 	$song_results = json_decode($get_data, true);
 
 	// Get playlist info so we can have them listed in our per track menu
-	$get_data = playlistsAPI($auth);
+	$get_data = playlistsAPI($auth, '', 0);
 	$playlist_results = json_decode($get_data, true);
 
 	include 'includes/header_iframe.php';

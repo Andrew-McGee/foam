@@ -101,14 +101,14 @@
 			</div>
 
 			<div class="borderless item"> <!-- Queue dropdown -->
-				<table><tr>
-						<td><div class="ui inline dropdown">
-							<i class="big caret down icon toggle-down" id="queueBtn"></i>
-						  <div class="menu" id="queueMenu">
-			        <div class="active item">No Music Here!</div>
-      			</div>
-					</div></td>
-				</tr></table>
+				<table><tr><td>
+					<div class="ui dropdown">
+						<i class="big caret down icon toggle-down" id="queueBtn"></i>
+					  <div class="vertical menu" id="queueMenu">
+		        	<div class="active item">No Music Here!</div>
+    				</div>
+					</div>
+				</td></tr></table>
 			</div>
 
 			<!-- Tagline -->

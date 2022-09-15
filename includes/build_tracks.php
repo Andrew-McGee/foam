@@ -32,6 +32,7 @@
 										echo '		<div class="item" id="addT2Q' . $i . '">Add to queue</div>' . "\r\n";
 										echo '		<div class="item" id="playNext' . $i . '">Play next</div>' . "\r\n";
 										echo '		<div class="item" id="playOnly' . $i . '">Play only</div>' . "\r\n";
+                    if ($plylst == true) echo '		<div class="item" id="remTFP' . $i . '">Remove from playlist</div>' . "\r\n";
 										echo '		<div class="item" id="addT2P' . $i . '">Add to playlist' . "\r\n";
 										echo '      <div class="menu">' . "\r\n";  // Add to playlist spawns another submenu
 										echo '        <div class="item" id="newplaylist' . $i . '"><center><button class="ui tiny basic button">NEW</button></center></div>' . "\r\n";
@@ -62,7 +63,8 @@
 									echo ' parent.list[' . $i . '][0] = "' . $safeTitle . '";' . "\r\n";
 									echo ' parent.list[' . $i . '][1] = "' . $song_results['song'][$i]['artist']['name'] . '";' . "\r\n";
 									echo ' parent.list[' . $i . '][2] = "' . $result['minutes'] . ':' . sprintf("%02d", $result['seconds']) . '";' . "\r\n";
-									echo ' parent.list[' . $i . '][3] = "' . $main_results['art'] . '";' . "\r\n";
+									//echo ' parent.list[' . $i . '][3] = "' . $main_results['art'] . '";' . "\r\n";
+                  echo ' parent.list[' . $i . '][3] = "' . $song_results['song'][$i]['art'] . '";' . "\r\n";
 									echo ' parent.list[' . $i . '][4] = "' . $song_results['song'][$i]['url'] . '";' . "\r\n";
 									echo ' parent.list[' . $i . '][5] = "' . $song_results['song'][$i]['album']['id'] . '";' . "\r\n";
 									echo ' parent.list[' . $i . '][6] = "' . $song_results['song'][$i]['id'] . '";' . "\r\n";
@@ -104,6 +106,14 @@
 									echo "<script>playOnly" . $i . ".addEventListener('click',  function() {";
 									echo "	parent.newSingle('" . $i . "');";
 									echo '});</script>' . "\r\n";
+
+                  if ($plylst == true)  {
+  									// Make a listener for clicking the remove from playlist menu item
+  									echo "<script>remTFP" . $i . ".addEventListener('click',  function() {";
+  									echo '	    $.get("includes/playlistAPI.php?action=remove&filter=' . $playlist_results['id'] . '&song=' . $song_results['song'][$i]['id'] . '");';
+  									echo '      location.reload();';  // Do a reload so we can see the change
+  									echo '});</script>' . "\r\n";
+                  }
 
 									// Make a listener for clicking the add to playlist menu item - we need a loop to create 1 for each playlist
 									$j = 0;

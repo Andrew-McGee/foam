@@ -24,6 +24,13 @@ The micro player is js and uses the howler audio library. The Ampache json API c
 - SupaMIX function creates huge randomised playlists from boxsets or collections of albums.
 - Easily create artist playlists from multiple albums and compilations.
 
+## Demo
+You can test the foam interface using your own Ampache database by using the demo here:
+
+http://foamdemo.mcgee.technology/
+
+Juts point the host to your Ampache server and log in with your Ampache credentials.
+
 ## Future Roadmap (after full stable release)
 
 Trello: https://trello.com/b/AgzQmuvO/foam

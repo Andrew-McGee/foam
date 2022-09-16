@@ -74,42 +74,42 @@ parent.list = []; // Clean out the old list before we build a new one
 
 								//Loop through the songs to display each on a table row
 								for ($i = 0; $i < $cnt; $i++){
-									echo  "\r\n" . '<tr class="albm-row" id="row' . $i . '">' . "\r\n"; // Start of the track listing row
+									echo "\r\n" . '<tr class="albm-row" id="row' . $i . '">' . "\r\n"; // Start of the track listing row
 										echo '<td id="trk' . ($i + 1) . '"><strong>' . $song_results['song'][$i]['title'] . '</strong></td>' . "\r\n";
 										echo '<td><a href="album_view.php?uid=' . $song_results['song'][$i]['album']['id'] . '">';
 										echo $song_results['song'][$i]['album']['name'] . '</a></td>' . "\r\n";
 
-											// hidden star and elipse reveal on mouseover row (see listeners below)
-											// some code here to test if song is flagged or not (favourite = blue star)
-											$fav = $song_results['song'][$i]['flag'];
-											if ($fav == true) {
-												$favi = "blue star icon";
-											} else {
-												$favi = "hidden star outline icon";
-											}
-											echo '<td><i class="' . $favi . '" id="hiddenstar' . $i . '"></i>&nbsp;' . "\r\n";
+										// hidden star and elipse reveal on mouseover row (see listeners below)
+										// some code here to test if song is flagged or not (favourite = blue star)
+										$fav = $song_results['song'][$i]['flag'];
+										if ($fav == true) {
+											$favi = "blue star icon";
+										} else {
+											$favi = "hidden star outline icon";
+										}
+										echo '<td><i class="' . $favi . '" id="hiddenstar' . $i . '"></i>&nbsp;' . "\r\n";
 
-										// Here's the code for the hidden drop down menu that appears on each track row under vertical elipsis
-											echo '<div class="ui inline dropdown"><i class="hidden ellipsis vertical icon" id="hiddenelipse' . $i . '"></i>' . "\r\n";
-											echo '	<div class="menu" id="albumMenu">' . "\r\n";
-											echo '		<div class="item" id="addT2Q' . $i . '">Add to queue</div>' . "\r\n";
-											echo '		<div class="item" id="playNext' . $i . '">Play next</div>' . "\r\n";
-											echo '		<div class="item" id="playOnly' . $i . '">Play only</div>' . "\r\n";
-											echo '		<div class="item" id="addT2P' . $i . '">Add to playlist' . "\r\n";
-											echo '      <div class="menu">' . "\r\n";  // Add to playlist spawns another submenu
-											echo '        <div class="item" id="newplaylist' . $i . '"><center><button class="ui tiny basic button">NEW</button></center></div>' . "\r\n";
-											// Loop to add all our known playlists to the sub menu
-											$j = 0;
-											foreach ($playlist_results['playlist'] as $playlist) {
-												echo '      <div class="item" id="playlist' . $i . "_" . $j . '">' . $playlist['name'] . '</div>' . "\r\n";
-												$j++;
-											}
-											echo '      </div>' . "\r\n";
-											echo '    </div>' . "\r\n";
-											echo '		<div class="item"><a class="icn" href="album_view.php?uid=' . $song_results['song'][$i]['album']['id'] . '">Go to album</a></div>' . "\r\n";
-											echo '		<div class="item"><a class="icn" href="artist_albums.php?uid=' . $song_results['song'][$i]['artist']['id'] . '">Go to artist</a></div>' . "\r\n";
-											echo '	</div>' . "\r\n";
-											echo '</div></td>' . "\r\n";
+	 									// Here's the code for the hidden drop down menu that appears on each track row under vertical elipsis
+										echo '<div class="ui inline dropdown"><i class="hidden ellipsis vertical icon" id="hiddenelipse' . $i . '"></i>' . "\r\n";
+										echo '	<div class="menu" id="albumMenu">' . "\r\n";
+										echo '		<div class="item" id="addT2Q' . $i . '">Add to queue</div>' . "\r\n";
+										echo '		<div class="item" id="playNext' . $i . '">Play next</div>' . "\r\n";
+										echo '		<div class="item" id="playOnly' . $i . '">Play only</div>' . "\r\n";
+										echo '		<div class="item" id="addT2P' . $i . '">Add to playlist' . "\r\n";
+										echo '      <div class="menu">' . "\r\n";  // Add to playlist spawns another submenu
+										echo '        <div class="item" id="newplaylist' . $i . '"><center><button class="ui tiny basic button">NEW</button></center></div>' . "\r\n";
+										// Loop to add all our known playlists to the sub menu
+										$j = 0;
+										foreach ($playlist_results['playlist'] as $playlist) {
+											echo '      <div class="item" id="playlist' . $i . "_" . $j . '">' . $playlist['name'] . '</div>' . "\r\n";
+											$j++;
+										}
+										echo '      </div>' . "\r\n";
+										echo '    </div>' . "\r\n";
+										echo '		<div class="item"><a class="icn" href="album_view.php?uid=' . $song_results['song'][$i]['album']['id'] . '">Go to album</a></div>' . "\r\n";
+										echo '		<div class="item"><a class="icn" href="artist_albums.php?uid=' . $song_results['song'][$i]['artist']['id'] . '">Go to artist</a></div>' . "\r\n";
+										echo '	</div>' . "\r\n";
+										echo '</div></td>' . "\r\n";
 
 										// Calculate song length from seconds
 										$result = sec2mins($song_results['song'][$i]['time']);

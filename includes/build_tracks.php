@@ -63,7 +63,6 @@
 									echo ' parent.list[' . $i . '][0] = "' . $safeTitle . '";' . "\r\n";
 									echo ' parent.list[' . $i . '][1] = "' . $song_results['song'][$i]['artist']['name'] . '";' . "\r\n";
 									echo ' parent.list[' . $i . '][2] = "' . $result['minutes'] . ':' . sprintf("%02d", $result['seconds']) . '";' . "\r\n";
-									//echo ' parent.list[' . $i . '][3] = "' . $main_results['art'] . '";' . "\r\n";
                   echo ' parent.list[' . $i . '][3] = "' . $song_results['song'][$i]['art'] . '";' . "\r\n";
 									echo ' parent.list[' . $i . '][4] = "' . $song_results['song'][$i]['url'] . '";' . "\r\n";
 									echo ' parent.list[' . $i . '][5] = "' . $song_results['song'][$i]['album']['id'] . '";' . "\r\n";
@@ -73,11 +72,6 @@
 									// ** TEMP NOTE ** Remove these duplicate functions and create single named functions for better performance
 									// Make a listener for clicking on this track title
 									echo "<script>trk" . ($i + 1) . ".addEventListener('click', function() {";
-									echo "  parent.newQueue('" . $i . "');";
-									echo '});</script>' . "\r\n";
-
-									// Make a listener for clicking on this track number
-									echo "<script>tno" . ($i + 1) . ".addEventListener('click', function() {";
 									echo "  parent.newQueue('" . $i . "');";
 									echo '});</script>' . "\r\n";
 
@@ -106,6 +100,13 @@
 									echo "<script>playOnly" . $i . ".addEventListener('click',  function() {";
 									echo "	parent.newSingle('" . $i . "');";
 									echo '});</script>' . "\r\n";
+
+									if ($trknum == true) {
+										// Make a listener for clicking on this track number
+										echo "<script>tno" . ($i + 1) . ".addEventListener('click', function() {";
+										echo "  parent.newQueue('" . $i . "');";
+										echo '});</script>' . "\r\n";
+									}
 
                   if ($plylst == true)  {
   									// Make a listener for clicking the remove from playlist menu item

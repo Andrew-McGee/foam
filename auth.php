@@ -13,7 +13,7 @@
 					<h1 class="ui inverted yellow header">foam</h1>
 					<form class="ui form" method="POST" action="includes/connect.php">
 						<div class="field">
-							<label>Host</label>
+							<label>Host (http://hostname:port)</label>
 			  			<input name="host" type="text" placeholder="host:port">
 						</div>
 						<div class="field">

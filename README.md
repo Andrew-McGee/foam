@@ -22,6 +22,7 @@ The micro player is js and uses the howler audio library. The Ampache json API c
 - Four built in colour schemes or add your own web colours in editable config.
 - Series Match finds multi volume album sets.
 - SupaMIX function creates huge randomised playlists from boxsets or collections of albums.
+- Easily create artist playlists from multiple albums and compilations.
 
 ## Future Roadmap (after full stable release)
 

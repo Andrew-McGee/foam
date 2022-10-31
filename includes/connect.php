@@ -4,7 +4,13 @@
 
 	include '../config/foam.conf.php';
 
-	$sessionTime = 365 * 24 * 3600; // Seconds in 1 year
+	// Set some vars for our passed credentials
+	$host = $_POST["host"];
+	$user = $_POST["name"];
+	$pass = $_POST["pass"];
+
+	// Check if hostname includes http or https - if not add http to front
+	if (substr($host, 0, 7) != "http://" && substr($host, 0, 8) != "https://") $host = "http://" . $host;
 
 	//Let's try and login with the passed credentials
 	$curl = curl_init();
@@ -12,9 +18,9 @@
   //Build the handshake string to get auth key
 
   $time = time();
-  $key = hash('sha256', $_POST["pass"]);
+  $key = hash('sha256', $pass);
   $passphrase = hash('sha256',$time . $key);
-  $url = $_POST["host"].'/server/json.server.php?action=handshake&auth='.$passphrase.'&timestamp='.$time.'&user='.$_POST["name"];
+  $url = $host.'/server/json.server.php?action=handshake&auth='.$passphrase.'&timestamp='.$time.'&user='.$user;
 
   // CURL options.
   curl_setopt($curl, CURLOPT_URL, $url);
@@ -37,16 +43,16 @@
 		header ('Location: ../auth.php?authError="Login Failed"');
 	}
 
-
+	// Now let's set the cookies with login info
 	if(!empty($_POST["remember"])) {
-		setcookie ("host",$_POST["host"],time()+ $sessionTime, "/");
-		setcookie ("name",$_POST["name"],time()+ $sessionTime, "/");
-		setcookie ("pass",$_POST["pass"],time()+ $sessionTime, "/");
+		setcookie ("host",$host,time()+ $sessionTime, "/");
+		setcookie ("name",$user,time()+ $sessionTime, "/");
+		setcookie ("pass",$pass,time()+ $sessionTime, "/");
 		echo "Cookies Set Successfully";
 	} else {
-		setcookie ("host",$_POST["host"],0, "/");
-		setcookie ("name",$_POST["name"],0, "/");
-		setcookie ("pass",$_POST["pass"],0, "/");
+		setcookie ("host",$host,0, "/");
+		setcookie ("name",$user,0, "/");
+		setcookie ("pass",$pass,0, "/");
 		echo "Cookies expire at end of session";
 	}
 

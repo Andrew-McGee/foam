@@ -1,13 +1,18 @@
 <?php
-// Config file for foam web player. Just a standard php include that will pull in variables
+  // Config file for foam web player. Just a standard php include that will pull in variables
 
-// Set the length of time a foam session cookie is remembered - default: 1 year
+  // Default login information that will be populated on the login form
+  // If left blank then fields will be unpopulated except for placeholder hints
+  $defHost = '';  // Eg. http://myhost.com or myampachehost.com or IP equivalent. Can include port number.
+  $defUser = '';  // Eg. The Ampache username to default
+  $defPass = '';  // Eg. The Ampache password to default use (WARN: this leaves it wide open for anyone to login)
 
-$sessionTime = 365 * 24 * 3600; // Seconds in 1 year
-// $sessionTime = 28 * 24 * 3600;  // Seconds in 4 weeks
-// $sessionTime = 7 * 24 * 3600;   // Seconds in 1 week
-// $sessionTime = 24 * 3600;       // Seconds in 1 day
-// $sessionTime = 3600;            // Seconds in 1 hour
+  // Set the length of time a foam session cookie is remembered - default: 1 year
+  $sessionTime = 365 * 24 * 3600;    // Seconds in 1 year
+  // $sessionTime = 28 * 24 * 3600;  // Seconds in 4 weeks
+  // $sessionTime = 7 * 24 * 3600;   // Seconds in 1 week
+  // $sessionTime = 24 * 3600;       // Seconds in 1 day
+  // $sessionTime = 3600;            // Seconds in 1 hour
 
   //Themes - some basic pre-set colour schemes
   $theme = array();

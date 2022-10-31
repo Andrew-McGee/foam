@@ -1,5 +1,6 @@
 <?php
 	include 'includes/header_iframe.php';
+	include 'config/foam.conf.php';
 
 	if(!empty($_GET["authError"])) {
 		$authError = $_GET["authError"];
@@ -13,16 +14,19 @@
 					<h1 class="ui inverted yellow header">foam</h1>
 					<form class="ui form" method="POST" action="includes/connect.php">
 						<div class="field">
-							<label>Host (http://hostname:port)</label>
-			  			<input name="host" type="text" placeholder="host:port">
+							<label>Host (hostname:port)</label>
+			  			<input name="host" type="text" size="35" placeholder="host:port"
+								<?php if (!empty($defHost)) echo ' value="' . $defHost . '"'?> >
 						</div>
 						<div class="field">
 							<label>User</label>
-							<input name="name" type="text" placeholder="username" ><br>
+							<input name="name" type="text" size="35" placeholder="username"
+							<?php if (!empty($defUser)) echo ' value="' . $defUser . '"'?> ><br>
 						</div>
 						<div class="field">
 							<label>Password</label>
-							<input name="pass" type="text" placeholder="password"><br>
+							<input name="pass" type="text" size="35" placeholder="password"
+							<?php if (!empty($defHost)) echo ' value="' . $defPass . '"'?> ><br>
 						</div>
 						  <div class="field">
 						    <div class="ui checkbox">

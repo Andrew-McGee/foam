@@ -61,4 +61,14 @@
   $theme[5]['colrfnt2'] = '#1990db'; // Bright text
   $theme[5]['colrfnt3'] = '#ffffff'; // Dark text
   $theme[5]['colrhilt'] = '#1990db'; // Highlight
+
+  // #06 Dark Rose - Uncomment to use
+  $theme[6]['name'] = 'Dark Rose';     // Name
+  $theme[6]['colrfgd1'] = '#790252'; // Foreground
+  $theme[6]['colrbgd1'] = '#4C0033'; // Background
+  $theme[6]['colrfnt1'] = '#e0d0e0'; // Main text
+  $theme[6]['colrfnt2'] = '#ffffff'; // Bright text
+  $theme[6]['colrfnt3'] = '#c0c0c0'; // Dark text
+  $theme[6]['colrhilt'] = '#E80F88'; // Highlight
+
 ?>

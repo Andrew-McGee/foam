@@ -204,14 +204,14 @@ function c_init($auth, $call){
     $time = time();
     $key = hash('sha256', $amppas);
     $passphrase = hash('sha256',$time . $key);
-    $url = $ampurl.'/server/json.server.php?action=handshake&auth='.$passphrase.'&timestamp='.$time.'&user='.$ampusr;
+    $url = $ampurl.'/server/json.server.php?action=handshake&version=5.6.0&auth='.$passphrase.'&timestamp='.$time.'&user='.$ampusr;
 
   } else {
 
     $ampurl = $_COOKIE["host"];
 
     //Non-handshake calls can be built from this format using the url and parms
-    $url = $ampurl . '/server/json.server.php' . $call . '&auth=' . $auth;
+    $url = $ampurl . '/server/json.server.php' . $call . '&version=5.6.0&auth=' . $auth;
   }
 
   // CURL options.

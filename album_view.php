@@ -35,12 +35,12 @@ parent.list = []; // Clean out the old list before we build a new one
 
 							// Left column for album art and stats
 							echo '<div class="ui four wide column">' . "\r\n";
-								echo "<img class='ui massive image' src='" . $main_results['art'] . "' >";
-								echo '<br><a href="artist_albums.php?uid=' . $main_results['artist']['id'] . '">';
-								echo $main_results['artist']['name'] . '</a>';
-								echo '<br>' . $main_results['year'];
-								echo '<br>' . $main_results['songcount'] . ' songs';
-								$result = sec2mins($main_results['time']);
+								echo "<img class='ui massive image' src='" . $main_results['album'][0]['art'] . "' >";
+								echo '<br><a href="artist_albums.php?uid=' . $main_results['album'][0]['artist']['id'] . '">';
+								echo $main_results['album'][0]['artist']['name'] . '</a>';
+								echo '<br>' . $main_results['album'][0]['year'];
+								echo '<br>' . $main_results['album'][0]['songcount'] . ' songs';
+								$result = sec2mins($main_results['album'][0]['time']);
 								if ($result['hours'] > 0) {
 									if ($result['hours'] > 1) {
 										echo '<br>' . $result['hours'] . ' hours, ' . $result['minutes'] . ' minutes';
@@ -56,7 +56,7 @@ parent.list = []; // Clean out the old list before we build a new one
 
 							// Right column for album songs in table
 								echo '<div class="ui twelve wide column">' . "\r\n";
-								echo '  <div class="ui huge smoke header">' . $main_results['name'] . '</div>' . "\r\n";
+								echo '  <div class="ui huge smoke header">' . $main_results['album'][0]['name'] . '</div>' . "\r\n";
 								echo '  <button class="ui tiny button" id="playb"><i class="play icon"></i>PLAY</button>&nbsp;';
 								echo '  <button class="ui tiny button" id="shufb"><i class="random icon"></i>SHUFFLE</button>&nbsp;';
 								echo '  <div class="ui inline dropdown"><i class="ellipsis vertical icon"></i>' . "\r\n";
@@ -65,7 +65,7 @@ parent.list = []; // Clean out the old list before we build a new one
 								echo '  	  <div class="item" id="playAllNext">Play next</div>' . "\r\n";
 								echo '  	  <div class="item"><a class="icn" href="albums_view.php?filt=' . $seriesMatch . '">Series match</a></div>' . "\r\n";
 								echo '    </div></div>' . "\r\n";
-								if ($main_results['flag'] == 0 ) {
+								if ($main_results['album'][0]['flag'] == 0 ) {
 									echo '<i id="albumStar" class="star outline icon"></i>';
 								} else {
 									echo '<i id="albumStar" class="blue star icon"></i>';
@@ -95,10 +95,10 @@ parent.list = []; // Clean out the old list before we build a new one
 								echo "<script>albumStar.addEventListener('click',  function() {";
 								echo '	if (document.getElementById("albumStar").className !== "blue star icon") {';
 								echo '   	  document.getElementById("albumStar").className = "blue star icon";';
-								echo '	    $.get("includes/favAPI.php?type=album&id=' . $main_results['id'] . '&flag=1");';
+								echo '	    $.get("includes/favAPI.php?type=album&id=' . $main_results['album'][0]['id'] . '&flag=1");';
 								echo '	} else { ';
 								echo '			document.getElementById("albumStar").className = "star outline icon";';
-								echo '	    $.get("includes/favAPI.php?type=album&id=' . $main_results['id'] . '&flag=0");';
+								echo '	    $.get("includes/favAPI.php?type=album&id=' . $main_results['album'][0]['id'] . '&flag=0");';
 								echo '	}';
 								echo '});</script>' . "\r\n";
 

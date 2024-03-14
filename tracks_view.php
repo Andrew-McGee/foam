@@ -33,7 +33,7 @@
 	$get_data = songsAPI($auth, $filt, $offset);
 	$song_results = json_decode($get_data, true);
 	$cnt = count($song_results['song']); //Set counter to number of songs returned
-	$main_results['songcount'] = $cnt;
+	$main_results['album'][0]['songcount'] = $cnt;
 
 	// Get playlist info so we can have them listed in our per track menu
 	$get_data = playlistsAPI($auth, '', 0);

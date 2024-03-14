@@ -6,7 +6,7 @@
 								echo '<th>Title</th><th>Artist</th><th></th><th>Time</th><th>DL</th>';
 								echo '</tr></thead>' . "\r\n";
 								echo '<tbody>' . "\r\n";
-								$cnt = $main_results['songcount']; //Set counter to total number of songs on album
+								$cnt = $main_results['album'][0]['songcount']; //Set counter to total number of songs on album
 
 								//Loop through the songs to display each on a table row
 								for ($i = 0; $i < $cnt; $i++){

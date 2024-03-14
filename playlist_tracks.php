@@ -20,7 +20,7 @@
 
 	include 'includes/header_iframe.php';
 
-	$main_results['songcount'] = $main_results['items']
+	$main_results['album'][0]['songcount'] = $main_results['items']
 ?>
 <script>
 parent.activeMenu(0); // Call js function in parent to highlight the correct active menu item -->

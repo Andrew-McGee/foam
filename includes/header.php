@@ -113,7 +113,7 @@
 
 			<!-- Tagline -->
 			<div class="right menu">
-	  		<div class="item" id="status_msg">
+	  		<div class="item" id="status99_msg">
 					A Fomantic Ampache web player.
 				</div>
 			</div>

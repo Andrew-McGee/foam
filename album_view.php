@@ -19,7 +19,7 @@
 	$playlists_results = json_decode($get_data, true);
 
 	// Create a stripped down album title we can use in a link for series match
-	$seriesMatch = smatch($main_results['name']);
+	$seriesMatch = smatch($main_results['album'][0]['name']);
 
 	include 'includes/header_iframe.php';
 ?>

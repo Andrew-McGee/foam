@@ -187,17 +187,17 @@ function c_init($auth, $call){
     if (isset($_COOKIE["host"])) {
       $ampurl = $_COOKIE["host"];
     } else {
-      header ('Location: auth.php');
+      header('Location: auth.php');
     }
     if (isset($_COOKIE["name"])) {
       $ampusr = $_COOKIE["name"];
     } else {
-      header ('Location: auth.php');
+      header('Location: auth.php');
     }
     if (isset($_COOKIE["pass"])) {
       $amppas = $_COOKIE["pass"];
     } else {
-      header ('Location: auth.php');
+      header('Location: auth.php');
     }
 
     //Build the handshake string to get auth key
@@ -239,7 +239,7 @@ function sec2mins($seconds){
   $result['minutes'] = floor(($seconds / 60) % 60);
   $result['seconds'] = $seconds % 60;
 
-  return $result;;
+  return $result;
 }
 
 //

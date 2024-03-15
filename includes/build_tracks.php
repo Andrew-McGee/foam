@@ -3,8 +3,13 @@
 								echo "\r\n" . '<table class="ui selectable inverted black table">' . "\r\n";
 								echo '<thead><tr>';
 								if ($trknum == true) echo '<th>#</th>';
-								echo '<th>Title</th><th>Artist</th><th></th><th>Time</th><th>DL</th>';
-								echo '</tr></thead>' . "\r\n";
+								echo '<th>Title</th>';
+								if ($albnam == true) {		// If we want to display album name or artist name
+									echo '<th>Album</th>';
+								} else {
+									echo '<th>Artist</th>';
+								}
+								echo '<th></th><th>Time</th><th>DL</th></tr></thead>' . "\r\n";
 								echo '<tbody>' . "\r\n";
 								$cnt = $main_results['album'][0]['songcount']; //Set counter to total number of songs on album
 
@@ -13,9 +18,14 @@
 									echo "\r\n" . '<tr class="albm-row" id="row' . $i . '">' . "\r\n"; // Start of the track listing row
 										if ($trknum == true) echo '<td id="tno' . ($i + 1) . '">' . $song_results['song'][$i]['track'] . '</td>' . "\r\n";
 										echo '<td id="trk' . ($i + 1) . '"><strong>' . $song_results['song'][$i]['title'] . '</strong></td>' . "\r\n";
-										echo '<td><a href="artist_albums.php?uid=' . $song_results['song'][$i]['artist']['id'] . '">';
-										echo $song_results['song'][$i]['artist']['name'] . '</a></td>' . "\r\n";
 
+										if ($albnam == true) {				// If we want to display album name or artist name
+											echo '<td><a href="album_view.php?uid=' . $song_results['song'][$i]['album']['id'] . '">';
+											echo $song_results['song'][$i]['album']['name'] . '</a></td>' . "\r\n";
+										} else {
+											echo '<td><a href="artist_albums.php?uid=' . $song_results['song'][$i]['artist']['id'] . '">';
+											echo $song_results['song'][$i]['artist']['name'] . '</a></td>' . "\r\n";
+										}
 										// hidden star and elipse reveal on mouseover row (see listeners below)
 										// some code here to test if song is flagged or not (favourite = blue star)
 										$fav = $song_results['song'][$i]['flag'];

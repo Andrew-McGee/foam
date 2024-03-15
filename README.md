@@ -29,7 +29,7 @@ You can test the foam interface using your own Ampache database by using the dem
 
 http://foamdemo.mcgee.technology/
 
-Juts point the host to your Ampache server and log in with your Ampache credentials.
+Just point the host to your Ampache server and log in with your Ampache credentials.
 
 ## Future Roadmap (after full stable release)
 
@@ -86,15 +86,15 @@ Code optimisation, clean up, minimisation, speed, etc.
 ## Testing
 Testing on Chrome (Windows and Linux) during initial development.
 - Testing library with all FLAC playback
-- Ampache: dev (testing 5.2)
-- Apache: 2.4.41
-- PHP: 7.4.3
+- Ampache: dev (testing 6.3.0)
+- Apache: 2.4.58
+- PHP: 8.2.16
 
 ## Acknowledgements & Dependencies
 - Inspired by the subsonic player [subplayer](https://github.com/peguerosdc/subplayer) - a really nice looking web player for subsonic.
-- Using [Fomantic UI](https://github.com/fomantic/Fomantic-UI) components (v2.8.8).
-- Using [howler.js](https://github.com/goldfire/howler.js) (v2.2.3) audio library for media playback (In HTML mode for better FLAC playback).
-- Fomantic (Semantic) UI is still dependent on jquery (pulled from CDN - no need to include it).
+- Using [Fomantic UI](https://github.com/fomantic/Fomantic-UI) components (v2.9.3).
+- Using [howler.js](https://github.com/goldfire/howler.js) (v2.2.4) audio library for media playback (In HTML mode for better FLAC playback).
+- Fomantic (Semantic) UI is still dependent on jquery (v3.7.1).
 - Of course you need a backend [Ampache](https://github.com/ampache/ampache) server.
 - And a PHP enabled webserver (PHP version 7.4+ recommended).
 

@@ -67,7 +67,7 @@
       $time = time();
       $key = hash('sha256', $amppas);
       $passphrase = hash('sha256',$time . $key);
-      $url = $ampurl.'/server/json.server.php?action=handshake&auth='.$passphrase.'&timestamp='.$time.'&user='.$ampusr;
+      $url = $ampurl.'/server/json.server.php?action=handshake&version=5.6.0&auth='.$passphrase.'&timestamp='.$time.'&user='.$ampusr;
       //error_log("playlistAPI.php: Handshake call built and ready.", 0);
     } else {
 

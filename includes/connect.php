@@ -20,7 +20,7 @@
   $time = time();
   $key = hash('sha256', $pass);
   $passphrase = hash('sha256',$time . $key);
-  $url = $host.'/server/json.server.php?action=handshake&auth='.$passphrase.'&timestamp='.$time.'&user='.$user;
+  $url = $host.'/server/json.server.php?action=handshake&version=5.6.0&auth='.$passphrase.'&timestamp='.$time.'&user='.$user;
 
   // CURL options.
   curl_setopt($curl, CURLOPT_URL, $url);

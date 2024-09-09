@@ -121,7 +121,7 @@
                   if ($plylst == true)  {
   									// Make a listener for clicking the remove from playlist menu item
   									echo "<script>remTFP" . $i . ".addEventListener('click',  function() {";
-  									echo '	    $.get("includes/playlistAPI.php?action=remove&filter=' . $playlist_results['id'] . '&song=' . $song_results['song'][$i]['id'] . '");';
+  									echo '	    $.get("includes/playlistAPI.php?action=remove&filter=' . $uid . '&song=' . $song_results['song'][$i]['id'] . '");';
   									echo '      location.reload();';  // Do a reload so we can see the change
   									echo '});</script>' . "\r\n";
                   }

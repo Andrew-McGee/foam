@@ -74,3 +74,4 @@ function active_menu($hshake){
 }
 
 ?>
+<!-- End of Side menu -->

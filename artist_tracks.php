@@ -16,7 +16,7 @@
 
 	// Get playlist info so we can have them listed in our per track menu
 	$get_data = playlistsAPI($auth, '', 0);
-	$playlist_results = json_decode($get_data, true);
+	$playlists_results = json_decode($get_data, true);
 
 	$main_results['album'][0]['songcount'] = $artist_results['songcount'];
 
@@ -49,7 +49,7 @@ parent.list = []; // Clean out the old list before we build a new one
 								echo '&nbsp;<div class="ui inline dropdown"><i class="ellipsis vertical icon"></i>' . "\r\n";
 								echo '	<div class="menu" id="albumMenu">' . "\r\n";
 								echo '	<div class="item" id="addAll2Q">Add to queue</div>' . "\r\n";
-								echo '	<div class="item">Play next</div>' . "\r\n";
+								echo '	<div class="item" id="playAllNext">Play next</div>' . "\r\n";
 								echo '</div></div>' . "\r\n";
 								// Make a listener for clicking on the play button
 								echo "\r\n<script>playb.addEventListener('click', function() {";
@@ -64,6 +64,11 @@ parent.list = []; // Clean out the old list before we build a new one
 								// Make a listener for Add to Queue menu item
 								echo "<script>addAll2Q.addEventListener('click', function() {";
 								echo "	parent.addAll2Q();";
+								echo '});</script>' . "\r\n";
+
+								// Make a listener for Add All to play next menu item
+								echo "<script>playAllNext.addEventListener('click', function() {";
+								echo "	parent.playAllNext();";
 								echo '});</script>' . "\r\n";
 
 								// Build the table that will list our tracks

@@ -38,7 +38,7 @@ function playnew(pointer) {
     loop: false,
     volume: [this.setVol],
     onplay: function() {
-      // Update the document title with the song and artist
+      // Update the track length indicator - do some math to round to minutes from seconds
       document.getElementById("length").textContent = sec2mins(Math.round(trk01.duration()));
       // Start the spectograph animation
       specto('on');
